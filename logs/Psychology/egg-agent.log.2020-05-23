@@ -1,0 +1,373 @@
+2020-05-22 18:27:52,644 INFO 16016 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-22 18:27:52,651 INFO 16016 [egg:core] dump config after load, 3ms
+2020-05-22 18:27:52,691 INFO 16016 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-05-22 18:27:52,691 INFO 16016 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-05-22 18:27:52,692 INFO 16016 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-05-22 18:27:52,692 INFO 16016 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-05-22 18:27:52,692 INFO 16016 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-05-22 18:27:52,692 INFO 16016 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-05-22 18:27:52,692 INFO 16016 [egg-watcher:agent] watcher start success
+2020-05-22 18:27:52,699 INFO 16016 [egg:core] dump config after ready, 4ms
+2020-05-22 18:27:53,587 INFO 16016 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/yuakira/dev/projects/Psychology2/app/public","stat":{"dev":16777224,"mode":16877,"nlink":2,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6169125,"size":64,"blocks":0,"atimeMs":1590143273574.7314,"mtimeMs":1590143273574.7314,"ctimeMs":1590143273574.7314,"birthtimeMs":1590143273574.7314,"atime":"2020-05-22T10:27:53.575Z","mtime":"2020-05-22T10:27:53.575Z","ctime":"2020-05-22T10:27:53.575Z","birthtime":"2020-05-22T10:27:53.575Z"},"remove":false,"isDirectory":true,"isFile":false}
+2020-05-22 18:32:36,263 INFO 17054 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-22 18:32:36,270 INFO 17054 [egg:core] dump config after load, 4ms
+2020-05-22 18:32:36,309 INFO 17054 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-05-22 18:32:36,309 INFO 17054 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-05-22 18:32:36,309 INFO 17054 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-05-22 18:32:36,309 INFO 17054 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-05-22 18:32:36,309 INFO 17054 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-05-22 18:32:36,309 INFO 17054 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-05-22 18:32:36,309 INFO 17054 [egg-watcher:agent] watcher start success
+2020-05-22 18:32:36,318 INFO 17054 [egg:core] dump config after ready, 4ms
+2020-05-22 18:34:19,004 INFO 17259 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-22 18:34:19,010 INFO 17259 [egg:core] dump config after load, 3ms
+2020-05-22 18:34:19,046 INFO 17259 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-05-22 18:34:19,046 INFO 17259 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-05-22 18:34:19,046 INFO 17259 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-05-22 18:34:19,047 INFO 17259 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-05-22 18:34:19,047 INFO 17259 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-05-22 18:34:19,047 INFO 17259 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-05-22 18:34:19,047 INFO 17259 [egg-watcher:agent] watcher start success
+2020-05-22 18:34:19,057 INFO 17259 [egg:core] dump config after ready, 5ms
+2020-05-22 18:36:41,193 WARN 17303 Sequelize Error: Access denied for user 'root'@'localhost' (using password: NO), sleep 1 seconds to retry...
+2020-05-22 18:36:40,815 INFO 17303 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-22 18:36:41,122 INFO 17303 [egg:core] dump config after load, 3ms
+2020-05-22 18:36:41,167 INFO 17303 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-05-22 18:36:41,167 INFO 17303 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-05-22 18:36:41,167 INFO 17303 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-05-22 18:36:41,167 INFO 17303 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-05-22 18:36:41,168 INFO 17303 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-05-22 18:36:41,168 INFO 17303 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-05-22 18:36:41,168 INFO 17303 [egg-watcher:agent] watcher start success
+2020-05-22 18:36:42,204 WARN 17303 Sequelize Error: Access denied for user 'root'@'localhost' (using password: NO), sleep 1 seconds to retry...
+2020-05-22 18:36:43,217 WARN 17303 Sequelize Error: Access denied for user 'root'@'localhost' (using password: NO), sleep 1 seconds to retry...
+2020-05-22 18:36:44,229 ERROR 17303 nodejs.SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/dialects/mysql/connection-manager.js:125:19
+    at tryCatcher (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:725:18)
+    at _drainQueueStep (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:15:14)
+From previous event:
+    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/debuggability.js:482:19)
+    at Function.Promise.attempt.Promise.try (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/method.js:29:9)
+    at Sequelize.query (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/sequelize.js:580:23)
+    at Sequelize.authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/sequelize.js:892:17)
+    at authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:134:22)
+    at authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:13)
+    at async authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async Promise.all (index 0)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:40:5
+name: "SequelizeAccessDeniedError"
+parent: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)"}
+original: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)"}
+pid: 17303
+hostname: yudeMacBook-Pro.local
+
+2020-05-22 18:36:44,250 INFO 17303 [egg:core] dump config after ready, 4ms
+2020-05-22 18:39:42,526 WARN 17337 Sequelize Error: Access denied for user 'root'@'localhost' (using password: NO), sleep 1 seconds to retry...
+2020-05-22 18:39:42,183 INFO 17337 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-22 18:39:42,471 INFO 17337 [egg:core] dump config after load, 4ms
+2020-05-22 18:39:42,504 INFO 17337 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-05-22 18:39:42,504 INFO 17337 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-05-22 18:39:42,505 INFO 17337 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-05-22 18:39:42,505 INFO 17337 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-05-22 18:39:42,505 INFO 17337 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-05-22 18:39:42,505 INFO 17337 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-05-22 18:39:42,505 INFO 17337 [egg-watcher:agent] watcher start success
+2020-05-22 18:39:43,537 WARN 17337 Sequelize Error: Access denied for user 'root'@'localhost' (using password: NO), sleep 1 seconds to retry...
+2020-05-22 18:39:44,545 WARN 17337 Sequelize Error: Access denied for user 'root'@'localhost' (using password: NO), sleep 1 seconds to retry...
+2020-05-22 18:39:45,557 ERROR 17337 nodejs.SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/dialects/mysql/connection-manager.js:125:19
+    at tryCatcher (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:725:18)
+    at _drainQueueStep (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:15:14)
+From previous event:
+    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/debuggability.js:482:19)
+    at Function.Promise.attempt.Promise.try (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/method.js:29:9)
+    at Sequelize.query (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/sequelize.js:580:23)
+    at Sequelize.authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/sequelize.js:892:17)
+    at authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:134:22)
+    at authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:13)
+    at async authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async Promise.all (index 0)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:40:5
+name: "SequelizeAccessDeniedError"
+parent: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)"}
+original: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)"}
+pid: 17337
+hostname: yudeMacBook-Pro.local
+
+2020-05-22 18:39:45,576 INFO 17337 [egg:core] dump config after ready, 5ms
+2020-05-22 18:41:30,294 WARN 17369 Sequelize Error: Unknown database 'egg-sequelize-doc-default', sleep 1 seconds to retry...
+2020-05-22 18:41:29,925 INFO 17369 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-22 18:41:30,230 INFO 17369 [egg:core] dump config after load, 4ms
+2020-05-22 18:41:30,270 INFO 17369 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-05-22 18:41:30,270 INFO 17369 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-05-22 18:41:30,270 INFO 17369 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-05-22 18:41:30,270 INFO 17369 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-05-22 18:41:30,270 INFO 17369 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-05-22 18:41:30,270 INFO 17369 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-05-22 18:41:30,271 INFO 17369 [egg-watcher:agent] watcher start success
+2020-05-22 18:41:31,307 WARN 17369 Sequelize Error: Unknown database 'egg-sequelize-doc-default', sleep 1 seconds to retry...
+2020-05-22 18:41:32,317 WARN 17369 Sequelize Error: Unknown database 'egg-sequelize-doc-default', sleep 1 seconds to retry...
+2020-05-22 18:41:33,325 ERROR 17369 nodejs.SequelizeConnectionError: Unknown database 'egg-sequelize-doc-default'
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/dialects/mysql/connection-manager.js:133:19
+    at tryCatcher (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:725:18)
+    at _drainQueueStep (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:15:14)
+From previous event:
+    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/debuggability.js:482:19)
+    at Function.Promise.attempt.Promise.try (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/method.js:29:9)
+    at Sequelize.query (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/sequelize.js:580:23)
+    at Sequelize.authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/sequelize.js:892:17)
+    at authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:134:22)
+    at authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:13)
+    at async authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async Promise.all (index 0)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:40:5
+name: "SequelizeConnectionError"
+parent: {"code":"ER_BAD_DB_ERROR","errno":1049,"sqlState":"42000","sqlMessage":"Unknown database 'egg-sequelize-doc-default'"}
+original: {"code":"ER_BAD_DB_ERROR","errno":1049,"sqlState":"42000","sqlMessage":"Unknown database 'egg-sequelize-doc-default'"}
+pid: 17369
+hostname: yudeMacBook-Pro.local
+
+2020-05-22 18:41:33,331 INFO 17369 [egg:core] dump config after ready, 5ms
+2020-05-22 18:42:23,367 INFO 17382 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-05-22 18:42:23,136 INFO 17382 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-22 18:42:23,315 INFO 17382 [egg:core] dump config after load, 3ms
+2020-05-22 18:42:23,337 INFO 17382 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-05-22 18:42:23,338 INFO 17382 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-05-22 18:42:23,338 INFO 17382 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-05-22 18:42:23,338 INFO 17382 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-05-22 18:42:23,338 INFO 17382 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-05-22 18:42:23,338 INFO 17382 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-05-22 18:42:23,338 INFO 17382 [egg-watcher:agent] watcher start success
+2020-05-22 18:42:23,374 INFO 17382 [egg:core] dump config after ready, 4ms
+2020-05-22 18:43:02,413 INFO 17382 [egg-watcher] Received a change event from eventSource: {"event":"rename","path":"/Users/yuakira/dev/projects/Psychology2/app/model","stat":{"dev":16777224,"mode":16877,"nlink":3,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174034,"size":96,"blocks":0,"atimeMs":1590144182361.2385,"mtimeMs":1590144182352.9683,"ctimeMs":1590144182352.9683,"birthtimeMs":1590144182351.0134,"atime":"2020-05-22T10:43:02.361Z","mtime":"2020-05-22T10:43:02.353Z","ctime":"2020-05-22T10:43:02.353Z","birthtime":"2020-05-22T10:43:02.351Z"},"remove":false,"isDirectory":true,"isFile":false}
+2020-05-22 18:43:45,119 WARN 17382 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/router.js change
+2020-05-22 18:43:44,916 INFO 17382 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/router.js","stat":{"dev":16777224,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6122922,"size":3733,"blocks":8,"atimeMs":1590143158680.4858,"mtimeMs":1590144224854.5178,"ctimeMs":1590144224854.5178,"birthtimeMs":1590143157816.9827,"atime":"2020-05-22T10:25:58.680Z","mtime":"2020-05-22T10:43:44.855Z","ctime":"2020-05-22T10:43:44.855Z","birthtime":"2020-05-22T10:25:57.817Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-22 18:44:57,456 INFO 17432 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-05-22 18:44:57,074 INFO 17432 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-22 18:44:57,395 INFO 17432 [egg:core] dump config after load, 3ms
+2020-05-22 18:44:57,425 INFO 17432 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-05-22 18:44:57,425 INFO 17432 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-05-22 18:44:57,426 INFO 17432 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-05-22 18:44:57,426 INFO 17432 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-05-22 18:44:57,426 INFO 17432 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-05-22 18:44:57,426 INFO 17432 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-05-22 18:44:57,426 INFO 17432 [egg-watcher:agent] watcher start success
+2020-05-22 18:44:57,462 INFO 17432 [egg:core] dump config after ready, 4ms
+2020-05-22 18:46:00,252 INFO 17547 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-05-22 18:45:59,874 INFO 17547 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-22 18:46:00,191 INFO 17547 [egg:core] dump config after load, 3ms
+2020-05-22 18:46:00,221 INFO 17547 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-05-22 18:46:00,221 INFO 17547 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-05-22 18:46:00,222 INFO 17547 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-05-22 18:46:00,222 INFO 17547 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-05-22 18:46:00,222 INFO 17547 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-05-22 18:46:00,222 INFO 17547 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-05-22 18:46:00,222 INFO 17547 [egg-watcher:agent] watcher start success
+2020-05-22 18:46:00,258 INFO 17547 [egg:core] dump config after ready, 3ms
+2020-05-22 18:52:08,210 INFO 17693 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-05-22 18:52:07,817 INFO 17693 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-22 18:52:08,137 INFO 17693 [egg:core] dump config after load, 4ms
+2020-05-22 18:52:08,178 INFO 17693 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-05-22 18:52:08,178 INFO 17693 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-05-22 18:52:08,178 INFO 17693 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-05-22 18:52:08,178 INFO 17693 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-05-22 18:52:08,179 INFO 17693 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-05-22 18:52:08,179 INFO 17693 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-05-22 18:52:08,179 INFO 17693 [egg-watcher:agent] watcher start success
+2020-05-22 18:52:08,216 INFO 17693 [egg:core] dump config after ready, 4ms
+2020-05-22 18:53:16,987 INFO 17693 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/config/config.default.js","stat":{"dev":16777224,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6122943,"size":1351,"blocks":8,"atimeMs":1590144726873.238,"mtimeMs":1590144796925.1687,"ctimeMs":1590144796925.1687,"birthtimeMs":1590143157819.4668,"atime":"2020-05-22T10:52:06.873Z","mtime":"2020-05-22T10:53:16.925Z","ctime":"2020-05-22T10:53:16.925Z","birthtime":"2020-05-22T10:25:57.819Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-22 18:53:17,189 WARN 17693 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/config/config.default.js change
+2020-05-22 18:53:18,628 WARN 17693 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/config/config.default.js change
+2020-05-22 18:53:18,376 INFO 17693 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/config/config.default.js","stat":{"dev":16777224,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6122943,"size":1350,"blocks":8,"atimeMs":1590144798361.4312,"mtimeMs":1590144798365.1873,"ctimeMs":1590144798365.1873,"birthtimeMs":1590143157819.4668,"atime":"2020-05-22T10:53:18.361Z","mtime":"2020-05-22T10:53:18.365Z","ctime":"2020-05-22T10:53:18.365Z","birthtime":"2020-05-22T10:25:57.819Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-22 18:53:18,426 INFO 17693 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/config/config.default.js","stat":{"dev":16777224,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6122943,"size":1350,"blocks":8,"atimeMs":1590144798361.4312,"mtimeMs":1590144798365.1873,"ctimeMs":1590144798365.1873,"birthtimeMs":1590143157819.4668,"atime":"2020-05-22T10:53:18.361Z","mtime":"2020-05-22T10:53:18.365Z","ctime":"2020-05-22T10:53:18.365Z","birthtime":"2020-05-22T10:25:57.819Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-22 18:53:34,980 WARN 17693 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-22 18:53:34,773 INFO 17693 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777224,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1185,"blocks":8,"atimeMs":1590144291219.9192,"mtimeMs":1590144814712.7085,"ctimeMs":1590144814712.7085,"birthtimeMs":1590144182352.9573,"atime":"2020-05-22T10:44:51.220Z","mtime":"2020-05-22T10:53:34.713Z","ctime":"2020-05-22T10:53:34.713Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-22 18:53:36,311 WARN 17693 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-22 18:53:36,059 INFO 17693 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777224,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1184,"blocks":8,"atimeMs":1590144815927.0513,"mtimeMs":1590144816057.027,"ctimeMs":1590144816057.027,"birthtimeMs":1590144182352.9573,"atime":"2020-05-22T10:53:35.927Z","mtime":"2020-05-22T10:53:36.057Z","ctime":"2020-05-22T10:53:36.057Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-22 18:53:36,110 INFO 17693 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777224,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1184,"blocks":8,"atimeMs":1590144815927.0513,"mtimeMs":1590144816057.027,"ctimeMs":1590144816057.027,"birthtimeMs":1590144182352.9573,"atime":"2020-05-22T10:53:35.927Z","mtime":"2020-05-22T10:53:36.057Z","ctime":"2020-05-22T10:53:36.057Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-22 18:53:50,659 WARN 17693 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-22 18:53:50,405 INFO 17693 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777224,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1209,"blocks":8,"atimeMs":1590144816364.7476,"mtimeMs":1590144830393.5476,"ctimeMs":1590144830393.5476,"birthtimeMs":1590144182352.9573,"atime":"2020-05-22T10:53:36.365Z","mtime":"2020-05-22T10:53:50.394Z","ctime":"2020-05-22T10:53:50.394Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-22 18:53:50,454 INFO 17693 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777224,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1209,"blocks":8,"atimeMs":1590144816364.7476,"mtimeMs":1590144830393.5476,"ctimeMs":1590144830393.5476,"birthtimeMs":1590144182352.9573,"atime":"2020-05-22T10:53:36.365Z","mtime":"2020-05-22T10:53:50.394Z","ctime":"2020-05-22T10:53:50.394Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-22 19:15:59,871 ERROR 17693 nodejs.ClusterClientNoResponseError: client no response in 104340ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 17693
+hostname: yudeMacBook-Pro.local
+
+2020-05-22 19:24:23,956 ERROR 17693 nodejs.ClusterClientNoResponseError: client no response in 144026ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 17693
+hostname: yudeMacBook-Pro.local
+
+2020-05-22 19:26:07,981 WARN 17693 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-22 19:26:07,775 INFO 17693 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777224,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1297,"blocks":8,"atimeMs":1590144831250.0244,"mtimeMs":1590146767714.3225,"ctimeMs":1590146767714.3225,"birthtimeMs":1590144182352.9573,"atime":"2020-05-22T10:53:51.250Z","mtime":"2020-05-22T11:26:07.714Z","ctime":"2020-05-22T11:26:07.714Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-22 20:13:24,036 ERROR 17693 nodejs.ClusterClientNoResponseError: client no response in 1493461ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 17693
+hostname: yudeMacBook-Pro.local
+
+2020-05-22 21:25:56,569 ERROR 17693 nodejs.ClusterClientNoResponseError: client no response in 4352514ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 17693
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 10:44:50,378 INFO 5547 [egg-sequelize](3ms) Executed (default): SELECT 1+1 AS result
+2020-05-23 10:44:50,393 INFO 5547 [egg-sequelize](17ms) Executed (default): DROP TABLE IF EXISTS `p_user`;
+2020-05-23 10:44:50,445 INFO 5547 [egg-sequelize](46ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_user` (`id` INTEGER auto_increment  COMMENT '用户id', `account` VARCHAR(50) UNIQUE COMMENT '用户账号', `phone` VARCHAR(11) COMMENT '用户电话', `password` VARCHAR(50) COMMENT '密码', `name` VARCHAR(10) COMMENT '用户姓名', `birthday` VARCHAR(13) COMMENT '生日', `gender` INTEGER(1) COMMENT '性别，1男2女', `avatar` VARCHAR(255) COMMENT '头像地址', `justice_id` INTEGER(11) DEFAULT 0 COMMENT '司法所，服刑犯人才需要填', `parent_id` INTEGER(11) DEFAULT 0 COMMENT '来访者才有父类', `is_marry` INTEGER(11) DEFAULT 2 COMMENT '是否结婚,1是2否', `education` VARCHAR(255), `job` VARCHAR(255), `urgent_name` VARCHAR(255), PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-05-23 10:44:50,448 INFO 5547 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `p_user`
+2020-05-23 10:44:49,961 INFO 5547 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-05-23 10:44:50,291 INFO 5547 [egg:core] dump config after load, 3ms
+2020-05-23 10:44:50,335 INFO 5547 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-05-23 10:44:50,336 INFO 5547 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-05-23 10:44:50,336 INFO 5547 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-05-23 10:44:50,336 INFO 5547 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-05-23 10:44:50,336 INFO 5547 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-05-23 10:44:50,336 INFO 5547 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-05-23 10:44:50,336 INFO 5547 [egg-watcher:agent] watcher start success
+2020-05-23 10:44:50,385 INFO 5547 [egg:core] dump config after ready, 5ms
+2020-05-23 10:45:53,850 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1459,"blocks":8,"atimeMs":1590201847576.074,"mtimeMs":1590201953787.6523,"ctimeMs":1590201953787.6523,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:44:07.576Z","mtime":"2020-05-23T02:45:53.788Z","ctime":"2020-05-23T02:45:53.788Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:45:54,054 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:46:59,092 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1475,"blocks":8,"atimeMs":1590201954793.8943,"mtimeMs":1590202019030.4214,"ctimeMs":1590202019030.4214,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:45:54.794Z","mtime":"2020-05-23T02:46:59.030Z","ctime":"2020-05-23T02:46:59.030Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:46:59,292 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:47:23,668 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:47:23,465 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1495,"blocks":8,"atimeMs":1590202020165.7114,"mtimeMs":1590202043402.9043,"ctimeMs":1590202043402.9043,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:47:00.166Z","mtime":"2020-05-23T02:47:23.403Z","ctime":"2020-05-23T02:47:23.403Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:47:35,011 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1500,"blocks":8,"atimeMs":1590202044883.7087,"mtimeMs":1590202054999.88,"ctimeMs":1590202054999.88,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:47:24.884Z","mtime":"2020-05-23T02:47:35.000Z","ctime":"2020-05-23T02:47:35.000Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:47:35,061 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1500,"blocks":8,"atimeMs":1590202044883.7087,"mtimeMs":1590202054999.88,"ctimeMs":1590202054999.88,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:47:24.884Z","mtime":"2020-05-23T02:47:35.000Z","ctime":"2020-05-23T02:47:35.000Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:47:35,264 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:47:56,146 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:47:55,945 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1541,"blocks":8,"atimeMs":1590202056259.3284,"mtimeMs":1590202075884.3213,"ctimeMs":1590202075884.3213,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:47:36.259Z","mtime":"2020-05-23T02:47:55.884Z","ctime":"2020-05-23T02:47:55.884Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:48:13,935 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:48:13,732 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1591,"blocks":8,"atimeMs":1590202077108.494,"mtimeMs":1590202093669.7158,"ctimeMs":1590202093669.7158,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:47:57.108Z","mtime":"2020-05-23T02:48:13.670Z","ctime":"2020-05-23T02:48:13.670Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:49:00,141 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1772,"blocks":8,"atimeMs":1590202094889.7832,"mtimeMs":1590202140079.9812,"ctimeMs":1590202140079.9812,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:48:14.890Z","mtime":"2020-05-23T02:49:00.080Z","ctime":"2020-05-23T02:49:00.080Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:49:00,345 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:51:44,113 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:51:43,911 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2002,"blocks":8,"atimeMs":1590202141320.2083,"mtimeMs":1590202303849.2146,"ctimeMs":1590202303849.2146,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:49:01.320Z","mtime":"2020-05-23T02:51:43.849Z","ctime":"2020-05-23T02:51:43.849Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:53:14,467 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:53:14,264 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2000,"blocks":8,"atimeMs":1590202305359.1667,"mtimeMs":1590202394203.4648,"ctimeMs":1590202394203.4648,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:51:45.359Z","mtime":"2020-05-23T02:53:14.203Z","ctime":"2020-05-23T02:53:14.203Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:54:57,773 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:54:57,570 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2003,"blocks":8,"atimeMs":1590202395603.7014,"mtimeMs":1590202497509.3047,"ctimeMs":1590202497509.3047,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:53:15.604Z","mtime":"2020-05-23T02:54:57.509Z","ctime":"2020-05-23T02:54:57.509Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:55:22,115 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:55:21,911 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2000,"blocks":8,"atimeMs":1590202519325.632,"mtimeMs":1590202521849.8135,"ctimeMs":1590202521849.8135,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:55:19.326Z","mtime":"2020-05-23T02:55:21.850Z","ctime":"2020-05-23T02:55:21.850Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:58:15,900 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:58:15,698 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2084,"blocks":8,"atimeMs":1590202522175.0786,"mtimeMs":1590202695635.6714,"ctimeMs":1590202695635.6714,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:55:22.175Z","mtime":"2020-05-23T02:58:15.636Z","ctime":"2020-05-23T02:58:15.636Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:58:28,635 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 10:58:28,383 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1999,"blocks":8,"atimeMs":1590202696905.502,"mtimeMs":1590202708372.4033,"ctimeMs":1590202708372.4033,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:58:16.906Z","mtime":"2020-05-23T02:58:28.372Z","ctime":"2020-05-23T02:58:28.372Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 10:58:28,433 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1999,"blocks":8,"atimeMs":1590202696905.502,"mtimeMs":1590202708372.4033,"ctimeMs":1590202708372.4033,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:58:16.906Z","mtime":"2020-05-23T02:58:28.372Z","ctime":"2020-05-23T02:58:28.372Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 11:00:57,996 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 11:00:57,796 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1999,"blocks":8,"atimeMs":1590202709626.637,"mtimeMs":1590202857735.4814,"ctimeMs":1590202857735.4814,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T02:58:29.627Z","mtime":"2020-05-23T03:00:57.735Z","ctime":"2020-05-23T03:00:57.735Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 11:01:38,298 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 11:01:38,096 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1924,"blocks":8,"atimeMs":1590202859202.2998,"mtimeMs":1590202898033.9224,"ctimeMs":1590202898033.9224,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T03:00:59.202Z","mtime":"2020-05-23T03:01:38.034Z","ctime":"2020-05-23T03:01:38.034Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 11:01:52,602 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 11:01:52,397 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":1999,"blocks":8,"atimeMs":1590202898482.4395,"mtimeMs":1590202912386.4744,"ctimeMs":1590202912386.4744,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T03:01:38.482Z","mtime":"2020-05-23T03:01:52.386Z","ctime":"2020-05-23T03:01:52.386Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 11:24:09,022 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 1111092ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 11:47:13,708 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 624542ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 11:57:33,729 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 259234ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 12:02:25,132 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 111356ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 12:15:38,835 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 12:15:38,630 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2106,"blocks":8,"atimeMs":1590202913227.4202,"mtimeMs":1590207338559.7322,"ctimeMs":1590207338559.7322,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T03:01:53.227Z","mtime":"2020-05-23T04:15:38.560Z","ctime":"2020-05-23T04:15:38.560Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 12:16:07,311 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2109,"blocks":8,"atimeMs":1590207340674.4724,"mtimeMs":1590207367249.2786,"ctimeMs":1590207367249.2786,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T04:15:40.674Z","mtime":"2020-05-23T04:16:07.249Z","ctime":"2020-05-23T04:16:07.249Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 12:16:07,514 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 12:16:09,321 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 12:16:09,068 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2109,"blocks":8,"atimeMs":1590207368474.7876,"mtimeMs":1590207369056.0146,"ctimeMs":1590207369056.0146,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T04:16:08.475Z","mtime":"2020-05-23T04:16:09.056Z","ctime":"2020-05-23T04:16:09.056Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 12:16:09,119 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2109,"blocks":8,"atimeMs":1590207368474.7876,"mtimeMs":1590207369056.0146,"ctimeMs":1590207369056.0146,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T04:16:08.475Z","mtime":"2020-05-23T04:16:09.056Z","ctime":"2020-05-23T04:16:09.056Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 12:16:10,304 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 12:16:10,051 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2109,"blocks":8,"atimeMs":1590207370039.0159,"mtimeMs":1590207370039.4475,"ctimeMs":1590207370039.4475,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T04:16:10.039Z","mtime":"2020-05-23T04:16:10.039Z","ctime":"2020-05-23T04:16:10.039Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 12:16:10,102 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2109,"blocks":8,"atimeMs":1590207370039.0159,"mtimeMs":1590207370039.4475,"ctimeMs":1590207370039.4475,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T04:16:10.039Z","mtime":"2020-05-23T04:16:10.039Z","ctime":"2020-05-23T04:16:10.039Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 12:16:16,028 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 12:16:15,770 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2109,"blocks":8,"atimeMs":1590207371830.6208,"mtimeMs":1590207375759.4446,"ctimeMs":1590207375759.4446,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T04:16:11.831Z","mtime":"2020-05-23T04:16:15.759Z","ctime":"2020-05-23T04:16:15.759Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 12:16:15,821 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2109,"blocks":8,"atimeMs":1590207371830.6208,"mtimeMs":1590207375759.4446,"ctimeMs":1590207375759.4446,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T04:16:11.831Z","mtime":"2020-05-23T04:16:15.759Z","ctime":"2020-05-23T04:16:15.759Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 12:16:20,886 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/model/p_user.js change
+2020-05-23 12:16:20,681 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/model/p_user.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6174035,"size":2106,"blocks":8,"atimeMs":1590207376882.9856,"mtimeMs":1590207380668.5093,"ctimeMs":1590207380668.5093,"birthtimeMs":1590144182352.9573,"atime":"2020-05-23T04:16:16.883Z","mtime":"2020-05-23T04:16:20.669Z","ctime":"2020-05-23T04:16:20.669Z","birthtime":"2020-05-22T10:43:02.353Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 12:17:54,026 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/router.js change
+2020-05-23 12:17:53,825 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/router.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6122922,"size":3652,"blocks":8,"atimeMs":1590201693216.5164,"mtimeMs":1590207473763.6855,"ctimeMs":1590207473763.6855,"birthtimeMs":1590143157816.9827,"atime":"2020-05-23T02:41:33.217Z","mtime":"2020-05-23T04:17:53.764Z","ctime":"2020-05-23T04:17:53.764Z","birthtime":"2020-05-22T10:25:57.817Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 14:09:22,629 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 4222335ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 14:17:47,707 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/config/config.default.js change
+2020-05-23 14:17:47,502 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/config/config.default.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6122943,"size":1350,"blocks":8,"atimeMs":1590144798638.3005,"mtimeMs":1590214667440.0732,"ctimeMs":1590214667440.0732,"birthtimeMs":1590143157819.4668,"atime":"2020-05-22T10:53:18.638Z","mtime":"2020-05-23T06:17:47.440Z","ctime":"2020-05-23T06:17:47.440Z","birthtime":"2020-05-22T10:25:57.819Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 14:32:49,076 WARN 5547 [agent:development] reload worker because /Users/yuakira/dev/projects/Psychology2/app/controller/distribution.js change
+2020-05-23 14:32:48,874 INFO 5547 [egg-watcher] Received a change event from eventSource: {"event":"change","path":"/Users/yuakira/dev/projects/Psychology2/app/controller/distribution.js","stat":{"dev":16777221,"mode":33188,"nlink":1,"uid":501,"gid":20,"rdev":0,"blksize":4096,"ino":6122906,"size":8614,"blocks":24,"atimeMs":1590143158673.367,"mtimeMs":1590215568812.0894,"ctimeMs":1590215568812.0894,"birthtimeMs":1590143157814.3938,"atime":"2020-05-22T10:25:58.673Z","mtime":"2020-05-23T06:32:48.812Z","ctime":"2020-05-23T06:32:48.812Z","birthtime":"2020-05-22T10:25:57.814Z"},"remove":false,"isDirectory":false,"isFile":true}
+2020-05-23 19:10:44,740 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 293140ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 19:15:29,046 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 244287ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+

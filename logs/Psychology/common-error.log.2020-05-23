@@ -1,0 +1,172 @@
+2020-05-22 18:36:44,228 ERROR 17303 nodejs.SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/dialects/mysql/connection-manager.js:125:19
+    at tryCatcher (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:725:18)
+    at _drainQueueStep (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:15:14)
+From previous event:
+    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/debuggability.js:482:19)
+    at Function.Promise.attempt.Promise.try (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/method.js:29:9)
+    at Sequelize.query (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/sequelize.js:580:23)
+    at Sequelize.authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/sequelize.js:892:17)
+    at authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:134:22)
+    at authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:13)
+    at async authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async Promise.all (index 0)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:40:5
+name: "SequelizeAccessDeniedError"
+parent: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)"}
+original: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)"}
+pid: 17303
+hostname: yudeMacBook-Pro.local
+
+2020-05-22 18:39:45,556 ERROR 17337 nodejs.SequelizeAccessDeniedError: Access denied for user 'root'@'localhost' (using password: NO)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/dialects/mysql/connection-manager.js:125:19
+    at tryCatcher (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:725:18)
+    at _drainQueueStep (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:15:14)
+From previous event:
+    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/debuggability.js:482:19)
+    at Function.Promise.attempt.Promise.try (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/method.js:29:9)
+    at Sequelize.query (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/sequelize.js:580:23)
+    at Sequelize.authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/sequelize.js:892:17)
+    at authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:134:22)
+    at authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:13)
+    at async authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async Promise.all (index 0)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:40:5
+name: "SequelizeAccessDeniedError"
+parent: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)"}
+original: {"code":"ER_ACCESS_DENIED_ERROR","errno":1045,"sqlState":"28000","sqlMessage":"Access denied for user 'root'@'localhost' (using password: NO)"}
+pid: 17337
+hostname: yudeMacBook-Pro.local
+
+2020-05-22 18:41:33,325 ERROR 17369 nodejs.SequelizeConnectionError: Unknown database 'egg-sequelize-doc-default'
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/dialects/mysql/connection-manager.js:133:19
+    at tryCatcher (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:725:18)
+    at _drainQueueStep (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:15:14)
+From previous event:
+    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/debuggability.js:482:19)
+    at Function.Promise.attempt.Promise.try (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/method.js:29:9)
+    at Sequelize.query (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/sequelize.js:580:23)
+    at Sequelize.authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/sequelize.js:892:17)
+    at authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:134:22)
+    at authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:13)
+    at async authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async authenticate (/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:142:7)
+    at async Promise.all (index 0)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize/lib/loader.js:40:5
+name: "SequelizeConnectionError"
+parent: {"code":"ER_BAD_DB_ERROR","errno":1049,"sqlState":"42000","sqlMessage":"Unknown database 'egg-sequelize-doc-default'"}
+original: {"code":"ER_BAD_DB_ERROR","errno":1049,"sqlState":"42000","sqlMessage":"Unknown database 'egg-sequelize-doc-default'"}
+pid: 17369
+hostname: yudeMacBook-Pro.local
+
+2020-05-22 19:15:59,870 ERROR 17693 nodejs.ClusterClientNoResponseError: client no response in 104340ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 17693
+hostname: yudeMacBook-Pro.local
+
+2020-05-22 19:24:23,955 ERROR 17693 nodejs.ClusterClientNoResponseError: client no response in 144026ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 17693
+hostname: yudeMacBook-Pro.local
+
+2020-05-22 20:13:24,031 ERROR 17693 nodejs.ClusterClientNoResponseError: client no response in 1493461ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 17693
+hostname: yudeMacBook-Pro.local
+
+2020-05-22 21:25:56,569 ERROR 17693 nodejs.ClusterClientNoResponseError: client no response in 4352514ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 17693
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 11:24:09,021 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 1111092ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 11:47:13,707 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 624542ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 11:57:33,729 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 259234ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 12:02:25,132 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 111356ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 14:09:22,629 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 4222335ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 19:10:44,738 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 293140ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
+2020-05-23 19:15:29,046 ERROR 5547 nodejs.ClusterClientNoResponseError: client no response in 244287ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 5547
+hostname: yudeMacBook-Pro.local
+
