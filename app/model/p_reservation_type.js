@@ -29,13 +29,13 @@ module.exports = (app) => {
     }
   );
 
-  p_reservation_type
-    .sync({
-      //改变表的结构，保留数据
-      alter: true,
-    })
-    .then(() => {
-      console.log("p_reservation_type Table has been created");
-    });
+  // p_reservation_type
+  //   .sync({
+  //     //改变表的结构，保留数据
+  //     alter: true,
+  //   })
+  //   .then(() => {
+  //     console.log("p_reservation_type Table has been created");
+  //   });
   return p_reservation_type;
 };

@@ -2,6 +2,7 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
+import ExportIsSync = require('../../../app/model/isSync');
 import ExportPExercises = require('../../../app/model/p_exercises');
 import ExportPJustice = require('../../../app/model/p_justice');
 import ExportPMsg = require('../../../app/model/p_msg');
@@ -15,6 +16,7 @@ import ExportPUser = require('../../../app/model/p_user');
 
 declare module 'egg' {
   interface IModel {
+    IsSync: ReturnType<typeof ExportIsSync>;
     PExercises: ReturnType<typeof ExportPExercises>;
     PJustice: ReturnType<typeof ExportPJustice>;
     PMsg: ReturnType<typeof ExportPMsg>;

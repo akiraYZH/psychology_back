@@ -40,7 +40,7 @@ module.exports = appInfo => {
       // 密码
       password: 'root',
       // 数据库名
-      database: 'project_psychology',
+      database: 'project_psychology_test',
     },
     // 是否加载到 app 上，默认开启
     app: true,
@@ -55,7 +55,7 @@ module.exports = appInfo => {
     dialect: 'mysql',
     host: '127.0.0.1',
     port: 3306,
-    database: 'project_psychology',
+    database: 'project_psychology_test',
     username: 'root', //账号
     password: 'root', //密码
   };
@@ -69,8 +69,3 @@ module.exports = appInfo => {
     ...userConfig,
   };
 };
-
-
-
-
-

@@ -31,12 +31,12 @@ module.exports = (app) => {
     );
   
   
-    p_type.sync({
-      //改变表的结构，保留数据
-      alter: true
-    }).then(() => {
-      console.log("p_type Table has been created");
-    });
+    // p_type.sync({
+    //   //改变表的结构，保留数据
+    //   alter: true
+    // }).then(() => {
+    //   console.log("p_type Table has been created");
+    // });
     return p_type;
   };
   
