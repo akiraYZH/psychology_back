@@ -75,7 +75,7 @@
     "onerror": {
       "errorPageUrl": "",
       "appErrorFilter": null,
-      "templatePath": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-onerror/lib/onerror_page.mustache"
+      "templatePath": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-onerror/lib/onerror_page.mustache"
     },
     "i18n": {
       "defaultLocale": "en_US",
@@ -88,8 +88,8 @@
     "watcher": {
       "type": "development",
       "eventSources": {
-        "default": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-watcher/lib/event-sources/default",
-        "development": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-watcher/lib/event-sources/development"
+        "default": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-watcher/lib/event-sources/default",
+        "development": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-watcher/lib/event-sources/development"
       }
     },
     "customLogger": {
@@ -135,14 +135,14 @@
     },
     "static": {
       "prefix": "/public/",
-      "dir": "/Users/yuakira/dev/projects/psychology_back/app/public",
+      "dir": "/Users/yuakira/dev/projects/Psychology2/app/public",
       "dynamic": true,
       "preload": false,
       "buffer": false,
       "maxFiles": 1000
     },
     "view": {
-      "root": "/Users/yuakira/dev/projects/psychology_back/app/view",
+      "root": "/Users/yuakira/dev/projects/Psychology2/app/view",
       "cache": false,
       "defaultExtension": ".html",
       "defaultViewEngine": "",
@@ -240,9 +240,9 @@
       "author": "melon",
       "license": "MIT"
     },
-    "baseDir": "/Users/yuakira/dev/projects/psychology_back",
+    "baseDir": "/Users/yuakira/dev/projects/Psychology2",
     "HOME": "/Users/yuakira",
-    "rundir": "/Users/yuakira/dev/projects/psychology_back/run",
+    "rundir": "/Users/yuakira/dev/projects/Psychology2/run",
     "dump": {
       "ignore": "<Set>"
     },
@@ -274,7 +274,7 @@
       "onerror": "<Function onerror>"
     },
     "logger": {
-      "dir": "/Users/yuakira/dev/projects/psychology_back/logs/Psychology",
+      "dir": "/Users/yuakira/dev/projects/Psychology2/logs/Psychology",
       "encoding": "utf8",
       "env": "local",
       "level": "INFO",
@@ -353,8 +353,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-session",
+      "from": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-session",
       "version": "3.2.0"
     },
     "security": {
@@ -366,8 +366,8 @@
         "session"
       ],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-security",
+      "from": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security",
       "version": "2.8.0"
     },
     "jsonp": {
@@ -379,8 +379,8 @@
         "security"
       ],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-jsonp",
+      "from": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-jsonp",
       "version": "2.0.0"
     },
     "onerror": {
@@ -392,8 +392,8 @@
         "jsonp"
       ],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-onerror",
+      "from": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-onerror",
       "version": "2.1.0"
     },
     "i18n": {
@@ -403,8 +403,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-i18n",
+      "from": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-i18n",
       "version": "2.1.1"
     },
     "watcher": {
@@ -414,8 +414,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-watcher",
+      "from": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-watcher",
       "version": "3.1.1"
     },
     "schedule": {
@@ -425,8 +425,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-schedule",
+      "from": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-schedule",
       "version": "3.6.4"
     },
     "multipart": {
@@ -438,8 +438,8 @@
         "schedule"
       ],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-multipart",
+      "from": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart",
       "version": "2.10.3"
     },
     "development": {
@@ -453,8 +453,8 @@
       "env": [
         "local"
       ],
-      "from": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-development",
+      "from": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-development",
       "version": "2.4.3"
     },
     "logrotator": {
@@ -466,8 +466,8 @@
       ],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-logrotator",
+      "from": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator",
       "version": "3.1.0"
     },
     "static": {
@@ -477,8 +477,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-static",
+      "from": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-static",
       "version": "2.2.0"
     },
     "view": {
@@ -488,8 +488,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-view",
+      "from": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-view",
       "version": "2.1.2"
     },
     "cors": {
@@ -499,8 +499,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-cors",
+      "from": "/Users/yuakira/dev/projects/Psychology2/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-cors",
       "version": "2.2.3"
     },
     "mysql": {
@@ -510,8 +510,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/egg-mysql",
+      "from": "/Users/yuakira/dev/projects/Psychology2/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-mysql",
       "version": "3.0.0"
     },
     "sequelize": {
@@ -521,8 +521,8 @@
       "dependencies": [],
       "optionalDependencies": [],
       "env": [],
-      "from": "/Users/yuakira/dev/projects/psychology_back/config/plugin.js",
-      "path": "/Users/yuakira/dev/projects/psychology_back/node_modules/_egg-sequelize@5.2.1@egg-sequelize",
+      "from": "/Users/yuakira/dev/projects/Psychology2/config/plugin.js",
+      "path": "/Users/yuakira/dev/projects/Psychology2/node_modules/_egg-sequelize@5.2.1@egg-sequelize",
       "version": "5.2.1"
     }
   }

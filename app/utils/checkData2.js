@@ -48,10 +48,6 @@ const extraCheck = (targetName, targetVal) => {
       case "thatDay":
       case "points":
       case "token":
-      case "spelling":
-      case "phonetic":
-      case "detail":
-      case "sentences":
         return true;
       default:
         return regNormal(targetVal);

@@ -2,32 +2,28 @@
 // Do not modify this file!!!!!!!!!
 
 import 'egg';
-import ExportMain = require('../../../app/model/main');
-import ExportTablesPExercises = require('../../../app/model/tables/p_exercises');
-import ExportTablesPJustice = require('../../../app/model/tables/p_justice');
-import ExportTablesPMsg = require('../../../app/model/tables/p_msg');
-import ExportTablesPPaper = require('../../../app/model/tables/p_paper');
-import ExportTablesPPaperUser = require('../../../app/model/tables/p_paper_user');
-import ExportTablesPRecord = require('../../../app/model/tables/p_record');
-import ExportTablesPReservation = require('../../../app/model/tables/p_reservation');
-import ExportTablesPReservationType = require('../../../app/model/tables/p_reservation_type');
-import ExportTablesPType = require('../../../app/model/tables/p_type');
-import ExportTablesPUser = require('../../../app/model/tables/p_user');
+import ExportPExercises = require('../../../app/model/p_exercises');
+import ExportPJustice = require('../../../app/model/p_justice');
+import ExportPMsg = require('../../../app/model/p_msg');
+import ExportPPaper = require('../../../app/model/p_paper');
+import ExportPPaperUser = require('../../../app/model/p_paper_user');
+import ExportPRecord = require('../../../app/model/p_record');
+import ExportPReservation = require('../../../app/model/p_reservation');
+import ExportPReservationType = require('../../../app/model/p_reservation_type');
+import ExportPType = require('../../../app/model/p_type');
+import ExportPUser = require('../../../app/model/p_user');
 
 declare module 'egg' {
   interface IModel {
-    Main: ReturnType<typeof ExportMain>;
-    Tables: {
-      PExercises: ReturnType<typeof ExportTablesPExercises>;
-      PJustice: ReturnType<typeof ExportTablesPJustice>;
-      PMsg: ReturnType<typeof ExportTablesPMsg>;
-      PPaper: ReturnType<typeof ExportTablesPPaper>;
-      PPaperUser: ReturnType<typeof ExportTablesPPaperUser>;
-      PRecord: ReturnType<typeof ExportTablesPRecord>;
-      PReservation: ReturnType<typeof ExportTablesPReservation>;
-      PReservationType: ReturnType<typeof ExportTablesPReservationType>;
-      PType: ReturnType<typeof ExportTablesPType>;
-      PUser: ReturnType<typeof ExportTablesPUser>;
-    }
+    PExercises: ReturnType<typeof ExportPExercises>;
+    PJustice: ReturnType<typeof ExportPJustice>;
+    PMsg: ReturnType<typeof ExportPMsg>;
+    PPaper: ReturnType<typeof ExportPPaper>;
+    PPaperUser: ReturnType<typeof ExportPPaperUser>;
+    PRecord: ReturnType<typeof ExportPRecord>;
+    PReservation: ReturnType<typeof ExportPReservation>;
+    PReservationType: ReturnType<typeof ExportPReservationType>;
+    PType: ReturnType<typeof ExportPType>;
+    PUser: ReturnType<typeof ExportPUser>;
   }
 }

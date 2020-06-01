@@ -18,7 +18,7 @@ class DistributionController extends Controller {
     }
    * 
    */
-
+ 
     /**apidoc
      * 
      */
