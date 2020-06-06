@@ -181,7 +181,7 @@
     },
     "cors": {
       "origin": "*",
-      "allowMethods": "GET,POST"
+      "allowMethods": "GET,POST,PUT,DELETE"
     },
     "mysql": {
       "default": {
@@ -204,7 +204,10 @@
       "host": "127.0.0.1",
       "port": 3306,
       "username": "root",
-      "password": "<String len: 4>"
+      "password": "<String len: 4>",
+      "define": {
+        "underscored": true
+      }
     },
     "env": "local",
     "name": "Psychology",

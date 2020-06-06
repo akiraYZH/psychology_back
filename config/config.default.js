@@ -25,7 +25,7 @@ module.exports = appInfo => {
 
   config.cors = {
     origin: '*',
-    allowMethods: 'GET,POST',
+    allowMethods: 'GET,POST,PUT,DELETE',
   };
 
   config.mysql = {
@@ -58,6 +58,10 @@ module.exports = appInfo => {
     database: 'project_psychology',
     username: 'root', //账号
     password: 'root', //密码
+    define: {
+      // 字段以下划线（_）来分割（默认是驼峰命名风格）
+      underscored: true,
+    },
   };
   // add your user config here
   const userConfig = {

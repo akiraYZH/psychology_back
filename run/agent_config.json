@@ -169,11 +169,14 @@
     },
     "sequelize": {
       "dialect": "mysql",
-      "database": "project_psychology_test",
+      "database": "project_psychology",
       "host": "127.0.0.1",
       "port": 3306,
       "username": "root",
-      "password": "<String len: 4>"
+      "password": "<String len: 4>",
+      "define": {
+        "underscored": true
+      }
     },
     "env": "local",
     "name": "Psychology",

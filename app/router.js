@@ -3,9 +3,14 @@
 /**
  * @param {Egg.Application} app - egg application
  */
-module.exports = app => {
+module.exports = async (app) => {
   const { router, controller } = app,
     preRouter = '/api';
+  
+    
+    
+   
+  
   router.post(preRouter + '/login/login', controller.login.login);
   router.get(preRouter + '/user/userInfo', controller.user.userInfo);
   router.post(preRouter + '/user/logout', controller.user.logout);
@@ -59,10 +64,12 @@ module.exports = app => {
 
   router.get(preRouter+'/type/getList', controller.type.getList);
   
-  
+  router.get(preRouter+'/test/get', controller.test.get);
   router.post('/*', controller.melon.index);
   router.get('/*', controller.melon.index);
 
+
+  
 
   
 };

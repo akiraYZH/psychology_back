@@ -80,7 +80,10 @@
     "port": "/Users/yuakira/dev/projects/Psychology2/config/config.default.js",
     "database": "/Users/yuakira/dev/projects/Psychology2/config/config.default.js",
     "username": "/Users/yuakira/dev/projects/Psychology2/config/config.default.js",
-    "password": "/Users/yuakira/dev/projects/Psychology2/config/config.default.js"
+    "password": "/Users/yuakira/dev/projects/Psychology2/config/config.default.js",
+    "define": {
+      "underscored": "/Users/yuakira/dev/projects/Psychology2/config/config.default.js"
+    }
   },
   "session": {
     "maxAge": "/Users/yuakira/dev/projects/Psychology2/node_modules/egg-session/config/config.default.js",
