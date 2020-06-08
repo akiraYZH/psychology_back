@@ -125,7 +125,8 @@ class UserController extends Controller {
    * @apiGroup User
    * @apiParam {String} account 用户账号
    * @apiParam {String} password 用户密码
-   * @apiParam {String} roles 用户权限
+   * @apiParam {String} role_id 用户权限
+   * @apiParam {String} phone 用户电话
    * @apiSuccessExample 成功返回
    * {
    *    "code":1,
@@ -142,37 +143,7 @@ class UserController extends Controller {
    * }
    *
    */
-  // async register() {
-  //   const { ctx, service } = this;
-  //   const { checkDataRes, checkDataMsg } = new ctx.helper._checkData(
-  //     ctx,
-  //     "account",
-  //     "password",
-  //     "roles"
-  //   );
-
-  //   console.log(ctx.request.body);
-
-  //   if (checkDataRes) {
-  //     if (rolesList.includes(ctx.request.body.roles)) {
-  //       let result = await service.common.insert("p_user", ctx.request.body);
-  //       // console.log(result);
-  //       if (result.affectedRows) {
-  //         ctx.body = new this.ctx.helper._success("成功注册", {
-  //           insertId: result.insertId,
-  //         });
-  //       } else if (result.msg) {
-  //         this.ctx.body = new this.ctx.helper._error(result.msg);
-  //       } else {
-  //         this.ctx.body = new this.ctx.helper._error("注册失败");
-  //       }
-  //     } else {
-  //       this.ctx.body = new this.ctx.helper._lack("roles");
-  //     }
-  //   } else {
-  //     this.ctx.body = new this.ctx.helper._lack(checkDataMsg);
-  //   }
-  // }
+  
   async register() {
     const { ctx, service } = this;
     const { checkDataRes, checkDataMsg } = new ctx.helper._checkData(

@@ -349,7 +349,7 @@ class CommonService extends Service {
 
     function fix(obj) {
       //去掉所有空的属性
-      Object.keys(obj).forEach((attr, index) => {
+      Object.keys(obj).forEach(attr => {
         if (obj[attr] instanceof Object) {
           if (obj[attr] instanceof Array) {
             if (!obj[attr].length) {
