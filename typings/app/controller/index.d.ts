@@ -11,6 +11,7 @@ import ExportPaper = require('../../../app/controller/paper');
 import ExportRecord = require('../../../app/controller/record');
 import ExportReservation = require('../../../app/controller/reservation');
 import ExportReservationType = require('../../../app/controller/reservationType');
+import ExportTest = require('../../../app/controller/test');
 import ExportType = require('../../../app/controller/type');
 import ExportUser = require('../../../app/controller/user');
 
@@ -25,6 +26,7 @@ declare module 'egg' {
     record: ExportRecord;
     reservation: ExportReservation;
     reservationType: ExportReservationType;
+    test: ExportTest;
     type: ExportType;
     user: ExportUser;
   }

@@ -11,6 +11,7 @@ import ExportLogin = require('../../../app/service/login');
 import ExportPaper = require('../../../app/service/paper');
 import ExportRecord = require('../../../app/service/record');
 import ExportReservation = require('../../../app/service/reservation');
+import ExportUser = require('../../../app/service/user');
 
 declare module 'egg' {
   interface IService {
@@ -19,5 +20,6 @@ declare module 'egg' {
     paper: AutoInstanceType<typeof ExportPaper>;
     record: AutoInstanceType<typeof ExportRecord>;
     reservation: AutoInstanceType<typeof ExportReservation>;
+    user: AutoInstanceType<typeof ExportUser>;
   }
 }

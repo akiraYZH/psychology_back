@@ -61,7 +61,7 @@ module.exports =app => {
   // console.log(app.model);
   // app.model.models.p_user.belongsTo(app.model.models.p_role,{foreignKey:"role_id"});
   p_user.associate=function(){
-    app.model.Tables.PUser.belongsTo(app.model.Tables.PRole,{foreignKey:"role_id", onDelete:"SET NULL"});
+    app.model.Tables.PUser.belongsTo(app.model.Tables.PRole,{foreignKey:"role_id", onDelete:"SET NULL", as:"roles"});
     app.model.Tables.PUser.hasMany(app.model.Tables.PReservation,{foreignKey:"from_id"});
     app.model.Tables.PUser.hasMany(app.model.Tables.PReservation,{foreignKey:"to_id"});
     app.model.Tables.PUser.hasMany(app.model.Tables.PRecord,{foreignKey:"operator_id"});

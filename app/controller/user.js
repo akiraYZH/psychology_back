@@ -30,11 +30,9 @@ class UserController extends Controller {
     const { ctx } = this;
     console.log(ctx.body);
     console.log(ctx.query);
-    try {
-      ctx.body = new ctx.helper._success(ctx.redisData.userInfo);
-    } catch (e) {
-      ctx.body = new ctx.helper._notLogin();
-    }
+    console.log(ctx.headers);
+    const result = await this.service.user.userInfo();
+    ctx.body = result;
   }
   /**
    * @api {Post} /user/logout 登出
@@ -63,96 +61,30 @@ class UserController extends Controller {
   /**
    * @api {Get} /api/user/userDetail 获取用户详情
    * @apiGroup User
-   * @apiParam {String} account 用户名
+   * @apiParam {Header:token} token
    * @apiSuccessExample  成功返回
-   * {
-   *  "code": 1,
-   *  "msg": "成功操作",
-   *  "data": {
-   *      "id": 1,
-   *      "roles": "admin",
-   *      "account": "admin",
-   *      "password": "123456",
-   *      "gender": 1,
-   *      "name": "admin",
-   *      "birthday": null,
-   *      "phone": "110",
-   *      "avatar": "https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif"
-   *  }
-   * }
+   {
+    "code": 1,
+    "msg": "成功操作",
+    "data": {
+        "id": 1,
+        "roles": {
+            "id": 1,
+            "name": "admin"
+        },
+        "account": "admin",
+        "password": "123456",
+        "gender": 1,
+        "name": null,
+        "birthday": null,
+        "phone": null,
+        "avatar": null
+    }
+}
    */
   async userDetail() {
     const { ctx, service } = this;
-    const { checkDataRes, checkDataMsg } = new ctx.helper._checkData(
-      ctx,
-      "account"
-    );
-
-    if (checkDataRes) {
-      console.log(ctx.request.body);
-      const result = await service.common.get("p_user", {
-        account: ctx.query.account,
-        status: 1,
-      });
-      console.log(result);
-      
-      if (result) {
-        const {
-          id,
-          roles,
-          account,
-          password,
-          name,
-          gender,
-          birthday,
-          phone,
-          avatar,
-          is_marry,
-          job,
-          urgent_name,
-          urgent_relation,
-          urgent_phone,
-          visitor_id,
-        } = result;
-        // console.log(roles);
-
-        if (roles == "admin" || roles == "doctor" || roles == "worker") {
-          this.ctx.body = new this.ctx.helper._success({
-            id,
-            roles,
-            account,
-            password,
-            gender,
-            name,
-            birthday,
-            phone,
-            avatar,
-          });
-        } else {
-          this.ctx.body = new this.ctx.helper._success({
-            id,
-            roles,
-            account,
-            password,
-            name,
-            gender,
-            birthday,
-            phone,
-            avatar,
-            is_marry,
-            job,
-            urgent_name,
-            urgent_relation,
-            urgent_phone,
-            visitor_id,
-          });
-        }
-      } else {
-        this.ctx.body = new this.ctx.helper._error("获得用户信息失败");
-      }
-    } else {
-      this.ctx.body = new this.ctx.helper._lack(checkDataMsg);
-    }
+    ctx.body = await service.user.userDetail();
   }
 
   //获取用户列表
@@ -301,13 +233,13 @@ class UserController extends Controller {
    *      "insertId": 7
    *    }
    * }
-   * 
+   *
    * @apiErrorExample 错误返回
    * {
    *  "code":0,
    *  "msg":"注册失败"
    * }
-   * 
+   *
    */
   async register() {
     const { ctx, service } = this;
@@ -385,8 +317,6 @@ class UserController extends Controller {
     } else {
       ctx.body = new this.ctx.helper._error(checkRes.msg);
     }
-
-    
   }
 
   //成员修改
@@ -395,7 +325,7 @@ class UserController extends Controller {
    * @apiGroup User
    * @apiParam {String} account 用户账号
    * @apiParam {String} phone （可选）电话
-   * @apiParam {String} password （可选）电话， 
+   * @apiParam {String} password （可选）电话，
    * @apiParam {String} name （可选）昵称
    * @apiParam {String} avatar （可选）用户头像地址
    * @apiParam {String} justice_id （可选）监狱id
@@ -407,9 +337,9 @@ class UserController extends Controller {
    * @apiParam {String} urgent_relation （可选）紧急联系人关系
    * @apiParam {String} urgent_phone （可选）紧急联系人电话
    * @apiParam {String} roles （可选）权限
-   * 
    *
-   * 
+   *
+   *
    * @apiSuccessExample 成功返回
    * {
    *    code:1,

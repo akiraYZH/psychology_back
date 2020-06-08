@@ -150,7 +150,7 @@
     },
     "cors": {
       "origin": "*",
-      "allowMethods": "GET,POST"
+      "allowMethods": "GET,POST,PUT,DELETE"
     },
     "mysql": {
       "default": {
