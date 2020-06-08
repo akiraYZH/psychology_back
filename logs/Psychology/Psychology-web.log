@@ -345,3 +345,10 @@ hostname: yudeMacBook-Pro.local
 2020-06-08 11:54:21,697 INFO 6835 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`status` = 1 LIMIT 1;
 2020-06-08 12:12:26,245 INFO 7258 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
 2020-06-08 12:13:45,628 INFO 7298 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:41:25,410 INFO 9467 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:50:42,427 INFO 9560 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:54:51,074 INFO 9605 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:55:18,863 INFO 9629 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:56:42,551 INFO 9662 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:02:13,398 INFO 9726 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:10:20,475 INFO 9840 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result

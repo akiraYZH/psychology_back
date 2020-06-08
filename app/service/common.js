@@ -326,6 +326,37 @@ class CommonService extends Service {
     }
   }
 
+
+  async selectWithPagging(model, options){
+
+    model.find
+
+    function validate(obj){
+      //去掉所有空的属性
+      for(val in obj){
+        if(obj[val] instanceof Object){
+          if(obj[val] instanceof Array){
+            if(!obj[val].length){
+              delete obj[val];
+            }
+          }else{
+            if(JSON.stringify(obj)=="{}"){
+              delete obj[val]
+            }else{
+              check(obj[val])
+            }
+          }
+        }else{
+          if(obj[val]==undefined||obj[val]==null||obj[val]==""){
+            delete obj[val];
+          }
+        }
+      }
+
+      return obj;
+    }
+
+  }
   async update(db, param = null, condition = null) {
     // console.log(sql);
     try {

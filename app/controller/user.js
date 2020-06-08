@@ -28,9 +28,6 @@ class UserController extends Controller {
    */
   async userInfo() {
     const { ctx } = this;
-    console.log(ctx.body);
-    console.log(ctx.query);
-    console.log(ctx.headers);
     const result = await this.service.user.userInfo();
     ctx.body = result;
   }
