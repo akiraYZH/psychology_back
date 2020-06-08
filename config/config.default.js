@@ -51,6 +51,7 @@ module.exports = appInfo => {
     
   };
 
+  const Op = require('sequelize').Op;
   config.sequelize = {
     dialect: 'mysql',
     host: '127.0.0.1',
@@ -62,7 +63,48 @@ module.exports = appInfo => {
       // 字段以下划线（_）来分割（默认是驼峰命名风格）
       underscored: true,
     },
+    // 使用默认运算符别名
+    operatorsAliases:{
+      $eq: Op.eq,
+      $ne: Op.ne,
+      $gte: Op.gte,
+      $gt: Op.gt,
+      $lte: Op.lte,
+      $lt: Op.lt,
+      $not: Op.not,
+      $in: Op.in,
+      $notIn: Op.notIn,
+      $is: Op.is,
+      $like: Op.like,
+      $notLike: Op.notLike,
+      $iLike: Op.iLike,
+      $notILike: Op.notILike,
+      $regexp: Op.regexp,
+      $notRegexp: Op.notRegexp,
+      $iRegexp: Op.iRegexp,
+      $notIRegexp: Op.notIRegexp,
+      $between: Op.between,
+      $notBetween: Op.notBetween,
+      $overlap: Op.overlap,
+      $contains: Op.contains,
+      $contained: Op.contained,
+      $adjacent: Op.adjacent,
+      $strictLeft: Op.strictLeft,
+      $strictRight: Op.strictRight,
+      $noExtendRight: Op.noExtendRight,
+      $noExtendLeft: Op.noExtendLeft,
+      $and: Op.and,
+      $or: Op.or,
+      $any: Op.any,
+      $all: Op.all,
+      $values: Op.values,
+      $col: Op.col
+    },
   };
+
+
+
+
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',

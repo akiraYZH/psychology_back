@@ -88,7 +88,7 @@ class UserController extends Controller {
   /**
    * @api {Get} /api/user/userList 获取用户列表
    * @apiGroup User
-   * @apiParam {String} roles （可选）精准查询 用户权限：admin，doctor， worker， criminal，visitor
+   * @apiParam {String} role_id（可选）精准查询 用户权限id
    * @apiParam {String} account （可选）模糊查询 账号
    * @apiParam {Number} page_now （可选）当前页，默认为1
    * @apiParam {Number} num_in_page （可选）页面内显示个数，默认为10
@@ -97,123 +97,27 @@ class UserController extends Controller {
    {
     "code": 1,
     "msg": "成功操作",
-    "data": {
-        "is_success": true,
-        "page_total": 4,
-        "page_now": 1,
-        "num_in_page": 10,
-        "list": [
-            {
-                "roles": "admin",
-                "account": "admin",
-                "name": "admin",
-                "gender": 1
-            },
-            {
-                "roles": "doctor",
-                "account": "doctor",
-                "name": "editor",
-                "gender": 1
-            },
-            {
-                "roles": "worker",
-                "account": "worker",
-                "name": "worker",
-                "gender": 1
-            },
-            {
-                "roles": "visitor",
-                "account": "visitor",
-                "name": "visitor",
-                "gender": 1
-            },
-            {
-                "roles": "criminal",
-                "account": "fuxing",
-                "name": "crimial",
-                "gender": 1
-            },
-            {
-                "roles": "visitor",
-                "account": "visitor1",
-                "name": null,
-                "gender": 1
-            },
-            {
-                "roles": "visitor",
-                "account": "visitor2",
-                "name": null,
-                "gender": 1
-            },
-            {
-                "roles": "visitor",
-                "account": "ddd",
-                "name": null,
-                "gender": 1
-            },
-            {
-                "roles": "visitor",
-                "account": "ddf",
-                "name": null,
-                "gender": 1
-            },
-            {
-                "roles": "visitor",
-                "account": "fff",
-                "name": null,
-                "gender": 1
+    "data": [
+        {
+            "account": "admin",
+            "name": null,
+            "gender": 1,
+            "roles": {
+                "id": 1,
+                "name": "admin"
             }
-        ]
+        }
+    ],
+    "pagging": {
+        "size": 3,
+        "current": 1,
+        "total": 1
     }
 }
    */
   async userList() {
     const { ctx, service } = this;
-
-    // console.log(ctx.query.roles)
-    let result = null;
-    if (ctx.query.roles) {
-      //按照角色精准查询
-      result = await service.common.selectPagination(
-        "p_user",
-        {
-          roles: ctx.query.roles,
-          status: 1,
-          page_now: ctx.query.page_now,
-          num_in_page: ctx.query.num_in_page,
-        },
-        ["roles", "account", "name", "gender"]
-      );
-    } else if (ctx.query.account) {
-      //根据账号模糊查询
-      result = await service.common.selectPagination(
-        "p_user",
-        {
-          account: ctx.query.account,
-          status: 1,
-          page_now: ctx.query.page_now,
-          num_in_page: ctx.query.num_in_page,
-        },
-        ["roles", "account", "name", "gender"],
-        true
-      );
-    } else {
-      result = await service.common.selectPagination(
-        "p_user",
-        {
-          status: 1,
-          page_now: ctx.query.page_now,
-          num_in_page: ctx.query.num_in_page,
-        },
-        ["roles", "account", "name", "gender"]
-      );
-    }
-
-    if (result.is_success) {
-      this.ctx.body = new this.ctx.helper._success(result);
-    } else {
-      this.ctx.body = new this.ctx.helper._error("查找不到用户");
-    }
+    ctx.body = await service.user.userList();
   }
 
   /**

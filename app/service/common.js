@@ -85,13 +85,15 @@ class CommonService extends Service {
       // 加联表条件
       sql += " AND " + ons.join(" AND ");
     }
-    let sqlCount=sql;
+    let sqlCount = sql;
     sql += ` LIMIT ${(page_now - 1) * num_in_page},${num_in_page}`;
     console.log(sql);
 
     try {
       let result = await this.app.mysql.query(sql);
-      let count = await this.app.mysql.query(sqlCount).then(res=>res.length);
+      let count = await this.app.mysql
+        .query(sqlCount)
+        .then((res) => res.length);
       let page_total = Math.ceil(count / num_in_page);
       console.log(result);
 
@@ -192,14 +194,16 @@ class CommonService extends Service {
       // 加联表条件
       sql += " AND " + ons.join(" AND ");
     }
-    let sqlCount=sql;
+    let sqlCount = sql;
 
     sql += ` LIMIT ${(page_now - 1) * num_in_page},${num_in_page}`;
     console.log(sql);
 
     try {
       let result = await this.app.mysql.query(sql);
-      let count = await this.app.mysql.query(sqlCount).then(res=>res.length);
+      let count = await this.app.mysql
+        .query(sqlCount)
+        .then((res) => res.length);
 
       let page_total = Math.ceil(count / num_in_page);
 
@@ -227,7 +231,7 @@ class CommonService extends Service {
     param = null,
     columns = [],
     search = null,
-    joins = []
+    joins = [],
   }) {
     let conditionArr = [];
     let condition = "";
@@ -301,14 +305,16 @@ class CommonService extends Service {
     //   // 加联表条件
     //   sql += " AND " + ons.join(" AND ");
     // }
-    let sqlCount=sql;
+    let sqlCount = sql;
 
     sql += ` LIMIT ${(page_now - 1) * num_in_page},${num_in_page}`;
     console.log(sql);
 
     try {
       let result = await this.app.mysql.query(sql);
-      let count = await this.app.mysql.query(sqlCount).then(res=>res.length);
+      let count = await this.app.mysql
+        .query(sqlCount)
+        .then((res) => res.length);
 
       let page_total = Math.ceil(count / num_in_page);
 
@@ -326,36 +332,54 @@ class CommonService extends Service {
     }
   }
 
+  async selectWithPagging(model, options) {
+    let fixed = fix(options);
+    let result = await model.findAndCountAll(fixed);
+    let current = Number(options.offset) / Number(options.offset) + 1;
+    console.log(fixed,9999999999);
 
-  async selectWithPagging(model, options){
+    let res = {
+      pagging: {
+        size: options.limit,
+        current: current || 1,
+        total: result.count,
+      },
+      data: result.rows,
+    };
+    return res;
 
-    model.find
-
-    function validate(obj){
+    function fix(obj) {
       //去掉所有空的属性
-      for(val in obj){
-        if(obj[val] instanceof Object){
-          if(obj[val] instanceof Array){
-            if(!obj[val].length){
-              delete obj[val];
+      Object.keys(obj).forEach((attr, index) => {
+        if (obj[attr] instanceof Object) {
+          if (obj[attr] instanceof Array) {
+            if (!obj[attr].length) {
+              delete obj[attr];
             }
-          }else{
-            if(JSON.stringify(obj)=="{}"){
-              delete obj[val]
-            }else{
-              check(obj[val])
+          } else {
+            if (attr != "model") {
+              if (JSON.stringify(obj[attr]) == "{}") {
+                delete obj[attr];
+              } else {
+                fix(obj[attr]);
+              }
             }
           }
-        }else{
-          if(obj[val]==undefined||obj[val]==null||obj[val]==""){
-            delete obj[val];
+        } else {
+          
+          if (obj[attr] == undefined || obj[attr] == null || obj[attr] == "") {
+            
+            delete obj[attr];
+          }else if(typeof obj[attr]=="string"){
+            if(obj[attr].indexOf("undefined")!=-1||obj[attr].indexOf("null")!=-1){
+              obj[attr]="%%";
+            }
           }
         }
-      }
+      });
 
       return obj;
     }
-
   }
   async update(db, param = null, condition = null) {
     // console.log(sql);
@@ -378,11 +402,10 @@ class CommonService extends Service {
     let hasError = false;
     for (let i = 0; i < list.length; i++) {
       try {
-        let res=await conn.insert(db, list[i]);
+        let res = await conn.insert(db, list[i]);
         console.log(db);
-        
+
         console.log(res);
-        
       } catch (e) {
         console.log(e, 123);
 
@@ -392,7 +415,6 @@ class CommonService extends Service {
       }
     }
 
-    
     if (!hasError) {
       //commit才会确定修改
       await conn.commit();

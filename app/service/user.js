@@ -1,4 +1,6 @@
 const Service = require("egg").Service;
+const Op = require('sequelize').Op;
+
 
 class UserService extends Service {
   async userInfo() {
@@ -20,7 +22,7 @@ class UserService extends Service {
   }
 
   async userDetail() {
-    const { PUser,PRole } = this.app.model.Tables;
+    const { PUser, PRole } = this.app.model.Tables;
     const token = this.ctx.headers.token;
     let redisData = "";
     try {
@@ -35,11 +37,13 @@ class UserService extends Service {
         account: redisData.userInfo.account,
         status: 1,
       },
-      include:[{
-          model:PRole,
-          attributes:["id","name"],
-          as:"roles"
-      }]
+      include: [
+        {
+          model: PRole,
+          attributes: ["id", "name"],
+          as: "roles",
+        },
+      ],
     });
     console.log(result.dataValues);
 
@@ -63,8 +67,12 @@ class UserService extends Service {
       } = result.dataValues;
       // console.log(roles);
 
-      if (roles.dataValues.name == "admin" || roles.dataValues.name == "doctor" || roles.dataValues.name == "worker") {
-        this.ctx.status=200;
+      if (
+        roles.dataValues.name == "admin" ||
+        roles.dataValues.name == "doctor" ||
+        roles.dataValues.name == "worker"
+      ) {
+        this.ctx.status = 200;
         return new this.ctx.helper._success({
           id,
           roles,
@@ -77,7 +85,7 @@ class UserService extends Service {
           avatar,
         });
       } else {
-        this.ctx.status=200;
+        this.ctx.status = 200;
         return new this.ctx.helper._success({
           id,
           roles,
@@ -97,27 +105,43 @@ class UserService extends Service {
         });
       }
     } else {
-        this.ctx.status=500;
-        return new this.ctx.helper._error("获得用户信息失败");
+      this.ctx.status = 500;
+      return new this.ctx.helper._error("获得用户信息失败");
     }
   }
 
-
   async userList() {
-    const token = this.ctx.headers.token;
-    console.log(token);
+    const { ctx, service } = this;
+    const { PUser, PRole } = this.app.model.Tables;
 
     try {
-      const redisData = await this.ctx.helper._getRedis(token);
 
-      this.ctx.status = 200;
-      return new this.ctx.helper._success({
-        token: token,
-        roles: redisData.userInfo.roles.name,
+      const result = await service.common.selectWithPagging(PUser, {
+        where: {
+          role_id: ctx.query.role_id,
+          account: { $like: `%${ctx.query.account}%` },
+          status:1
+        },
+        attributes:["account","name","gender"],
+        offset: Number(ctx.query.now_page)
+          ? (Number(ctx.query.now_page) - 1) * Number(ctx.query.now_page)
+          : 0,
+        limit: Number(ctx.query.num_in_page) || 10,
+        include: {
+          model: PRole,
+          attributes: ["id", "name"],
+          as: "roles",
+        },
       });
+      ctx.status=200;
+      let template=new ctx.helper._success();
+      return Object.assign(template, result);
+      
     } catch (e) {
-      this.ctx.status = 401;
-      return new this.ctx.helper._notLogin();
+      console.log(e);
+
+      this.ctx.status = 500;
+      return new this.ctx.helper._error();
     }
   }
 }
