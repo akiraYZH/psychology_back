@@ -351,3 +351,38 @@ name: "ClusterClientNoResponseError"
 pid: 4005
 hostname: yudeMacBook-Pro.local
 
+2020-06-08 18:50:14,648 ERROR 12927 nodejs.ClusterClientNoResponseError: client no response in 1419569ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 12927
+hostname: yudeMacBook-Pro.local
+
+2020-06-08 19:05:16,320 ERROR 14625 [-/::1/-/2ms POST /api/user/register] nodejs.TypeError: service.user.register is not a function
+    at UserController.register (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:187:44)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+
+pid: 14625
+hostname: yudeMacBook-Pro.local
+

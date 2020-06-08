@@ -136,13 +136,31 @@ class UserService extends Service {
       ctx.status=200;
       let template=new ctx.helper._success();
       return Object.assign(template, result);
-      
+
     } catch (e) {
       console.log(e);
 
       this.ctx.status = 500;
       return new this.ctx.helper._error();
     }
+  }
+
+  async register(){
+    const { PUser } = this.app.model.Tables;
+    try {
+      const result = await PUser.create(this.ctx.request.body);
+      // console.log(result.dataValues.id);
+      this.ctx.status = 200;
+      return new this.ctx.helper._success("成功注册",{
+        insertId:result.dataValues.id
+      });
+
+    } catch (error) {
+      // console.log(error.errors);
+      this.ctx.status = 500;
+      return new this.ctx.helper._error(error.name);
+    }
+
   }
 }
 

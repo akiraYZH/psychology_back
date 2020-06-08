@@ -142,35 +142,52 @@ class UserController extends Controller {
    * }
    *
    */
+  // async register() {
+  //   const { ctx, service } = this;
+  //   const { checkDataRes, checkDataMsg } = new ctx.helper._checkData(
+  //     ctx,
+  //     "account",
+  //     "password",
+  //     "roles"
+  //   );
+
+  //   console.log(ctx.request.body);
+
+  //   if (checkDataRes) {
+  //     if (rolesList.includes(ctx.request.body.roles)) {
+  //       let result = await service.common.insert("p_user", ctx.request.body);
+  //       // console.log(result);
+  //       if (result.affectedRows) {
+  //         ctx.body = new this.ctx.helper._success("成功注册", {
+  //           insertId: result.insertId,
+  //         });
+  //       } else if (result.msg) {
+  //         this.ctx.body = new this.ctx.helper._error(result.msg);
+  //       } else {
+  //         this.ctx.body = new this.ctx.helper._error("注册失败");
+  //       }
+  //     } else {
+  //       this.ctx.body = new this.ctx.helper._lack("roles");
+  //     }
+  //   } else {
+  //     this.ctx.body = new this.ctx.helper._lack(checkDataMsg);
+  //   }
+  // }
   async register() {
     const { ctx, service } = this;
     const { checkDataRes, checkDataMsg } = new ctx.helper._checkData(
       ctx,
       "account",
       "password",
-      "roles"
+      "role_id",
+      "phone"
     );
 
     console.log(ctx.request.body);
-
     if (checkDataRes) {
-      if (rolesList.includes(ctx.request.body.roles)) {
-        let result = await service.common.insert("p_user", ctx.request.body);
-        // console.log(result);
-        if (result.affectedRows) {
-          ctx.body = new this.ctx.helper._success("成功注册", {
-            insertId: result.insertId,
-          });
-        } else if (result.msg) {
-          this.ctx.body = new this.ctx.helper._error(result.msg);
-        } else {
-          this.ctx.body = new this.ctx.helper._error("注册失败");
-        }
-      } else {
-        this.ctx.body = new this.ctx.helper._lack("roles");
-      }
+      this.ctx.body = await service.user.register();
     } else {
-      this.ctx.body = new this.ctx.helper._lack(checkDataMsg);
+      this.ctx.body = new this.ctx.helper._lack("role_id");
     }
   }
 

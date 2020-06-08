@@ -559,3 +559,54 @@ hostname: yudeMacBook-Pro.local
 2020-06-08 17:54:47,085 INFO 13744 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`name`, `p_user`.`gender`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%' AND `p_user`.`status` = 1 LIMIT 3;
 2020-06-08 17:55:32,558 INFO 13766 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
 2020-06-08 17:56:03,872 INFO 13790 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 18:07:54,829 INFO 13998 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:01:43,659 INFO 14625 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:05:16,327 ERROR 14625 [-/::1/-/2ms POST /api/user/register] nodejs.TypeError: service.user.register is not a function
+    at UserController.register (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:187:44)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+
+pid: 14625
+hostname: yudeMacBook-Pro.local
+
+2020-06-08 19:05:42,994 INFO 14676 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:05:44,177 INFO 14691 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:05:45,853 INFO 14691 [egg-sequelize](34ms) Executed (default): INSERT INTO `p_user` (`id`,`account`,`password`,`gender`,`justice_id`,`parent_id`,`is_marry`,`role_id`,`status`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2020-06-08 19:06:02,760 INFO 14691 [egg-sequelize](6ms) Executed (default): INSERT INTO `p_user` (`id`,`account`,`password`,`gender`,`justice_id`,`parent_id`,`is_marry`,`role_id`,`status`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2020-06-08 19:06:38,991 WARN 14691 [-/::1/-/1ms POST /api/user/register] nodejs.SyntaxError: Unexpected token } in JSON at position 59, check bodyParser config
+    at JSON.parse (<anonymous>)
+    at parse (/Users/yuakira/dev/projects/Psychology2/node_modules/co-body/lib/json.js:57:17)
+    at AsyncFunction.module.exports [as json] (/Users/yuakira/dev/projects/Psychology2/node_modules/co-body/lib/json.js:41:20)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async parseBody (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:100:14)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:85:19)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+status: 400
+body: "{\n\t\"account\":\"664752\",\n\t\"password\":\"123456\",\n\t\"role_id\":2,\n}"
+pid: 14691
+hostname: yudeMacBook-Pro.local
+
+2020-06-08 19:07:03,614 INFO 14691 [egg-sequelize](5ms) Executed (default): INSERT INTO `p_user` (`id`,`account`,`password`,`gender`,`justice_id`,`parent_id`,`is_marry`,`role_id`,`status`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2020-06-08 19:10:48,275 INFO 14742 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result

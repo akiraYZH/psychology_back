@@ -336,7 +336,6 @@ class CommonService extends Service {
     let fixed = fix(options);
     let result = await model.findAndCountAll(fixed);
     let current = Number(options.offset) / Number(options.offset) + 1;
-    console.log(fixed,9999999999);
 
     let res = {
       pagging: {
