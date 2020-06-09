@@ -10,7 +10,7 @@ module.exports = async (app) => {
     
     
    
-  
+  //已经修改
   router.post(preRouter + '/login/login', controller.login.login);
   router.get(preRouter + '/user/userInfo', controller.user.userInfo);
   router.post(preRouter + '/user/logout', controller.user.logout);
@@ -23,14 +23,15 @@ module.exports = async (app) => {
 
   router.get(preRouter + '/reservation/getList', controller.reservation.getList);
   router.post(preRouter + '/reservation/addReservation', controller.reservation.addReservation);
-  router.post(preRouter + '/reservation/modify', controller.reservation.modify);
-  router.post(preRouter + '/reservation/del', controller.reservation.del);
+  router.put(preRouter + '/reservation/modify', controller.reservation.modify);
+  router.delete(preRouter + '/reservation/del', controller.reservation.del);
 
-  router.post(preRouter + '/reservation_type/add', controller.reservationType.add);
-  router.get(preRouter + '/reservation_type/getList', controller.reservationType.getList);
-  router.post(preRouter + '/reservation_type/update', controller.reservationType.update);
-  router.post(preRouter + '/reservation_type/del', controller.reservationType.del);
-  // router.post(preRouter + '/member/userInfo', controller.member.userInfo);
+  //已经修改
+  router.post(preRouter + '/reservationType/add', controller.reservationType.add);
+  router.get(preRouter + '/reservationType/getList', controller.reservationType.getList);
+  router.put(preRouter + '/reservationType/update', controller.reservationType.update);
+  router.delete(preRouter + '/reservationType/del', controller.reservationType.del);
+  
   router.post(preRouter + '/exercise/add', controller.exercise.add);
   router.post(preRouter + '/exercise/multiAdd', controller.exercise.multiAdd);
   router.post(preRouter + '/exercise/getList', controller.exercise.getList);
@@ -57,11 +58,13 @@ module.exports = async (app) => {
   router.post(preRouter + '/distribution/update', controller.distribution.update);
   router.post(preRouter + '/distribution/del', controller.distribution.del);
 
+  //已经修改
   router.post(preRouter + '/msg/add', controller.message.add);
-  router.post(preRouter + '/msg/getList', controller.message.getList);
-  router.post(preRouter + '/msg/update', controller.message.update);
-  router.post(preRouter + '/msg/del', controller.message.del);
+  router.get(preRouter + '/msg/getList', controller.message.getList);
+  router.put(preRouter + '/msg/update', controller.message.update);
+  router.delete(preRouter + '/msg/del', controller.message.del);
 
+  //已经修改
   router.get(preRouter+'/type/getList', controller.type.getList);
   
   router.get(preRouter+'/test/get', controller.test.get);

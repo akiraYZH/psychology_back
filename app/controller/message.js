@@ -1,7 +1,6 @@
 "use strict";
 
 const Controller = require("egg").Controller;
-console.log(123);
 const checkData = require("../utils/checkData2");
 class MessageController extends Controller {
   /**
@@ -12,7 +11,12 @@ class MessageController extends Controller {
     "code": 1,
     "msg": "成功操作",
     "data": {
-        "insertId": 3
+        "state": 0,
+        "status": 1,
+        "id": 2,
+        "from_id": "-1",
+        "to_id": "1",
+        "content": "test msg"
     }
 }
    * 
@@ -23,16 +27,7 @@ class MessageController extends Controller {
 
     let checkDataRes = checkData(ctx, "from_id", "to_id", "content");
     if (checkDataRes.is_pass) {
-      let result = await service.common.insert("p_msg", {
-        from_id: ctx.request.body.from_id,
-        to_id: ctx.request.body.to_id,
-        content: ctx.request.body.content,
-      });
-      if (result.affectedRows) {
-        ctx.body = new ctx.helper._success({ insertId: result.insertId });
-      } else {
-        ctx.body = new ctx.helper._error("暂无数据");
-      }
+      ctx.body = await service.message.add();
     } else {
       ctx.body = new ctx.helper._lack(checkDataRes.msg);
     }
@@ -95,46 +90,7 @@ class MessageController extends Controller {
    * 
    */
   async getList() {
-    const { ctx, service } = this;
-    console.log("msg add");
-
-    // let checkDataRes = checkData(ctx, "", "to_id", "content");
-    let result = await service.common.selectPaginationJoin({
-      db: "p_msg m",
-      param: {
-        "m.from_id": ctx.request.body.from_id,
-        "m.to_id": ctx.request.body.to_id,
-        "m.state": ctx.request.body.state,
-        page_now: ctx.request.body.page_now,
-        num_in_page: ctx.request.body.num_in_page,
-        "m.status": 1,
-      },
-      columns: [
-        "m.id",
-        "m.from_id",
-        "IF((m.from_id=-1),('system'),(u1.account)) AS from_account",
-        "IF((m.from_id=-1),('系统消息'),(u1.name)) AS from_name",
-        "m.to_id",
-        "u2.name AS to_name",
-        "m.content",
-        "m.state",
-      ],
-      search: {
-        from_account: ctx.request.body.from_account,
-        from_name: ctx.request.body.from_name,
-        to_name: ctx.request.body.to_name,
-      },
-      joins: [
-        "LEFT JOIN p_user u1 ON m.from_id=u1.id",
-        "LEFT JOIN p_user u2 ON m.to_id=u2.id",
-      ],
-    });
-
-    if (result.is_success) {
-      ctx.body = new ctx.helper._success(result);
-    } else {
-      ctx.body = new ctx.helper._error("暂无数据");
-    }
+    this.ctx.body = await this.service.message.getList();
   }
 
   /**
@@ -165,24 +121,8 @@ class MessageController extends Controller {
       "state"
     );
     if (checkDataRes.is_pass) {
-        let result = await service.common.update(
-            "p_msg",
-            {
-              from_id: ctx.request.body.from_id,
-              to_id: ctx.request.body.to_id,
-              content: ctx.request.body.content,
-              state: ctx.request.body.state,
-            },
-            {
-              id: ctx.request.body.id,
-              status: 1,
-            }
-          );
-      if (result.affectedRows) {
-        ctx.body = new ctx.helper._success();
-      } else {
-        ctx.body = new ctx.helper._error();
-      }
+      let body = ctx.request.body;
+      ctx.body = await service.message.update(body);
     } else {
       ctx.body = new ctx.helper._lack(checkDataRes.msg);
     }
@@ -202,25 +142,10 @@ class MessageController extends Controller {
   async del() {
     const { ctx, service } = this;
 
-    let checkDataRes = checkData(
-      ctx,
-      "id"
-    );
+    let checkDataRes = checkData(ctx, "id");
     if (checkDataRes.is_pass) {
-      let result = await service.common.update(
-        "p_msg",
-        {
-          status: 0,
-        },
-        {
-          id: ctx.request.body.id
-        }
-      );
-      if (result.affectedRows) {
-        ctx.body = new ctx.helper._success();
-      } else {
-        ctx.body = new ctx.helper._error();
-      }
+      let query = ctx.query;
+      ctx.body = await service.message.del(query);
     } else {
       ctx.body = new ctx.helper._lack(checkDataRes.msg);
     }

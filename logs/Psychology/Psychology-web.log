@@ -765,3 +765,160 @@ hostname: yudeMacBook-Pro.local
 2020-06-09 15:44:39,990 INFO 10193 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
 2020-06-09 15:44:41,677 INFO 10207 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
 2020-06-09 15:44:50,518 INFO 10218 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:45:57,139 INFO 10352 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:58:44,138 INFO 10462 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:00:28,059 INFO 10497 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:00:46,610 INFO 10523 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:01:08,940 INFO 10549 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:01:22,068 INFO 10575 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:01:56,103 INFO 10603 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:02:22,761 INFO 10630 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:02:41,968 INFO 10651 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:03:13,521 INFO 10678 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:03:22,791 INFO 10699 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:03:26,208 INFO 10710 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:03:45,205 INFO 10724 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:07:03,271 INFO 10764 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:07:08,997 INFO 10781 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:07:58,536 INFO 10808 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:08:14,517 INFO 10836 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:10:12,536 INFO 10836 [egg-sequelize](4ms) Executed (default): INSERT INTO `p_msg` (`id`,`from_id`,`to_id`,`content`,`state`,`status`) VALUES (DEFAULT,?,?,?,?,?);
+2020-06-09 16:10:12,547 ERROR 10836 [-/::1/-/27ms POST /api/msg/add] nodejs.TypeError: Class constructor _error cannot be invoked without 'new'
+    at MessageService.add (/Users/yuakira/dev/projects/Psychology2/app/service/message.js:16:25)
+    at async MessageController.add (/Users/yuakira/dev/projects/Psychology2/app/controller/message.js:25:18)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 10836
+hostname: yudeMacBook-Pro.local
+
+2020-06-09 16:10:51,796 INFO 10880 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:10:54,267 INFO 10880 [egg-sequelize](4ms) Executed (default): INSERT INTO `p_msg` (`id`,`from_id`,`to_id`,`content`,`state`,`status`) VALUES (DEFAULT,?,?,?,?,?);
+2020-06-09 16:11:15,211 INFO 10909 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:24:18,687 INFO 11057 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:24:49,755 INFO 11089 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:25:16,049 INFO 11116 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:25:33,624 INFO 11137 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:25:54,179 INFO 11165 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:26:12,124 INFO 11186 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:26:38,867 INFO 11215 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:44:02,519 INFO 11351 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:44:08,863 INFO 11370 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:44:28,377 INFO 11390 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:45:39,754 INFO 11441 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:46:42,124 INFO 11505 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:47:04,091 INFO 11521 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:48:29,136 INFO 11558 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:48:45,195 INFO 11584 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:49:12,618 INFO 11608 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:49:14,404 INFO 11619 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:49:27,765 INFO 11630 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:50:32,482 INFO 11661 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:50:34,838 INFO 11672 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:51:33,707 INFO 11689 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:51:36,593 INFO 11700 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:51:45,181 INFO 11727 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:51:58,574 INFO 11738 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:52:11,124 INFO 11759 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:52:36,908 INFO 11783 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:52:42,193 INFO 11783 [egg-sequelize](9ms) Executed (default): UPDATE `p_msg` SET `from_id`=?,`to_id`=?,`content`=?,`state`=? WHERE `id` = ?
+2020-06-09 16:53:22,932 INFO 11815 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:53:26,156 INFO 11815 [egg-sequelize](3ms) Executed (default): UPDATE `p_msg` SET `from_id`=?,`to_id`=?,`content`=?,`state`=? WHERE `id` = ?
+2020-06-09 16:53:40,827 INFO 11815 [egg-sequelize](4ms) Executed (default): UPDATE `p_msg` SET `from_id`=?,`to_id`=?,`content`=?,`state`=? WHERE `id` = ?
+2020-06-09 16:54:00,501 INFO 11842 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:54:02,190 INFO 11842 [egg-sequelize](2ms) Executed (default): UPDATE `p_msg` SET `from_id`=?,`to_id`=?,`content`=?,`state`=? WHERE `id` = ?
+2020-06-09 16:55:58,108 INFO 11884 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:56:56,922 INFO 11917 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:57:07,683 INFO 11938 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 17:00:34,878 INFO 12000 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 17:00:54,719 INFO 12025 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 17:01:04,641 INFO 12046 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 17:02:14,511 INFO 12081 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 17:02:15,610 INFO 12081 [egg-sequelize](3ms) Executed (default): UPDATE `p_msg` SET `status`=? WHERE `id` = ?
+2020-06-09 17:02:39,474 INFO 12107 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:18:35,750 INFO 13073 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:19:14,488 INFO 13102 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:19:47,050 INFO 13135 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:19:53,649 INFO 13155 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:20:14,981 INFO 13200 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:20:49,942 INFO 13221 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:21:04,919 INFO 13242 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:22:23,120 INFO 13286 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:22:34,734 INFO 13307 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:24:17,365 INFO 13348 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:24:38,792 INFO 13370 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:24:53,495 INFO 13401 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:26:03,603 INFO 13401 [egg-sequelize](8ms) Executed (default): INSERT INTO `p_reservation_type` (`id`,`type_name`,`description`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-09 19:26:39,227 INFO 13434 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:26:39,333 INFO 13434 [egg-sequelize](3ms) Executed (default): INSERT INTO `p_reservation_type` (`id`,`type_name`,`description`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-09 19:27:01,752 INFO 13462 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:28:13,654 INFO 13495 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:30:10,672 INFO 13565 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:30:14,442 INFO 13583 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:31:07,001 INFO 13613 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:31:19,367 INFO 13637 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:31:59,902 INFO 13673 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:32:00,344 INFO 13673 [egg-sequelize](2ms) Executed (default): SELECT `id`, `type_name`, `description`, `status` FROM `p_reservation_type` AS `p_reservation_type` WHERE `p_reservation_type`.`status` = 1;
+2020-06-09 19:32:50,269 INFO 13728 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:32:52,469 INFO 13728 [egg-sequelize](3ms) Executed (default): SELECT `id`, `type_name`, `description`, `status` FROM `p_reservation_type` AS `p_reservation_type` WHERE `p_reservation_type`.`status` = 1;
+2020-06-09 19:33:21,814 INFO 13773 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:33:33,022 INFO 13794 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:33:35,435 INFO 13794 [egg-sequelize](1ms) Executed (default): SELECT `id`, `type_name`, `description`, `status` FROM `p_reservation_type` AS `p_reservation_type` WHERE `p_reservation_type`.`status` = 1;
+2020-06-09 19:34:28,637 INFO 13822 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:34:29,455 INFO 13822 [egg-sequelize](1ms) Executed (default): SELECT `id,type_name`, `description` FROM `p_reservation_type` AS `p_reservation_type` WHERE `p_reservation_type`.`status` = 1;
+2020-06-09 19:34:51,178 INFO 13847 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:34:54,186 INFO 13847 [egg-sequelize](2ms) Executed (default): SELECT `id`, `type_name`, `description` FROM `p_reservation_type` AS `p_reservation_type` WHERE `p_reservation_type`.`status` = 1;
+2020-06-09 19:35:26,523 INFO 13895 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:35:35,971 INFO 13917 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:36:06,674 INFO 13941 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:36:11,132 INFO 13952 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:37:13,152 INFO 13987 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:38:26,158 INFO 14036 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:39:19,440 ERROR 14036 [-/::1/-/20ms PUT /api/reservationType/update] nodejs.ReferenceError: checkMsg is not defined
+    at ReservationTypeController.update (/Users/yuakira/dev/projects/Psychology2/app/controller/reservationType.js:82:39)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+
+pid: 14036
+hostname: yudeMacBook-Pro.local
+
+2020-06-09 19:40:01,047 INFO 14081 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:40:11,470 INFO 14081 [egg-sequelize](8ms) Executed (default): UPDATE `p_reservation_type` SET `type_name`=?,`description`=? WHERE `id` = ?
+2020-06-09 19:40:25,562 INFO 14081 [egg-sequelize](3ms) Executed (default): UPDATE `p_reservation_type` SET `type_name`=?,`description`=? WHERE `id` = ?
+2020-06-09 19:41:17,898 INFO 14122 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:42:03,483 INFO 14122 [egg-sequelize](3ms) Executed (default): UPDATE `p_msg` SET `status`=? WHERE `id` = ?
+2020-06-09 19:42:48,211 INFO 14167 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:42:50,748 INFO 14167 [egg-sequelize](2ms) Executed (default): UPDATE `p_msg` SET `status`=? WHERE `id` = ?
+2020-06-09 19:43:39,604 INFO 14201 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:43:41,785 INFO 14201 [egg-sequelize](5ms) Executed (default): UPDATE `p_reservation_type` SET `status`=? WHERE `id` = ?
+2020-06-09 19:44:20,049 INFO 14248 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result

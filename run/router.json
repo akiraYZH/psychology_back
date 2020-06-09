@@ -138,7 +138,7 @@
   {
     "name": null,
     "methods": [
-      "POST"
+      "PUT"
     ],
     "paramNames": [],
     "path": "/api/reservation/modify",
@@ -150,7 +150,7 @@
   {
     "name": null,
     "methods": [
-      "POST"
+      "DELETE"
     ],
     "paramNames": [],
     "path": "/api/reservation/del",
@@ -165,8 +165,8 @@
       "POST"
     ],
     "paramNames": [],
-    "path": "/api/reservation_type/add",
-    "regexp": "/^\\/api\\/reservation_type\\/add(?:\\/(?=$))?$/",
+    "path": "/api/reservationType/add",
+    "regexp": "/^\\/api\\/reservationType\\/add(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -178,8 +178,8 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/api/reservation_type/getList",
-    "regexp": "/^\\/api\\/reservation_type\\/getList(?:\\/(?=$))?$/",
+    "path": "/api/reservationType/getList",
+    "regexp": "/^\\/api\\/reservationType\\/getList(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -187,11 +187,11 @@
   {
     "name": null,
     "methods": [
-      "POST"
+      "PUT"
     ],
     "paramNames": [],
-    "path": "/api/reservation_type/update",
-    "regexp": "/^\\/api\\/reservation_type\\/update(?:\\/(?=$))?$/",
+    "path": "/api/reservationType/update",
+    "regexp": "/^\\/api\\/reservationType\\/update(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -199,11 +199,11 @@
   {
     "name": null,
     "methods": [
-      "POST"
+      "DELETE"
     ],
     "paramNames": [],
-    "path": "/api/reservation_type/del",
-    "regexp": "/^\\/api\\/reservation_type\\/del(?:\\/(?=$))?$/",
+    "path": "/api/reservationType/del",
+    "regexp": "/^\\/api\\/reservationType\\/del(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -491,7 +491,8 @@
   {
     "name": null,
     "methods": [
-      "POST"
+      "HEAD",
+      "GET"
     ],
     "paramNames": [],
     "path": "/api/msg/getList",
@@ -503,7 +504,7 @@
   {
     "name": null,
     "methods": [
-      "POST"
+      "PUT"
     ],
     "paramNames": [],
     "path": "/api/msg/update",
@@ -515,7 +516,7 @@
   {
     "name": null,
     "methods": [
-      "POST"
+      "DELETE"
     ],
     "paramNames": [],
     "path": "/api/msg/del",

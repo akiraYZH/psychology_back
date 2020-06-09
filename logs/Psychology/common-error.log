@@ -484,3 +484,50 @@ hostname: yudeMacBook-Pro.local
 pid: 10088
 hostname: yudeMacBook-Pro.local
 
+2020-06-09 16:10:12,541 ERROR 10836 [-/::1/-/27ms POST /api/msg/add] nodejs.TypeError: Class constructor _error cannot be invoked without 'new'
+    at MessageService.add (/Users/yuakira/dev/projects/Psychology2/app/service/message.js:16:25)
+    at async MessageController.add (/Users/yuakira/dev/projects/Psychology2/app/controller/message.js:25:18)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 10836
+hostname: yudeMacBook-Pro.local
+
+2020-06-09 19:39:19,437 ERROR 14036 [-/::1/-/20ms PUT /api/reservationType/update] nodejs.ReferenceError: checkMsg is not defined
+    at ReservationTypeController.update (/Users/yuakira/dev/projects/Psychology2/app/controller/reservationType.js:82:39)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+
+pid: 14036
+hostname: yudeMacBook-Pro.local
+
