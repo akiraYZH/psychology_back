@@ -719,3 +719,49 @@ hostname: yudeMacBook-Pro.local
 2020-06-09 14:58:04,142 INFO 9311 [egg-sequelize](2ms) Executed (default): UPDATE `p_user` SET `status`=? WHERE `id` = ?
 2020-06-09 14:58:54,631 INFO 9345 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
 2020-06-09 14:58:56,715 INFO 9345 [egg-sequelize](3ms) Executed (default): UPDATE `p_user` SET `status`=? WHERE `id` = ?
+2020-06-09 15:37:28,230 INFO 9827 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:37:56,293 INFO 9875 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:38:12,736 INFO 9902 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:38:26,189 INFO 9924 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:39:32,140 INFO 9958 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:39:35,798 INFO 9976 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:40:45,910 INFO 10006 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:40:56,867 INFO 10027 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:41:57,688 INFO 10058 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:42:48,602 INFO 10088 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:43:01,460 ERROR 10088 [-/::1/-/22ms GET /api/type/getList] nodejs.TypeError: PUser.get is not a function
+    at TypeService.getList (/Users/yuakira/dev/projects/Psychology2/app/service/type.js:7:30)
+    at TypeController.getList (/Users/yuakira/dev/projects/Psychology2/app/controller/type.js:61:45)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+
+pid: 10088
+hostname: yudeMacBook-Pro.local
+
+2020-06-09 15:43:30,175 INFO 10113 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:43:30,210 INFO 10113 [egg-sequelize](3ms) Executed (default): SELECT `id`, `account`, `phone`, `password`, `name`, `birthday`, `gender`, `avatar`, `criminal_id`, `justice_id`, `parent_id`, `is_marry`, `education`, `job`, `urgent_name`, `urgent_relation`, `urgent_phone`, `role_id`, `status` FROM `p_user` AS `p_user`;
+2020-06-09 15:43:47,200 INFO 10137 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:43:55,356 INFO 10148 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:43:59,781 INFO 10148 [egg-sequelize](3ms) Executed (default): SELECT `id`, `name`, `symtom_free`, `symtom_free_advice`, `low`, `low_advice`, `middle`, `middle_advice`, `high`, `high_advice`, `status` FROM `p_type` AS `p_type`;
+2020-06-09 15:44:18,471 INFO 10172 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:44:39,990 INFO 10193 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:44:41,677 INFO 10207 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:44:50,518 INFO 10218 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result

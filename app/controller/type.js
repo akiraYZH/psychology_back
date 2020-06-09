@@ -57,24 +57,9 @@ class TypeController extends Controller {
    * 
    */
   async getList() {
-    console.log(123);
 
-    const { ctx, service } = this;
-    let result = await service.common.select("p_type", "", ["id", "name"]);
-    result=result.filter(item=>{
-      if(item.name=='总分'){
-        return false;
-      }else{
-        return true;
-      }
-    })
-    console.log(result);
+    this.ctx.body = await this.service.type.getList();
     
-    if (result.length) {
-      ctx.body = new ctx.helper._success(result);
-    } else {
-      ctx.body = new ctx.helper._error('暂无数据');
-    }
     // this.ctx.body = new this.ctx.helper._notFound();
   }
 }
