@@ -94,12 +94,14 @@ function checkArrContentType(arr) {
 const checkData = (ctx, ...targetArr) => {
   let dataObj = {};
 
-  if (ctx.method === "POST") {
+  if (ctx.method === "POST"||ctx.method === "PUT") {
     dataObj = ctx.request.body;
-  } else if (ctx.method === "GET") {
+  } else if (ctx.method === "GET"||ctx.method === "DELETE") {
     dataObj = ctx.query;
   }
 
+  console.log(dataObj,123);
+  
   for (k of targetArr) {
     if (dataObj[k] == undefined || null) {
       // console.log(dataObj);

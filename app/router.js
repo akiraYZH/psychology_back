@@ -18,8 +18,8 @@ module.exports = async (app) => {
   router.get(preRouter + '/user/userList', controller.user.userList);
   router.post(preRouter + '/user/register', controller.user.register);
   router.post(preRouter + '/user/multiAdd', controller.user.multiAdd);
-  router.post(preRouter + '/user/userChange', controller.user.userChange);
-  router.post(preRouter + '/user/userDel', controller.user.userDel);
+  router.put(preRouter + '/user/userChange', controller.user.userChange);
+  router.delete(preRouter + '/user/userDel', controller.user.userDel);
 
   router.get(preRouter + '/reservation/getList', controller.reservation.getList);
   router.post(preRouter + '/reservation/addReservation', controller.reservation.addReservation);

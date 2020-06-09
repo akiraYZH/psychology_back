@@ -407,9 +407,11 @@ class CommonService extends Service {
         console.log(res);
       } catch (e) {
         console.log(e, 123);
-
+        // error=e;
+        
         hasError = true;
         await conn.rollback();
+        throw e;
         break;
       }
     }

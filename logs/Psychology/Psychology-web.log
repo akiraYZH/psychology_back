@@ -612,3 +612,110 @@ hostname: yudeMacBook-Pro.local
 2020-06-08 19:10:48,275 INFO 14742 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
 2020-06-08 19:11:55,393 INFO 14874 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
 2020-06-08 19:20:43,530 INFO 14960 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:51:18,094 INFO 15294 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:51:48,325 INFO 15328 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:52:27,285 INFO 15356 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:53:24,737 INFO 15388 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:57:08,257 INFO 15442 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:01:03,582 INFO 15522 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:01:33,023 INFO 15548 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:03:00,373 INFO 15586 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:03:25,738 INFO 15607 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:04:06,076 INFO 15639 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:05:16,860 INFO 15666 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:07:04,432 INFO 15705 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:07:10,562 INFO 15724 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:07:36,070 INFO 15740 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:07:43,286 INFO 15761 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:07:59,269 INFO 15775 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:08:14,891 INFO 15796 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:08:24,852 INFO 15817 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:09:36,629 INFO 15854 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 09:55:05,521 INFO 5563 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 09:57:30,630 INFO 5609 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 09:58:57,574 INFO 5654 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 09:58:58,596 INFO 5659 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:00:29,336 INFO 5700 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:02:59,674 INFO 5740 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:03:08,692 INFO 5761 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:03:59,934 INFO 5788 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:04:15,378 INFO 5816 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:05:09,397 INFO 5846 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:26:04,514 INFO 6368 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:26:08,963 INFO 6381 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:26:14,233 INFO 6395 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:29:50,300 INFO 6445 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:30:16,287 INFO 6470 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:30:27,802 INFO 6491 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:31:22,948 INFO 6526 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:31:38,967 INFO 6547 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:31:43,208 INFO 6561 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:32:39,276 INFO 6589 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:34:56,906 INFO 6657 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:35:07,215 INFO 6678 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:35:29,169 INFO 6708 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:36:26,748 INFO 6745 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:39:11,184 INFO 6791 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:39:15,706 INFO 6791 [egg-sequelize](15ms) Executed (default): UPDATE `p_user` SET `password`=? WHERE `id` = ?
+2020-06-09 11:39:35,211 INFO 6817 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:39:35,657 INFO 6817 [egg-sequelize](4ms) Executed (default): UPDATE `p_user` SET `password`=? WHERE `id` = ?
+2020-06-09 11:39:45,482 INFO 6817 [egg-sequelize](2ms) Executed (default): UPDATE `p_user` SET `password`=? WHERE `id` = ?
+2020-06-09 11:40:42,234 INFO 6847 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:41:07,681 INFO 6868 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:41:26,684 INFO 6892 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:41:29,150 INFO 6903 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:41:32,435 INFO 6903 [egg-sequelize](4ms) Executed (default): UPDATE `p_user` SET `password`=? WHERE `id` = ?
+2020-06-09 11:42:00,906 INFO 6917 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:42:08,183 INFO 6938 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:42:18,688 INFO 6952 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:42:59,023 INFO 6980 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:39:04,276 INFO 8855 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:39:05,850 INFO 8871 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:39:12,376 INFO 8887 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:45:17,447 INFO 9004 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:50:27,261 INFO 9052 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:50:43,171 INFO 9074 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:51:08,967 INFO 9098 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:51:38,694 INFO 9130 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:51:52,713 INFO 9150 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:52:26,336 INFO 9170 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:55:17,637 INFO 9227 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:55:33,916 INFO 9248 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:55:51,447 ERROR 9248 [-/::1/-/23ms DELETE /api/user/userDel?id=2] nodejs.AssertionError: Missing where attribute in the options parameter
+    at Function._optionsMustContainWhere (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:3429:5)
+    at Function.update (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:3055:10)
+    at UserService.userDel (/Users/yuakira/dev/projects/Psychology2/app/service/user.js:213:30)
+    at UserController.userDel (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:274:42)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+generatedMessage: false
+code: "ERR_ASSERTION"
+actual: undefined
+expected: true
+operator: "=="
+pid: 9248
+hostname: yudeMacBook-Pro.local
+
+2020-06-09 14:57:23,463 INFO 9286 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:57:25,527 INFO 9286 [egg-sequelize](28ms) Executed (default): UPDATE `p_user` SET `status`=? WHERE `id` = ?
+2020-06-09 14:57:43,921 INFO 9311 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:57:44,889 INFO 9311 [egg-sequelize](3ms) Executed (default): UPDATE `p_user` SET `status`=? WHERE `id` = ?
+2020-06-09 14:58:04,142 INFO 9311 [egg-sequelize](2ms) Executed (default): UPDATE `p_user` SET `status`=? WHERE `id` = ?
+2020-06-09 14:58:54,631 INFO 9345 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:58:56,715 INFO 9345 [egg-sequelize](3ms) Executed (default): UPDATE `p_user` SET `status`=? WHERE `id` = ?

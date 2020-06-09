@@ -1,6 +1,5 @@
 const Service = require("egg").Service;
-const Op = require('sequelize').Op;
-
+const Op = require("sequelize").Op;
 
 class UserService extends Service {
   async userInfo() {
@@ -115,14 +114,13 @@ class UserService extends Service {
     const { PUser, PRole } = this.app.model.Tables;
 
     try {
-
       const result = await service.common.selectWithPagging(PUser, {
         where: {
           role_id: ctx.query.role_id,
           account: { $like: `%${ctx.query.account}%` },
-          status:1
+          status: 1,
         },
-        attributes:["account","name","gender"],
+        attributes: ["account", "name", "gender"],
         offset: Number(ctx.query.now_page)
           ? (Number(ctx.query.now_page) - 1) * Number(ctx.query.now_page)
           : 0,
@@ -133,10 +131,9 @@ class UserService extends Service {
           as: "roles",
         },
       });
-      ctx.status=200;
-      let template=new ctx.helper._success();
+      ctx.status = 200;
+      let template = new ctx.helper._success();
       return Object.assign(template, result);
-
     } catch (e) {
       console.log(e);
 
@@ -145,22 +142,92 @@ class UserService extends Service {
     }
   }
 
-  async register(){
+  async register() {
     const { PUser } = this.app.model.Tables;
     try {
       const result = await PUser.create(this.ctx.request.body);
       // console.log(result.dataValues.id);
       this.ctx.status = 200;
-      return new this.ctx.helper._success("成功注册",{
-        insertId:result.dataValues.id
+      return new this.ctx.helper._success("成功注册", {
+        insertId: result.dataValues.id,
       });
-
     } catch (error) {
       // console.log(error.errors);
       this.ctx.status = 500;
       return new this.ctx.helper._error(error.name);
     }
+  }
 
+  async multiInsert() {
+    try {
+      let result = await this.service.common.multiInsert(
+        "p_user",
+        this.ctx.request.body.exList
+      );
+      if (result.affectedRows) {
+        this.ctx.status = 200;
+        return new this.ctx.helper._success();
+      } else {
+        this.ctx.status = 500;
+        return new this.ctx.helper._error();
+      }
+    } catch (error) {
+      // console.log(error.errors);
+      this.ctx.status = 500;
+      return new this.ctx.helper._error(error);
+    }
+  }
+
+  async userChange() {
+    let { PUser } = this.app.model.Tables;
+    let { ctx } = this;
+    let condition = {
+      id: ctx.request.body.id,
+    };
+    delete ctx.request.body.id;
+    (ctx.request.body.status || ctx.request.body.status == 0) &&
+      delete ctx.request.body.status;
+
+    let result = await PUser.update(ctx.request.body, { where: condition });
+    console.log(result);
+    if (result[0] > 0) {
+      ctx.status = 200;
+      return new this.ctx.helper._success("成功修改");
+    } else {
+      ctx.status = 400;
+      return new this.ctx.helper._error("没有改动");
+    }
+  }
+  catch(error) {
+    // console.log(error.errors);
+    this.ctx.status = 500;
+    return new this.ctx.helper._error(error);
+  }
+
+  async userDel() {
+    let { PUser } = this.app.model.Tables;
+    let { ctx } = this;
+    let condition = {
+      id: ctx.query.id,
+    };
+    let result = await PUser.update(
+      {
+        status: 0,
+      },
+      {where:condition}
+    );
+    if (result[0] > 0) {
+      ctx.status=200;
+      return new this.ctx.helper._success("成功删除");
+    } else {
+      ctx.status=500;
+      return new this.ctx.helper._error("删除失败");
+    }
+  }
+  catch(error) {
+    // console.log(error.errors);
+    this.ctx.status = 500;
+    return new this.ctx.helper._error(error);
   }
 }
 

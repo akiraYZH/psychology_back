@@ -194,25 +194,18 @@ class UserController extends Controller {
     // );
     let checkRes = checkData(ctx, "exList");
     if (checkRes.is_pass) {
-      let result = await service.common.multiInsert(
-        "p_user",
-        ctx.request.body.exList
-      );
-      if (result.affectedRows) {
-        ctx.body = new this.ctx.helper._success();
-      } else {
-        ctx.body = new this.ctx.helper._error();
-      }
+     ctx.body= await service.user.multiInsert();
     } else {
+      ctx.status=400;
       ctx.body = new this.ctx.helper._error(checkRes.msg);
     }
   }
 
   //成员修改
   /**
-   * @api {Post} /api/user/userChange 成员修改
+   * @api {Put} /api/user/userChange 成员修改
    * @apiGroup User
-   * @apiParam {String} account 用户账号
+   * @apiParam {Number} id 用户id
    * @apiParam {String} phone （可选）电话
    * @apiParam {String} password （可选）电话，
    * @apiParam {String} name （可选）昵称
@@ -225,7 +218,7 @@ class UserController extends Controller {
    * @apiParam {String} urgent_name （可选）紧急联系人名字
    * @apiParam {String} urgent_relation （可选）紧急联系人关系
    * @apiParam {String} urgent_phone （可选）紧急联系人电话
-   * @apiParam {String} roles （可选）权限
+   * @apiParam {String} roles_id（可选）权限id
    *
    *
    *
@@ -242,33 +235,13 @@ class UserController extends Controller {
    */
   async userChange() {
     const { ctx, service } = this;
-    const { checkDataRes, checkDataMsg } = new ctx.helper._checkData(
+    const checkDataRes = checkData(
       ctx,
-      "account"
+      "id"
     );
 
-    if (checkDataRes) {
-      let condition = {
-        account: ctx.request.body.account,
-      };
-      delete ctx.request.body.account;
-      ctx.request.body.roles && delete ctx.request.body.roles;
-      (ctx.request.body.status || ctx.request.body.status == 0) &&
-        delete ctx.request.body.status;
-      console.log(ctx.request.body);
-      let result = await service.common.update(
-        "p_user",
-        ctx.request.body,
-        condition
-      );
-      // console.log(result);
-      if (result.affectedRows) {
-        ctx.body = new this.ctx.helper._success("成功修改");
-      } else if (result.msg) {
-        this.ctx.body = new this.ctx.helper._error(result.msg);
-      } else {
-        this.ctx.body = new this.ctx.helper._error("修改失败");
-      }
+    if (checkDataRes.is_pass) {
+      ctx.body = await service.user.userChange();
     } else {
       this.ctx.body = new this.ctx.helper._lack(checkDataMsg);
     }
@@ -276,9 +249,9 @@ class UserController extends Controller {
 
   //成员删除
   /**
-   * @api {Post} /api/user/userDel 成员删除
+   * @api {Delete} /api/user/userDel 成员删除
    * @apiGroup User
-   * @apiParam {String} account 用户账号
+   * @apiParam {Number} id 用户id
    * @apiSuccessExample 成功返回
    *{
    *  "code":1,
@@ -294,27 +267,11 @@ class UserController extends Controller {
     const { ctx, service } = this;
     const { checkDataRes, checkDataMsg } = new ctx.helper._checkData(
       ctx,
-      "account"
+      "id"
     );
 
     if (checkDataRes) {
-      let condition = {
-        account: ctx.request.body.account,
-      };
-      let result = await service.common.update(
-        "p_user",
-        {
-          status: 0,
-        },
-        condition
-      );
-      if (result.affectedRows) {
-        ctx.body = new this.ctx.helper._success("成功删除");
-      } else if (result.msg) {
-        this.ctx.body = new this.ctx.helper._error(result.msg);
-      } else {
-        this.ctx.body = new this.ctx.helper._error("删除失败");
-      }
+      this.ctx.body = await service.user.userDel();
     } else {
       this.ctx.body = new this.ctx.helper._lack(checkDataMsg);
     }

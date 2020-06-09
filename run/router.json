@@ -89,7 +89,7 @@
   {
     "name": null,
     "methods": [
-      "POST"
+      "PUT"
     ],
     "paramNames": [],
     "path": "/api/user/userChange",
@@ -101,7 +101,7 @@
   {
     "name": null,
     "methods": [
-      "POST"
+      "DELETE"
     ],
     "paramNames": [],
     "path": "/api/user/userDel",
