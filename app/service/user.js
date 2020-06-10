@@ -114,7 +114,7 @@ class UserService extends Service {
     const { PUser, PRole } = this.app.model.Tables;
 
     try {
-      const result = await service.common.selectWithPagging(PUser, {
+      const result = await ctx.helper.selectWithPagging(PUser, {
         where: {
           role_id: ctx.query.role_id,
           account: { $like: `%${ctx.query.account}%` },

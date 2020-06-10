@@ -1,0 +1,924 @@
+2020-06-08 10:36:03,384 INFO 4008 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:38:19,996 INFO 4039 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:38:31,459 INFO 4064 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:39:15,589 INFO 4091 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:40:47,795 INFO 4142 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:41:27,945 INFO 4166 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:41:54,875 INFO 4192 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:42:26,428 INFO 4216 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:42:31,181 INFO 4216 [egg-sequelize](2ms) Executed (default): SELECT `id`, `account`, `phone`, `password`, `name`, `birthday`, `gender`, `avatar`, `criminal_id`, `justice_id`, `parent_id`, `is_marry`, `education`, `job`, `urgent_name`, `urgent_relation`, `urgent_phone`, `role_id`, `status` FROM `p_user` AS `p_user` WHERE `p_user`.`account` = '664753092' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 10:43:47,735 INFO 4254 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:43:49,674 INFO 4254 [egg-sequelize](2ms) Executed (default): SELECT `id`, `account`, `phone`, `password`, `name`, `birthday`, `gender`, `avatar`, `criminal_id`, `justice_id`, `parent_id`, `is_marry`, `education`, `job`, `urgent_name`, `urgent_relation`, `urgent_phone`, `role_id`, `status` FROM `p_user` AS `p_user` WHERE `p_user`.`account` = '664753092' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 10:44:03,467 INFO 4254 [egg-sequelize](4ms) Executed (default): SELECT `id`, `account`, `phone`, `password`, `name`, `birthday`, `gender`, `avatar`, `criminal_id`, `justice_id`, `parent_id`, `is_marry`, `education`, `job`, `urgent_name`, `urgent_relation`, `urgent_phone`, `role_id`, `status` FROM `p_user` AS `p_user` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 10:44:40,372 INFO 4278 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:46:14,190 INFO 4315 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:46:15,524 INFO 4315 [egg-sequelize](3ms) Executed (default): SELECT `id`, `account`, `phone`, `password`, `name`, `birthday`, `gender`, `avatar`, `criminal_id`, `justice_id`, `parent_id`, `is_marry`, `education`, `job`, `urgent_name`, `urgent_relation`, `urgent_phone`, `role_id`, `status` FROM `p_user` AS `p_user` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 10:46:31,543 INFO 4336 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:46:41,554 INFO 4360 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:46:59,920 INFO 4381 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:48:08,057 INFO 4455 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:49:45,991 INFO 4493 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:50:14,466 INFO 4534 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:50:24,992 INFO 4534 [egg-sequelize](5ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `p_role`.`id` AS `p_role.id`, `p_role`.`name` AS `p_role.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `p_role` ON `p_user`.`role_id` = `p_role`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 10:51:10,603 INFO 4567 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:51:24,283 INFO 4596 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:51:24,289 INFO 4596 [egg-sequelize](4ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_exercises` (`id` INTEGER auto_increment  COMMENT '站内信id', `title` VARCHAR(255) NOT NULL COMMENT '内容题目', `option_obj` TEXT NOT NULL COMMENT '答案选项json', `score_obj` TEXT NOT NULL COMMENT '答案分数json', `option_score_obj` TEXT NOT NULL COMMENT '选项和分数', `mold_id` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '题目类型,1选择题', `type_id` INTEGER(11) NOT NULL COMMENT '题目类型id，待定', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-08 10:51:24,294 INFO 4596 [egg-sequelize](2ms) Executed (default): SHOW FULL COLUMNS FROM `p_exercises`;
+2020-06-08 10:51:24,296 INFO 4596 [egg-sequelize](4ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_exercises' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-08 10:51:24,319 INFO 4596 [egg-sequelize](21ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `title` `title` VARCHAR(255) NOT NULL COMMENT '内容题目';
+2020-06-08 10:51:24,331 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `option_obj` `option_obj` TEXT NOT NULL COMMENT '答案选项json';
+2020-06-08 10:51:24,344 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `score_obj` `score_obj` TEXT NOT NULL COMMENT '答案分数json';
+2020-06-08 10:51:24,357 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `option_score_obj` `option_score_obj` TEXT NOT NULL COMMENT '选项和分数';
+2020-06-08 10:51:24,369 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `mold_id` `mold_id` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '题目类型,1选择题';
+2020-06-08 10:51:24,381 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `type_id` `type_id` INTEGER(11) NOT NULL COMMENT '题目类型id，待定';
+2020-06-08 10:51:24,393 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-08 10:51:24,396 INFO 4596 [egg-sequelize](2ms) Executed (default): SHOW INDEX FROM `p_exercises` FROM `project_psychology`
+2020-06-08 10:51:24,398 INFO 4596 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_justice` (`id` INTEGER auto_increment  COMMENT '地点id', `parent_id` INTEGER NOT NULL COMMENT '父级id', `name` VARCHAR(10) NOT NULL COMMENT '名称', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-08 10:51:24,400 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_justice`;
+2020-06-08 10:51:24,401 INFO 4596 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_justice' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-08 10:51:24,416 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_justice` CHANGE `parent_id` `parent_id` INTEGER NOT NULL COMMENT '父级id';
+2020-06-08 10:51:24,428 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_justice` CHANGE `name` `name` VARCHAR(10) NOT NULL COMMENT '名称';
+2020-06-08 10:51:24,430 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_justice` FROM `project_psychology`
+2020-06-08 10:51:24,432 INFO 4596 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_msg` (`id` INTEGER auto_increment  COMMENT '站内信id', `from_id` INTEGER NOT NULL DEFAULT -1 COMMENT '来源id(-1为系统信息)', `to_id` INTEGER NOT NULL COMMENT '目标id', `content` TEXT NOT NULL COMMENT '内容', `state` INTEGER(11) NOT NULL DEFAULT 0 COMMENT '0:未读， 1:已读', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-08 10:51:24,435 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_msg`;
+2020-06-08 10:51:24,435 INFO 4596 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_msg' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-08 10:51:24,456 INFO 4596 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_msg` CHANGE `from_id` `from_id` INTEGER NOT NULL DEFAULT -1 COMMENT '来源id(-1为系统信息)';
+2020-06-08 10:51:24,469 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_msg` CHANGE `to_id` `to_id` INTEGER NOT NULL COMMENT '目标id';
+2020-06-08 10:51:24,481 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_msg` CHANGE `content` `content` TEXT NOT NULL COMMENT '内容';
+2020-06-08 10:51:24,493 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_msg` CHANGE `state` `state` INTEGER(11) NOT NULL DEFAULT 0 COMMENT '0:未读， 1:已读';
+2020-06-08 10:51:24,506 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_msg` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-08 10:51:24,507 INFO 4596 [egg-sequelize](0ms) Executed (default): SHOW INDEX FROM `p_msg` FROM `project_psychology`
+2020-06-08 10:51:24,509 INFO 4596 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_role` (`id` INTEGER auto_increment  COMMENT '用户id', `name` VARCHAR(50) NOT NULL COMMENT '角色名', `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-08 10:51:24,511 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_role`;
+2020-06-08 10:51:24,511 INFO 4596 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_role' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-08 10:51:24,525 INFO 4596 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_role` CHANGE `name` `name` VARCHAR(50) NOT NULL COMMENT '角色名';
+2020-06-08 10:51:24,537 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_role` CHANGE `status` `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-08 10:51:24,538 INFO 4596 [egg-sequelize](0ms) Executed (default): SHOW INDEX FROM `p_role` FROM `project_psychology`
+2020-06-08 10:51:24,541 INFO 4596 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_user` (`id` INTEGER(11) auto_increment  COMMENT '用户id', `account` VARCHAR(50) COMMENT '用户账号', `phone` VARCHAR(11) COMMENT '用户电话', `password` VARCHAR(50) COMMENT '密码', `name` VARCHAR(10) COMMENT '用户姓名', `birthday` VARCHAR(13) COMMENT '生日', `gender` INTEGER(1) DEFAULT 1 COMMENT '性别，1男2女', `avatar` VARCHAR(255) COMMENT '头像地址', `criminal_id` VARCHAR(50) COMMENT '服刑人员编码', `justice_id` INTEGER(11) DEFAULT 0 COMMENT '司法所，服刑犯人才需要填', `parent_id` INTEGER(11) DEFAULT 0 COMMENT '来访者才有父类', `is_marry` INTEGER(11) DEFAULT 2 COMMENT '是否结婚,1是2否', `education` VARCHAR(255) COMMENT '学历', `job` VARCHAR(255) COMMENT '职业', `urgent_name` VARCHAR(255) COMMENT '紧急联系人', `urgent_relation` VARCHAR(255) COMMENT '紧急联系人关系', `urgent_phone` VARCHAR(255) COMMENT '紧急联系人电话', `role_id` INTEGER(11) COMMENT '角色id，管理者admin 咨询师doctor 中心工作人员worker 来访者visitor 服刑人员criminal', `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`role_id`) REFERENCES `p_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-08 10:51:24,543 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_user`;
+2020-06-08 10:51:24,544 INFO 4596 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_user' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-08 10:51:24,559 INFO 4596 [egg-sequelize](14ms) Executed (default): ALTER TABLE `p_user` CHANGE `account` `account` VARCHAR(50) COMMENT '用户账号';
+2020-06-08 10:51:24,572 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `phone` `phone` VARCHAR(11) COMMENT '用户电话';
+2020-06-08 10:51:24,585 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `password` `password` VARCHAR(50) COMMENT '密码';
+2020-06-08 10:51:24,621 INFO 4596 [egg-sequelize](35ms) Executed (default): ALTER TABLE `p_user` CHANGE `name` `name` VARCHAR(10) COMMENT '用户姓名';
+2020-06-08 10:51:24,634 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `birthday` `birthday` VARCHAR(13) COMMENT '生日';
+2020-06-08 10:51:24,648 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `gender` `gender` INTEGER(1) DEFAULT 1 COMMENT '性别，1男2女';
+2020-06-08 10:51:24,659 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `avatar` `avatar` VARCHAR(255) COMMENT '头像地址';
+2020-06-08 10:51:24,671 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `criminal_id` `criminal_id` VARCHAR(50) COMMENT '服刑人员编码';
+2020-06-08 10:51:24,684 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `justice_id` `justice_id` INTEGER(11) DEFAULT 0 COMMENT '司法所，服刑犯人才需要填';
+2020-06-08 10:51:24,695 INFO 4596 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_user` CHANGE `parent_id` `parent_id` INTEGER(11) DEFAULT 0 COMMENT '来访者才有父类';
+2020-06-08 10:51:24,707 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `is_marry` `is_marry` INTEGER(11) DEFAULT 2 COMMENT '是否结婚,1是2否';
+2020-06-08 10:51:24,720 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `education` `education` VARCHAR(255) COMMENT '学历';
+2020-06-08 10:51:24,733 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `job` `job` VARCHAR(255) COMMENT '职业';
+2020-06-08 10:51:24,745 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `urgent_name` `urgent_name` VARCHAR(255) COMMENT '紧急联系人';
+2020-06-08 10:51:24,756 INFO 4596 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_user` CHANGE `urgent_relation` `urgent_relation` VARCHAR(255) COMMENT '紧急联系人关系';
+2020-06-08 10:51:24,768 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `urgent_phone` `urgent_phone` VARCHAR(255) COMMENT '紧急联系人电话';
+2020-06-08 10:51:24,771 INFO 4596 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_user' AND constraint_name = 'p_user_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-08 10:51:24,790 INFO 4596 [egg-sequelize](18ms) Executed (default): ALTER TABLE `p_user`
+      DROP FOREIGN KEY `p_user_ibfk_1`;
+2020-06-08 10:51:24,819 INFO 4596 [egg-sequelize](28ms) Executed (default): ALTER TABLE `p_user` ADD FOREIGN KEY (`role_id`) REFERENCES `p_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2020-06-08 10:51:24,831 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `status` `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-08 10:51:24,833 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_user` FROM `project_psychology`
+2020-06-08 10:51:24,835 INFO 4596 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_paper` (`id` INTEGER auto_increment  COMMENT '试卷id', `title` VARCHAR(255) NOT NULL COMMENT '试卷标题', `worker_id` INTEGER(11) NOT NULL COMMENT '创建人id', `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳', `exercises_json` TEXT NOT NULL COMMENT '所包含题目ID集合', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`worker_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE) ENGINE=innoDB;
+2020-06-08 10:51:24,838 INFO 4596 [egg-sequelize](2ms) Executed (default): SHOW FULL COLUMNS FROM `p_paper`;
+2020-06-08 10:51:24,838 INFO 4596 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_paper' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-08 10:51:24,853 INFO 4596 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_paper` CHANGE `title` `title` VARCHAR(255) NOT NULL COMMENT '试卷标题';
+2020-06-08 10:51:24,854 INFO 4596 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_paper' AND constraint_name = 'p_paper_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-08 10:51:24,867 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper`
+      DROP FOREIGN KEY `p_paper_ibfk_1`;
+2020-06-08 10:51:24,886 INFO 4596 [egg-sequelize](18ms) Executed (default): ALTER TABLE `p_paper` ADD FOREIGN KEY (`worker_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-08 10:51:24,899 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper` CHANGE `time_stamp` `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳';
+2020-06-08 10:51:24,910 INFO 4596 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_paper` CHANGE `exercises_json` `exercises_json` TEXT NOT NULL COMMENT '所包含题目ID集合';
+2020-06-08 10:51:24,922 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-08 10:51:24,923 INFO 4596 [egg-sequelize](0ms) Executed (default): SHOW INDEX FROM `p_paper` FROM `project_psychology`
+2020-06-08 10:51:24,925 INFO 4596 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_paper_user` (`id` INTEGER(11) auto_increment  COMMENT '分配记录id', `user_id` INTEGER(11) NOT NULL COMMENT '用户id', `distributor_id` INTEGER(11) NOT NULL COMMENT '派发人id', `paper_id` INTEGER NOT NULL COMMENT '试卷id', `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳', `state` INTEGER(11) NOT NULL DEFAULT 0 COMMENT '1:完成 0:未完成', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE, FOREIGN KEY (`distributor_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE, FOREIGN KEY (`paper_id`) REFERENCES `p_paper` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-08 10:51:24,927 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_paper_user`;
+2020-06-08 10:51:24,928 INFO 4596 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_paper_user' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-08 10:51:24,930 INFO 4596 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_paper_user' AND constraint_name = 'p_paper_user_ibfk_7' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-08 10:51:24,943 INFO 4596 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_paper_user`
+      DROP FOREIGN KEY `p_paper_user_ibfk_7`;
+2020-06-08 10:51:24,945 INFO 4596 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_paper_user' AND constraint_name = 'p_paper_user_ibfk_8' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-08 10:51:24,957 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper_user`
+      DROP FOREIGN KEY `p_paper_user_ibfk_8`;
+2020-06-08 10:51:24,978 INFO 4596 [egg-sequelize](20ms) Executed (default): ALTER TABLE `p_paper_user` ADD FOREIGN KEY (`user_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-08 10:51:25,002 INFO 4596 [egg-sequelize](23ms) Executed (default): ALTER TABLE `p_paper_user` ADD FOREIGN KEY (`distributor_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-08 10:51:25,004 INFO 4596 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_paper_user' AND constraint_name = 'p_paper_user_ibfk_9' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-08 10:51:25,019 INFO 4596 [egg-sequelize](14ms) Executed (default): ALTER TABLE `p_paper_user`
+      DROP FOREIGN KEY `p_paper_user_ibfk_9`;
+2020-06-08 10:51:25,040 INFO 4596 [egg-sequelize](20ms) Executed (default): ALTER TABLE `p_paper_user` ADD FOREIGN KEY (`paper_id`) REFERENCES `p_paper` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-08 10:51:25,054 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper_user` CHANGE `time_stamp` `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳';
+2020-06-08 10:51:25,066 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper_user` CHANGE `state` `state` INTEGER(11) NOT NULL DEFAULT 0 COMMENT '1:完成 0:未完成';
+2020-06-08 10:51:25,079 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper_user` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-08 10:51:25,081 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_paper_user` FROM `project_psychology`
+2020-06-08 10:51:25,083 INFO 4596 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_permission` (`id` INTEGER auto_increment  COMMENT '用户id', `content` TEXT NOT NULL COMMENT '权限内容', `type` INTEGER COMMENT '1:路由, 2:接口, 3:其他', `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用', `role_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`role_id`) REFERENCES `p_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-08 10:51:25,085 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_permission`;
+2020-06-08 10:51:25,086 INFO 4596 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_permission' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-08 10:51:25,100 INFO 4596 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_permission` CHANGE `content` `content` TEXT NOT NULL COMMENT '权限内容';
+2020-06-08 10:51:25,113 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_permission` CHANGE `type` `type` INTEGER COMMENT '1:路由, 2:接口, 3:其他';
+2020-06-08 10:51:25,125 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_permission` CHANGE `status` `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-08 10:51:25,127 INFO 4596 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_permission' AND constraint_name = 'p_permission_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-08 10:51:25,140 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_permission`
+      DROP FOREIGN KEY `p_permission_ibfk_1`;
+2020-06-08 10:51:25,161 INFO 4596 [egg-sequelize](20ms) Executed (default): ALTER TABLE `p_permission` ADD FOREIGN KEY (`role_id`) REFERENCES `p_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2020-06-08 10:51:25,167 INFO 4596 [egg-sequelize](4ms) Executed (default): SHOW INDEX FROM `p_permission` FROM `project_psychology`
+2020-06-08 10:51:25,170 INFO 4596 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_record` (`id` INTEGER auto_increment  COMMENT '记录id', `operator_id` INTEGER NOT NULL COMMENT '留下记录的用户id', `worker_id` INTEGER NOT NULL COMMENT '负责工作人员id', `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳', `type_id` INTEGER(11) NOT NULL COMMENT '记录类型,1答卷2面谈', `content` TEXT COMMENT '面谈内容', `score` VARCHAR(255) COMMENT '答卷总得分，用于导出Excel', `title` VARCHAR(255) COMMENT '面谈标题或问卷标题', `paper_evaluation` TEXT COMMENT '答卷评价', `paper_exercises` TEXT COMMENT '用户的答卷答案', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`operator_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (`worker_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-08 10:51:25,173 INFO 4596 [egg-sequelize](2ms) Executed (default): SHOW FULL COLUMNS FROM `p_record`;
+2020-06-08 10:51:25,174 INFO 4596 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_record' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-08 10:51:25,175 INFO 4596 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_record' AND constraint_name = 'p_record_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-08 10:51:25,194 INFO 4596 [egg-sequelize](15ms) Executed (default): ALTER TABLE `p_record`
+      DROP FOREIGN KEY `p_record_ibfk_1`;
+2020-06-08 10:51:25,196 INFO 4596 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_record' AND constraint_name = 'p_record_ibfk_2' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-08 10:51:25,208 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record`
+      DROP FOREIGN KEY `p_record_ibfk_2`;
+2020-06-08 10:51:25,229 INFO 4596 [egg-sequelize](20ms) Executed (default): ALTER TABLE `p_record` ADD FOREIGN KEY (`operator_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+2020-06-08 10:51:25,255 INFO 4596 [egg-sequelize](25ms) Executed (default): ALTER TABLE `p_record` ADD FOREIGN KEY (`worker_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+2020-06-08 10:51:25,271 INFO 4596 [egg-sequelize](15ms) Executed (default): ALTER TABLE `p_record` CHANGE `time_stamp` `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳';
+2020-06-08 10:51:25,284 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_record` CHANGE `type_id` `type_id` INTEGER(11) NOT NULL COMMENT '记录类型,1答卷2面谈';
+2020-06-08 10:51:25,296 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_record` CHANGE `content` `content` TEXT COMMENT '面谈内容';
+2020-06-08 10:51:25,308 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record` CHANGE `score` `score` VARCHAR(255) COMMENT '答卷总得分，用于导出Excel';
+2020-06-08 10:51:25,320 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record` CHANGE `title` `title` VARCHAR(255) COMMENT '面谈标题或问卷标题';
+2020-06-08 10:51:25,333 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_record` CHANGE `paper_evaluation` `paper_evaluation` TEXT COMMENT '答卷评价';
+2020-06-08 10:51:25,344 INFO 4596 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_record` CHANGE `paper_exercises` `paper_exercises` TEXT COMMENT '用户的答卷答案';
+2020-06-08 10:51:25,356 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-08 10:51:25,358 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_record` FROM `project_psychology`
+2020-06-08 10:51:25,360 INFO 4596 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_reservation` (`id` INTEGER auto_increment  COMMENT '预约id', `from_id` INTEGER NOT NULL COMMENT '来访者id', `to_id` INTEGER NOT NULL COMMENT '咨询师id', `type_name` VARCHAR(255) NOT NULL COMMENT '类型名字', `method` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:来访， 2:线上', `date_time` VARCHAR(13) NOT NULL COMMENT '当天日期时间戳', `start_time` VARCHAR(13) NOT NULL COMMENT '预约开始时间戳', `end_time` VARCHAR(13) NOT NULL COMMENT '预约结束时间戳', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '预约状态，1待确认2确认待上门3成功上门4失约5咨询师主动取消', `state` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`from_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (`to_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-08 10:51:25,363 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_reservation`;
+2020-06-08 10:51:25,363 INFO 4596 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_reservation' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-08 10:51:25,365 INFO 4596 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_reservation' AND constraint_name = 'p_reservation_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-08 10:51:25,379 INFO 4596 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_reservation`
+      DROP FOREIGN KEY `p_reservation_ibfk_1`;
+2020-06-08 10:51:25,380 INFO 4596 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_reservation' AND constraint_name = 'p_reservation_ibfk_2' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-08 10:51:25,393 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_reservation`
+      DROP FOREIGN KEY `p_reservation_ibfk_2`;
+2020-06-08 10:51:25,413 INFO 4596 [egg-sequelize](19ms) Executed (default): ALTER TABLE `p_reservation` ADD FOREIGN KEY (`from_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+2020-06-08 10:51:25,438 INFO 4596 [egg-sequelize](24ms) Executed (default): ALTER TABLE `p_reservation` ADD FOREIGN KEY (`to_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+2020-06-08 10:51:25,454 INFO 4596 [egg-sequelize](15ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `type_name` `type_name` VARCHAR(255) NOT NULL COMMENT '类型名字';
+2020-06-08 10:51:25,467 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `method` `method` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:来访， 2:线上';
+2020-06-08 10:51:25,481 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `date_time` `date_time` VARCHAR(13) NOT NULL COMMENT '当天日期时间戳';
+2020-06-08 10:51:25,492 INFO 4596 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `start_time` `start_time` VARCHAR(13) NOT NULL COMMENT '预约开始时间戳';
+2020-06-08 10:51:25,504 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `end_time` `end_time` VARCHAR(13) NOT NULL COMMENT '预约结束时间戳';
+2020-06-08 10:51:25,517 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '预约状态，1待确认2确认待上门3成功上门4失约5咨询师主动取消';
+2020-06-08 10:51:25,528 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `state` `state` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-08 10:51:25,530 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_reservation` FROM `project_psychology`
+2020-06-08 10:51:25,531 INFO 4596 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_reservation_type` (`id` INTEGER auto_increment  COMMENT '预约类型id', `type_name` VARCHAR(255) NOT NULL COMMENT '预约类型名称', `description` TEXT NOT NULL COMMENT '预约类型描述', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-08 10:51:25,533 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_reservation_type`;
+2020-06-08 10:51:25,534 INFO 4596 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_reservation_type' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-08 10:51:25,548 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_reservation_type` CHANGE `type_name` `type_name` VARCHAR(255) NOT NULL COMMENT '预约类型名称';
+2020-06-08 10:51:25,560 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation_type` CHANGE `description` `description` TEXT NOT NULL COMMENT '预约类型描述';
+2020-06-08 10:51:25,571 INFO 4596 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_reservation_type` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-08 10:51:25,573 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_reservation_type` FROM `project_psychology`
+2020-06-08 10:51:25,574 INFO 4596 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_type` (`id` INTEGER auto_increment  COMMENT '症状种类id', `name` VARCHAR(255) COMMENT '症状名称', `symtom_free` TEXT COMMENT '无症状评价', `symtom_free_advice` TEXT COMMENT '无症状建议', `low` TEXT COMMENT '轻度症状评价', `low_advice` TEXT COMMENT '轻度症状建议', `middle` TEXT COMMENT '中度症状评价', `middle_advice` TEXT COMMENT '中度症状建议', `high` TEXT COMMENT '重度症状评价', `high_advice` TEXT COMMENT '重度症状建议', `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-08 10:51:25,576 INFO 4596 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_type`;
+2020-06-08 10:51:25,577 INFO 4596 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_type' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-08 10:51:25,590 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_type` CHANGE `name` `name` VARCHAR(255) COMMENT '症状名称';
+2020-06-08 10:51:25,602 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `symtom_free` `symtom_free` TEXT COMMENT '无症状评价';
+2020-06-08 10:51:25,615 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_type` CHANGE `symtom_free_advice` `symtom_free_advice` TEXT COMMENT '无症状建议';
+2020-06-08 10:51:25,626 INFO 4596 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_type` CHANGE `low` `low` TEXT COMMENT '轻度症状评价';
+2020-06-08 10:51:25,639 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_type` CHANGE `low_advice` `low_advice` TEXT COMMENT '轻度症状建议';
+2020-06-08 10:51:25,651 INFO 4596 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `middle` `middle` TEXT COMMENT '中度症状评价';
+2020-06-08 10:51:25,663 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_type` CHANGE `middle_advice` `middle_advice` TEXT COMMENT '中度症状建议';
+2020-06-08 10:51:25,679 INFO 4596 [egg-sequelize](15ms) Executed (default): ALTER TABLE `p_type` CHANGE `high` `high` TEXT COMMENT '重度症状评价';
+2020-06-08 10:51:25,692 INFO 4596 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_type` CHANGE `high_advice` `high_advice` TEXT COMMENT '重度症状建议';
+2020-06-08 10:51:25,703 INFO 4596 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_type` CHANGE `status` `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-08 10:51:25,706 INFO 4596 [egg-sequelize](0ms) Executed (default): SHOW INDEX FROM `p_type` FROM `project_psychology`
+2020-06-08 10:51:31,226 INFO 4656 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:52:28,259 INFO 5014 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:52:32,114 INFO 5014 [egg-sequelize](4ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 10:53:25,885 INFO 5042 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:53:29,402 INFO 5042 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 10:53:29,733 INFO 5042 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 10:53:39,719 INFO 5061 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:54:40,800 INFO 5082 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:55:25,782 INFO 5117 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:55:27,480 INFO 5117 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 10:55:38,798 INFO 5138 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:56:16,751 INFO 5169 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:56:38,191 INFO 5194 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:56:39,898 INFO 5194 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 10:56:39,904 INFO 5194 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 10:57:11,496 INFO 5221 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:57:38,545 INFO 5250 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:58:46,384 INFO 5302 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 10:59:24,664 INFO 5302 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 11:00:39,536 INFO 5341 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:00:42,806 INFO 5341 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 11:01:10,506 INFO 5373 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:04:54,289 INFO 5373 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 11:05:36,131 INFO 5425 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:11:02,292 INFO 5526 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:13:13,419 INFO 5609 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:14:34,035 INFO 5641 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:15:51,680 INFO 5671 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:15:56,469 INFO 5682 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:16:15,144 INFO 5707 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:17:06,084 INFO 5742 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:17:22,608 INFO 5770 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:18:55,054 INFO 5803 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:19:14,292 INFO 5827 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:19:29,134 INFO 5852 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:21:20,395 INFO 5888 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:23:35,455 INFO 5932 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:24:52,530 INFO 5989 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:26:14,389 INFO 6035 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:26:25,749 INFO 6056 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:26:30,210 INFO 6069 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:26:47,006 INFO 6093 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:26:54,423 INFO 6114 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:27:27,916 INFO 6131 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:28:04,406 INFO 6155 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:28:34,611 INFO 6180 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:28:53,280 INFO 6204 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:29:35,380 INFO 6228 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:33:46,698 INFO 6285 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:37:18,268 INFO 6332 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:37:19,608 INFO 6347 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:38:50,917 INFO 6367 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:43:35,558 INFO 6437 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:43:39,348 INFO 6448 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:43:51,602 INFO 6472 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:44:54,793 INFO 6502 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:45:19,570 INFO 6530 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:45:46,044 INFO 6557 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:47:02,794 INFO 6586 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:47:50,657 INFO 6586 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' LIMIT 1;
+2020-06-08 11:48:53,383 INFO 6623 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:48:54,639 ERROR 6623 [-/::1/-/25ms GET /api/user/userDetail] nodejs.SequelizeEagerLoadingError: p_role is associated to p_user using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+    at Function._getIncludedAssociation (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:727:13)
+    at Function._validateIncludedElement (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:619:53)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:516:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:511:39)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:1726:14
+    at tryCatcher (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:729:18)
+    at _drainQueueStep (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:15:14)
+    at processImmediate (internal/timers.js:456:21)
+From previous event:
+    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/debuggability.js:482:19)
+    at Promise._then (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:261:17)
+    at Promise.then (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:154:17)
+    at Function.findAll (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:1720:8)
+    at Function.findOne (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:1924:17)
+    at UserService.userDetail (/Users/yuakira/dev/projects/Psychology2/app/service/user.js:33:32)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async UserController.userDetail (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:84:16)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:41:56
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+name: "SequelizeEagerLoadingError"
+pid: 6623
+hostname: yudeMacBook-Pro.local
+
+2020-06-08 11:48:55,117 ERROR 6623 [-/::1/-/2ms GET /api/user/userDetail] nodejs.SequelizeEagerLoadingError: p_role is associated to p_user using an alias. You must use the 'as' keyword to specify the alias within your include statement.
+    at Function._getIncludedAssociation (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:727:13)
+    at Function._validateIncludedElement (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:619:53)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:516:37
+    at Array.map (<anonymous>)
+    at Function._validateIncludedElements (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:511:39)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:1726:14
+    at tryCatcher (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/util.js:16:23)
+    at Promise._settlePromiseFromHandler (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:547:31)
+    at Promise._settlePromise (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:604:18)
+    at Promise._settlePromise0 (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:649:10)
+    at Promise._settlePromises (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:729:18)
+    at _drainQueueStep (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:93:12)
+    at _drainQueue (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:86:9)
+    at Async._drainQueues (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:102:5)
+    at Immediate.Async.drainQueues [as _onImmediate] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/async.js:15:14)
+    at processImmediate (internal/timers.js:456:21)
+From previous event:
+    at Promise.longStackTracesCaptureStackTrace [as _captureStackTrace] (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/debuggability.js:482:19)
+    at Promise._then (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:261:17)
+    at Promise.then (/Users/yuakira/dev/projects/Psychology2/node_modules/_bluebird@3.7.2@bluebird/js/release/promise.js:154:17)
+    at Function.findAll (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:1720:8)
+    at Function.findOne (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:1924:17)
+    at UserService.userDetail (/Users/yuakira/dev/projects/Psychology2/app/service/user.js:33:32)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async UserController.userDetail (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:84:16)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:41:56
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+name: "SequelizeEagerLoadingError"
+pid: 6623
+hostname: yudeMacBook-Pro.local
+
+2020-06-08 11:50:08,721 INFO 6658 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:50:14,826 INFO 6683 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:50:17,200 INFO 6683 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`status` = 1 LIMIT 1;
+2020-06-08 11:50:48,701 INFO 6697 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:51:24,838 INFO 6721 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:51:27,514 INFO 6721 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`status` = 1 LIMIT 1;
+2020-06-08 11:51:28,912 INFO 6721 [egg-sequelize](1ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`status` = 1 LIMIT 1;
+2020-06-08 11:51:44,567 INFO 6745 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:51:44,891 INFO 6745 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`status` = 1 LIMIT 1;
+2020-06-08 11:52:42,365 INFO 6773 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:52:47,103 INFO 6784 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:52:52,315 INFO 6784 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`status` = 1 LIMIT 1;
+2020-06-08 11:53:50,313 INFO 6811 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:54:16,592 INFO 6835 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 11:54:21,697 INFO 6835 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`status` = 1 LIMIT 1;
+2020-06-08 12:12:26,245 INFO 7258 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 12:13:45,628 INFO 7298 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:41:25,410 INFO 9467 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:50:42,427 INFO 9560 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:54:51,074 INFO 9605 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:55:18,863 INFO 9629 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 14:56:42,551 INFO 9662 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:02:13,398 INFO 9726 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:10:20,475 INFO 9840 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:15:27,026 INFO 10009 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:16:14,936 INFO 10036 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:16:27,711 INFO 10057 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:16:39,445 INFO 10081 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:18:00,931 INFO 10116 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:19:36,720 INFO 10154 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:21:12,580 INFO 10186 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:22:34,450 INFO 10220 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:24:19,635 INFO 10254 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:37:38,502 INFO 10394 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:39:21,555 INFO 10426 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:39:31,725 INFO 10447 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:39:47,443 INFO 10471 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:40:05,457 INFO 10494 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:40:54,078 INFO 10522 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:40:55,098 INFO 10533 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:46:31,209 INFO 10584 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:50:01,471 INFO 10673 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:50:49,489 INFO 10702 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:51:42,066 INFO 10731 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:51:53,793 INFO 10752 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:52:13,307 INFO 10776 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:52:42,642 INFO 10792 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:52:49,811 INFO 10813 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:53:10,625 INFO 10828 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:54:07,714 INFO 10855 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:54:24,408 INFO 10876 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:55:01,264 INFO 10900 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:55:29,614 INFO 10925 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:55:44,015 INFO 10949 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:55:45,009 INFO 10950 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:56:19,597 INFO 10965 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:56:24,257 INFO 10979 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:57:24,203 INFO 11008 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:58:37,228 INFO 11039 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 15:58:42,968 INFO 11050 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:00:21,623 INFO 11088 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:01:58,613 INFO 11124 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:02:01,006 INFO 11124 [egg-sequelize](18ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:03:16,221 INFO 11160 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:05:07,570 INFO 11200 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:05:14,498 INFO 11224 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:06:33,296 INFO 11244 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:06:41,893 INFO 11270 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:06:51,800 INFO 11291 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:07:13,939 INFO 11305 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:08:11,603 INFO 11336 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:08:16,256 INFO 11336 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:08:16,258 INFO 11336 [egg-sequelize](7ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:09:16,950 INFO 11336 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:09:16,952 INFO 11336 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT '3';
+2020-06-08 16:10:54,047 INFO 11380 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:10:54,465 INFO 11380 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:10:54,467 INFO 11380 [egg-sequelize](1ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT '3';
+2020-06-08 16:12:06,020 INFO 11434 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:12:11,028 INFO 11445 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:12:25,146 INFO 11477 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:12:28,820 INFO 11477 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:12:28,822 INFO 11477 [egg-sequelize](0ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT '3';
+2020-06-08 16:18:18,266 INFO 11562 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:19:06,238 INFO 11595 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:19:13,115 INFO 11595 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:19:13,118 INFO 11595 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:19:33,688 INFO 11595 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:19:33,690 INFO 11595 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 1, 3;
+2020-06-08 16:20:05,849 INFO 11595 [egg-sequelize](2ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:20:05,850 INFO 11595 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:24:52,638 INFO 11660 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:26:14,727 INFO 11692 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:26:41,136 INFO 11716 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:26:43,274 INFO 11716 [egg-sequelize](4ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:26:43,277 INFO 11716 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:27:02,343 INFO 11737 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:27:03,875 INFO 11737 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:27:03,879 INFO 11737 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:27:40,584 INFO 11766 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:27:41,206 INFO 11766 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:27:41,209 INFO 11766 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:27:51,637 INFO 11787 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:27:52,941 INFO 11787 [egg-sequelize](2ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:27:52,944 INFO 11787 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:31:37,911 INFO 11838 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:32:00,465 INFO 11838 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:32:00,465 INFO 11838 [egg-sequelize](4ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:35:56,004 INFO 11887 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:40:13,063 INFO 11948 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:40:17,546 INFO 11959 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:40:29,062 INFO 11980 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:40:31,885 INFO 11980 [egg-sequelize](2ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:40:31,888 INFO 11980 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:41:01,908 INFO 12006 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:41:04,323 INFO 12006 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:41:04,329 INFO 12006 [egg-sequelize](4ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:41:27,800 INFO 12034 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:41:28,482 INFO 12034 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:41:28,485 INFO 12034 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:41:42,502 INFO 12048 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:41:50,899 INFO 12048 [egg-sequelize](2ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:41:50,903 INFO 12048 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:42:51,739 INFO 12079 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:43:09,275 INFO 12105 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:43:22,085 INFO 12105 [egg-sequelize](2ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:43:22,087 INFO 12105 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:43:54,536 INFO 12105 [egg-sequelize](2ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:43:54,537 INFO 12105 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 2, 3;
+2020-06-08 16:44:35,272 INFO 12139 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:44:41,933 INFO 12139 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1';
+2020-06-08 16:44:41,936 INFO 12139 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`id` = '1' LIMIT 3;
+2020-06-08 16:45:15,321 INFO 12139 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` LIMIT 3;
+2020-06-08 16:45:15,326 INFO 12139 [egg-sequelize](9ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id`;
+2020-06-08 16:47:32,203 INFO 12187 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:48:59,996 INFO 12217 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:49:53,007 INFO 12244 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:53:57,794 INFO 12322 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:54:02,014 INFO 12333 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:54:10,683 INFO 12333 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id`;
+2020-06-08 16:54:10,686 INFO 12333 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` LIMIT 3;
+2020-06-08 16:57:04,997 INFO 12400 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:57:37,571 INFO 12439 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 16:57:41,018 INFO 12439 [egg-sequelize](2ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id`;
+2020-06-08 16:57:41,023 INFO 12439 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` LIMIT 3;
+2020-06-08 16:58:41,083 INFO 12439 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id`;
+2020-06-08 16:58:41,085 INFO 12439 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` LIMIT 10;
+2020-06-08 16:58:48,043 INFO 12439 [egg-sequelize](3ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id`;
+2020-06-08 16:58:48,044 INFO 12439 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` LIMIT 10;
+2020-06-08 16:59:34,432 INFO 12439 [egg-sequelize](2ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id`;
+2020-06-08 16:59:34,434 INFO 12439 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` LIMIT 10;
+2020-06-08 17:00:26,146 INFO 12480 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:02:09,058 INFO 12518 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:02:20,287 INFO 12539 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:02:29,994 INFO 12539 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id`;
+2020-06-08 17:02:29,997 INFO 12539 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` LIMIT 10;
+2020-06-08 17:02:33,034 INFO 12539 [egg-sequelize](3ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id`;
+2020-06-08 17:02:33,035 INFO 12539 [egg-sequelize](4ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` LIMIT 10;
+2020-06-08 17:02:34,200 INFO 12539 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id`;
+2020-06-08 17:02:34,201 INFO 12539 [egg-sequelize](1ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` LIMIT 10;
+2020-06-08 17:03:23,017 INFO 12567 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:03:23,667 INFO 12567 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id`;
+2020-06-08 17:03:23,671 INFO 12567 [egg-sequelize](1ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` LIMIT 10;
+2020-06-08 17:03:40,322 INFO 12567 [egg-sequelize](2ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id`;
+2020-06-08 17:03:40,323 INFO 12567 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` LIMIT 10;
+2020-06-08 17:03:53,109 INFO 12567 [egg-sequelize](6ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`role_id` = '2';
+2020-06-08 17:03:53,110 INFO 12567 [egg-sequelize](6ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`role_id` = '2' LIMIT 3;
+2020-06-08 17:04:11,242 INFO 12567 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`role_id` = '1';
+2020-06-08 17:04:11,243 INFO 12567 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`role_id` = '1' LIMIT 3;
+2020-06-08 17:06:42,561 INFO 12615 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:06:43,699 INFO 12615 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`role_id` = '1';
+2020-06-08 17:06:43,703 INFO 12615 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`role_id` = '1' LIMIT 3;
+2020-06-08 17:08:38,473 INFO 12653 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:08:54,820 INFO 12674 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:09:35,208 INFO 12698 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:10:17,253 INFO 12746 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:15:30,136 INFO 12809 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:19:10,676 INFO 12880 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:19:34,477 INFO 12928 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:20:29,064 INFO 12960 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:20:30,821 INFO 12960 [egg-sequelize](3ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%undefined%';
+2020-06-08 17:20:30,823 INFO 12960 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%undefined%' LIMIT 3;
+2020-06-08 17:26:31,836 INFO 13024 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:27:53,771 INFO 13054 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:29:27,322 INFO 13084 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:32:39,126 INFO 13128 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:33:49,260 INFO 13155 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:34:47,099 INFO 13186 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:34:50,651 INFO 13201 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:35:30,779 INFO 13229 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:36:29,689 INFO 13256 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:36:31,617 INFO 13256 [egg-sequelize](2ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%undefined%';
+2020-06-08 17:36:31,619 INFO 13256 [egg-sequelize](1ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%undefined%' LIMIT 3;
+2020-06-08 17:36:58,950 INFO 13280 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:37:56,575 INFO 13307 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:38:27,831 INFO 13307 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%undefined%';
+2020-06-08 17:38:27,832 INFO 13307 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%undefined%' LIMIT 3;
+2020-06-08 17:40:45,429 INFO 13351 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:40:45,608 INFO 13351 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id`;
+2020-06-08 17:40:45,612 INFO 13351 [egg-sequelize](3ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` LIMIT 3;
+2020-06-08 17:40:54,062 INFO 13372 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:41:28,634 INFO 13398 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:41:29,646 INFO 13409 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:41:32,502 INFO 13409 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%%';
+2020-06-08 17:41:32,505 INFO 13409 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%%' LIMIT 3;
+2020-06-08 17:41:58,389 INFO 13409 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%b%';
+2020-06-08 17:41:58,390 INFO 13409 [egg-sequelize](1ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%b%' LIMIT 3;
+2020-06-08 17:42:06,498 INFO 13409 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%' LIMIT 3;
+2020-06-08 17:42:06,500 INFO 13409 [egg-sequelize](4ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%';
+2020-06-08 17:42:19,431 INFO 13437 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:45:47,463 INFO 13496 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:49:15,561 INFO 13562 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:49:16,136 INFO 13562 [egg-sequelize](2ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%' AND `p_user`.`statud` = 1;
+2020-06-08 17:49:16,146 INFO 13562 [egg-sequelize](6ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`name`, `p_user`.`gender`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%' AND `p_user`.`statud` = 1 LIMIT 3;
+2020-06-08 17:49:41,710 INFO 13587 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:50:20,038 INFO 13587 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%' AND `p_user`.`status` = 1;
+2020-06-08 17:50:20,039 INFO 13587 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`name`, `p_user`.`gender`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%' AND `p_user`.`status` = 1 LIMIT 3;
+2020-06-08 17:50:41,162 INFO 13621 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:51:04,550 INFO 13646 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:52:33,162 INFO 13676 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:52:41,613 INFO 13676 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%' AND `p_user`.`status` = 1;
+2020-06-08 17:52:41,616 INFO 13676 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`name`, `p_user`.`gender`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%' AND `p_user`.`status` = 1 LIMIT 3;
+2020-06-08 17:52:55,946 INFO 13700 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:52:56,449 INFO 13700 [egg-sequelize](2ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%' AND `p_user`.`status` = 1;
+2020-06-08 17:52:56,453 INFO 13700 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`name`, `p_user`.`gender`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%' AND `p_user`.`status` = 1 LIMIT 3;
+2020-06-08 17:54:42,892 INFO 13733 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:54:44,743 INFO 13744 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:54:47,082 INFO 13744 [egg-sequelize](1ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%' AND `p_user`.`status` = 1;
+2020-06-08 17:54:47,085 INFO 13744 [egg-sequelize](2ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`name`, `p_user`.`gender`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` LIKE '%ad%' AND `p_user`.`status` = 1 LIMIT 3;
+2020-06-08 17:55:32,558 INFO 13766 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 17:56:03,872 INFO 13790 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 18:07:54,829 INFO 13998 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:01:43,659 INFO 14625 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:05:16,327 ERROR 14625 [-/::1/-/2ms POST /api/user/register] nodejs.TypeError: service.user.register is not a function
+    at UserController.register (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:187:44)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+
+pid: 14625
+hostname: yudeMacBook-Pro.local
+
+2020-06-08 19:05:42,994 INFO 14676 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:05:44,177 INFO 14691 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:05:45,853 INFO 14691 [egg-sequelize](34ms) Executed (default): INSERT INTO `p_user` (`id`,`account`,`password`,`gender`,`justice_id`,`parent_id`,`is_marry`,`role_id`,`status`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2020-06-08 19:06:02,760 INFO 14691 [egg-sequelize](6ms) Executed (default): INSERT INTO `p_user` (`id`,`account`,`password`,`gender`,`justice_id`,`parent_id`,`is_marry`,`role_id`,`status`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2020-06-08 19:06:38,991 WARN 14691 [-/::1/-/1ms POST /api/user/register] nodejs.SyntaxError: Unexpected token } in JSON at position 59, check bodyParser config
+    at JSON.parse (<anonymous>)
+    at parse (/Users/yuakira/dev/projects/Psychology2/node_modules/co-body/lib/json.js:57:17)
+    at AsyncFunction.module.exports [as json] (/Users/yuakira/dev/projects/Psychology2/node_modules/co-body/lib/json.js:41:20)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async parseBody (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:100:14)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:85:19)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+status: 400
+body: "{\n\t\"account\":\"664752\",\n\t\"password\":\"123456\",\n\t\"role_id\":2,\n}"
+pid: 14691
+hostname: yudeMacBook-Pro.local
+
+2020-06-08 19:07:03,614 INFO 14691 [egg-sequelize](5ms) Executed (default): INSERT INTO `p_user` (`id`,`account`,`password`,`gender`,`justice_id`,`parent_id`,`is_marry`,`role_id`,`status`) VALUES (DEFAULT,?,?,?,?,?,?,?,?);
+2020-06-08 19:10:48,275 INFO 14742 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:11:55,393 INFO 14874 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:20:43,530 INFO 14960 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:51:18,094 INFO 15294 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:51:48,325 INFO 15328 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:52:27,285 INFO 15356 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:53:24,737 INFO 15388 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 19:57:08,257 INFO 15442 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:01:03,582 INFO 15522 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:01:33,023 INFO 15548 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:03:00,373 INFO 15586 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:03:25,738 INFO 15607 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:04:06,076 INFO 15639 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:05:16,860 INFO 15666 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:07:04,432 INFO 15705 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:07:10,562 INFO 15724 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:07:36,070 INFO 15740 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:07:43,286 INFO 15761 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:07:59,269 INFO 15775 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:08:14,891 INFO 15796 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:08:24,852 INFO 15817 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-08 20:09:36,629 INFO 15854 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 09:55:05,521 INFO 5563 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 09:57:30,630 INFO 5609 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 09:58:57,574 INFO 5654 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 09:58:58,596 INFO 5659 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:00:29,336 INFO 5700 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:02:59,674 INFO 5740 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:03:08,692 INFO 5761 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:03:59,934 INFO 5788 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:04:15,378 INFO 5816 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 10:05:09,397 INFO 5846 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:26:04,514 INFO 6368 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:26:08,963 INFO 6381 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:26:14,233 INFO 6395 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:29:50,300 INFO 6445 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:30:16,287 INFO 6470 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:30:27,802 INFO 6491 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:31:22,948 INFO 6526 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:31:38,967 INFO 6547 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:31:43,208 INFO 6561 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:32:39,276 INFO 6589 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:34:56,906 INFO 6657 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:35:07,215 INFO 6678 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:35:29,169 INFO 6708 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:36:26,748 INFO 6745 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:39:11,184 INFO 6791 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:39:15,706 INFO 6791 [egg-sequelize](15ms) Executed (default): UPDATE `p_user` SET `password`=? WHERE `id` = ?
+2020-06-09 11:39:35,211 INFO 6817 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:39:35,657 INFO 6817 [egg-sequelize](4ms) Executed (default): UPDATE `p_user` SET `password`=? WHERE `id` = ?
+2020-06-09 11:39:45,482 INFO 6817 [egg-sequelize](2ms) Executed (default): UPDATE `p_user` SET `password`=? WHERE `id` = ?
+2020-06-09 11:40:42,234 INFO 6847 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:41:07,681 INFO 6868 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:41:26,684 INFO 6892 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:41:29,150 INFO 6903 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:41:32,435 INFO 6903 [egg-sequelize](4ms) Executed (default): UPDATE `p_user` SET `password`=? WHERE `id` = ?
+2020-06-09 11:42:00,906 INFO 6917 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:42:08,183 INFO 6938 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:42:18,688 INFO 6952 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 11:42:59,023 INFO 6980 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:39:04,276 INFO 8855 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:39:05,850 INFO 8871 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:39:12,376 INFO 8887 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:45:17,447 INFO 9004 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:50:27,261 INFO 9052 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:50:43,171 INFO 9074 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:51:08,967 INFO 9098 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:51:38,694 INFO 9130 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:51:52,713 INFO 9150 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:52:26,336 INFO 9170 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:55:17,637 INFO 9227 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:55:33,916 INFO 9248 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:55:51,447 ERROR 9248 [-/::1/-/23ms DELETE /api/user/userDel?id=2] nodejs.AssertionError: Missing where attribute in the options parameter
+    at Function._optionsMustContainWhere (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:3429:5)
+    at Function.update (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/model.js:3055:10)
+    at UserService.userDel (/Users/yuakira/dev/projects/Psychology2/app/service/user.js:213:30)
+    at UserController.userDel (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:274:42)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+generatedMessage: false
+code: "ERR_ASSERTION"
+actual: undefined
+expected: true
+operator: "=="
+pid: 9248
+hostname: yudeMacBook-Pro.local
+
+2020-06-09 14:57:23,463 INFO 9286 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:57:25,527 INFO 9286 [egg-sequelize](28ms) Executed (default): UPDATE `p_user` SET `status`=? WHERE `id` = ?
+2020-06-09 14:57:43,921 INFO 9311 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:57:44,889 INFO 9311 [egg-sequelize](3ms) Executed (default): UPDATE `p_user` SET `status`=? WHERE `id` = ?
+2020-06-09 14:58:04,142 INFO 9311 [egg-sequelize](2ms) Executed (default): UPDATE `p_user` SET `status`=? WHERE `id` = ?
+2020-06-09 14:58:54,631 INFO 9345 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 14:58:56,715 INFO 9345 [egg-sequelize](3ms) Executed (default): UPDATE `p_user` SET `status`=? WHERE `id` = ?
+2020-06-09 15:37:28,230 INFO 9827 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:37:56,293 INFO 9875 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:38:12,736 INFO 9902 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:38:26,189 INFO 9924 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:39:32,140 INFO 9958 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:39:35,798 INFO 9976 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:40:45,910 INFO 10006 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:40:56,867 INFO 10027 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:41:57,688 INFO 10058 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:42:48,602 INFO 10088 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:43:01,460 ERROR 10088 [-/::1/-/22ms GET /api/type/getList] nodejs.TypeError: PUser.get is not a function
+    at TypeService.getList (/Users/yuakira/dev/projects/Psychology2/app/service/type.js:7:30)
+    at TypeController.getList (/Users/yuakira/dev/projects/Psychology2/app/controller/type.js:61:45)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+
+pid: 10088
+hostname: yudeMacBook-Pro.local
+
+2020-06-09 15:43:30,175 INFO 10113 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:43:30,210 INFO 10113 [egg-sequelize](3ms) Executed (default): SELECT `id`, `account`, `phone`, `password`, `name`, `birthday`, `gender`, `avatar`, `criminal_id`, `justice_id`, `parent_id`, `is_marry`, `education`, `job`, `urgent_name`, `urgent_relation`, `urgent_phone`, `role_id`, `status` FROM `p_user` AS `p_user`;
+2020-06-09 15:43:47,200 INFO 10137 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:43:55,356 INFO 10148 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:43:59,781 INFO 10148 [egg-sequelize](3ms) Executed (default): SELECT `id`, `name`, `symtom_free`, `symtom_free_advice`, `low`, `low_advice`, `middle`, `middle_advice`, `high`, `high_advice`, `status` FROM `p_type` AS `p_type`;
+2020-06-09 15:44:18,471 INFO 10172 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:44:39,990 INFO 10193 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:44:41,677 INFO 10207 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:44:50,518 INFO 10218 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:45:57,139 INFO 10352 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 15:58:44,138 INFO 10462 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:00:28,059 INFO 10497 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:00:46,610 INFO 10523 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:01:08,940 INFO 10549 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:01:22,068 INFO 10575 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:01:56,103 INFO 10603 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:02:22,761 INFO 10630 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:02:41,968 INFO 10651 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:03:13,521 INFO 10678 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:03:22,791 INFO 10699 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:03:26,208 INFO 10710 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:03:45,205 INFO 10724 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:07:03,271 INFO 10764 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:07:08,997 INFO 10781 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:07:58,536 INFO 10808 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:08:14,517 INFO 10836 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:10:12,536 INFO 10836 [egg-sequelize](4ms) Executed (default): INSERT INTO `p_msg` (`id`,`from_id`,`to_id`,`content`,`state`,`status`) VALUES (DEFAULT,?,?,?,?,?);
+2020-06-09 16:10:12,547 ERROR 10836 [-/::1/-/27ms POST /api/msg/add] nodejs.TypeError: Class constructor _error cannot be invoked without 'new'
+    at MessageService.add (/Users/yuakira/dev/projects/Psychology2/app/service/message.js:16:25)
+    at async MessageController.add (/Users/yuakira/dev/projects/Psychology2/app/controller/message.js:25:18)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 10836
+hostname: yudeMacBook-Pro.local
+
+2020-06-09 16:10:51,796 INFO 10880 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:10:54,267 INFO 10880 [egg-sequelize](4ms) Executed (default): INSERT INTO `p_msg` (`id`,`from_id`,`to_id`,`content`,`state`,`status`) VALUES (DEFAULT,?,?,?,?,?);
+2020-06-09 16:11:15,211 INFO 10909 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:24:18,687 INFO 11057 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:24:49,755 INFO 11089 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:25:16,049 INFO 11116 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:25:33,624 INFO 11137 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:25:54,179 INFO 11165 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:26:12,124 INFO 11186 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:26:38,867 INFO 11215 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:44:02,519 INFO 11351 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:44:08,863 INFO 11370 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:44:28,377 INFO 11390 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:45:39,754 INFO 11441 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:46:42,124 INFO 11505 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:47:04,091 INFO 11521 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:48:29,136 INFO 11558 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:48:45,195 INFO 11584 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:49:12,618 INFO 11608 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:49:14,404 INFO 11619 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:49:27,765 INFO 11630 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:50:32,482 INFO 11661 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:50:34,838 INFO 11672 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:51:33,707 INFO 11689 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:51:36,593 INFO 11700 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:51:45,181 INFO 11727 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:51:58,574 INFO 11738 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:52:11,124 INFO 11759 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:52:36,908 INFO 11783 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:52:42,193 INFO 11783 [egg-sequelize](9ms) Executed (default): UPDATE `p_msg` SET `from_id`=?,`to_id`=?,`content`=?,`state`=? WHERE `id` = ?
+2020-06-09 16:53:22,932 INFO 11815 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:53:26,156 INFO 11815 [egg-sequelize](3ms) Executed (default): UPDATE `p_msg` SET `from_id`=?,`to_id`=?,`content`=?,`state`=? WHERE `id` = ?
+2020-06-09 16:53:40,827 INFO 11815 [egg-sequelize](4ms) Executed (default): UPDATE `p_msg` SET `from_id`=?,`to_id`=?,`content`=?,`state`=? WHERE `id` = ?
+2020-06-09 16:54:00,501 INFO 11842 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:54:02,190 INFO 11842 [egg-sequelize](2ms) Executed (default): UPDATE `p_msg` SET `from_id`=?,`to_id`=?,`content`=?,`state`=? WHERE `id` = ?
+2020-06-09 16:55:58,108 INFO 11884 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:56:56,922 INFO 11917 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 16:57:07,683 INFO 11938 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 17:00:34,878 INFO 12000 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 17:00:54,719 INFO 12025 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 17:01:04,641 INFO 12046 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 17:02:14,511 INFO 12081 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 17:02:15,610 INFO 12081 [egg-sequelize](3ms) Executed (default): UPDATE `p_msg` SET `status`=? WHERE `id` = ?
+2020-06-09 17:02:39,474 INFO 12107 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:18:35,750 INFO 13073 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:19:14,488 INFO 13102 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:19:47,050 INFO 13135 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:19:53,649 INFO 13155 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:20:14,981 INFO 13200 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:20:49,942 INFO 13221 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:21:04,919 INFO 13242 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:22:23,120 INFO 13286 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:22:34,734 INFO 13307 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:24:17,365 INFO 13348 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:24:38,792 INFO 13370 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:24:53,495 INFO 13401 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:26:03,603 INFO 13401 [egg-sequelize](8ms) Executed (default): INSERT INTO `p_reservation_type` (`id`,`type_name`,`description`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-09 19:26:39,227 INFO 13434 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:26:39,333 INFO 13434 [egg-sequelize](3ms) Executed (default): INSERT INTO `p_reservation_type` (`id`,`type_name`,`description`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-09 19:27:01,752 INFO 13462 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:28:13,654 INFO 13495 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:30:10,672 INFO 13565 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:30:14,442 INFO 13583 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:31:07,001 INFO 13613 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:31:19,367 INFO 13637 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:31:59,902 INFO 13673 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:32:00,344 INFO 13673 [egg-sequelize](2ms) Executed (default): SELECT `id`, `type_name`, `description`, `status` FROM `p_reservation_type` AS `p_reservation_type` WHERE `p_reservation_type`.`status` = 1;
+2020-06-09 19:32:50,269 INFO 13728 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:32:52,469 INFO 13728 [egg-sequelize](3ms) Executed (default): SELECT `id`, `type_name`, `description`, `status` FROM `p_reservation_type` AS `p_reservation_type` WHERE `p_reservation_type`.`status` = 1;
+2020-06-09 19:33:21,814 INFO 13773 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:33:33,022 INFO 13794 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:33:35,435 INFO 13794 [egg-sequelize](1ms) Executed (default): SELECT `id`, `type_name`, `description`, `status` FROM `p_reservation_type` AS `p_reservation_type` WHERE `p_reservation_type`.`status` = 1;
+2020-06-09 19:34:28,637 INFO 13822 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:34:29,455 INFO 13822 [egg-sequelize](1ms) Executed (default): SELECT `id,type_name`, `description` FROM `p_reservation_type` AS `p_reservation_type` WHERE `p_reservation_type`.`status` = 1;
+2020-06-09 19:34:51,178 INFO 13847 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:34:54,186 INFO 13847 [egg-sequelize](2ms) Executed (default): SELECT `id`, `type_name`, `description` FROM `p_reservation_type` AS `p_reservation_type` WHERE `p_reservation_type`.`status` = 1;
+2020-06-09 19:35:26,523 INFO 13895 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:35:35,971 INFO 13917 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:36:06,674 INFO 13941 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:36:11,132 INFO 13952 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:37:13,152 INFO 13987 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:38:26,158 INFO 14036 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:39:19,440 ERROR 14036 [-/::1/-/20ms PUT /api/reservationType/update] nodejs.ReferenceError: checkMsg is not defined
+    at ReservationTypeController.update (/Users/yuakira/dev/projects/Psychology2/app/controller/reservationType.js:82:39)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+
+pid: 14036
+hostname: yudeMacBook-Pro.local
+
+2020-06-09 19:40:01,047 INFO 14081 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:40:11,470 INFO 14081 [egg-sequelize](8ms) Executed (default): UPDATE `p_reservation_type` SET `type_name`=?,`description`=? WHERE `id` = ?
+2020-06-09 19:40:25,562 INFO 14081 [egg-sequelize](3ms) Executed (default): UPDATE `p_reservation_type` SET `type_name`=?,`description`=? WHERE `id` = ?
+2020-06-09 19:41:17,898 INFO 14122 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:42:03,483 INFO 14122 [egg-sequelize](3ms) Executed (default): UPDATE `p_msg` SET `status`=? WHERE `id` = ?
+2020-06-09 19:42:48,211 INFO 14167 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:42:50,748 INFO 14167 [egg-sequelize](2ms) Executed (default): UPDATE `p_msg` SET `status`=? WHERE `id` = ?
+2020-06-09 19:43:39,604 INFO 14201 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-09 19:43:41,785 INFO 14201 [egg-sequelize](5ms) Executed (default): UPDATE `p_reservation_type` SET `status`=? WHERE `id` = ?
+2020-06-09 19:44:20,049 INFO 14248 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result

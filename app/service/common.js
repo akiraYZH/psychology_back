@@ -380,6 +380,8 @@ class CommonService extends Service {
       return obj;
     }
   }
+
+
   async update(db, param = null, condition = null) {
     // console.log(sql);
     try {
