@@ -2,7 +2,6 @@
 
 const Controller = require("egg").Controller;
 const { _getRedis } = require("../utils/redisModel");
-const parseTime = require("../utils/parseTime");
 
 class ReservationController extends Controller {
   //增加预约
@@ -35,82 +34,14 @@ class ReservationController extends Controller {
     );
 
     if (checkDataRes) {
-      //8:30-17:30
-      //检测是否在上班时间
-      let start_time = Number(ctx.request.body.start_time);
-      let dateAppo = new Date(start_time);
-      let startTxt = `${dateAppo.getFullYear()}-${
-        dateAppo.getMonth() + 1
-      }-${dateAppo.getDate()} 8:30:00`;
-      let endTxt = `${dateAppo.getFullYear()}-${
-        dateAppo.getMonth() + 1
-      }-${dateAppo.getDate()} 17:30:00`;
-      let officeStart = new Date(startTxt).getTime();
-      let officeEnd = new Date(endTxt).getTime();
-      if (
-        start_time < officeStart ||
-        start_time > officeEnd - 1000 * 60 * 60 * 2
-      ) {
-        //不在上班时间
-        this.ctx.body = new this.ctx.helper._error("不在办公时间");
-      } else if (start_time < Date.now()) {
-        this.ctx.body = new this.ctx.helper._error("不能选择已过去的时间");
-      } else {
-        //获得该医生预约记录
-        let appoList = await service.common.select("p_reservation", {
-          to_id: ctx.request.body.to_id,
-          state: 1,
-        });
-
-        let end_time = start_time + 1000 * 60 * 60 * 2;
-        let conflict = null;
-
-        //检测冲突
-        for (let i = 0; i < appoList.length; i++) {
-          //冲突
-          if (
-            !(
-              Number(appoList[i].start_time) > end_time ||
-              Number(appoList[i].end_time) < start_time
-            )
-          ) {
-            conflict = appoList[i];
-            break;
-          }
-        }
-        console.log(conflict);
-
-        if (!conflict) {
-          let result = await service.common.insert("p_reservation", {
-            from_id: ctx.request.body.from_id,
-            to_id: ctx.request.body.to_id,
-            start_time: start_time,
-            end_time: end_time,
-            date_time: Date.now(),
-            type_name: ctx.request.body.type_name,
-            method: ctx.request.body.method == 2 ? 2 : 1,
-          });
-          console.log(result);
-
-          if (result.affectedRows) {
-            this.ctx.body = new this.ctx.helper._success();
-          } else {
-            this.ctx.body = new this.ctx.helper._error(result.msg);
-          }
-        } else {
-          this.ctx.body = new this.ctx.helper._error("预约时间冲突", {
-            conflict_start_time: conflict.start_time,
-            conflict_end_time: conflict.end_time,
-          });
-        }
-      }
+      let body = ctx.request.body;
+      ctx.body = await service.reservation.addReservation(body);
     } else {
       //缺少参数
+      ctx.status = 400;
       this.ctx.body = new this.ctx.helper._lack(checkDataMsg);
     }
   }
-
-
 
   /**
    * @api {Get} /api/reservation/getList 获得预约列表
@@ -122,78 +53,46 @@ class ReservationController extends Controller {
     "code": 1,
     "msg": "成功操作",
     "data": {
-        "2020-3-28": [
+        "2020-6-10": [
             {
-                "id": 5,
-                "from_id": 7,
-                "from_name": null,
-                "to_id": 2,
-                "to_name": "editor",
-                "method":1,
-                "start_time": "1588035600000",
-                "end_time": "1588042800",
-                "status": 1 
-            }
-        ],
-        "2020-3-20": [
-            {
-                "id": 5,
-                "from_id": 7,
-                "from_name": null,
-                "to_id": 2,
-                "to_name": "editor",
-                "method":1,
-                "start_time": "1587348000000",
-                "end_time": "1587355200",
-                "status": 2
+                "id": 1,
+                "type_name": "abc",
+                "method": 1,
+                "start_time": "1591758326626",
+                "end_time": "1591765526626",
+                "state": 1,
+                "from": {
+                    "id": 1,
+                    "account": "admin",
+                    "name": null
+                },
+                "to": {
+                    "id": 2,
+                    "account": "664753092",
+                    "name": null
+                }
             }
         ]
     }
-   }
+}
    * 
    */
   async getList() {
     const { ctx, service } = this;
-    const { checkDataRes, checkDataMsg } = new ctx.helper._checkData(
-      ctx,
-      "to_id"
-    );
+    const checkDataRes = new ctx.helper.checkData(ctx, "to_id");
 
-    if (checkDataRes) {
-      // let role = redisData.userInfo.roles;
-      // let id = redisData.id;
-      let sortedList = {};
-      let result = await service.reservation.getList(ctx.query.to_id);
-      if (result.length) {
-        result.forEach((item, index) => {
-          let isMatched = false;
-          let date = parseTime(item.start_time);
-
-          let keysList = Object.keys(sortedList);
-          for (let i = 0; i < keysList.length; i++) {
-            if (date == keysList[i]) {
-              isMatched = true;
-              sortedList[keysList[i]].push(item);
-              break;
-            }
-          }
-
-          if (!isMatched) {
-            sortedList[date] = [item];
-          }
-          ctx.body = new this.ctx.helper._success(sortedList);
-        });
-      } else {
-        this.ctx.body = new this.ctx.helper._error("暂时没有数据");
-      }
+    if (checkDataRes.is_pass) {
+      let query = ctx.query;
+      let result = await service.reservation.getList(query);
+      ctx.body = result;
     } else {
-      this.ctx.body = new this.ctx.helper._lack(checkDataMsg);
+      ctx.status = 400;
+      ctx.body = new this.ctx.helper._lack(checkDataRes.msg);
     }
   }
 
-
   /**
-   * @api {Post} /api/reservation/modify 修改预约
+   * @api {Put} /api/reservation/modify 修改预约
    * @apiGroup Reservation
    * @apiParam {Number} id 预约记录id
    * @apiParam {Number} from_id 预约人id
@@ -212,95 +111,15 @@ class ReservationController extends Controller {
    */
   async modify() {
     const { ctx, service } = this;
-    const { checkDataRes, checkDataMsg } = new ctx.helper._checkData(ctx, "id");
+    const checkDataRes = ctx.helper.checkData(ctx, "id");
     // console.log(checkDataMsg);
 
-    if (checkDataRes) {
-      let conflict = null;
-      if (ctx.request.body.start_time) {
-        //8:30-17:30
-        //检测是否在上班时间
-        let start_time = Number(ctx.request.body.start_time);
-        let dateAppo = new Date(start_time);
-        let startTxt = `${dateAppo.getFullYear()}-${
-          dateAppo.getMonth() + 1
-        }-${dateAppo.getDate()} 8:30:00`;
-        let endTxt = `${dateAppo.getFullYear()}-${
-          dateAppo.getMonth() + 1
-        }-${dateAppo.getDate()} 17:30:00`;
-        let officeStart = new Date(startTxt).getTime();
-        let officeEnd = new Date(endTxt).getTime();
-        if (
-          start_time < officeStart ||
-          start_time > officeEnd - 1000 * 60 * 60 * 2
-        ) {
-          //不在上班时间
-          this.ctx.body = new this.ctx.helper._error("不在办公时间");
-        } else if (start_time < Date.now()) {
-          //已过去时间
-          this.ctx.body = new this.ctx.helper._error("不能选择已过去的时间");
-        } else {
-          //获得该医生预约记录
-          let appoList = await service.common.select("p_reservation", {
-            to_id: ctx.request.body.to_id,
-            state: 1,
-          });
-          // console.log(appoList);
-
-          let end_time = start_time + 1000 * 60 * 60 * 2;
-
-          //检测冲突
-          for (let i = 0; i < appoList.length; i++) {
-            //不算之前的预约
-            if (ctx.request.body.id == appoList[i].id) {
-              continue;
-            }
-            //冲突
-            if (
-              !(
-                Number(appoList[i].start_time) > end_time ||
-                Number(appoList[i].end_time) < start_time
-              )
-            ) {
-              conflict = appoList[i];
-              break;
-            }
-          }
-          console.log(conflict);
-        }
-      }
-      if (!conflict) {
-        //没有冲突
-        let condition = { id: ctx.request.body.id, state: 1 };
-        // 防止修改的参数需要删除
-        delete ctx.request.body.id;
-        (ctx.request.body.state == 0 || ctx.request.body.state) &&
-          delete ctx.request.body.state;
-        if (ctx.request.body.method != 1 && ctx.request.body.method != 2) {
-          delete ctx.request.body.method;
-        }
-        let params = ctx.request.body;
-        let result = await service.common.update(
-          "p_reservation",
-          params,
-          condition
-        );
-        console.log(result);
-
-        if (result.affectedRows) {
-          this.ctx.body = new this.ctx.helper._success();
-        } else {
-          this.ctx.body = new this.ctx.helper._error(result.msg);
-        }
-      } else {
-        this.ctx.body = new this.ctx.helper._error("预约时间冲突", {
-          conflict_start_time: conflict.start_time,
-          conflict_end_time: conflict.end_time,
-        });
-      }
+    if (checkDataRes.is_pass) {
+      let body = ctx.request.body;
+      ctx.body = await service.reservation.modify(body);
     } else {
       //缺少参数
-      this.ctx.body = new this.ctx.helper._lack(checkDataMsg);
+      this.ctx.body = new this.ctx.helper._lack(checkDataRes.msg);
     }
   }
 
@@ -322,14 +141,9 @@ class ReservationController extends Controller {
     // console.log(checkDataMsg);
 
     if (checkDataRes) {
-      let result = await service.common.update(
-        "p_reservation",
-        { state: 0 },
-        { id: ctx.request.body.id }
-      );
-      if (result.affectedRows) {
-        ctx.body = new ctx.helper._success();
-      }
+      let query = ctx.query;
+      
+      ctx.body = await service.reservation.del(query);
     } else {
       //缺少参数
       this.ctx.body = new this.ctx.helper._lack(checkDataMsg);

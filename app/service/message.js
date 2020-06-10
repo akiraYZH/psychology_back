@@ -63,7 +63,7 @@ class MessageService extends Service {
     const { ctx } = this;
     const { PMsg } = this.app.model.Tables;
     try {
-      let condition = { id: data.id };
+      let condition = { id: data.id,status:1};
       delete data.id;
       let result = await PMsg.update(data, { where: condition });
       console.log(result);
@@ -85,7 +85,7 @@ class MessageService extends Service {
     const { ctx } = this;
     const { PMsg } = this.app.model.Tables;
     try {
-      let condition = { id: data.id };
+      let condition = { id: data.id,status:1};
       let result =  await PMsg.update({status:0}, { where: condition });
       console.log(result);
 

@@ -183,25 +183,27 @@ class UserService extends Service {
     let { ctx } = this;
     let condition = {
       id: ctx.request.body.id,
+      status:1
     };
     delete ctx.request.body.id;
     (ctx.request.body.status || ctx.request.body.status == 0) &&
       delete ctx.request.body.status;
 
-    let result = await PUser.update(ctx.request.body, { where: condition });
-    console.log(result);
-    if (result[0] > 0) {
-      ctx.status = 200;
-      return new this.ctx.helper._success("成功修改");
-    } else {
-      ctx.status = 400;
-      return new this.ctx.helper._error("没有改动");
+    try {
+      let result = await PUser.update(ctx.request.body, { where: condition });
+      console.log(result);
+      if (result[0] > 0) {
+        ctx.status = 200;
+        return new this.ctx.helper._uccess("成功修改");
+      } else {
+        ctx.status = 400;
+        return new this.ctx.helper._error("没有改动");
+      }
+    } catch (error) {
+      // console.log(error.errors);
+      this.ctx.status = 500;
+      return new this.ctx.helper._error(error);
     }
-  }
-  catch(error) {
-    // console.log(error.errors);
-    this.ctx.status = 500;
-    return new this.ctx.helper._error(error);
   }
 
   async userDel() {
@@ -214,13 +216,13 @@ class UserService extends Service {
       {
         status: 0,
       },
-      {where:condition}
+      { where: condition }
     );
     if (result[0] > 0) {
-      ctx.status=200;
+      ctx.status = 200;
       return new this.ctx.helper._success("成功删除");
     } else {
-      ctx.status=500;
+      ctx.status = 500;
       return new this.ctx.helper._error("删除失败");
     }
   }

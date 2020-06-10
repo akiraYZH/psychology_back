@@ -4,7 +4,11 @@ class TypeService extends Service {
   async getList() {
     const { ctx } = this;
     const { PType } = this.app.model.Tables;
-    let result = await PType.findAll();
+    let result = await PType.findAll({
+      where: {
+        status: 1,
+      },
+    });
     result = result.filter((item) => {
       if (item.name == "总分") {
         return false;

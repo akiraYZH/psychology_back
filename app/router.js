@@ -21,6 +21,7 @@ module.exports = async (app) => {
   router.put(preRouter + '/user/userChange', controller.user.userChange);
   router.delete(preRouter + '/user/userDel', controller.user.userDel);
 
+  //已经修改
   router.get(preRouter + '/reservation/getList', controller.reservation.getList);
   router.post(preRouter + '/reservation/addReservation', controller.reservation.addReservation);
   router.put(preRouter + '/reservation/modify', controller.reservation.modify);

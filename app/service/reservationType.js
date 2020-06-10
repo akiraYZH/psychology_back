@@ -21,22 +21,22 @@ class ReservationTypeService extends Service {
     const { ctx, service } = this;
     const { PReservationType } = this.app.model.Tables;
     try {
-      let result = await PReservationType.findAll({ 
-          attributes:["id","type_name","description"],
-          where: { status: 1 } 
-        });
-        console.log(result);
-        
+      let result = await PReservationType.findAll({
+        attributes: ["id", "type_name", "description"],
+        where: { status: 1 },
+      });
+      console.log(result);
+
       if (result.length) {
-        ctx.status=200;
+        ctx.status = 200;
         return new ctx.helper._success(result);
       } else {
-        ctx.status=404;
+        ctx.status = 404;
         return new ctx.helper._error("暂无数据");
       }
-    }catch(error){
-        ctx.status = 500;
-        return new ctx.helper._error(error);
+    } catch (error) {
+      ctx.status = 500;
+      return new ctx.helper._error(error);
     }
   }
 
@@ -44,7 +44,7 @@ class ReservationTypeService extends Service {
     const { ctx } = this;
     const { PReservationType } = this.app.model.Tables;
     try {
-      let condition = { id: data.id };
+      let condition = { id: data.id, status: 1 };
       delete data.id;
       let result = await PReservationType.update(data, { where: condition });
       console.log(result);
@@ -66,8 +66,11 @@ class ReservationTypeService extends Service {
     const { ctx } = this;
     const { PReservationType } = this.app.model.Tables;
     try {
-      let condition = { id: data.id };
-      let result = await PReservationType.update({ status: 0 }, { where: condition });
+      let condition = { id: data.id, status: 1 };
+      let result = await PReservationType.update(
+        { status: 0 },
+        { where: condition }
+      );
       console.log(result);
 
       if (result[0] > 0) {

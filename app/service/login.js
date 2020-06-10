@@ -14,6 +14,7 @@ class loginService extends Service {
       where:{
         account: this.ctx.request.body.account,
         password: this.ctx.request.body.password,
+        status:1
       },
       include:[{
         model:PRole,
