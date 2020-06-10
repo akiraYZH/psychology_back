@@ -33,6 +33,7 @@ module.exports = async (app) => {
   router.put(preRouter + '/reservationType/update', controller.reservationType.update);
   router.delete(preRouter + '/reservationType/del', controller.reservationType.del);
   
+  
   router.post(preRouter + '/exercise/add', controller.exercise.add);
   router.post(preRouter + '/exercise/multiAdd', controller.exercise.multiAdd);
   router.post(preRouter + '/exercise/getList', controller.exercise.getList);

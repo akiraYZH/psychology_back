@@ -2047,3 +2047,73 @@ hostname: yudeMacBook-Pro.local
 2020-06-10 16:35:08,534 INFO 14848 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
 2020-06-10 16:35:11,087 INFO 14848 [egg-sequelize](6ms) Executed (default): UPDATE `p_reservation` SET `status`=? WHERE `id` = ? AND `status` = ?
 2020-06-10 16:36:02,376 INFO 14876 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 17:32:26,946 INFO 15493 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 17:32:50,874 INFO 15522 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 17:33:08,123 INFO 15564 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 17:33:27,098 INFO 15585 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 18:04:04,292 INFO 16233 [egg-sequelize](3ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 18:04:28,690 INFO 16233 [egg-sequelize](18ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`name`, `p_user`.`gender`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`status` = 1 LIMIT 3;
+2020-06-10 18:04:28,690 INFO 16233 [egg-sequelize](19ms) Executed (default): SELECT count(`p_user`.`id`) AS `count` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`status` = 1;
+2020-06-10 18:08:05,947 INFO 16315 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 18:08:10,478 INFO 16326 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 18:08:27,348 INFO 16352 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 18:08:42,959 ERROR 16352 [-/::1/-/22ms GET /api/reservation/getList?to_id=2] nodejs.TypeError: ctx.helper.checkData is not a constructor
+    at ReservationController.getList (/Users/yuakira/dev/projects/Psychology2/app/controller/reservation.js:82:26)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+
+pid: 16352
+hostname: yudeMacBook-Pro.local
+
+2020-06-10 18:09:24,553 ERROR 16352 [-/::1/-/1ms GET /api/reservation/getList?to_id=2] nodejs.TypeError: ctx.helper.checkData is not a constructor
+    at ReservationController.getList (/Users/yuakira/dev/projects/Psychology2/app/controller/reservation.js:82:26)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+
+pid: 16352
+hostname: yudeMacBook-Pro.local
+
+2020-06-10 18:09:24,653 INFO 16380 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 18:10:04,349 INFO 16416 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 18:10:07,451 INFO 16416 [egg-sequelize](9ms) Executed (default): SELECT `p_reservation`.`id`, `p_reservation`.`type_name`, `p_reservation`.`method`, `p_reservation`.`start_time`, `p_reservation`.`end_time`, `p_reservation`.`state`, `from`.`id` AS `from.id`, `from`.`account` AS `from.account`, `from`.`name` AS `from.name`, `to`.`id` AS `to.id`, `to`.`account` AS `to.account`, `to`.`name` AS `to.name` FROM `p_reservation` AS `p_reservation` LEFT OUTER JOIN `p_user` AS `from` ON `p_reservation`.`from_id` = `from`.`id` LEFT OUTER JOIN `p_user` AS `to` ON `p_reservation`.`to_id` = `to`.`id` WHERE `p_reservation`.`to_id` = '2' AND `p_reservation`.`status` = 1 AND `p_reservation`.`start_time` > 1589105407428;
+2020-06-10 18:10:52,742 INFO 16444 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 18:12:19,312 INFO 16478 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-10 18:12:29,117 INFO 16502 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result

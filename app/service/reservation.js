@@ -1,5 +1,6 @@
 const Service = require("egg").Service;
 const parseTime = require("../utils/parseTime");
+const Op = require("sequelize").Op;
 
 class ReservationService extends Service {
   async getList(data) {
@@ -9,7 +10,13 @@ class ReservationService extends Service {
     // let id = redisData.id;
     let sortedList = {};
     let result = await PReservation.findAll({
-      where: { to_id: data.to_id, status: 1 },
+      where: {
+        to_id: data.to_id,
+        status: 1,
+        start_time: {
+          [Op.gt]: Date.now() - 1000 * 3600 * 24 * 31,
+        },
+      },
       attributes: [
         "id",
         "type_name",
@@ -94,11 +101,14 @@ class ReservationService extends Service {
       this.ctx.status = 400;
       return new this.ctx.helper._error("不能选择已过去的时间");
     } else {
-      //获得该医生预约记录
+      //获得该医生预约记录（31天前所有）
       let appoList = await PReservation.findAll({
         where: {
           to_id: data.to_id,
           state: 1,
+          start_time: {
+            [Op.gt]: Date.now() - 1000 * 3600 * 24 * 31,
+          }
         },
       });
 
@@ -181,11 +191,14 @@ class ReservationService extends Service {
           this.ctx.status = 400;
           return new this.ctx.helper._error("不能选择已过去的时间");
         } else {
-          //获得该医生预约记录
+          //获得该医生预约记录（31天前所有）
           let appoList = await PReservation.findAll({
             where: {
               to_id: data.to_id,
               state: 1,
+              start_time: {
+                [Op.gt]: Date.now() - 1000 * 3600 * 24 * 31,
+              }
             },
           });
           // console.log(appoList);
@@ -223,16 +236,16 @@ class ReservationService extends Service {
           delete data.method;
         }
         //计算结束时间
-        if(data.start_time){
-          data.end_time=String(Number(data.start_time)+1000*3600*2);
+        if (data.start_time) {
+          data.end_time = String(Number(data.start_time) + 1000 * 3600 * 2);
         }
         let result = await PReservation.update(data, { where: condition });
         console.log(result);
 
-        if (result[0]>0) {
+        if (result[0] > 0) {
           ctx.status = 200;
           return new this.ctx.helper._success();
-        }else{
+        } else {
           ctx.status = 400;
           return new this.ctx.helper._error("没有修改");
         }
@@ -250,13 +263,15 @@ class ReservationService extends Service {
     }
   }
 
-
   async del(data) {
     const { ctx } = this;
     const { PReservation } = this.app.model.Tables;
     try {
-      let condition = { id: data.id,status:1};
-      let result =  await PReservation.update({status:0}, { where: condition });
+      let condition = { id: data.id, status: 1 };
+      let result = await PReservation.update(
+        { status: 0 },
+        { where: condition }
+      );
       console.log(result);
 
       if (result[0] > 0) {

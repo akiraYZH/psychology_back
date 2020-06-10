@@ -44,7 +44,7 @@ class ReservationController extends Controller {
   }
 
   /**
-   * @api {Get} /api/reservation/getList 获得预约列表
+   * @api {Get} /api/reservation/getList 获得预约列表(31天前起的所有数据)
    * @apiGroup Reservation
    * @apiParam {Number} to_id 被预约咨询师id
    * 
@@ -79,7 +79,7 @@ class ReservationController extends Controller {
    */
   async getList() {
     const { ctx, service } = this;
-    const checkDataRes = new ctx.helper.checkData(ctx, "to_id");
+    const checkDataRes = ctx.helper.checkData(ctx, "to_id");
 
     if (checkDataRes.is_pass) {
       let query = ctx.query;

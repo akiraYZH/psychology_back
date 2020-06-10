@@ -117,7 +117,7 @@ class UserService extends Service {
       const result = await ctx.helper.selectWithPagging(PUser, {
         where: {
           role_id: ctx.query.role_id,
-          account: { $like: `%${ctx.query.account}%` },
+          account: { [Op.like]: `%${ctx.query.account}%` },
           status: 1,
         },
         attributes: ["account", "name", "gender"],
