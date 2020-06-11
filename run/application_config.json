@@ -379,7 +379,8 @@
     "onClientError": null,
     "middleware": [
       "isLogin",
-      "responseOption"
+      "responseOption",
+      "permissionCheck"
     ],
     "coreMiddlewares": "~config~coreMiddleware",
     "appMiddlewares": "~config~middleware",

@@ -1043,3 +1043,110 @@ name: "ECONNREFUSEDError"
 pid: 38733
 hostname: yudeMacBook-Pro.local
 
+2020-06-11 17:07:27,958 ERROR 40197 [-/::1/-/19ms GET /api/role/get] nodejs.ReferenceError: _getRedis is not defined
+    at permissionCheck (/Users/yuakira/dev/projects/Psychology2/app/middleware/permissionCheck.js:10:26)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:41:56
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 40197
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 17:08:20,980 ERROR 40228 [-/::1/-/15ms GET /api/role/get] nodejs.ReferenceError: ignoreArr is not defined
+    at permissionCheck (/Users/yuakira/dev/projects/Psychology2/app/middleware/permissionCheck.js:14:59)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:41:56
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 40228
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 17:58:10,217 ERROR 30672 nodejs.ClusterClientNoResponseError: client no response in 167020ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 30672
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 18:07:51,906 ERROR 42027 [-/::1/-/24ms DELETE /api/role/del?id=1] nodejs.TypeError: Cannot read property 'permissions' of null
+    at permissionCheck (/Users/yuakira/dev/projects/Psychology2/app/middleware/permissionCheck.js:26:12)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:12:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 42027
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 18:08:40,523 ERROR 42027 [-/::1/-/10ms DELETE /api/role/del?id=1] nodejs.TypeError: Cannot read property 'permissions' of null
+    at permissionCheck (/Users/yuakira/dev/projects/Psychology2/app/middleware/permissionCheck.js:26:12)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:12:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 42027
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 18:09:21,116 ERROR 42061 [-/::1/-/29ms DELETE /api/role/del?id=1] nodejs.TypeError: Cannot read property 'permissions' of null
+    at permissionCheck (/Users/yuakira/dev/projects/Psychology2/app/middleware/permissionCheck.js:28:12)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:12:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 42061
+hostname: yudeMacBook-Pro.local
+

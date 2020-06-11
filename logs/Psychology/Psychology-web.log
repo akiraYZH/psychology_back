@@ -2890,3 +2890,264 @@ hostname: yudeMacBook-Pro.local
 2020-06-11 16:55:53,154 INFO 39822 [egg-sequelize](4ms) Executed (default): UPDATE `p_reservation_type` SET `status`=? WHERE `id` = ? AND `status` = ?
 2020-06-11 16:56:33,066 INFO 39856 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
 2020-06-11 16:56:35,982 INFO 39856 [egg-sequelize](7ms) Executed (default): UPDATE `p_role` SET `status`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 17:01:30,900 INFO 40029 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:03:20,961 INFO 40066 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:03:44,730 INFO 40088 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:04:30,376 INFO 40118 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:05:52,106 INFO 40118 [egg-sequelize](5ms) Executed (default): SELECT `p_user`.`id`, `p_user`.`account`, `p_user`.`phone`, `p_user`.`password`, `p_user`.`name`, `p_user`.`birthday`, `p_user`.`gender`, `p_user`.`avatar`, `p_user`.`criminal_id`, `p_user`.`justice_id`, `p_user`.`parent_id`, `p_user`.`is_marry`, `p_user`.`education`, `p_user`.`job`, `p_user`.`urgent_name`, `p_user`.`urgent_relation`, `p_user`.`urgent_phone`, `p_user`.`role_id`, `p_user`.`status`, `roles`.`id` AS `roles.id`, `roles`.`name` AS `roles.name` FROM `p_user` AS `p_user` LEFT OUTER JOIN `p_role` AS `roles` ON `p_user`.`role_id` = `roles`.`id` WHERE `p_user`.`account` = 'admin' AND `p_user`.`password` = '123456' AND `p_user`.`status` = 1 LIMIT 1;
+2020-06-11 17:06:34,620 INFO 40118 [egg-sequelize](4ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:06:52,669 INFO 40160 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:07:25,979 INFO 40197 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:07:27,959 ERROR 40197 [-/::1/-/19ms GET /api/role/get] nodejs.ReferenceError: _getRedis is not defined
+    at permissionCheck (/Users/yuakira/dev/projects/Psychology2/app/middleware/permissionCheck.js:10:26)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:41:56
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 40197
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 17:08:18,655 INFO 40228 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:08:20,980 ERROR 40228 [-/::1/-/15ms GET /api/role/get] nodejs.ReferenceError: ignoreArr is not defined
+    at permissionCheck (/Users/yuakira/dev/projects/Psychology2/app/middleware/permissionCheck.js:14:59)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:41:56
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 40228
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 17:08:41,520 INFO 40252 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:08:42,709 INFO 40252 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:09:29,412 INFO 40282 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:09:30,142 INFO 40282 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:09:52,323 INFO 40308 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:09:53,007 INFO 40308 [egg-sequelize](3ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:10:39,954 INFO 40332 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:10:41,108 INFO 40332 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:11:46,245 INFO 40361 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:11:46,895 INFO 40361 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:13:02,772 INFO 40361 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:13:19,942 INFO 40404 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:13:20,880 INFO 40404 [egg-sequelize](4ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:14:08,858 INFO 40428 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:15:57,264 INFO 40461 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:16:07,152 INFO 40482 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:17:25,378 INFO 40513 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:17:28,253 INFO 40513 [egg-sequelize](1ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:18:39,217 INFO 40541 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:20:12,633 INFO 40571 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:20:17,266 INFO 40585 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:20:33,350 INFO 40606 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:20:47,720 INFO 40631 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:21:16,445 INFO 40677 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:21:25,451 INFO 40688 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:21:27,036 INFO 40688 [egg-sequelize](2ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 17:21:27,040 INFO 40688 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:21:47,663 INFO 40688 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 17:21:47,666 INFO 40688 [egg-sequelize](3ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:21:47,663 INFO 40712 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:21:56,929 INFO 40733 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:21:58,355 INFO 40735 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:21:58,987 INFO 40736 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:22:00,890 INFO 40736 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 17:22:00,900 INFO 40736 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:23:29,641 INFO 40763 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:23:33,136 INFO 40774 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:24:45,801 INFO 40801 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:24:47,434 INFO 40815 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:24:50,754 INFO 40815 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 17:24:50,766 INFO 40815 [egg-sequelize](3ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:27:27,045 INFO 40842 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:30:11,840 INFO 40879 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:30:20,079 INFO 40903 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:30:20,592 INFO 40903 [egg-sequelize](1ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 17:30:20,603 INFO 40903 [egg-sequelize](1ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:30:43,387 INFO 40924 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:33:35,054 INFO 40989 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:33:41,879 INFO 41013 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:33:55,547 INFO 41031 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:34:07,272 INFO 41052 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:34:08,256 INFO 41052 [egg-sequelize](1ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 17:34:08,266 INFO 41052 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:34:29,070 INFO 41076 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:34:32,107 INFO 41087 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:35:40,722 INFO 41136 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:35:42,927 INFO 41147 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:39:26,894 INFO 41147 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 17:58:31,097 INFO 41654 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:58:41,329 INFO 41680 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:58:46,119 INFO 41680 [egg-sequelize](17ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 17:58:46,130 INFO 41680 [egg-sequelize](3ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 17:58:58,795 INFO 41704 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:59:33,470 INFO 41730 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 17:59:34,542 INFO 41730 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 17:59:45,817 INFO 41754 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:00:16,004 INFO 41784 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:00:16,066 INFO 41784 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 18:00:38,254 INFO 41809 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:00:41,352 INFO 41809 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 18:03:59,945 INFO 41809 [egg-sequelize](1ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 18:04:19,483 INFO 41881 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:04:21,460 INFO 41881 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 18:04:21,486 INFO 41881 [egg-sequelize](13ms) Executed (default): UPDATE `p_role` SET `status`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 18:04:27,007 INFO 41905 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:04:49,517 INFO 41916 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:05:01,412 INFO 41940 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:05:06,635 INFO 41951 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:07:28,246 INFO 41992 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:07:47,082 INFO 42016 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:07:51,125 INFO 42027 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:07:51,904 INFO 42027 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 18:07:51,906 ERROR 42027 [-/::1/-/24ms DELETE /api/role/del?id=1] nodejs.TypeError: Cannot read property 'permissions' of null
+    at permissionCheck (/Users/yuakira/dev/projects/Psychology2/app/middleware/permissionCheck.js:26:12)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:12:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 42027
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 18:08:40,522 INFO 42027 [egg-sequelize](1ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 18:08:40,523 ERROR 42027 [-/::1/-/10ms DELETE /api/role/del?id=1] nodejs.TypeError: Cannot read property 'permissions' of null
+    at permissionCheck (/Users/yuakira/dev/projects/Psychology2/app/middleware/permissionCheck.js:26:12)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:12:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 42027
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 18:09:20,620 INFO 42061 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:09:21,113 INFO 42061 [egg-sequelize](1ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 18:09:21,116 ERROR 42061 [-/::1/-/29ms DELETE /api/role/del?id=1] nodejs.TypeError: Cannot read property 'permissions' of null
+    at permissionCheck (/Users/yuakira/dev/projects/Psychology2/app/middleware/permissionCheck.js:28:12)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:12:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 42061
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 18:10:01,456 INFO 42061 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 18:12:01,812 WARN 42061 [-/::1/-/1ms PUT /api/role/update] nodejs.SyntaxError: Unexpected token ， in JSON at position 61, check bodyParser config
+    at JSON.parse (<anonymous>)
+    at parse (/Users/yuakira/dev/projects/Psychology2/node_modules/co-body/lib/json.js:57:17)
+    at AsyncFunction.module.exports [as json] (/Users/yuakira/dev/projects/Psychology2/node_modules/co-body/lib/json.js:41:20)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async parseBody (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:100:14)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:85:19)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+status: 400
+body: "{\n\t\"id\":\"1\",\n\t\"name\":\"admin\",\n\t\"permissions\":[\"base\",\"record\"，\"role\"]\n}"
+pid: 42061
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 18:12:56,045 INFO 42061 [egg-sequelize](1ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 18:13:26,946 INFO 42128 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:13:27,299 INFO 42128 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 18:13:27,310 INFO 42128 [egg-sequelize](0ms) Executed (17ee55c3-0f55-4022-b489-ebd90877cf9b): START TRANSACTION;
+2020-06-11 18:13:27,315 INFO 42128 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '1' AND `p_role`.`status` = 1;
+2020-06-11 18:13:27,326 INFO 42128 [egg-sequelize](2ms) Executed (17ee55c3-0f55-4022-b489-ebd90877cf9b): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 18:13:27,329 INFO 42128 [egg-sequelize](1ms) Executed (default): SELECT `id`, `apis`, `name`, `status`, `role_id` FROM `p_permission` AS `p_permission` WHERE `p_permission`.`role_id` = 1;
+2020-06-11 18:13:27,337 INFO 42128 [egg-sequelize](4ms) Executed (17ee55c3-0f55-4022-b489-ebd90877cf9b): DELETE FROM `p_permission` WHERE `id` = 5
+2020-06-11 18:13:27,337 INFO 42128 [egg-sequelize](4ms) Executed (17ee55c3-0f55-4022-b489-ebd90877cf9b): DELETE FROM `p_permission` WHERE `id` = 6
+2020-06-11 18:13:27,340 INFO 42128 [egg-sequelize](6ms) Executed (17ee55c3-0f55-4022-b489-ebd90877cf9b): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 18:13:27,344 INFO 42128 [egg-sequelize](1ms) Executed (17ee55c3-0f55-4022-b489-ebd90877cf9b): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (7)
+2020-06-11 18:13:27,347 INFO 42128 [egg-sequelize](1ms) Executed (17ee55c3-0f55-4022-b489-ebd90877cf9b): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 18:13:27,350 INFO 42128 [egg-sequelize](1ms) Executed (17ee55c3-0f55-4022-b489-ebd90877cf9b): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (8)
+2020-06-11 18:13:27,352 INFO 42128 [egg-sequelize](1ms) Executed (17ee55c3-0f55-4022-b489-ebd90877cf9b): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 18:13:27,355 INFO 42128 [egg-sequelize](1ms) Executed (17ee55c3-0f55-4022-b489-ebd90877cf9b): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (9)
+2020-06-11 18:13:27,357 INFO 42128 [egg-sequelize](1ms) Executed (17ee55c3-0f55-4022-b489-ebd90877cf9b): COMMIT;
+2020-06-11 18:13:34,508 INFO 42139 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:13:38,749 INFO 42150 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:13:39,391 INFO 42150 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 18:13:39,402 INFO 42150 [egg-sequelize](1ms) Executed (f09213f6-5212-4ab3-b977-d400a6958eef): START TRANSACTION;
+2020-06-11 18:13:39,407 INFO 42150 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '1' AND `p_role`.`status` = 1;
+2020-06-11 18:13:39,420 INFO 42150 [egg-sequelize](3ms) Executed (f09213f6-5212-4ab3-b977-d400a6958eef): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 18:13:39,423 INFO 42150 [egg-sequelize](2ms) Executed (default): SELECT `id`, `apis`, `name`, `status`, `role_id` FROM `p_permission` AS `p_permission` WHERE `p_permission`.`role_id` = 1;
+2020-06-11 18:13:39,429 INFO 42150 [egg-sequelize](2ms) Executed (f09213f6-5212-4ab3-b977-d400a6958eef): DELETE FROM `p_permission` WHERE `id` = 7
+2020-06-11 18:13:39,430 INFO 42150 [egg-sequelize](2ms) Executed (f09213f6-5212-4ab3-b977-d400a6958eef): DELETE FROM `p_permission` WHERE `id` = 8
+2020-06-11 18:13:39,430 INFO 42150 [egg-sequelize](2ms) Executed (f09213f6-5212-4ab3-b977-d400a6958eef): DELETE FROM `p_permission` WHERE `id` = 9
+2020-06-11 18:13:39,431 INFO 42150 [egg-sequelize](2ms) Executed (f09213f6-5212-4ab3-b977-d400a6958eef): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 18:13:39,435 INFO 42150 [egg-sequelize](1ms) Executed (f09213f6-5212-4ab3-b977-d400a6958eef): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (10)
+2020-06-11 18:13:39,437 INFO 42150 [egg-sequelize](1ms) Executed (f09213f6-5212-4ab3-b977-d400a6958eef): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 18:13:39,440 INFO 42150 [egg-sequelize](1ms) Executed (f09213f6-5212-4ab3-b977-d400a6958eef): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (11)
+2020-06-11 18:13:39,442 INFO 42150 [egg-sequelize](0ms) Executed (f09213f6-5212-4ab3-b977-d400a6958eef): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 18:13:39,445 INFO 42150 [egg-sequelize](1ms) Executed (f09213f6-5212-4ab3-b977-d400a6958eef): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (12)
+2020-06-11 18:13:39,447 INFO 42150 [egg-sequelize](1ms) Executed (f09213f6-5212-4ab3-b977-d400a6958eef): COMMIT;
+2020-06-11 18:13:56,715 INFO 42170 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 18:14:03,574 INFO 42170 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 18:14:03,588 INFO 42170 [egg-sequelize](1ms) Executed (e076fc62-c2fa-4272-8e1f-5312b0eaf98b): START TRANSACTION;
+2020-06-11 18:14:03,593 INFO 42170 [egg-sequelize](2ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '1' AND `p_role`.`status` = 1;
+2020-06-11 18:14:03,603 INFO 42170 [egg-sequelize](2ms) Executed (e076fc62-c2fa-4272-8e1f-5312b0eaf98b): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 18:14:03,607 INFO 42170 [egg-sequelize](1ms) Executed (default): SELECT `id`, `apis`, `name`, `status`, `role_id` FROM `p_permission` AS `p_permission` WHERE `p_permission`.`role_id` = 1;
+2020-06-11 18:14:03,614 INFO 42170 [egg-sequelize](3ms) Executed (e076fc62-c2fa-4272-8e1f-5312b0eaf98b): DELETE FROM `p_permission` WHERE `id` = 10
+2020-06-11 18:14:03,614 INFO 42170 [egg-sequelize](2ms) Executed (e076fc62-c2fa-4272-8e1f-5312b0eaf98b): DELETE FROM `p_permission` WHERE `id` = 11
+2020-06-11 18:14:03,615 INFO 42170 [egg-sequelize](3ms) Executed (e076fc62-c2fa-4272-8e1f-5312b0eaf98b): DELETE FROM `p_permission` WHERE `id` = 12
+2020-06-11 18:14:03,615 INFO 42170 [egg-sequelize](2ms) Executed (e076fc62-c2fa-4272-8e1f-5312b0eaf98b): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 18:14:03,619 INFO 42170 [egg-sequelize](0ms) Executed (e076fc62-c2fa-4272-8e1f-5312b0eaf98b): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (13)
+2020-06-11 18:14:03,622 INFO 42170 [egg-sequelize](1ms) Executed (e076fc62-c2fa-4272-8e1f-5312b0eaf98b): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 18:14:03,626 INFO 42170 [egg-sequelize](1ms) Executed (e076fc62-c2fa-4272-8e1f-5312b0eaf98b): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (14)
+2020-06-11 18:14:03,628 INFO 42170 [egg-sequelize](1ms) Executed (e076fc62-c2fa-4272-8e1f-5312b0eaf98b): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 18:14:03,631 INFO 42170 [egg-sequelize](1ms) Executed (e076fc62-c2fa-4272-8e1f-5312b0eaf98b): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (15)
+2020-06-11 18:14:03,632 INFO 42170 [egg-sequelize](0ms) Executed (e076fc62-c2fa-4272-8e1f-5312b0eaf98b): COMMIT;
+2020-06-11 19:38:44,089 INFO 42170 [egg-sequelize](7ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_role`.`status`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` WHERE `p_role`.`id` = 1 AND `p_role`.`status` = 1;
+2020-06-11 19:38:44,129 INFO 42170 [egg-sequelize](3ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
