@@ -2117,3 +2117,776 @@ hostname: yudeMacBook-Pro.local
 2020-06-10 18:10:52,742 INFO 16444 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
 2020-06-10 18:12:19,312 INFO 16478 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
 2020-06-10 18:12:29,117 INFO 16502 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:20:26,392 INFO 30676 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:21:07,408 INFO 30676 [egg-sequelize](15ms) Executed (default): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 09:21:23,690 WARN 30676 [-/::1/-/2ms POST /api/role/add] nodejs.SyntaxError: Unexpected token 心 in JSON at position 11, check bodyParser config
+    at JSON.parse (<anonymous>)
+    at parse (/Users/yuakira/dev/projects/Psychology2/node_modules/co-body/lib/json.js:57:17)
+    at AsyncFunction.module.exports [as json] (/Users/yuakira/dev/projects/Psychology2/node_modules/co-body/lib/json.js:41:20)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async parseBody (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:100:14)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:85:19)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+status: 400
+body: "{\n\t\"name1:\"心理咨询师\"\n}"
+pid: 30676
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 09:22:45,980 INFO 30724 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:22:50,160 INFO 30739 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:22:54,781 INFO 30751 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:23:23,346 INFO 30778 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:24:42,812 INFO 30808 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:24:55,960 INFO 30832 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:25:15,844 INFO 30861 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:26:25,756 INFO 30892 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:26:26,151 INFO 30892 [egg-sequelize](4ms) Executed (default): SELECT `id`, `type_name`, `description` FROM `p_reservation_type` AS `p_reservation_type` WHERE `p_reservation_type`.`status` = 1;
+2020-06-11 09:26:50,237 INFO 30920 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:27:16,664 INFO 30954 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:27:17,471 ERROR 30954 [-/::1/-/26ms GET /api/role/get] nodejs.TypeError: service.role.getList is not a function
+    at RoleController.get (/Users/yuakira/dev/projects/Psychology2/app/controller/role.js:58:35)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+
+pid: 30954
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 09:27:28,083 INFO 30975 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:27:32,461 INFO 30975 [egg-sequelize](4ms) Executed (default): SELECT `id`, `name` FROM `p_role` AS `p_role` WHERE `p_role`.`status` = 1;
+2020-06-11 09:29:04,997 INFO 31033 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:29:21,454 INFO 31057 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:30:07,934 INFO 31085 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:30:36,928 INFO 31085 [egg-sequelize](3ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_permissions`.`id` AS `p_permissions.id`, `p_permissions`.`content` AS `p_permissions.content`, `p_permissions`.`type` AS `p_permissions.type`, `p_permissions`.`status` AS `p_permissions.status`, `p_permissions`.`role_id` AS `p_permissions.role_id` FROM `p_role` AS `p_role` INNER JOIN `p_permission` AS `p_permissions` ON `p_role`.`id` = `p_permissions`.`role_id` AND `p_permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 09:31:05,544 INFO 31115 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:31:06,308 INFO 31115 [egg-sequelize](1ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_permissions`.`id` AS `p_permissions.id`, `p_permissions`.`content` AS `p_permissions.content`, `p_permissions`.`type` AS `p_permissions.type`, `p_permissions`.`status` AS `p_permissions.status`, `p_permissions`.`role_id` AS `p_permissions.role_id` FROM `p_role` AS `p_role` INNER JOIN `p_permission` AS `p_permissions` ON `p_role`.`id` = `p_permissions`.`role_id` AND `p_permissions`.`status` = 1 AND `p_permissions`.`requred` = false WHERE `p_role`.`status` = 1;
+2020-06-11 09:31:41,707 INFO 31115 [egg-sequelize](3ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_permissions`.`id` AS `p_permissions.id`, `p_permissions`.`content` AS `p_permissions.content`, `p_permissions`.`type` AS `p_permissions.type`, `p_permissions`.`status` AS `p_permissions.status`, `p_permissions`.`role_id` AS `p_permissions.role_id` FROM `p_role` AS `p_role` INNER JOIN `p_permission` AS `p_permissions` ON `p_role`.`id` = `p_permissions`.`role_id` AND `p_permissions`.`status` = 1 AND `p_permissions`.`requred` = false WHERE `p_role`.`status` = 1;
+2020-06-11 09:31:41,676 INFO 31139 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:31:44,868 INFO 31139 [egg-sequelize](1ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_permissions`.`id` AS `p_permissions.id`, `p_permissions`.`content` AS `p_permissions.content`, `p_permissions`.`type` AS `p_permissions.type`, `p_permissions`.`status` AS `p_permissions.status`, `p_permissions`.`role_id` AS `p_permissions.role_id` FROM `p_role` AS `p_role` INNER JOIN `p_permission` AS `p_permissions` ON `p_role`.`id` = `p_permissions`.`role_id` AND `p_permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 09:31:59,010 INFO 31160 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:31:59,892 INFO 31160 [egg-sequelize](1ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `p_permissions`.`id` AS `p_permissions.id`, `p_permissions`.`content` AS `p_permissions.content`, `p_permissions`.`type` AS `p_permissions.type`, `p_permissions`.`status` AS `p_permissions.status`, `p_permissions`.`role_id` AS `p_permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `p_permissions` ON `p_role`.`id` = `p_permissions`.`role_id` AND `p_permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 09:32:33,525 INFO 31185 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:33:20,625 INFO 31221 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:33:21,135 INFO 31221 [egg-sequelize](1ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`content` AS `permissions.content`, `permissions`.`type` AS `permissions.type`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 09:34:20,658 INFO 31251 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:39:52,817 INFO 31315 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:40:12,251 INFO 31315 [egg-sequelize](7ms) Executed (default): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 09:40:47,812 INFO 31342 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:40:58,374 INFO 31342 [egg-sequelize](3ms) Executed (default): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 09:50:02,229 INFO 31453 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:50:14,268 INFO 31477 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:52:38,106 INFO 31534 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:56:12,475 INFO 31588 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:56:27,125 INFO 31613 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:56:46,125 INFO 31613 [egg-sequelize](0ms) Executed (be22faf1-2a9e-4bb5-9473-0d8dcd050f72): START TRANSACTION;
+2020-06-11 09:56:46,134 INFO 31613 [egg-sequelize](2ms) Executed (be22faf1-2a9e-4bb5-9473-0d8dcd050f72): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 09:56:46,146 INFO 31613 [egg-sequelize](5ms) Executed (be22faf1-2a9e-4bb5-9473-0d8dcd050f72): COMMIT;
+2020-06-11 09:57:16,555 INFO 31643 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:57:55,786 INFO 31684 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 09:58:08,198 INFO 31684 [egg-sequelize](1ms) Executed (58e42dac-8379-4f9c-ac67-f2f8dd5c4f6d): START TRANSACTION;
+2020-06-11 09:58:08,207 INFO 31684 [egg-sequelize](2ms) Executed (58e42dac-8379-4f9c-ac67-f2f8dd5c4f6d): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 09:58:08,219 INFO 31684 [egg-sequelize](6ms) Executed (58e42dac-8379-4f9c-ac67-f2f8dd5c4f6d): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN ('[object Object]')
+2020-06-11 09:58:08,221 INFO 31684 [egg-sequelize](1ms) Executed (58e42dac-8379-4f9c-ac67-f2f8dd5c4f6d): COMMIT;
+2020-06-11 10:04:16,849 INFO 31802 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:04:19,089 INFO 31802 [egg-sequelize](0ms) Executed (bd93aab8-063e-4c66-b024-6db6d2383e3a): START TRANSACTION;
+2020-06-11 10:04:19,105 INFO 31802 [egg-sequelize](6ms) Executed (default): INSERT INTO `p_permission` (`id`,`content`,`type`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 10:04:19,109 INFO 31802 [egg-sequelize](1ms) Executed (bd93aab8-063e-4c66-b024-6db6d2383e3a): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 10:04:19,118 INFO 31802 [egg-sequelize](3ms) Executed (bd93aab8-063e-4c66-b024-6db6d2383e3a): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (1)
+2020-06-11 10:04:19,145 INFO 31802 [egg-sequelize](26ms) Executed (bd93aab8-063e-4c66-b024-6db6d2383e3a): COMMIT;
+2020-06-11 10:07:00,984 INFO 31848 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:07:02,256 INFO 31848 [egg-sequelize](1ms) Executed (f5cbab01-93f4-4e24-a178-fe1372bb55f8): START TRANSACTION;
+2020-06-11 10:07:02,268 INFO 31848 [egg-sequelize](2ms) Executed (default): INSERT INTO `p_permission` (`id`,`content`,`type`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 10:07:02,274 INFO 31848 [egg-sequelize](1ms) Executed (f5cbab01-93f4-4e24-a178-fe1372bb55f8): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 10:07:02,285 INFO 31848 [egg-sequelize](1ms) Executed (f5cbab01-93f4-4e24-a178-fe1372bb55f8): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (2)
+2020-06-11 10:07:26,928 INFO 31877 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:08:04,484 INFO 31902 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:08:13,395 INFO 31926 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:08:16,787 INFO 31937 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:09:02,113 INFO 31951 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:09:10,526 INFO 31975 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:09:32,024 INFO 31997 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:09:57,845 INFO 32022 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:11:56,970 INFO 32059 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:12:53,528 INFO 32090 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:13:00,517 INFO 32113 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:13:02,658 INFO 32113 [egg-sequelize](0ms) Executed (09b1cf05-fcfe-49e5-90cf-68fc295827cf): START TRANSACTION;
+2020-06-11 10:13:02,671 INFO 32113 [egg-sequelize](4ms) Executed (09b1cf05-fcfe-49e5-90cf-68fc295827cf): INSERT INTO `p_permission` (`id`,`content`,`type`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 10:13:02,674 INFO 32113 [egg-sequelize](1ms) Executed (09b1cf05-fcfe-49e5-90cf-68fc295827cf): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 10:13:02,684 INFO 32113 [egg-sequelize](0ms) Executed (09b1cf05-fcfe-49e5-90cf-68fc295827cf): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (3)
+2020-06-11 10:13:02,686 INFO 32113 [egg-sequelize](0ms) Executed (09b1cf05-fcfe-49e5-90cf-68fc295827cf): COMMIT;
+2020-06-11 10:13:02,689 ERROR 32113 [-/::1/-/53ms POST /api/role/add] nodejs.ReferenceError: transaction is not defined
+    at RoleService.add (/Users/yuakira/dev/projects/Psychology2/app/service/role.js:38:7)
+    at async RoleController.add (/Users/yuakira/dev/projects/Psychology2/app/controller/role.js:27:18)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 32113
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 10:13:11,573 INFO 32127 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:13:14,860 INFO 32127 [egg-sequelize](0ms) Executed (61a4c198-42ce-4534-923a-82dbace9b8f0): START TRANSACTION;
+2020-06-11 10:13:14,870 INFO 32127 [egg-sequelize](3ms) Executed (61a4c198-42ce-4534-923a-82dbace9b8f0): INSERT INTO `p_permission` (`id`,`content`,`type`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 10:13:14,874 INFO 32127 [egg-sequelize](1ms) Executed (61a4c198-42ce-4534-923a-82dbace9b8f0): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 10:13:14,886 INFO 32127 [egg-sequelize](3ms) Executed (61a4c198-42ce-4534-923a-82dbace9b8f0): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (4)
+2020-06-11 10:13:14,888 INFO 32127 [egg-sequelize](1ms) Executed (61a4c198-42ce-4534-923a-82dbace9b8f0): COMMIT;
+2020-06-11 10:13:14,891 ERROR 32127 [-/::1/-/52ms POST /api/role/add] nodejs.ReferenceError: transaction is not defined
+    at RoleService.add (/Users/yuakira/dev/projects/Psychology2/app/service/role.js:38:7)
+    at async RoleController.add (/Users/yuakira/dev/projects/Psychology2/app/controller/role.js:27:18)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 32127
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 10:13:52,605 INFO 32142 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:13:57,872 INFO 32142 [egg-sequelize](1ms) Executed (24bcd6a2-e731-42d9-afb5-bb78d9426e53): START TRANSACTION;
+2020-06-11 10:13:57,880 INFO 32142 [egg-sequelize](2ms) Executed (24bcd6a2-e731-42d9-afb5-bb78d9426e53): INSERT INTO `p_permission` (`id`,`content`,`type`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 10:13:57,884 INFO 32142 [egg-sequelize](1ms) Executed (24bcd6a2-e731-42d9-afb5-bb78d9426e53): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 10:13:57,894 INFO 32142 [egg-sequelize](1ms) Executed (24bcd6a2-e731-42d9-afb5-bb78d9426e53): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (5)
+2020-06-11 10:13:57,900 INFO 32142 [egg-sequelize](1ms) Executed (24bcd6a2-e731-42d9-afb5-bb78d9426e53): COMMIT;
+2020-06-11 10:13:57,909 ERROR 32142 [-/::1/-/59ms POST /api/role/add] nodejs.Error: Transaction cannot be rolled back because it has been finished with state: commit
+    at Transaction.rollback (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/transaction.js:86:29)
+    at RoleService.add (/Users/yuakira/dev/projects/Psychology2/app/service/role.js:38:25)
+    at async RoleController.add (/Users/yuakira/dev/projects/Psychology2/app/controller/role.js:27:18)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 32142
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 10:16:38,340 INFO 32182 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:16:38,411 INFO 32182 [egg-sequelize](0ms) Executed (9080adc4-a28d-457c-81a7-81c978a896bb): START TRANSACTION;
+2020-06-11 10:16:38,420 INFO 32182 [egg-sequelize](3ms) Executed (9080adc4-a28d-457c-81a7-81c978a896bb): INSERT INTO `p_permission` (`id`,`content`,`type`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 10:16:38,423 INFO 32182 [egg-sequelize](1ms) Executed (9080adc4-a28d-457c-81a7-81c978a896bb): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 10:16:38,429 INFO 32182 [egg-sequelize](1ms) Executed (9080adc4-a28d-457c-81a7-81c978a896bb): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (6)
+2020-06-11 10:16:38,435 INFO 32182 [egg-sequelize](1ms) Executed (9080adc4-a28d-457c-81a7-81c978a896bb): COMMIT;
+2020-06-11 10:16:38,440 ERROR 32182 [-/::1/-/48ms POST /api/role/add] nodejs.Error: Transaction cannot be rolled back because it has been finished with state: commit
+    at Transaction.rollback (/Users/yuakira/dev/projects/Psychology2/node_modules/_sequelize@5.21.10@sequelize/lib/transaction.js:86:29)
+    at RoleService.add (/Users/yuakira/dev/projects/Psychology2/app/service/role.js:40:25)
+    at async RoleController.add (/Users/yuakira/dev/projects/Psychology2/app/controller/role.js:27:18)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 32182
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 10:17:03,425 INFO 32203 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 10:17:07,102 INFO 32203 [egg-sequelize](5ms) Executed (be98a3ae-3eef-45a3-8678-55a1b070fd0f): START TRANSACTION;
+2020-06-11 10:17:07,111 INFO 32203 [egg-sequelize](3ms) Executed (be98a3ae-3eef-45a3-8678-55a1b070fd0f): INSERT INTO `p_permission` (`id`,`content`,`type`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 10:17:07,114 INFO 32203 [egg-sequelize](0ms) Executed (be98a3ae-3eef-45a3-8678-55a1b070fd0f): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 10:17:07,122 INFO 32203 [egg-sequelize](1ms) Executed (be98a3ae-3eef-45a3-8678-55a1b070fd0f): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (7)
+2020-06-11 10:17:07,124 INFO 32203 [egg-sequelize](1ms) Executed (be98a3ae-3eef-45a3-8678-55a1b070fd0f): COMMIT;
+2020-06-11 10:34:23,308 INFO 32457 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:23:35,281 INFO 33344 [egg-sequelize](3ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:23:43,614 INFO 33366 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:40:30,579 INFO 33864 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:40:55,936 INFO 33888 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:41:20,288 INFO 33916 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:41:20,306 INFO 33916 [egg-sequelize](19ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_exercises` (`id` INTEGER auto_increment  COMMENT '站内信id', `title` VARCHAR(255) NOT NULL COMMENT '内容题目', `option_obj` TEXT NOT NULL COMMENT '答案选项json', `score_obj` TEXT NOT NULL COMMENT '答案分数json', `option_score_obj` TEXT NOT NULL COMMENT '选项和分数', `mold_id` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '题目类型,1选择题', `type_id` INTEGER(11) NOT NULL COMMENT '题目类型id，待定', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-11 11:41:20,316 INFO 33916 [egg-sequelize](6ms) Executed (default): SHOW FULL COLUMNS FROM `p_exercises`;
+2020-06-11 11:41:20,317 INFO 33916 [egg-sequelize](7ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_exercises' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:41:20,334 INFO 33916 [egg-sequelize](14ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `title` `title` VARCHAR(255) NOT NULL COMMENT '内容题目';
+2020-06-11 11:41:20,347 INFO 33916 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `option_obj` `option_obj` TEXT NOT NULL COMMENT '答案选项json';
+2020-06-11 11:41:20,364 INFO 33916 [egg-sequelize](14ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `score_obj` `score_obj` TEXT NOT NULL COMMENT '答案分数json';
+2020-06-11 11:41:20,379 INFO 33916 [egg-sequelize](14ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `option_score_obj` `option_score_obj` TEXT NOT NULL COMMENT '选项和分数';
+2020-06-11 11:41:20,394 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `mold_id` `mold_id` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '题目类型,1选择题';
+2020-06-11 11:41:20,407 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `type_id` `type_id` INTEGER(11) NOT NULL COMMENT '题目类型id，待定';
+2020-06-11 11:41:20,420 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:41:20,422 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_exercises` FROM `project_psychology`
+2020-06-11 11:41:20,428 INFO 33916 [egg-sequelize](2ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_justice` (`id` INTEGER auto_increment  COMMENT '地点id', `parent_id` INTEGER NOT NULL COMMENT '父级id', `name` VARCHAR(10) NOT NULL COMMENT '名称', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-11 11:41:20,431 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_justice`;
+2020-06-11 11:41:20,431 INFO 33916 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_justice' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:41:20,446 INFO 33916 [egg-sequelize](14ms) Executed (default): ALTER TABLE `p_justice` CHANGE `parent_id` `parent_id` INTEGER NOT NULL COMMENT '父级id';
+2020-06-11 11:41:20,458 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_justice` CHANGE `name` `name` VARCHAR(10) NOT NULL COMMENT '名称';
+2020-06-11 11:41:20,459 INFO 33916 [egg-sequelize](0ms) Executed (default): SHOW INDEX FROM `p_justice` FROM `project_psychology`
+2020-06-11 11:41:20,462 INFO 33916 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_msg` (`id` INTEGER auto_increment  COMMENT '站内信id', `from_id` INTEGER NOT NULL DEFAULT -1 COMMENT '来源id(-1为系统信息)', `to_id` INTEGER NOT NULL COMMENT '目标id', `content` TEXT NOT NULL COMMENT '内容', `state` INTEGER(11) NOT NULL DEFAULT 0 COMMENT '0:未读， 1:已读', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-11 11:41:20,464 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_msg`;
+2020-06-11 11:41:20,465 INFO 33916 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_msg' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:41:20,478 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_msg` CHANGE `from_id` `from_id` INTEGER NOT NULL DEFAULT -1 COMMENT '来源id(-1为系统信息)';
+2020-06-11 11:41:20,490 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_msg` CHANGE `to_id` `to_id` INTEGER NOT NULL COMMENT '目标id';
+2020-06-11 11:41:20,501 INFO 33916 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_msg` CHANGE `content` `content` TEXT NOT NULL COMMENT '内容';
+2020-06-11 11:41:20,513 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_msg` CHANGE `state` `state` INTEGER(11) NOT NULL DEFAULT 0 COMMENT '0:未读， 1:已读';
+2020-06-11 11:41:20,524 INFO 33916 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_msg` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:41:20,526 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_msg` FROM `project_psychology`
+2020-06-11 11:41:20,530 INFO 33916 [egg-sequelize](3ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_role` (`id` INTEGER auto_increment  COMMENT '用户id', `name` VARCHAR(50) NOT NULL COMMENT '角色名', `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-11 11:41:20,531 INFO 33916 [egg-sequelize](0ms) Executed (default): SHOW FULL COLUMNS FROM `p_role`;
+2020-06-11 11:41:20,532 INFO 33916 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_role' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:41:20,545 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_role` CHANGE `name` `name` VARCHAR(50) NOT NULL COMMENT '角色名';
+2020-06-11 11:41:20,557 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_role` CHANGE `status` `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:41:20,558 INFO 33916 [egg-sequelize](0ms) Executed (default): SHOW INDEX FROM `p_role` FROM `project_psychology`
+2020-06-11 11:41:20,562 INFO 33916 [egg-sequelize](2ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_user` (`id` INTEGER(11) auto_increment  COMMENT '用户id', `account` VARCHAR(50) COMMENT '用户账号', `phone` VARCHAR(11) COMMENT '用户电话', `password` VARCHAR(50) COMMENT '密码', `name` VARCHAR(10) COMMENT '用户姓名', `birthday` VARCHAR(13) COMMENT '生日', `gender` INTEGER(1) DEFAULT 1 COMMENT '性别，1男2女', `avatar` VARCHAR(255) COMMENT '头像地址', `criminal_id` VARCHAR(50) COMMENT '服刑人员编码', `justice_id` INTEGER(11) DEFAULT 0 COMMENT '司法所，服刑犯人才需要填', `parent_id` INTEGER(11) DEFAULT 0 COMMENT '来访者才有父类', `is_marry` INTEGER(11) DEFAULT 2 COMMENT '是否结婚,1是2否', `education` VARCHAR(255) COMMENT '学历', `job` VARCHAR(255) COMMENT '职业', `urgent_name` VARCHAR(255) COMMENT '紧急联系人', `urgent_relation` VARCHAR(255) COMMENT '紧急联系人关系', `urgent_phone` VARCHAR(255) COMMENT '紧急联系人电话', `role_id` INTEGER(11) COMMENT '角色id，管理者admin 咨询师doctor 中心工作人员worker 来访者visitor 服刑人员criminal', `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`role_id`) REFERENCES `p_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-11 11:41:20,566 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_user`;
+2020-06-11 11:41:20,567 INFO 33916 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_user' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:41:20,581 INFO 33916 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_user` CHANGE `account` `account` VARCHAR(50) COMMENT '用户账号';
+2020-06-11 11:41:20,592 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `phone` `phone` VARCHAR(11) COMMENT '用户电话';
+2020-06-11 11:41:20,605 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `password` `password` VARCHAR(50) COMMENT '密码';
+2020-06-11 11:41:20,616 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `name` `name` VARCHAR(10) COMMENT '用户姓名';
+2020-06-11 11:41:20,629 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `birthday` `birthday` VARCHAR(13) COMMENT '生日';
+2020-06-11 11:41:20,640 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `gender` `gender` INTEGER(1) DEFAULT 1 COMMENT '性别，1男2女';
+2020-06-11 11:41:20,653 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `avatar` `avatar` VARCHAR(255) COMMENT '头像地址';
+2020-06-11 11:41:20,665 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `criminal_id` `criminal_id` VARCHAR(50) COMMENT '服刑人员编码';
+2020-06-11 11:41:20,677 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `justice_id` `justice_id` INTEGER(11) DEFAULT 0 COMMENT '司法所，服刑犯人才需要填';
+2020-06-11 11:41:20,689 INFO 33916 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_user` CHANGE `parent_id` `parent_id` INTEGER(11) DEFAULT 0 COMMENT '来访者才有父类';
+2020-06-11 11:41:20,701 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `is_marry` `is_marry` INTEGER(11) DEFAULT 2 COMMENT '是否结婚,1是2否';
+2020-06-11 11:41:20,712 INFO 33916 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_user` CHANGE `education` `education` VARCHAR(255) COMMENT '学历';
+2020-06-11 11:41:20,725 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `job` `job` VARCHAR(255) COMMENT '职业';
+2020-06-11 11:41:20,738 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `urgent_name` `urgent_name` VARCHAR(255) COMMENT '紧急联系人';
+2020-06-11 11:41:20,750 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `urgent_relation` `urgent_relation` VARCHAR(255) COMMENT '紧急联系人关系';
+2020-06-11 11:41:20,762 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `urgent_phone` `urgent_phone` VARCHAR(255) COMMENT '紧急联系人电话';
+2020-06-11 11:41:20,766 INFO 33916 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_user' AND constraint_name = 'p_user_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:41:20,785 INFO 33916 [egg-sequelize](18ms) Executed (default): ALTER TABLE `p_user`
+      DROP FOREIGN KEY `p_user_ibfk_1`;
+2020-06-11 11:41:20,815 INFO 33916 [egg-sequelize](29ms) Executed (default): ALTER TABLE `p_user` ADD FOREIGN KEY (`role_id`) REFERENCES `p_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2020-06-11 11:41:20,827 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `status` `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:41:20,829 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_user` FROM `project_psychology`
+2020-06-11 11:41:20,833 INFO 33916 [egg-sequelize](2ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_paper` (`id` INTEGER auto_increment  COMMENT '试卷id', `title` VARCHAR(255) NOT NULL COMMENT '试卷标题', `worker_id` INTEGER(11) NOT NULL COMMENT '创建人id', `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳', `exercises_json` TEXT NOT NULL COMMENT '所包含题目ID集合', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`worker_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE) ENGINE=innoDB;
+2020-06-11 11:41:20,835 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_paper`;
+2020-06-11 11:41:20,836 INFO 33916 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_paper' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:41:20,848 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper` CHANGE `title` `title` VARCHAR(255) NOT NULL COMMENT '试卷标题';
+2020-06-11 11:41:20,850 INFO 33916 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_paper' AND constraint_name = 'p_paper_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:41:20,864 INFO 33916 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_paper`
+      DROP FOREIGN KEY `p_paper_ibfk_1`;
+2020-06-11 11:41:20,883 INFO 33916 [egg-sequelize](18ms) Executed (default): ALTER TABLE `p_paper` ADD FOREIGN KEY (`worker_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-11 11:41:20,896 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper` CHANGE `time_stamp` `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳';
+2020-06-11 11:41:20,908 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper` CHANGE `exercises_json` `exercises_json` TEXT NOT NULL COMMENT '所包含题目ID集合';
+2020-06-11 11:41:20,920 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:41:20,921 INFO 33916 [egg-sequelize](0ms) Executed (default): SHOW INDEX FROM `p_paper` FROM `project_psychology`
+2020-06-11 11:41:20,924 INFO 33916 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_paper_user` (`id` INTEGER(11) auto_increment  COMMENT '分配记录id', `user_id` INTEGER(11) NOT NULL COMMENT '用户id', `distributor_id` INTEGER(11) NOT NULL COMMENT '派发人id', `paper_id` INTEGER NOT NULL COMMENT '试卷id', `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳', `state` INTEGER(11) NOT NULL DEFAULT 0 COMMENT '1:完成 0:未完成', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE, FOREIGN KEY (`distributor_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE, FOREIGN KEY (`paper_id`) REFERENCES `p_paper` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-11 11:41:20,926 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_paper_user`;
+2020-06-11 11:41:20,927 INFO 33916 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_paper_user' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:41:20,928 INFO 33916 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_paper_user' AND constraint_name = 'p_paper_user_ibfk_37' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:41:20,942 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper_user`
+      DROP FOREIGN KEY `p_paper_user_ibfk_37`;
+2020-06-11 11:41:20,943 INFO 33916 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_paper_user' AND constraint_name = 'p_paper_user_ibfk_38' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:41:20,955 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper_user`
+      DROP FOREIGN KEY `p_paper_user_ibfk_38`;
+2020-06-11 11:41:20,974 INFO 33916 [egg-sequelize](18ms) Executed (default): ALTER TABLE `p_paper_user` ADD FOREIGN KEY (`user_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-11 11:41:20,999 INFO 33916 [egg-sequelize](25ms) Executed (default): ALTER TABLE `p_paper_user` ADD FOREIGN KEY (`distributor_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-11 11:41:21,002 INFO 33916 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_paper_user' AND constraint_name = 'p_paper_user_ibfk_39' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:41:21,015 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper_user`
+      DROP FOREIGN KEY `p_paper_user_ibfk_39`;
+2020-06-11 11:41:21,035 INFO 33916 [egg-sequelize](19ms) Executed (default): ALTER TABLE `p_paper_user` ADD FOREIGN KEY (`paper_id`) REFERENCES `p_paper` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-11 11:41:21,050 INFO 33916 [egg-sequelize](14ms) Executed (default): ALTER TABLE `p_paper_user` CHANGE `time_stamp` `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳';
+2020-06-11 11:41:21,062 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper_user` CHANGE `state` `state` INTEGER(11) NOT NULL DEFAULT 0 COMMENT '1:完成 0:未完成';
+2020-06-11 11:41:21,074 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper_user` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:41:21,075 INFO 33916 [egg-sequelize](0ms) Executed (default): SHOW INDEX FROM `p_paper_user` FROM `project_psychology`
+2020-06-11 11:41:21,078 INFO 33916 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_permission` (`id` INTEGER auto_increment  COMMENT '用户id', `apis` TEXT NOT NULL COMMENT '接口', `name` VARCHAR(50) COMMENT '1:路由, 2:接口, 3:其他', `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用', `role_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`role_id`) REFERENCES `p_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-11 11:41:21,081 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_permission`;
+2020-06-11 11:41:21,081 INFO 33916 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_permission' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:41:21,134 INFO 33916 [egg-sequelize](51ms) Executed (default): ALTER TABLE `p_permission` ADD `apis` TEXT NOT NULL COMMENT '接口';
+2020-06-11 11:41:21,183 INFO 33916 [egg-sequelize](47ms) Executed (default): ALTER TABLE `p_permission` ADD `name` VARCHAR(50) COMMENT '1:路由, 2:接口, 3:其他';
+2020-06-11 11:41:21,324 INFO 33916 [egg-sequelize](138ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE WHERE (REFERENCED_TABLE_NAME = 'p_permission' AND REFERENCED_TABLE_SCHEMA = 'project_psychology' AND REFERENCED_COLUMN_NAME = 'content') OR (TABLE_NAME = 'p_permission' AND TABLE_SCHEMA = 'project_psychology' AND COLUMN_NAME = 'content' AND REFERENCED_TABLE_NAME IS NOT NULL)
+2020-06-11 11:41:21,367 INFO 33916 [egg-sequelize](40ms) Executed (default): ALTER TABLE `p_permission` DROP `content`;
+2020-06-11 11:41:21,403 INFO 33916 [egg-sequelize](34ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE WHERE (REFERENCED_TABLE_NAME = 'p_permission' AND REFERENCED_TABLE_SCHEMA = 'project_psychology' AND REFERENCED_COLUMN_NAME = 'type') OR (TABLE_NAME = 'p_permission' AND TABLE_SCHEMA = 'project_psychology' AND COLUMN_NAME = 'type' AND REFERENCED_TABLE_NAME IS NOT NULL)
+2020-06-11 11:41:21,450 INFO 33916 [egg-sequelize](46ms) Executed (default): ALTER TABLE `p_permission` DROP `type`;
+2020-06-11 11:41:21,463 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_permission` CHANGE `status` `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:41:21,465 INFO 33916 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_permission' AND constraint_name = 'p_permission_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:41:21,479 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_permission`
+      DROP FOREIGN KEY `p_permission_ibfk_1`;
+2020-06-11 11:41:21,497 INFO 33916 [egg-sequelize](17ms) Executed (default): ALTER TABLE `p_permission` ADD FOREIGN KEY (`role_id`) REFERENCES `p_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2020-06-11 11:41:21,500 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_permission` FROM `project_psychology`
+2020-06-11 11:41:21,502 INFO 33916 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_record` (`id` INTEGER auto_increment  COMMENT '记录id', `operator_id` INTEGER NOT NULL COMMENT '留下记录的用户id', `worker_id` INTEGER NOT NULL COMMENT '负责工作人员id', `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳', `type_id` INTEGER(11) NOT NULL COMMENT '记录类型,1答卷2面谈', `content` TEXT COMMENT '面谈内容', `score` VARCHAR(255) COMMENT '答卷总得分，用于导出Excel', `title` VARCHAR(255) COMMENT '面谈标题或问卷标题', `paper_evaluation` TEXT COMMENT '答卷评价', `paper_exercises` TEXT COMMENT '用户的答卷答案', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`operator_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (`worker_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-11 11:41:21,504 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_record`;
+2020-06-11 11:41:21,505 INFO 33916 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_record' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:41:21,507 INFO 33916 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_record' AND constraint_name = 'p_record_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:41:21,520 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_record`
+      DROP FOREIGN KEY `p_record_ibfk_1`;
+2020-06-11 11:41:21,521 INFO 33916 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_record' AND constraint_name = 'p_record_ibfk_2' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:41:21,535 INFO 33916 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_record`
+      DROP FOREIGN KEY `p_record_ibfk_2`;
+2020-06-11 11:41:21,557 INFO 33916 [egg-sequelize](21ms) Executed (default): ALTER TABLE `p_record` ADD FOREIGN KEY (`operator_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+2020-06-11 11:41:21,578 INFO 33916 [egg-sequelize](20ms) Executed (default): ALTER TABLE `p_record` ADD FOREIGN KEY (`worker_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+2020-06-11 11:41:21,593 INFO 33916 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_record` CHANGE `time_stamp` `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳';
+2020-06-11 11:41:21,608 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_record` CHANGE `type_id` `type_id` INTEGER(11) NOT NULL COMMENT '记录类型,1答卷2面谈';
+2020-06-11 11:41:21,620 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record` CHANGE `content` `content` TEXT COMMENT '面谈内容';
+2020-06-11 11:41:21,633 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_record` CHANGE `score` `score` VARCHAR(255) COMMENT '答卷总得分，用于导出Excel';
+2020-06-11 11:41:21,646 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_record` CHANGE `title` `title` VARCHAR(255) COMMENT '面谈标题或问卷标题';
+2020-06-11 11:41:21,658 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record` CHANGE `paper_evaluation` `paper_evaluation` TEXT COMMENT '答卷评价';
+2020-06-11 11:41:21,670 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record` CHANGE `paper_exercises` `paper_exercises` TEXT COMMENT '用户的答卷答案';
+2020-06-11 11:41:21,683 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_record` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:41:21,685 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_record` FROM `project_psychology`
+2020-06-11 11:41:21,687 INFO 33916 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_reservation` (`id` INTEGER auto_increment  COMMENT '预约id', `from_id` INTEGER NOT NULL COMMENT '来访者id', `to_id` INTEGER NOT NULL COMMENT '咨询师id', `type_name` VARCHAR(255) NOT NULL COMMENT '类型名字', `method` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:来访， 2:线上', `date_time` VARCHAR(13) NOT NULL COMMENT '当天日期时间戳', `start_time` VARCHAR(13) NOT NULL COMMENT '预约开始时间戳', `end_time` VARCHAR(13) NOT NULL COMMENT '预约结束时间戳', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '预约状态，1待确认2确认待上门3成功上门4失约5咨询师主动取消', `state` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`from_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE, FOREIGN KEY (`to_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-11 11:41:21,691 INFO 33916 [egg-sequelize](2ms) Executed (default): SHOW FULL COLUMNS FROM `p_reservation`;
+2020-06-11 11:41:21,692 INFO 33916 [egg-sequelize](3ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_reservation' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:41:21,694 INFO 33916 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_reservation' AND constraint_name = 'p_reservation_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:41:21,708 INFO 33916 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_reservation`
+      DROP FOREIGN KEY `p_reservation_ibfk_1`;
+2020-06-11 11:41:21,709 INFO 33916 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_reservation' AND constraint_name = 'p_reservation_ibfk_2' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:41:21,722 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_reservation`
+      DROP FOREIGN KEY `p_reservation_ibfk_2`;
+2020-06-11 11:41:21,743 INFO 33916 [egg-sequelize](19ms) Executed (default): ALTER TABLE `p_reservation` ADD FOREIGN KEY (`from_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-11 11:41:21,766 INFO 33916 [egg-sequelize](22ms) Executed (default): ALTER TABLE `p_reservation` ADD FOREIGN KEY (`to_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-11 11:41:21,780 INFO 33916 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `type_name` `type_name` VARCHAR(255) NOT NULL COMMENT '类型名字';
+2020-06-11 11:41:21,792 INFO 33916 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `method` `method` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:来访， 2:线上';
+2020-06-11 11:41:21,804 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `date_time` `date_time` VARCHAR(13) NOT NULL COMMENT '当天日期时间戳';
+2020-06-11 11:41:21,816 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `start_time` `start_time` VARCHAR(13) NOT NULL COMMENT '预约开始时间戳';
+2020-06-11 11:41:21,828 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `end_time` `end_time` VARCHAR(13) NOT NULL COMMENT '预约结束时间戳';
+2020-06-11 11:41:21,840 INFO 33916 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `state` `state` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:41:21,852 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '预约状态，1待确认2确认待上门3成功上门4失约5咨询师主动取消';
+2020-06-11 11:41:21,853 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_reservation` FROM `project_psychology`
+2020-06-11 11:41:21,855 INFO 33916 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_reservation_type` (`id` INTEGER auto_increment  COMMENT '预约类型id', `type_name` VARCHAR(255) NOT NULL COMMENT '预约类型名称', `description` TEXT NOT NULL COMMENT '预约类型描述', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-11 11:41:21,856 INFO 33916 [egg-sequelize](0ms) Executed (default): SHOW FULL COLUMNS FROM `p_reservation_type`;
+2020-06-11 11:41:21,857 INFO 33916 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_reservation_type' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:41:21,869 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation_type` CHANGE `type_name` `type_name` VARCHAR(255) NOT NULL COMMENT '预约类型名称';
+2020-06-11 11:41:21,881 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_reservation_type` CHANGE `description` `description` TEXT NOT NULL COMMENT '预约类型描述';
+2020-06-11 11:41:21,892 INFO 33916 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_reservation_type` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:41:21,894 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_reservation_type` FROM `project_psychology`
+2020-06-11 11:41:21,896 INFO 33916 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_type` (`id` INTEGER auto_increment  COMMENT '症状种类id', `name` VARCHAR(255) COMMENT '症状名称', `symtom_free` TEXT COMMENT '无症状评价', `symtom_free_advice` TEXT COMMENT '无症状建议', `low` TEXT COMMENT '轻度症状评价', `low_advice` TEXT COMMENT '轻度症状建议', `middle` TEXT COMMENT '中度症状评价', `middle_advice` TEXT COMMENT '中度症状建议', `high` TEXT COMMENT '重度症状评价', `high_advice` TEXT COMMENT '重度症状建议', `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-11 11:41:21,899 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_type`;
+2020-06-11 11:41:21,900 INFO 33916 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_type' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:41:21,912 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_type` CHANGE `name` `name` VARCHAR(255) COMMENT '症状名称';
+2020-06-11 11:41:21,924 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `symtom_free` `symtom_free` TEXT COMMENT '无症状评价';
+2020-06-11 11:41:21,936 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `symtom_free_advice` `symtom_free_advice` TEXT COMMENT '无症状建议';
+2020-06-11 11:41:21,947 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `low` `low` TEXT COMMENT '轻度症状评价';
+2020-06-11 11:41:21,960 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `low_advice` `low_advice` TEXT COMMENT '轻度症状建议';
+2020-06-11 11:41:21,972 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `middle` `middle` TEXT COMMENT '中度症状评价';
+2020-06-11 11:41:21,984 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `middle_advice` `middle_advice` TEXT COMMENT '中度症状建议';
+2020-06-11 11:41:21,997 INFO 33916 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_type` CHANGE `high` `high` TEXT COMMENT '重度症状评价';
+2020-06-11 11:41:22,009 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `high_advice` `high_advice` TEXT COMMENT '重度症状建议';
+2020-06-11 11:41:22,021 INFO 33916 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `status` `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:41:22,022 INFO 33916 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_type` FROM `project_psychology`
+2020-06-11 11:41:32,881 INFO 34327 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:42:09,723 INFO 34380 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:42:18,974 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:42:18,976 INFO 34395 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_exercises` (`id` INTEGER auto_increment  COMMENT '站内信id', `title` VARCHAR(255) NOT NULL COMMENT '内容题目', `option_obj` TEXT NOT NULL COMMENT '答案选项json', `score_obj` TEXT NOT NULL COMMENT '答案分数json', `option_score_obj` TEXT NOT NULL COMMENT '选项和分数', `mold_id` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '题目类型,1选择题', `type_id` INTEGER(11) NOT NULL COMMENT '题目类型id，待定', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-11 11:42:18,980 INFO 34395 [egg-sequelize](2ms) Executed (default): SHOW FULL COLUMNS FROM `p_exercises`;
+2020-06-11 11:42:18,981 INFO 34395 [egg-sequelize](3ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_exercises' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:42:18,996 INFO 34395 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `title` `title` VARCHAR(255) NOT NULL COMMENT '内容题目';
+2020-06-11 11:42:19,009 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `option_obj` `option_obj` TEXT NOT NULL COMMENT '答案选项json';
+2020-06-11 11:42:19,020 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `score_obj` `score_obj` TEXT NOT NULL COMMENT '答案分数json';
+2020-06-11 11:42:19,032 INFO 34395 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `option_score_obj` `option_score_obj` TEXT NOT NULL COMMENT '选项和分数';
+2020-06-11 11:42:19,044 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `mold_id` `mold_id` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '题目类型,1选择题';
+2020-06-11 11:42:19,056 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `type_id` `type_id` INTEGER(11) NOT NULL COMMENT '题目类型id，待定';
+2020-06-11 11:42:19,068 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_exercises` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:42:19,075 INFO 34395 [egg-sequelize](6ms) Executed (default): SHOW INDEX FROM `p_exercises` FROM `project_psychology`
+2020-06-11 11:42:19,078 INFO 34395 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_justice` (`id` INTEGER auto_increment  COMMENT '地点id', `parent_id` INTEGER NOT NULL COMMENT '父级id', `name` VARCHAR(10) NOT NULL COMMENT '名称', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-11 11:42:19,080 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_justice`;
+2020-06-11 11:42:19,081 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_justice' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:42:19,095 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_justice` CHANGE `parent_id` `parent_id` INTEGER NOT NULL COMMENT '父级id';
+2020-06-11 11:42:19,108 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_justice` CHANGE `name` `name` VARCHAR(10) NOT NULL COMMENT '名称';
+2020-06-11 11:42:19,110 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_justice` FROM `project_psychology`
+2020-06-11 11:42:19,112 INFO 34395 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_msg` (`id` INTEGER auto_increment  COMMENT '站内信id', `from_id` INTEGER NOT NULL DEFAULT -1 COMMENT '来源id(-1为系统信息)', `to_id` INTEGER NOT NULL COMMENT '目标id', `content` TEXT NOT NULL COMMENT '内容', `state` INTEGER(11) NOT NULL DEFAULT 0 COMMENT '0:未读， 1:已读', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-11 11:42:19,114 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_msg`;
+2020-06-11 11:42:19,115 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_msg' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:42:19,129 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_msg` CHANGE `from_id` `from_id` INTEGER NOT NULL DEFAULT -1 COMMENT '来源id(-1为系统信息)';
+2020-06-11 11:42:19,140 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_msg` CHANGE `to_id` `to_id` INTEGER NOT NULL COMMENT '目标id';
+2020-06-11 11:42:19,152 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_msg` CHANGE `content` `content` TEXT NOT NULL COMMENT '内容';
+2020-06-11 11:42:19,164 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_msg` CHANGE `state` `state` INTEGER(11) NOT NULL DEFAULT 0 COMMENT '0:未读， 1:已读';
+2020-06-11 11:42:19,176 INFO 34395 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_msg` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:42:19,178 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_msg` FROM `project_psychology`
+2020-06-11 11:42:19,180 INFO 34395 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_role` (`id` INTEGER auto_increment  COMMENT '用户id', `name` VARCHAR(50) NOT NULL COMMENT '角色名', `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-11 11:42:19,182 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_role`;
+2020-06-11 11:42:19,182 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_role' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:42:19,194 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_role` CHANGE `name` `name` VARCHAR(50) NOT NULL COMMENT '角色名';
+2020-06-11 11:42:19,207 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_role` CHANGE `status` `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:42:19,208 INFO 34395 [egg-sequelize](0ms) Executed (default): SHOW INDEX FROM `p_role` FROM `project_psychology`
+2020-06-11 11:42:19,211 INFO 34395 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_user` (`id` INTEGER(11) auto_increment  COMMENT '用户id', `account` VARCHAR(50) COMMENT '用户账号', `phone` VARCHAR(11) COMMENT '用户电话', `password` VARCHAR(50) COMMENT '密码', `name` VARCHAR(10) COMMENT '用户姓名', `birthday` VARCHAR(13) COMMENT '生日', `gender` INTEGER(1) DEFAULT 1 COMMENT '性别，1男2女', `avatar` VARCHAR(255) COMMENT '头像地址', `criminal_id` VARCHAR(50) COMMENT '服刑人员编码', `justice_id` INTEGER(11) DEFAULT 0 COMMENT '司法所，服刑犯人才需要填', `parent_id` INTEGER(11) DEFAULT 0 COMMENT '来访者才有父类', `is_marry` INTEGER(11) DEFAULT 2 COMMENT '是否结婚,1是2否', `education` VARCHAR(255) COMMENT '学历', `job` VARCHAR(255) COMMENT '职业', `urgent_name` VARCHAR(255) COMMENT '紧急联系人', `urgent_relation` VARCHAR(255) COMMENT '紧急联系人关系', `urgent_phone` VARCHAR(255) COMMENT '紧急联系人电话', `role_id` INTEGER(11) COMMENT '角色id，管理者admin 咨询师doctor 中心工作人员worker 来访者visitor 服刑人员criminal', `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`role_id`) REFERENCES `p_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-11 11:42:19,214 INFO 34395 [egg-sequelize](2ms) Executed (default): SHOW FULL COLUMNS FROM `p_user`;
+2020-06-11 11:42:19,215 INFO 34395 [egg-sequelize](3ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_user' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:42:19,229 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `account` `account` VARCHAR(50) COMMENT '用户账号';
+2020-06-11 11:42:19,242 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `phone` `phone` VARCHAR(11) COMMENT '用户电话';
+2020-06-11 11:42:19,255 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `password` `password` VARCHAR(50) COMMENT '密码';
+2020-06-11 11:42:19,267 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `name` `name` VARCHAR(10) COMMENT '用户姓名';
+2020-06-11 11:42:19,279 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `birthday` `birthday` VARCHAR(13) COMMENT '生日';
+2020-06-11 11:42:19,291 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `gender` `gender` INTEGER(1) DEFAULT 1 COMMENT '性别，1男2女';
+2020-06-11 11:42:19,305 INFO 34395 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_user` CHANGE `avatar` `avatar` VARCHAR(255) COMMENT '头像地址';
+2020-06-11 11:42:19,318 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `criminal_id` `criminal_id` VARCHAR(50) COMMENT '服刑人员编码';
+2020-06-11 11:42:19,330 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `justice_id` `justice_id` INTEGER(11) DEFAULT 0 COMMENT '司法所，服刑犯人才需要填';
+2020-06-11 11:42:19,342 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `parent_id` `parent_id` INTEGER(11) DEFAULT 0 COMMENT '来访者才有父类';
+2020-06-11 11:42:19,354 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `is_marry` `is_marry` INTEGER(11) DEFAULT 2 COMMENT '是否结婚,1是2否';
+2020-06-11 11:42:19,366 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `education` `education` VARCHAR(255) COMMENT '学历';
+2020-06-11 11:42:19,378 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `job` `job` VARCHAR(255) COMMENT '职业';
+2020-06-11 11:42:19,391 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `urgent_name` `urgent_name` VARCHAR(255) COMMENT '紧急联系人';
+2020-06-11 11:42:19,404 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_user` CHANGE `urgent_relation` `urgent_relation` VARCHAR(255) COMMENT '紧急联系人关系';
+2020-06-11 11:42:19,416 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_user` CHANGE `urgent_phone` `urgent_phone` VARCHAR(255) COMMENT '紧急联系人电话';
+2020-06-11 11:42:19,418 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_user' AND constraint_name = 'p_user_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:42:19,432 INFO 34395 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_user`
+      DROP FOREIGN KEY `p_user_ibfk_1`;
+2020-06-11 11:42:19,456 INFO 34395 [egg-sequelize](23ms) Executed (default): ALTER TABLE `p_user` ADD FOREIGN KEY (`role_id`) REFERENCES `p_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2020-06-11 11:42:19,472 INFO 34395 [egg-sequelize](14ms) Executed (default): ALTER TABLE `p_user` CHANGE `status` `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:42:19,473 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_user` FROM `project_psychology`
+2020-06-11 11:42:19,475 INFO 34395 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_paper` (`id` INTEGER auto_increment  COMMENT '试卷id', `title` VARCHAR(255) NOT NULL COMMENT '试卷标题', `worker_id` INTEGER(11) NOT NULL COMMENT '创建人id', `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳', `exercises_json` TEXT NOT NULL COMMENT '所包含题目ID集合', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`worker_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE) ENGINE=innoDB;
+2020-06-11 11:42:19,478 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_paper`;
+2020-06-11 11:42:19,479 INFO 34395 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_paper' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:42:19,492 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper` CHANGE `title` `title` VARCHAR(255) NOT NULL COMMENT '试卷标题';
+2020-06-11 11:42:19,493 INFO 34395 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_paper' AND constraint_name = 'p_paper_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:42:19,506 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper`
+      DROP FOREIGN KEY `p_paper_ibfk_1`;
+2020-06-11 11:42:19,524 INFO 34395 [egg-sequelize](17ms) Executed (default): ALTER TABLE `p_paper` ADD FOREIGN KEY (`worker_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-11 11:42:19,538 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper` CHANGE `time_stamp` `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳';
+2020-06-11 11:42:19,549 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper` CHANGE `exercises_json` `exercises_json` TEXT NOT NULL COMMENT '所包含题目ID集合';
+2020-06-11 11:42:19,561 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:42:19,562 INFO 34395 [egg-sequelize](0ms) Executed (default): SHOW INDEX FROM `p_paper` FROM `project_psychology`
+2020-06-11 11:42:19,564 INFO 34395 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_paper_user` (`id` INTEGER(11) auto_increment  COMMENT '分配记录id', `user_id` INTEGER(11) NOT NULL COMMENT '用户id', `distributor_id` INTEGER(11) NOT NULL COMMENT '派发人id', `paper_id` INTEGER NOT NULL COMMENT '试卷id', `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳', `state` INTEGER(11) NOT NULL DEFAULT 0 COMMENT '1:完成 0:未完成', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`user_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE, FOREIGN KEY (`distributor_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE, FOREIGN KEY (`paper_id`) REFERENCES `p_paper` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-11 11:42:19,567 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_paper_user`;
+2020-06-11 11:42:19,567 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_paper_user' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:42:19,569 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_paper_user' AND constraint_name = 'p_paper_user_ibfk_40' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:42:19,582 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper_user`
+      DROP FOREIGN KEY `p_paper_user_ibfk_40`;
+2020-06-11 11:42:19,583 INFO 34395 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_paper_user' AND constraint_name = 'p_paper_user_ibfk_41' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:42:19,595 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper_user`
+      DROP FOREIGN KEY `p_paper_user_ibfk_41`;
+2020-06-11 11:42:19,615 INFO 34395 [egg-sequelize](19ms) Executed (default): ALTER TABLE `p_paper_user` ADD FOREIGN KEY (`user_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-11 11:42:19,634 INFO 34395 [egg-sequelize](18ms) Executed (default): ALTER TABLE `p_paper_user` ADD FOREIGN KEY (`distributor_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-11 11:42:19,637 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_paper_user' AND constraint_name = 'p_paper_user_ibfk_42' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:42:19,650 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper_user`
+      DROP FOREIGN KEY `p_paper_user_ibfk_42`;
+2020-06-11 11:42:19,670 INFO 34395 [egg-sequelize](19ms) Executed (default): ALTER TABLE `p_paper_user` ADD FOREIGN KEY (`paper_id`) REFERENCES `p_paper` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-11 11:42:19,685 INFO 34395 [egg-sequelize](14ms) Executed (default): ALTER TABLE `p_paper_user` CHANGE `time_stamp` `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳';
+2020-06-11 11:42:19,697 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_paper_user` CHANGE `state` `state` INTEGER(11) NOT NULL DEFAULT 0 COMMENT '1:完成 0:未完成';
+2020-06-11 11:42:19,710 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_paper_user` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:42:19,712 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_paper_user` FROM `project_psychology`
+2020-06-11 11:42:19,714 INFO 34395 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_permission` (`id` INTEGER auto_increment  COMMENT '用户id', `apis` TEXT NOT NULL COMMENT '接口', `name` VARCHAR(50) COMMENT '权限标识符', `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用', `role_id` INTEGER, PRIMARY KEY (`id`), FOREIGN KEY (`role_id`) REFERENCES `p_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-11 11:42:19,716 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_permission`;
+2020-06-11 11:42:19,717 INFO 34395 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_permission' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:42:19,731 INFO 34395 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_permission` CHANGE `status` `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:42:19,732 INFO 34395 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_permission' AND constraint_name = 'p_permission_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:42:19,753 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_permission`
+      DROP FOREIGN KEY `p_permission_ibfk_1`;
+2020-06-11 11:42:19,771 INFO 34395 [egg-sequelize](17ms) Executed (default): ALTER TABLE `p_permission` ADD FOREIGN KEY (`role_id`) REFERENCES `p_role` (`id`) ON DELETE SET NULL ON UPDATE CASCADE;
+2020-06-11 11:42:19,783 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_permission` CHANGE `apis` `apis` TEXT NOT NULL COMMENT '接口';
+2020-06-11 11:42:19,795 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_permission` CHANGE `name` `name` VARCHAR(50) COMMENT '权限标识符';
+2020-06-11 11:42:19,796 INFO 34395 [egg-sequelize](0ms) Executed (default): SHOW INDEX FROM `p_permission` FROM `project_psychology`
+2020-06-11 11:42:19,798 INFO 34395 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_record` (`id` INTEGER auto_increment  COMMENT '记录id', `operator_id` INTEGER NOT NULL COMMENT '留下记录的用户id', `worker_id` INTEGER NOT NULL COMMENT '负责工作人员id', `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳', `type_id` INTEGER(11) NOT NULL COMMENT '记录类型,1答卷2面谈', `content` TEXT COMMENT '面谈内容', `score` VARCHAR(255) COMMENT '答卷总得分，用于导出Excel', `title` VARCHAR(255) COMMENT '面谈标题或问卷标题', `paper_evaluation` TEXT COMMENT '答卷评价', `paper_exercises` TEXT COMMENT '用户的答卷答案', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`operator_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE, FOREIGN KEY (`worker_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-11 11:42:19,801 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_record`;
+2020-06-11 11:42:19,802 INFO 34395 [egg-sequelize](2ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_record' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:42:19,803 INFO 34395 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_record' AND constraint_name = 'p_record_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:42:19,824 INFO 34395 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_record`
+      DROP FOREIGN KEY `p_record_ibfk_1`;
+2020-06-11 11:42:19,825 INFO 34395 [egg-sequelize](0ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_record' AND constraint_name = 'p_record_ibfk_2' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:42:19,838 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record`
+      DROP FOREIGN KEY `p_record_ibfk_2`;
+2020-06-11 11:42:19,856 INFO 34395 [egg-sequelize](17ms) Executed (default): ALTER TABLE `p_record` ADD FOREIGN KEY (`operator_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+2020-06-11 11:42:19,875 INFO 34395 [egg-sequelize](18ms) Executed (default): ALTER TABLE `p_record` ADD FOREIGN KEY (`worker_id`) REFERENCES `p_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+2020-06-11 11:42:19,888 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_record` CHANGE `time_stamp` `time_stamp` VARCHAR(13) NOT NULL COMMENT '生成时间戳';
+2020-06-11 11:42:19,900 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record` CHANGE `type_id` `type_id` INTEGER(11) NOT NULL COMMENT '记录类型,1答卷2面谈';
+2020-06-11 11:42:19,912 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record` CHANGE `content` `content` TEXT COMMENT '面谈内容';
+2020-06-11 11:42:19,924 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record` CHANGE `score` `score` VARCHAR(255) COMMENT '答卷总得分，用于导出Excel';
+2020-06-11 11:42:19,936 INFO 34395 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_record` CHANGE `title` `title` VARCHAR(255) COMMENT '面谈标题或问卷标题';
+2020-06-11 11:42:19,948 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record` CHANGE `paper_evaluation` `paper_evaluation` TEXT COMMENT '答卷评价';
+2020-06-11 11:42:19,960 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_record` CHANGE `paper_exercises` `paper_exercises` TEXT COMMENT '用户的答卷答案';
+2020-06-11 11:42:19,971 INFO 34395 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_record` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:42:19,973 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_record` FROM `project_psychology`
+2020-06-11 11:42:19,975 INFO 34395 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_reservation` (`id` INTEGER auto_increment  COMMENT '预约id', `from_id` INTEGER NOT NULL COMMENT '来访者id', `to_id` INTEGER NOT NULL COMMENT '咨询师id', `type_name` VARCHAR(255) NOT NULL COMMENT '类型名字', `method` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:来访， 2:线上', `date_time` VARCHAR(13) NOT NULL COMMENT '当天日期时间戳', `start_time` VARCHAR(13) NOT NULL COMMENT '预约开始时间戳', `end_time` VARCHAR(13) NOT NULL COMMENT '预约结束时间戳', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '预约状态，1待确认2确认待上门3成功上门4失约5咨询师主动取消', `state` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`), FOREIGN KEY (`from_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE, FOREIGN KEY (`to_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE) ENGINE=InnoDB;
+2020-06-11 11:42:19,979 INFO 34395 [egg-sequelize](2ms) Executed (default): SHOW FULL COLUMNS FROM `p_reservation`;
+2020-06-11 11:42:19,979 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_reservation' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:42:19,981 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_reservation' AND constraint_name = 'p_reservation_ibfk_1' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:42:19,993 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation`
+      DROP FOREIGN KEY `p_reservation_ibfk_1`;
+2020-06-11 11:42:19,995 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_CATALOG AS constraintCatalog, CONSTRAINT_NAME AS constraintName, CONSTRAINT_SCHEMA AS constraintSchema, CONSTRAINT_TYPE AS constraintType, TABLE_NAME AS tableName, TABLE_SCHEMA AS tableSchema from INFORMATION_SCHEMA.TABLE_CONSTRAINTS WHERE table_name='p_reservation' AND constraint_name = 'p_reservation_ibfk_2' AND TABLE_SCHEMA = 'project_psychology';
+2020-06-11 11:42:20,008 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_reservation`
+      DROP FOREIGN KEY `p_reservation_ibfk_2`;
+2020-06-11 11:42:20,028 INFO 34395 [egg-sequelize](19ms) Executed (default): ALTER TABLE `p_reservation` ADD FOREIGN KEY (`from_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-11 11:42:20,047 INFO 34395 [egg-sequelize](18ms) Executed (default): ALTER TABLE `p_reservation` ADD FOREIGN KEY (`to_id`) REFERENCES `p_user` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE;
+2020-06-11 11:42:20,059 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `type_name` `type_name` VARCHAR(255) NOT NULL COMMENT '类型名字';
+2020-06-11 11:42:20,071 INFO 34395 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `method` `method` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:来访， 2:线上';
+2020-06-11 11:42:20,084 INFO 34395 [egg-sequelize](10ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `date_time` `date_time` VARCHAR(13) NOT NULL COMMENT '当天日期时间戳';
+2020-06-11 11:42:20,097 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `start_time` `start_time` VARCHAR(13) NOT NULL COMMENT '预约开始时间戳';
+2020-06-11 11:42:20,109 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `end_time` `end_time` VARCHAR(13) NOT NULL COMMENT '预约结束时间戳';
+2020-06-11 11:42:20,122 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `state` `state` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:42:20,133 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '预约状态，1待确认2确认待上门3成功上门4失约5咨询师主动取消';
+2020-06-11 11:42:20,135 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_reservation` FROM `project_psychology`
+2020-06-11 11:42:20,136 INFO 34395 [egg-sequelize](0ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_reservation_type` (`id` INTEGER auto_increment  COMMENT '预约类型id', `type_name` VARCHAR(255) NOT NULL COMMENT '预约类型名称', `description` TEXT NOT NULL COMMENT '预约类型描述', `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-11 11:42:20,138 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_reservation_type`;
+2020-06-11 11:42:20,139 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_reservation_type' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:42:20,153 INFO 34395 [egg-sequelize](13ms) Executed (default): ALTER TABLE `p_reservation_type` CHANGE `type_name` `type_name` VARCHAR(255) NOT NULL COMMENT '预约类型名称';
+2020-06-11 11:42:20,165 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation_type` CHANGE `description` `description` TEXT NOT NULL COMMENT '预约类型描述';
+2020-06-11 11:42:20,176 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_reservation_type` CHANGE `status` `status` INTEGER(11) NOT NULL DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:42:20,178 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_reservation_type` FROM `project_psychology`
+2020-06-11 11:42:20,180 INFO 34395 [egg-sequelize](1ms) Executed (default): CREATE TABLE IF NOT EXISTS `p_type` (`id` INTEGER auto_increment  COMMENT '症状种类id', `name` VARCHAR(255) COMMENT '症状名称', `symtom_free` TEXT COMMENT '无症状评价', `symtom_free_advice` TEXT COMMENT '无症状建议', `low` TEXT COMMENT '轻度症状评价', `low_advice` TEXT COMMENT '轻度症状建议', `middle` TEXT COMMENT '中度症状评价', `middle_advice` TEXT COMMENT '中度症状建议', `high` TEXT COMMENT '重度症状评价', `high_advice` TEXT COMMENT '重度症状建议', `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用', PRIMARY KEY (`id`)) ENGINE=InnoDB;
+2020-06-11 11:42:20,182 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW FULL COLUMNS FROM `p_type`;
+2020-06-11 11:42:20,182 INFO 34395 [egg-sequelize](1ms) Executed (default): SELECT CONSTRAINT_NAME as constraint_name,CONSTRAINT_NAME as constraintName,CONSTRAINT_SCHEMA as constraintSchema,CONSTRAINT_SCHEMA as constraintCatalog,TABLE_NAME as tableName,TABLE_SCHEMA as tableSchema,TABLE_SCHEMA as tableCatalog,COLUMN_NAME as columnName,REFERENCED_TABLE_SCHEMA as referencedTableSchema,REFERENCED_TABLE_SCHEMA as referencedTableCatalog,REFERENCED_TABLE_NAME as referencedTableName,REFERENCED_COLUMN_NAME as referencedColumnName FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE where TABLE_NAME = 'p_type' AND CONSTRAINT_NAME!='PRIMARY' AND CONSTRAINT_SCHEMA='project_psychology' AND REFERENCED_TABLE_NAME IS NOT NULL;
+2020-06-11 11:42:20,195 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_type` CHANGE `name` `name` VARCHAR(255) COMMENT '症状名称';
+2020-06-11 11:42:20,208 INFO 34395 [egg-sequelize](12ms) Executed (default): ALTER TABLE `p_type` CHANGE `symtom_free` `symtom_free` TEXT COMMENT '无症状评价';
+2020-06-11 11:42:20,220 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `symtom_free_advice` `symtom_free_advice` TEXT COMMENT '无症状建议';
+2020-06-11 11:42:20,232 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `low` `low` TEXT COMMENT '轻度症状评价';
+2020-06-11 11:42:20,244 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `low_advice` `low_advice` TEXT COMMENT '轻度症状建议';
+2020-06-11 11:42:20,256 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `middle` `middle` TEXT COMMENT '中度症状评价';
+2020-06-11 11:42:20,268 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `middle_advice` `middle_advice` TEXT COMMENT '中度症状建议';
+2020-06-11 11:42:20,280 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `high` `high` TEXT COMMENT '重度症状评价';
+2020-06-11 11:42:20,292 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `high_advice` `high_advice` TEXT COMMENT '重度症状建议';
+2020-06-11 11:42:20,304 INFO 34395 [egg-sequelize](11ms) Executed (default): ALTER TABLE `p_type` CHANGE `status` `status` INTEGER(11) DEFAULT 1 COMMENT '1:正常 0:停止使用';
+2020-06-11 11:42:20,306 INFO 34395 [egg-sequelize](1ms) Executed (default): SHOW INDEX FROM `p_type` FROM `project_psychology`
+2020-06-11 11:42:25,053 INFO 34413 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:54:52,271 INFO 35180 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:55:27,506 INFO 35216 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:57:01,397 INFO 35254 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:57:37,716 INFO 35278 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:58:05,207 INFO 35302 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:59:16,378 INFO 35335 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:59:27,981 INFO 35356 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 11:59:41,740 INFO 35377 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:26:33,039 INFO 35649 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:26:39,777 INFO 35649 [egg-sequelize](1ms) Executed (90ae379d-0870-4086-9357-f62c44dee266): START TRANSACTION;
+2020-06-11 12:26:39,804 INFO 35649 [egg-sequelize](21ms) Executed (90ae379d-0870-4086-9357-f62c44dee266): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 12:26:39,823 INFO 35649 [egg-sequelize](13ms) Executed (90ae379d-0870-4086-9357-f62c44dee266): COMMIT;
+2020-06-11 12:30:19,803 INFO 35649 [egg-sequelize](1ms) Executed (624e170f-17c0-4fe5-9803-91c2c4e7a09f): START TRANSACTION;
+2020-06-11 12:30:19,814 INFO 35649 [egg-sequelize](2ms) Executed (624e170f-17c0-4fe5-9803-91c2c4e7a09f): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 12:30:19,829 INFO 35649 [egg-sequelize](10ms) Executed (624e170f-17c0-4fe5-9803-91c2c4e7a09f): COMMIT;
+2020-06-11 12:32:29,253 INFO 35712 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:32:32,747 INFO 35712 [egg-sequelize](0ms) Executed (f460e711-4624-4067-b224-7c64359cfe38): START TRANSACTION;
+2020-06-11 12:32:32,755 INFO 35712 [egg-sequelize](2ms) Executed (f460e711-4624-4067-b224-7c64359cfe38): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 12:32:32,762 INFO 35712 [egg-sequelize](2ms) Executed (f460e711-4624-4067-b224-7c64359cfe38): ROLLBACK;
+2020-06-11 12:33:59,541 INFO 35745 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:35:39,408 INFO 35776 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:36:16,833 INFO 35804 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:36:42,713 INFO 35825 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:37:12,916 INFO 35849 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:37:21,035 INFO 35849 [egg-sequelize](2ms) Executed (e08a6998-104f-4f10-a030-ef74d3bc1186): START TRANSACTION;
+2020-06-11 12:37:21,043 INFO 35849 [egg-sequelize](2ms) Executed (e08a6998-104f-4f10-a030-ef74d3bc1186): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 12:37:21,053 INFO 35849 [egg-sequelize](3ms) Executed (e08a6998-104f-4f10-a030-ef74d3bc1186): ROLLBACK;
+2020-06-11 12:37:59,918 INFO 35876 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:38:02,193 INFO 35887 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:38:04,514 INFO 35887 [egg-sequelize](1ms) Executed (5d637abd-772e-4baa-a61b-9bdf6b121aed): START TRANSACTION;
+2020-06-11 12:38:04,521 INFO 35887 [egg-sequelize](2ms) Executed (5d637abd-772e-4baa-a61b-9bdf6b121aed): INSERT INTO `p_role` (`id`,`name`,`status`) VALUES (DEFAULT,?,?);
+2020-06-11 12:38:04,525 INFO 35887 [egg-sequelize](1ms) Executed (5d637abd-772e-4baa-a61b-9bdf6b121aed): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 12:38:04,537 INFO 35887 [egg-sequelize](4ms) Executed (5d637abd-772e-4baa-a61b-9bdf6b121aed): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (1)
+2020-06-11 12:38:04,545 INFO 35887 [egg-sequelize](1ms) Executed (5d637abd-772e-4baa-a61b-9bdf6b121aed): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 12:38:04,549 INFO 35887 [egg-sequelize](1ms) Executed (5d637abd-772e-4baa-a61b-9bdf6b121aed): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (2)
+2020-06-11 12:38:04,551 INFO 35887 [egg-sequelize](1ms) Executed (5d637abd-772e-4baa-a61b-9bdf6b121aed): COMMIT;
+2020-06-11 12:38:54,399 INFO 35909 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:39:00,917 INFO 35920 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:40:21,981 INFO 35950 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:40:24,870 INFO 35950 [egg-sequelize](5ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 12:42:42,561 INFO 35984 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:42:46,350 INFO 35984 [egg-sequelize](5ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 12:43:00,096 INFO 36008 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:43:06,070 INFO 36027 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:43:09,088 INFO 36027 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 12:43:25,524 INFO 36043 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:43:27,023 INFO 36043 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 12:44:21,887 INFO 36071 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:47:08,384 INFO 36108 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:47:09,361 INFO 36108 [egg-sequelize](4ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 12:48:39,172 INFO 36108 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`apis` AS `permissions.apis`, `permissions`.`name` AS `permissions.name`, `permissions`.`status` AS `permissions.status`, `permissions`.`role_id` AS `permissions.role_id` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 12:48:39,292 INFO 36138 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:48:42,646 INFO 36138 [egg-sequelize](2ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 12:52:19,471 INFO 36200 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 12:52:21,679 INFO 36200 [egg-sequelize](3ms) Executed (default): SELECT `p_role`.`id`, `p_role`.`name`, `permissions`.`id` AS `permissions.id`, `permissions`.`name` AS `permissions.name`, `permissions`.`apis` AS `permissions.apis` FROM `p_role` AS `p_role` LEFT OUTER JOIN `p_permission` AS `permissions` ON `p_role`.`id` = `permissions`.`role_id` AND `permissions`.`status` = 1 WHERE `p_role`.`status` = 1;
+2020-06-11 15:41:28,176 INFO 37889 [egg-sequelize](3ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 15:44:11,234 INFO 37936 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 15:44:38,090 INFO 37963 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 15:44:46,323 INFO 37984 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 15:48:31,164 INFO 38032 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 15:48:57,024 INFO 38061 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 15:49:18,223 INFO 38090 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 15:58:22,177 INFO 38196 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 15:58:40,693 INFO 38223 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 15:58:42,194 INFO 38235 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:00:06,351 ERROR 38235 [-/::1/-/2ms PUT /api/role/update] nodejs.ReferenceError: checkData is not defined
+    at RoleController.update (/Users/yuakira/dev/projects/Psychology2/app/controller/role.js:77:22)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+
+pid: 38235
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 16:00:37,792 INFO 38270 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:00:39,560 ERROR 38270 [-/::1/-/19ms PUT /api/role/update] nodejs.TypeError: Cannot read property 'checkData' of undefined
+    at RoleController.update (/Users/yuakira/dev/projects/Psychology2/app/controller/role.js:77:31)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+
+pid: 38270
+hostname: yudeMacBook-Pro.local
+
+2020-06-11 16:00:57,314 INFO 38294 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:03:37,287 INFO 38339 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:04:53,639 INFO 38374 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:04:54,779 INFO 38374 [egg-sequelize](2ms) Executed (eaff1e5a-6940-4616-8091-7da1afaaa209): START TRANSACTION;
+2020-06-11 16:04:54,799 INFO 38374 [egg-sequelize](13ms) Executed (eaff1e5a-6940-4616-8091-7da1afaaa209): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:06:30,621 INFO 38429 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:06:33,005 INFO 38429 [egg-sequelize](1ms) Executed (cd9d5193-50bb-4bfe-968b-afb5b9b091e4): START TRANSACTION;
+2020-06-11 16:06:49,957 INFO 38453 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:06:54,226 INFO 38453 [egg-sequelize](0ms) Executed (24e05a2e-4abc-446b-ba01-9c6f0991ca8c): START TRANSACTION;
+2020-06-11 16:07:31,115 INFO 38477 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:07:33,590 INFO 38477 [egg-sequelize](0ms) Executed (c46c5dab-4794-401d-8dd6-d81a7135e991): START TRANSACTION;
+2020-06-11 16:07:33,600 INFO 38477 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '18' AND `p_role`.`status` = 1;
+2020-06-11 16:07:33,611 INFO 38477 [egg-sequelize](2ms) Executed (c46c5dab-4794-401d-8dd6-d81a7135e991): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:08:49,870 INFO 38507 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:09:00,020 INFO 38528 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:09:01,703 INFO 38528 [egg-sequelize](1ms) Executed (8e41178a-24ca-4eea-8d15-f91de19c7dcd): START TRANSACTION;
+2020-06-11 16:09:01,711 INFO 38528 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '18' AND `p_role`.`status` = 1;
+2020-06-11 16:09:01,724 INFO 38528 [egg-sequelize](2ms) Executed (8e41178a-24ca-4eea-8d15-f91de19c7dcd): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:09:01,725 INFO 38528 [egg-sequelize](1ms) Executed (default): SELECT `id` FROM `p_permission` AS `p_permission` WHERE (`p_permission`.`role_id` = 18 AND ((`p_permission`.`id` = '[object Object]')));
+2020-06-11 16:09:24,521 INFO 38552 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:09:26,946 INFO 38552 [egg-sequelize](1ms) Executed (c11dab7f-14ee-41ac-8112-e9b43bd468d5): START TRANSACTION;
+2020-06-11 16:09:26,955 INFO 38552 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '18' AND `p_role`.`status` = 1;
+2020-06-11 16:09:26,960 INFO 38552 [egg-sequelize](1ms) Executed (default): SELECT `id` FROM `p_permission` AS `p_permission` WHERE (`p_permission`.`role_id` = 18 AND ((`p_permission`.`id` = '[object Object]')));
+2020-06-11 16:09:26,972 INFO 38552 [egg-sequelize](3ms) Executed (c11dab7f-14ee-41ac-8112-e9b43bd468d5): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:12:09,942 INFO 38593 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:12:11,296 INFO 38593 [egg-sequelize](0ms) Executed (e256ca43-8d60-4176-8283-1f597ffa8ccc): START TRANSACTION;
+2020-06-11 16:12:11,305 INFO 38593 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '18' AND `p_role`.`status` = 1;
+2020-06-11 16:12:11,310 INFO 38593 [egg-sequelize](1ms) Executed (default): SELECT `id` FROM `p_permission` AS `p_permission` WHERE (`p_permission`.`role_id` = 18 AND ((`p_permission`.`id` = '[object Object]')));
+2020-06-11 16:12:11,318 INFO 38593 [egg-sequelize](2ms) Executed (e256ca43-8d60-4176-8283-1f597ffa8ccc): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:13:02,716 INFO 38622 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:13:03,458 INFO 38622 [egg-sequelize](0ms) Executed (805aaab2-2150-41e9-b469-03d4b80ba1a0): START TRANSACTION;
+2020-06-11 16:13:03,470 INFO 38622 [egg-sequelize](2ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '18' AND `p_role`.`status` = 1;
+2020-06-11 16:13:03,474 INFO 38622 [egg-sequelize](1ms) Executed (default): SELECT `id` FROM `p_permission` AS `p_permission` WHERE (`p_permission`.`role_id` = 18 AND ((`p_permission`.`id` = 1)));
+2020-06-11 16:13:03,495 INFO 38622 [egg-sequelize](12ms) Executed (805aaab2-2150-41e9-b469-03d4b80ba1a0): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:13:47,162 INFO 38649 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:13:50,385 INFO 38649 [egg-sequelize](1ms) Executed (5226e4fd-57d5-4271-bc97-6e5976113c4a): START TRANSACTION;
+2020-06-11 16:13:50,394 INFO 38649 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '18' AND `p_role`.`status` = 1;
+2020-06-11 16:13:50,404 INFO 38649 [egg-sequelize](2ms) Executed (default): UPDATE `p_permission` SET `role_id`=? WHERE `role_id` = ? AND `id` IN (NULL)
+2020-06-11 16:13:50,408 INFO 38649 [egg-sequelize](1ms) Executed (5226e4fd-57d5-4271-bc97-6e5976113c4a): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:15:26,280 INFO 38682 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:15:26,908 INFO 38682 [egg-sequelize](0ms) Executed (93222ece-1a0c-47ed-aed7-2e81e40af572): START TRANSACTION;
+2020-06-11 16:15:26,917 INFO 38682 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '18' AND `p_role`.`status` = 1;
+2020-06-11 16:15:26,924 INFO 38682 [egg-sequelize](4ms) Executed (default): SELECT `id`, `apis`, `name`, `status`, `role_id` FROM `p_permission` AS `p_permission` WHERE `p_permission`.`role_id` = 18;
+2020-06-11 16:15:26,938 INFO 38682 [egg-sequelize](3ms) Executed (93222ece-1a0c-47ed-aed7-2e81e40af572): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:16:46,284 INFO 38709 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:17:05,293 INFO 38733 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:17:07,354 INFO 38733 [egg-sequelize](1ms) Executed (a425f426-1d3f-48c6-9763-a90930909afb): START TRANSACTION;
+2020-06-11 16:17:07,364 INFO 38733 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '18' AND `p_role`.`status` = 1;
+2020-06-11 16:17:07,369 INFO 38733 [egg-sequelize](1ms) Executed (default): SELECT `id`, `apis`, `name`, `status`, `role_id` FROM `p_permission` AS `p_permission` WHERE `p_permission`.`role_id` = 18;
+2020-06-11 16:17:07,385 INFO 38733 [egg-sequelize](6ms) Executed (default): UPDATE `p_permission` SET `role_id`=? WHERE `role_id` = ? AND `id` IN (1, 2)
+2020-06-11 16:17:07,389 INFO 38733 [egg-sequelize](1ms) Executed (a425f426-1d3f-48c6-9763-a90930909afb): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:26:36,873 INFO 39258 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:27:40,733 INFO 39258 [egg-sequelize](1ms) Executed (8b464dcd-c03a-48bf-9ff3-07fd4f569c25): START TRANSACTION;
+2020-06-11 16:27:40,744 INFO 39258 [egg-sequelize](2ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '18' AND `p_role`.`status` = 1;
+2020-06-11 16:27:40,755 INFO 39258 [egg-sequelize](4ms) Executed (8b464dcd-c03a-48bf-9ff3-07fd4f569c25): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:27:40,760 INFO 39258 [egg-sequelize](1ms) Executed (default): SELECT `id`, `apis`, `name`, `status`, `role_id` FROM `p_permission` AS `p_permission` WHERE `p_permission`.`role_id` = 18;
+2020-06-11 16:27:40,772 INFO 39258 [egg-sequelize](3ms) Executed (default): DELETE FROM `p_permission` WHERE `id` = 2
+2020-06-11 16:27:40,772 INFO 39258 [egg-sequelize](6ms) Executed (default): DELETE FROM `p_permission` WHERE `id` = 1
+2020-06-11 16:28:11,683 INFO 39290 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:28:58,988 INFO 39318 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:29:12,311 INFO 39339 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:30:26,161 INFO 39370 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:32:03,298 INFO 39402 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:32:46,308 INFO 39426 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:32:54,807 INFO 39450 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:33:04,604 INFO 39471 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:33:09,187 INFO 39482 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:33:12,974 INFO 39482 [egg-sequelize](1ms) Executed (9177c52e-b5c6-43e3-b522-f0938c556248): START TRANSACTION;
+2020-06-11 16:33:12,984 INFO 39482 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '18' AND `p_role`.`status` = 1;
+2020-06-11 16:33:12,995 INFO 39482 [egg-sequelize](3ms) Executed (9177c52e-b5c6-43e3-b522-f0938c556248): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:33:12,998 INFO 39482 [egg-sequelize](1ms) Executed (default): SELECT `id`, `apis`, `name`, `status`, `role_id` FROM `p_permission` AS `p_permission` WHERE `p_permission`.`role_id` = 18;
+2020-06-11 16:33:13,013 INFO 39482 [egg-sequelize](4ms) Executed (9177c52e-b5c6-43e3-b522-f0938c556248): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 16:34:20,492 INFO 39503 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:34:20,701 INFO 39503 [egg-sequelize](1ms) Executed (61f15645-2805-443c-8622-ef9a512ef5db): START TRANSACTION;
+2020-06-11 16:34:20,711 INFO 39503 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '18' AND `p_role`.`status` = 1;
+2020-06-11 16:34:20,720 INFO 39503 [egg-sequelize](2ms) Executed (61f15645-2805-443c-8622-ef9a512ef5db): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:34:20,723 INFO 39503 [egg-sequelize](0ms) Executed (default): SELECT `id`, `apis`, `name`, `status`, `role_id` FROM `p_permission` AS `p_permission` WHERE `p_permission`.`role_id` = 18;
+2020-06-11 16:34:20,732 INFO 39503 [egg-sequelize](1ms) Executed (61f15645-2805-443c-8622-ef9a512ef5db): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 16:34:54,986 INFO 39528 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:35:12,669 INFO 39549 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:35:13,763 INFO 39549 [egg-sequelize](1ms) Executed (bd498ddc-b5f7-496e-a1a1-74db5b76c1d7): START TRANSACTION;
+2020-06-11 16:35:13,772 INFO 39549 [egg-sequelize](1ms) Executed (default): SELECT `id`, `name`, `status` FROM `p_role` AS `p_role` WHERE `p_role`.`id` = '18' AND `p_role`.`status` = 1;
+2020-06-11 16:35:13,781 INFO 39549 [egg-sequelize](2ms) Executed (bd498ddc-b5f7-496e-a1a1-74db5b76c1d7): UPDATE `p_role` SET `name`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:35:13,784 INFO 39549 [egg-sequelize](0ms) Executed (default): SELECT `id`, `apis`, `name`, `status`, `role_id` FROM `p_permission` AS `p_permission` WHERE `p_permission`.`role_id` = 18;
+2020-06-11 16:35:13,792 INFO 39549 [egg-sequelize](1ms) Executed (bd498ddc-b5f7-496e-a1a1-74db5b76c1d7): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 16:35:13,797 INFO 39549 [egg-sequelize](0ms) Executed (bd498ddc-b5f7-496e-a1a1-74db5b76c1d7): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (5)
+2020-06-11 16:35:13,801 INFO 39549 [egg-sequelize](2ms) Executed (bd498ddc-b5f7-496e-a1a1-74db5b76c1d7): INSERT INTO `p_permission` (`id`,`apis`,`name`,`status`) VALUES (DEFAULT,?,?,?);
+2020-06-11 16:35:13,804 INFO 39549 [egg-sequelize](1ms) Executed (bd498ddc-b5f7-496e-a1a1-74db5b76c1d7): UPDATE `p_permission` SET `role_id`=? WHERE `id` IN (6)
+2020-06-11 16:35:13,806 INFO 39549 [egg-sequelize](1ms) Executed (bd498ddc-b5f7-496e-a1a1-74db5b76c1d7): COMMIT;
+2020-06-11 16:35:42,091 INFO 39574 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:53:16,866 INFO 39736 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:54:04,707 INFO 39768 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:54:47,719 INFO 39795 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:55:20,072 INFO 39822 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:55:53,154 INFO 39822 [egg-sequelize](4ms) Executed (default): UPDATE `p_reservation_type` SET `status`=? WHERE `id` = ? AND `status` = ?
+2020-06-11 16:56:33,066 INFO 39856 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-11 16:56:35,982 INFO 39856 [egg-sequelize](7ms) Executed (default): UPDATE `p_role` SET `status`=? WHERE `id` = ? AND `status` = ?

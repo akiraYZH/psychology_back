@@ -299,8 +299,8 @@
       "GET"
     ],
     "paramNames": [],
-    "path": "/api/paper/detailAdmin",
-    "regexp": "/^\\/api\\/paper\\/detailAdmin(?:\\/(?=$))?$/",
+    "path": "/api/paper/detail-score",
+    "regexp": "/^\\/api\\/paper\\/detail-score(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]
@@ -521,6 +521,55 @@
     "paramNames": [],
     "path": "/api/msg/del",
     "regexp": "/^\\/api\\/msg\\/del(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "POST"
+    ],
+    "paramNames": [],
+    "path": "/api/role/add",
+    "regexp": "/^\\/api\\/role\\/add(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/role/get",
+    "regexp": "/^\\/api\\/role\\/get(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "PUT"
+    ],
+    "paramNames": [],
+    "path": "/api/role/update",
+    "regexp": "/^\\/api\\/role\\/update(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
+      "DELETE"
+    ],
+    "paramNames": [],
+    "path": "/api/role/del",
+    "regexp": "/^\\/api\\/role\\/del(?:\\/(?=$))?$/",
     "stack": [
       "wrappedController"
     ]

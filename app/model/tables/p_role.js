@@ -29,7 +29,7 @@ module.exports = (app) => {
     // app.model.PRole.hasMany(app.model.PPermission, {foreignKey:"role_id"})
     p_role.associate=function(){
         
-        app.model.Tables.PRole.hasMany(app.model.Tables.PPermission, {foreignKey:"role_id"})
+        app.model.Tables.PRole.hasMany(app.model.Tables.PPermission, {foreignKey:"role_id",as:"permissions"})
     }
   
     // p_role.sync({

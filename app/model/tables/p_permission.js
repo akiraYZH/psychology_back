@@ -9,14 +9,14 @@ module.exports = (app) => {
           autoIncrement: true,
           comment: "用户id",
         },
-        content: {
+        apis: {
           type: TEXT,
-          comment: "权限内容",
+          comment: "接口",
           allowNull: false
         },
-        type:{
-            type:INTEGER,
-            comment: "1:路由, 2:接口, 3:其他",
+        name:{
+            type:STRING(50),
+            comment: "权限标识符"
         },
         status: {type:INTEGER(11),defaultValue:1,comment:"1:正常 0:停止使用"}
       },

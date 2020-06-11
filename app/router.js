@@ -42,7 +42,7 @@ module.exports = async (app) => {
 
   router.post(preRouter + '/paper/add', controller.paper.add);
   router.post(preRouter + '/paper/getList', controller.paper.getList);
-  router.get(preRouter + '/paper/detailAdmin', controller.paper.detailAdmin);
+  router.get(preRouter + '/paper/detail-score', controller.paper.detailAdmin);
   router.get(preRouter + '/paper/detail', controller.paper.detail);
   router.post(preRouter + '/paper/update', controller.paper.update);
   router.post(preRouter + '/paper/del', controller.paper.del);
@@ -65,6 +65,12 @@ module.exports = async (app) => {
   router.get(preRouter + '/msg/getList', controller.message.getList);
   router.put(preRouter + '/msg/update', controller.message.update);
   router.delete(preRouter + '/msg/del', controller.message.del);
+
+  //新增
+  router.post(preRouter + '/role/add', controller.role.add);
+  router.get(preRouter + '/role/get', controller.role.get);
+  router.put(preRouter + '/role/update', controller.role.update);
+  router.del(preRouter + '/role/del', controller.role.del);
 
   //已经修改
   router.get(preRouter+'/type/getList', controller.type.getList);
