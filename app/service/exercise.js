@@ -111,10 +111,13 @@ class ExerciseService extends Service {
           : 0,
         limit: Number(data.num_in_page) || 10
       }
-      console.log(options);
+      
       
       const result = await ctx.helper.selectWithPagging(PExercises, options);
 
+      result.data.forEach(item=>{
+        item.option_score_obj= JSON.parse(item.option_score_obj);
+      })
 
       ctx.status = 200;
       let template = new ctx.helper._success();
@@ -129,20 +132,42 @@ class ExerciseService extends Service {
 
   async update(data) {
     const { ctx } = this;
-    const { PMsg } = this.app.model.Tables;
+    const { PExercises } = this.app.model.Tables;
     try {
       let condition = { id: data.id, status: 1 };
       delete data.id;
-      let result = await PMsg.update(data, { where: condition });
-      console.log(result);
+      if (
+        ctx.request.body.option_obj.length == ctx.request.body.score_obj.length
+      ) {
+        let option_score_obj = [];
+        let aOptions = data.option_obj;
+        let aScores = data.score_obj;
 
-      if (result[0] > 0) {
-        ctx.status = 200;
-        return new ctx.helper._success();
+        aOptions.forEach((item, index) => {
+          option_score_obj.push({ option: item, score: aScores[index] });
+        });
+
+        let result = await PExercises.update({
+          title: data.title,
+          option_obj: JSON.stringify(aOptions),
+          score_obj: JSON.stringify(aScores),
+          option_score_obj: JSON.stringify(option_score_obj),
+          type_id: data.type_id,
+        },{where:condition});
+
+        if (result[0] > 0) {
+          ctx.status = 200;
+          return new ctx.helper._success();
+        } else {
+          ctx.status = 404;
+          return new ctx.helper._error("没有修改");
+        }
       } else {
-        ctx.status = 404;
-        return new ctx.helper._error("没有修改");
+        status = 400;
+        ctx.body = new this.ctx.helper._error("有题目没有设置分数");
       }
+
+      
     } catch (error) {
       ctx.status = 500;
       return new ctx.helper._error(error);
@@ -151,11 +176,10 @@ class ExerciseService extends Service {
 
   async del(data) {
     const { ctx } = this;
-    const { PMsg } = this.app.model.Tables;
+    const { PExercises } = this.app.model.Tables;
     try {
       let condition = { id: data.id, status: 1 };
-      let result = await PMsg.update({ status: 0 }, { where: condition });
-      console.log(result);
+      let result = await PExercises.update({ status: 0 }, { where: condition });
 
       if (result[0] > 0) {
         ctx.status = 200;

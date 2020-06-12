@@ -29,17 +29,9 @@ class PaperController extends Controller {
     const { ctx, service } = this;
     let checkRes = checkData(ctx, "title", "exercises_json", "worker_id");
     if (checkRes.is_pass) {
-      let result = await service.common.insert("p_paper", {
-        title: ctx.request.body.title,
-        exercises_json: JSON.stringify(ctx.request.body.exercises_json),
-        worker_id: ctx.request.body.worker_id,
-        time_stamp: Date.now(),
-      });
-      if (result.affectedRows) {
-        ctx.body = new this.ctx.helper._success();
-      } else {
-        ctx.body = new this.ctx.helper._error();
-      }
+      let body = ctx.request.body;
+      ctx.body = await service.paper.add(body);
+      
     } else {
       ctx.body = new this.ctx.helper._lack(checkRes.msg);
     }
@@ -79,56 +71,60 @@ class PaperController extends Controller {
    */
   async getList() {
     const { ctx, service } = this;
-    // let result = await service.paper.list();
+    let query = ctx.query;
+    console.log(query);
+    
+    ctx.body = await service.paper.getList(query);
 
-    let result = await service.common.selectPagination(
-      "p_paper",
-      {
-        "p_paper.status": 1,
-        page_now: ctx.request.body.page_now,
-        num_in_page: ctx.request.body.num_in_page,
-        "p_paper.title": ctx.request.body.title,
-        "p_user.name": ctx.request.body.name,
-      },
-      [
-        "p_paper.id",
-        "p_paper.title",
-        "p_paper.worker_id",
-        "p_user.name",
-        "p_paper.time_stamp",
-      ],
-      true,
-      ["p_user"],
-      ["p_paper.worker_id=p_user.id"]
-    );
-    // result.forEach((item) => {
-    //   item.exercises_json = eval(item.exercises_json);
-    // });
-    if (result.is_success) {
-      // 过滤时间
-      if (ctx.request.body.start_time && ctx.request.body.end_time) {
-        // 获得区间
-        result.list = result.list.filter(
-          (item) =>
-            item.time_stamp > ctx.request.body.start_time &&
-            item.time_stamp < ctx.request.body.end_time
-        );
-      } else if (ctx.request.body.end_time) {
-        // 只传结束时间
-        result.list = result.list.filter(
-          (item) => item.time_stamp < ctx.request.body.end_time
-        );
-      } else if (ctx.request.body.start_time) {
-        // 只传开始时间
-        result.list = result.list.filter(
-          (item) => item.time_stamp > ctx.request.body.start_time
-        );
-      }
+    
+    // let result = await service.common.selectPagination(
+    //   "p_paper",
+    //   {
+    //     "p_paper.status": 1,
+    //     page_now: ctx.request.body.page_now,
+    //     num_in_page: ctx.request.body.num_in_page,
+    //     "p_paper.title": ctx.request.body.title,
+    //     "p_user.name": ctx.request.body.name,
+    //   },
+    //   [
+    //     "p_paper.id",
+    //     "p_paper.title",
+    //     "p_paper.worker_id",
+    //     "p_user.name",
+    //     "p_paper.time_stamp",
+    //   ],
+    //   true,
+    //   ["p_user"],
+    //   ["p_paper.worker_id=p_user.id"]
+    // );
+    // // result.forEach((item) => {
+    // //   item.exercises_json = eval(item.exercises_json);
+    // // });
+    // if (result.is_success) {
+    //   // 过滤时间
+    //   if (ctx.request.body.start_time && ctx.request.body.end_time) {
+    //     // 获得区间
+    //     result.list = result.list.filter(
+    //       (item) =>
+    //         item.time_stamp > ctx.request.body.start_time &&
+    //         item.time_stamp < ctx.request.body.end_time
+    //     );
+    //   } else if (ctx.request.body.end_time) {
+    //     // 只传结束时间
+    //     result.list = result.list.filter(
+    //       (item) => item.time_stamp < ctx.request.body.end_time
+    //     );
+    //   } else if (ctx.request.body.start_time) {
+    //     // 只传开始时间
+    //     result.list = result.list.filter(
+    //       (item) => item.time_stamp > ctx.request.body.start_time
+    //     );
+    //   }
 
-      ctx.body = new this.ctx.helper._success(result);
-    } else {
-      ctx.body = new this.ctx.helper._error("暂无数据");
-    }
+    //   ctx.body = new this.ctx.helper._success(result);
+    // } else {
+    //   ctx.body = new this.ctx.helper._error("暂无数据");
+    // }
   }
 
   /**

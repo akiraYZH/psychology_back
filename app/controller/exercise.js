@@ -41,6 +41,7 @@ class ExeciseController extends Controller {
       let body = ctx.request.body;
       ctx.body = await service.exercise.add(body);
     } else {
+      ctx.status=400;
       ctx.body = new this.ctx.helper._lack(checkRes.msg);
     }
   }
@@ -100,37 +101,204 @@ class ExeciseController extends Controller {
    {
     "code": 1,
     "msg": "成功操作",
-    "data": {
-        "is_success": true,
-        "page_total": 3,
-        "page_now": 1,
-        "num_in_page": 1,
-        "list": [
-            {
-                "id": 2,
-                "title": "test",
-                "option_score_obj": [
-                    {
-                        "question": "选项1",
-                        "score": "4"
-                    },
-                    {
-                        "question": "选项2",
-                        "score": "3"
-                    },
-                    {
-                        "question": "选项3",
-                        "score": "2"
-                    },
-                    {
-                        "question": "选项4",
-                        "score": "1"
-                    }
-                ],
-                "mold_id": 1,
-                "type_id": 1
-            }
-        ]
+    "data": [
+        {
+            "id": 1,
+            "title": "test",
+            "option_score_obj": [
+                {
+                    "option": "选项一",
+                    "score": "4"
+                },
+                {
+                    "option": "选项二",
+                    "score": "3"
+                },
+                {
+                    "option": "选项三",
+                    "score": "2"
+                },
+                {
+                    "option": "选项四",
+                    "score": "1"
+                }
+            ],
+            "mold_id": 1,
+            "type_id": 1
+        },
+        {
+            "id": 2,
+            "title": "test",
+            "option_score_obj": [
+                {
+                    "option": "选项一",
+                    "score": "4"
+                },
+                {
+                    "option": "选项二",
+                    "score": "3"
+                },
+                {
+                    "option": "选项三",
+                    "score": "2"
+                },
+                {
+                    "option": "选项四",
+                    "score": "1"
+                }
+            ],
+            "mold_id": 1,
+            "type_id": 1
+        },
+        {
+            "id": 3,
+            "title": "test",
+            "option_score_obj": [
+                {
+                    "option": "选项一",
+                    "score": "4"
+                },
+                {
+                    "option": "选项二",
+                    "score": "3"
+                },
+                {
+                    "option": "选项三",
+                    "score": "2"
+                },
+                {
+                    "option": "选项四",
+                    "score": "1"
+                }
+            ],
+            "mold_id": 1,
+            "type_id": 1
+        },
+        {
+            "id": 4,
+            "title": "test",
+            "option_score_obj": [
+                {
+                    "option": "选项一",
+                    "score": "4"
+                },
+                {
+                    "option": "选项二",
+                    "score": "3"
+                },
+                {
+                    "option": "选项三",
+                    "score": "2"
+                },
+                {
+                    "option": "选项四",
+                    "score": "1"
+                }
+            ],
+            "mold_id": 1,
+            "type_id": 1
+        },
+        {
+            "id": 5,
+            "title": "test",
+            "option_score_obj": [
+                {
+                    "question": "option1",
+                    "score": "4"
+                },
+                {
+                    "question": "option2",
+                    "score": "3"
+                },
+                {
+                    "question": "option3",
+                    "score": "2"
+                },
+                {
+                    "question": "option4",
+                    "score": "1"
+                }
+            ],
+            "mold_id": 1,
+            "type_id": 1
+        },
+        {
+            "id": 6,
+            "title": "test",
+            "option_score_obj": [
+                {
+                    "question": "option1",
+                    "score": "4"
+                },
+                {
+                    "question": "option2",
+                    "score": "3"
+                },
+                {
+                    "question": "option3",
+                    "score": "2"
+                },
+                {
+                    "question": "option4",
+                    "score": "1"
+                }
+            ],
+            "mold_id": 1,
+            "type_id": 1
+        },
+        {
+            "id": 7,
+            "title": "test",
+            "option_score_obj": [
+                {
+                    "question": "option1",
+                    "score": "4"
+                },
+                {
+                    "question": "option2",
+                    "score": "3"
+                },
+                {
+                    "question": "option3",
+                    "score": "2"
+                },
+                {
+                    "question": "option4",
+                    "score": "1"
+                }
+            ],
+            "mold_id": 1,
+            "type_id": 1
+        },
+        {
+            "id": 8,
+            "title": "test",
+            "option_score_obj": [
+                {
+                    "question": "option1",
+                    "score": "4"
+                },
+                {
+                    "question": "option2",
+                    "score": "3"
+                },
+                {
+                    "question": "option3",
+                    "score": "2"
+                },
+                {
+                    "question": "option4",
+                    "score": "1"
+                }
+            ],
+            "mold_id": 1,
+            "type_id": 1
+        }
+    ],
+    "pagging": {
+        "size": 10,
+        "current": 1,
+        "total": 8
     }
 }
    * 
@@ -140,66 +308,7 @@ class ExeciseController extends Controller {
     let query = ctx.query;
     ctx.body = await service.exercise.getList(query);
   }
-  // async getList() {
-  //   const { ctx, service } = this;
-  //   let aTypes = await service.common.select("p_type","", ["id","name"]);
-  //   // console.log(ctx.query.roles)
-  //   let result = null;
-  //   if (ctx.request.body.type_id) {
-  //     //按照类型精准查询
-  //     result = await service.common.selectPagination(
-  //       "p_exercises",
-  //       {
-  //         type_id: ctx.request.body.type_id,
-  //         status: 1,
-  //         page_now: ctx.request.body.page_now,
-  //         num_in_page: ctx.request.body.num_in_page,
-  //       },
-  //       ["id", "title", "option_score_obj", "mold_id", "type_id"]
-  //     );
-  //   } else if (ctx.request.body.title) {
-  //     //根据题目模糊查询
-  //     result = await service.common.selectPagination(
-  //       "p_exercises",
-  //       {
-  //         title: ctx.request.body.title,
-  //         status: 1,
-  //         page_now: ctx.request.body.page_now,
-  //         num_in_page: ctx.request.body.num_in_page,
-  //       },
-  //       ["id", "title", "option_score_obj", "mold_id", "type_id"],
-  //       true
-  //     );
-  //   } else {
-  //     result = await service.common.selectPagination(
-  //       "p_exercises",
-  //       {
-  //         status: 1,
-  //         page_now: ctx.request.body.page_now,
-  //         num_in_page: ctx.request.body.num_in_page,
-  //       },
-  //       ["id", "title", "option_score_obj", "mold_id", "type_id"]
-  //     );
-  //   }
-
-  //   if (result.is_success) {
-  //     result.list.forEach((item) => {
-  //       item.option_score_obj = eval(item.option_score_obj);
-  //       // console.log(aTypes);
-        
-  //       for(let i =0; i<aTypes.length; i++){
-  //         if(item.type_id==aTypes[i].id){
-            
-  //           item.type_name=aTypes[i].name;
-  //           break;
-  //         }
-  //       }
-  //     });
-  //     this.ctx.body = new this.ctx.helper._success(result);
-  //   } else {
-  //     this.ctx.body = new this.ctx.helper._error("查找不到数据");
-  //   }
-  // }
+ 
 
   /**
    * @api {Post} /api/exercise/update 修改题目
@@ -237,38 +346,10 @@ class ExeciseController extends Controller {
       "type_id"
     );
     if (checkRes.is_pass) {
-      if (
-        ctx.request.body.option_obj.length == ctx.request.body.score_obj.length
-      ) {
-        let option_score_obj = [];
-        let aOptions = ctx.request.body.option_obj;
-        let aScores = ctx.request.body.score_obj;
-
-        aOptions.forEach((item, index) => {
-          option_score_obj.push({ question: item, score: aScores[index] });
-        });
-
-        let result = await service.common.update(
-          "p_exercises",
-          {
-            title: ctx.request.body.title,
-            option_obj: JSON.stringify(aOptions),
-            score_obj: JSON.stringify(aScores),
-            option_score_obj: JSON.stringify(option_score_obj),
-            type_id: 1,
-          },
-          { id: ctx.request.body.id, status: 1 }
-        );
-
-        if (result.changedRows) {
-          ctx.body = new this.ctx.helper._success();
-        } else {
-          ctx.body = new this.ctx.helper._error();
-        }
-      } else {
-        ctx.body = new this.ctx.helper._error("有题目没有设置分数");
-      }
+      let body = ctx.request.body;
+      ctx.body = await service.exercise.update(body);
     } else {
+      ctx.status=400;
       ctx.body = new this.ctx.helper._lack(checkRes.msg);
     }
   }
@@ -290,23 +371,8 @@ class ExeciseController extends Controller {
     const { checkDataRes, checkDataMsg } = new ctx.helper._checkData(ctx, "id");
 
     if (checkDataRes) {
-      let condition = {
-        id: ctx.request.body.id,
-      };
-      let result = await service.common.update(
-        "p_exercises",
-        {
-          status: 0,
-        },
-        condition
-      );
-      if (result.changedRows) {
-        ctx.body = new this.ctx.helper._success("成功删除");
-      } else if (result.msg) {
-        this.ctx.body = new this.ctx.helper._error(result.msg);
-      } else {
-        this.ctx.body = new this.ctx.helper._error("删除失败");
-      }
+      let query = ctx.query;
+      ctx.body = await service.exercise.del(query);
     } else {
       this.ctx.body = new this.ctx.helper._lack(checkDataMsg);
     }

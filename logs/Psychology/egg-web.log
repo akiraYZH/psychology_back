@@ -1730,3 +1730,1008 @@
 2020-06-12 17:21:27,084 INFO 11078 [egg-watcher:application] watcher start success
 2020-06-12 17:21:27,085 INFO 11078 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:21:27 GMT+0800 (GMT+08:00)
 2020-06-12 17:21:27,102 INFO 11078 [egg:core] dump config after ready, 4ms
+2020-06-12 17:26:49,129 INFO 11240 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:26:49,154 INFO 11240 [egg-multipart] stream mode enable
+2020-06-12 17:26:49,155 INFO 11240 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:26:49,432 INFO 11240 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:26:49,435 INFO 11240 [egg-security] use methodnoallow middleware
+2020-06-12 17:26:49,435 INFO 11240 [egg-security] use noopen middleware
+2020-06-12 17:26:49,436 INFO 11240 [egg-security] use nosniff middleware
+2020-06-12 17:26:49,436 INFO 11240 [egg-security] use xssProtection middleware
+2020-06-12 17:26:49,437 INFO 11240 [egg-security] use xframe middleware
+2020-06-12 17:26:49,438 INFO 11240 [egg-security] use dta middleware
+2020-06-12 17:26:49,438 INFO 11240 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:26:49,459 INFO 11240 [egg:core] dump config after load, 5ms
+2020-06-12 17:26:49,491 INFO 11240 [egg-watcher:application] watcher start success
+2020-06-12 17:26:49,492 INFO 11240 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:26:49 GMT+0800 (GMT+08:00)
+2020-06-12 17:26:49,511 INFO 11240 [egg:core] dump config after ready, 4ms
+2020-06-12 17:27:15,663 INFO 11266 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:27:15,687 INFO 11266 [egg-multipart] stream mode enable
+2020-06-12 17:27:15,688 INFO 11266 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:27:15,936 INFO 11266 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:27:15,938 INFO 11266 [egg-security] use methodnoallow middleware
+2020-06-12 17:27:15,939 INFO 11266 [egg-security] use noopen middleware
+2020-06-12 17:27:15,940 INFO 11266 [egg-security] use nosniff middleware
+2020-06-12 17:27:15,941 INFO 11266 [egg-security] use xssProtection middleware
+2020-06-12 17:27:15,941 INFO 11266 [egg-security] use xframe middleware
+2020-06-12 17:27:15,942 INFO 11266 [egg-security] use dta middleware
+2020-06-12 17:27:15,942 INFO 11266 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:27:15,965 INFO 11266 [egg:core] dump config after load, 4ms
+2020-06-12 17:27:15,996 INFO 11266 [egg-watcher:application] watcher start success
+2020-06-12 17:27:15,997 INFO 11266 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:27:15 GMT+0800 (GMT+08:00)
+2020-06-12 17:27:16,015 INFO 11266 [egg:core] dump config after ready, 5ms
+2020-06-12 17:28:19,606 INFO 11297 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:28:19,629 INFO 11297 [egg-multipart] stream mode enable
+2020-06-12 17:28:19,630 INFO 11297 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:28:19,822 INFO 11297 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:28:19,824 INFO 11297 [egg-security] use methodnoallow middleware
+2020-06-12 17:28:19,824 INFO 11297 [egg-security] use noopen middleware
+2020-06-12 17:28:19,825 INFO 11297 [egg-security] use nosniff middleware
+2020-06-12 17:28:19,825 INFO 11297 [egg-security] use xssProtection middleware
+2020-06-12 17:28:19,825 INFO 11297 [egg-security] use xframe middleware
+2020-06-12 17:28:19,826 INFO 11297 [egg-security] use dta middleware
+2020-06-12 17:28:19,826 INFO 11297 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:28:19,842 INFO 11297 [egg:core] dump config after load, 4ms
+2020-06-12 17:28:19,876 INFO 11297 [egg-watcher:application] watcher start success
+2020-06-12 17:28:19,880 INFO 11297 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:28:19 GMT+0800 (GMT+08:00)
+2020-06-12 17:28:19,899 INFO 11297 [egg:core] dump config after ready, 6ms
+2020-06-12 17:28:58,241 INFO 11327 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:28:58,266 INFO 11327 [egg-multipart] stream mode enable
+2020-06-12 17:28:58,266 INFO 11327 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:28:58,541 INFO 11327 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:28:58,543 INFO 11327 [egg-security] use methodnoallow middleware
+2020-06-12 17:28:58,543 INFO 11327 [egg-security] use noopen middleware
+2020-06-12 17:28:58,544 INFO 11327 [egg-security] use nosniff middleware
+2020-06-12 17:28:58,545 INFO 11327 [egg-security] use xssProtection middleware
+2020-06-12 17:28:58,545 INFO 11327 [egg-security] use xframe middleware
+2020-06-12 17:28:58,546 INFO 11327 [egg-security] use dta middleware
+2020-06-12 17:28:58,546 INFO 11327 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:28:58,564 INFO 11327 [egg:core] dump config after load, 4ms
+2020-06-12 17:28:58,595 INFO 11327 [egg-watcher:application] watcher start success
+2020-06-12 17:28:58,596 INFO 11327 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:28:58 GMT+0800 (GMT+08:00)
+2020-06-12 17:28:58,613 INFO 11327 [egg:core] dump config after ready, 4ms
+2020-06-12 17:29:56,063 INFO 11354 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:29:56,086 INFO 11354 [egg-multipart] stream mode enable
+2020-06-12 17:29:56,087 INFO 11354 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:29:56,331 INFO 11354 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:29:56,333 INFO 11354 [egg-security] use methodnoallow middleware
+2020-06-12 17:29:56,334 INFO 11354 [egg-security] use noopen middleware
+2020-06-12 17:29:56,334 INFO 11354 [egg-security] use nosniff middleware
+2020-06-12 17:29:56,335 INFO 11354 [egg-security] use xssProtection middleware
+2020-06-12 17:29:56,336 INFO 11354 [egg-security] use xframe middleware
+2020-06-12 17:29:56,336 INFO 11354 [egg-security] use dta middleware
+2020-06-12 17:29:56,336 INFO 11354 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:29:56,354 INFO 11354 [egg:core] dump config after load, 4ms
+2020-06-12 17:29:56,384 INFO 11354 [egg-watcher:application] watcher start success
+2020-06-12 17:29:56,385 INFO 11354 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:29:56 GMT+0800 (GMT+08:00)
+2020-06-12 17:29:56,403 INFO 11354 [egg:core] dump config after ready, 4ms
+2020-06-12 17:30:41,501 INFO 11385 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:30:41,532 INFO 11385 [egg-multipart] stream mode enable
+2020-06-12 17:30:41,533 INFO 11385 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:30:41,820 INFO 11385 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:30:41,821 INFO 11385 [egg-security] use methodnoallow middleware
+2020-06-12 17:30:41,822 INFO 11385 [egg-security] use noopen middleware
+2020-06-12 17:30:41,823 INFO 11385 [egg-security] use nosniff middleware
+2020-06-12 17:30:41,824 INFO 11385 [egg-security] use xssProtection middleware
+2020-06-12 17:30:41,825 INFO 11385 [egg-security] use xframe middleware
+2020-06-12 17:30:41,826 INFO 11385 [egg-security] use dta middleware
+2020-06-12 17:30:41,826 INFO 11385 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:30:41,850 INFO 11385 [egg:core] dump config after load, 5ms
+2020-06-12 17:30:41,883 INFO 11385 [egg-watcher:application] watcher start success
+2020-06-12 17:30:41,884 INFO 11385 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:30:41 GMT+0800 (GMT+08:00)
+2020-06-12 17:30:41,903 INFO 11385 [egg:core] dump config after ready, 5ms
+2020-06-12 17:31:37,263 INFO 11409 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:31:37,288 INFO 11409 [egg-multipart] stream mode enable
+2020-06-12 17:31:37,288 INFO 11409 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:31:37,580 INFO 11409 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:31:37,583 INFO 11409 [egg-security] use methodnoallow middleware
+2020-06-12 17:31:37,583 INFO 11409 [egg-security] use noopen middleware
+2020-06-12 17:31:37,584 INFO 11409 [egg-security] use nosniff middleware
+2020-06-12 17:31:37,584 INFO 11409 [egg-security] use xssProtection middleware
+2020-06-12 17:31:37,585 INFO 11409 [egg-security] use xframe middleware
+2020-06-12 17:31:37,586 INFO 11409 [egg-security] use dta middleware
+2020-06-12 17:31:37,586 INFO 11409 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:31:37,604 INFO 11409 [egg:core] dump config after load, 4ms
+2020-06-12 17:31:37,638 INFO 11409 [egg-watcher:application] watcher start success
+2020-06-12 17:31:37,640 INFO 11409 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:31:37 GMT+0800 (GMT+08:00)
+2020-06-12 17:31:37,657 INFO 11409 [egg:core] dump config after ready, 4ms
+2020-06-12 17:31:45,931 INFO 11433 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:31:45,957 INFO 11433 [egg-multipart] stream mode enable
+2020-06-12 17:31:45,957 INFO 11433 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:31:46,244 INFO 11433 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:31:46,246 INFO 11433 [egg-security] use methodnoallow middleware
+2020-06-12 17:31:46,247 INFO 11433 [egg-security] use noopen middleware
+2020-06-12 17:31:46,247 INFO 11433 [egg-security] use nosniff middleware
+2020-06-12 17:31:46,248 INFO 11433 [egg-security] use xssProtection middleware
+2020-06-12 17:31:46,248 INFO 11433 [egg-security] use xframe middleware
+2020-06-12 17:31:46,249 INFO 11433 [egg-security] use dta middleware
+2020-06-12 17:31:46,249 INFO 11433 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:31:46,267 INFO 11433 [egg:core] dump config after load, 4ms
+2020-06-12 17:31:46,297 INFO 11433 [egg-watcher:application] watcher start success
+2020-06-12 17:31:46,299 INFO 11433 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:31:46 GMT+0800 (GMT+08:00)
+2020-06-12 17:31:46,315 INFO 11433 [egg:core] dump config after ready, 5ms
+2020-06-12 17:31:51,553 INFO 11444 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:31:51,572 INFO 11444 [egg-multipart] stream mode enable
+2020-06-12 17:31:51,573 INFO 11444 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:31:51,726 INFO 11444 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:31:51,728 INFO 11444 [egg-security] use methodnoallow middleware
+2020-06-12 17:31:51,728 INFO 11444 [egg-security] use noopen middleware
+2020-06-12 17:31:51,729 INFO 11444 [egg-security] use nosniff middleware
+2020-06-12 17:31:51,729 INFO 11444 [egg-security] use xssProtection middleware
+2020-06-12 17:31:51,729 INFO 11444 [egg-security] use xframe middleware
+2020-06-12 17:31:51,729 INFO 11444 [egg-security] use dta middleware
+2020-06-12 17:31:51,729 INFO 11444 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:31:51,742 INFO 11444 [egg:core] dump config after load, 4ms
+2020-06-12 17:31:51,773 INFO 11444 [egg-watcher:application] watcher start success
+2020-06-12 17:31:51,774 INFO 11444 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:31:51 GMT+0800 (GMT+08:00)
+2020-06-12 17:31:51,793 INFO 11444 [egg:core] dump config after ready, 4ms
+2020-06-12 17:32:11,648 INFO 11472 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:32:11,671 INFO 11472 [egg-multipart] stream mode enable
+2020-06-12 17:32:11,671 INFO 11472 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:32:11,955 INFO 11472 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:32:11,957 INFO 11472 [egg-security] use methodnoallow middleware
+2020-06-12 17:32:11,957 INFO 11472 [egg-security] use noopen middleware
+2020-06-12 17:32:11,958 INFO 11472 [egg-security] use nosniff middleware
+2020-06-12 17:32:11,960 INFO 11472 [egg-security] use xssProtection middleware
+2020-06-12 17:32:11,960 INFO 11472 [egg-security] use xframe middleware
+2020-06-12 17:32:11,961 INFO 11472 [egg-security] use dta middleware
+2020-06-12 17:32:11,961 INFO 11472 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:32:11,979 INFO 11472 [egg:core] dump config after load, 4ms
+2020-06-12 17:32:12,012 INFO 11472 [egg-watcher:application] watcher start success
+2020-06-12 17:32:12,013 INFO 11472 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:32:12 GMT+0800 (GMT+08:00)
+2020-06-12 17:32:12,032 INFO 11472 [egg:core] dump config after ready, 5ms
+2020-06-12 17:33:09,833 INFO 11513 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:33:09,860 INFO 11513 [egg-multipart] stream mode enable
+2020-06-12 17:33:09,860 INFO 11513 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:33:10,175 INFO 11513 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:33:10,178 INFO 11513 [egg-security] use methodnoallow middleware
+2020-06-12 17:33:10,178 INFO 11513 [egg-security] use noopen middleware
+2020-06-12 17:33:10,179 INFO 11513 [egg-security] use nosniff middleware
+2020-06-12 17:33:10,180 INFO 11513 [egg-security] use xssProtection middleware
+2020-06-12 17:33:10,180 INFO 11513 [egg-security] use xframe middleware
+2020-06-12 17:33:10,181 INFO 11513 [egg-security] use dta middleware
+2020-06-12 17:33:10,181 INFO 11513 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:33:10,199 INFO 11513 [egg:core] dump config after load, 4ms
+2020-06-12 17:33:10,233 INFO 11513 [egg-watcher:application] watcher start success
+2020-06-12 17:33:10,235 INFO 11513 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:33:10 GMT+0800 (GMT+08:00)
+2020-06-12 17:33:10,253 INFO 11513 [egg:core] dump config after ready, 4ms
+2020-06-12 17:35:10,683 INFO 11554 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:35:10,706 INFO 11554 [egg-multipart] stream mode enable
+2020-06-12 17:35:10,707 INFO 11554 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:35:10,974 INFO 11554 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:35:10,976 INFO 11554 [egg-security] use methodnoallow middleware
+2020-06-12 17:35:10,976 INFO 11554 [egg-security] use noopen middleware
+2020-06-12 17:35:10,977 INFO 11554 [egg-security] use nosniff middleware
+2020-06-12 17:35:10,977 INFO 11554 [egg-security] use xssProtection middleware
+2020-06-12 17:35:10,978 INFO 11554 [egg-security] use xframe middleware
+2020-06-12 17:35:10,978 INFO 11554 [egg-security] use dta middleware
+2020-06-12 17:35:10,978 INFO 11554 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:35:10,996 INFO 11554 [egg:core] dump config after load, 4ms
+2020-06-12 17:35:11,027 INFO 11554 [egg-watcher:application] watcher start success
+2020-06-12 17:35:11,029 INFO 11554 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:35:11 GMT+0800 (GMT+08:00)
+2020-06-12 17:35:11,045 INFO 11554 [egg:core] dump config after ready, 4ms
+2020-06-12 17:37:20,389 INFO 11591 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:37:20,415 INFO 11591 [egg-multipart] stream mode enable
+2020-06-12 17:37:20,416 INFO 11591 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:37:20,693 INFO 11591 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:37:20,695 INFO 11591 [egg-security] use methodnoallow middleware
+2020-06-12 17:37:20,696 INFO 11591 [egg-security] use noopen middleware
+2020-06-12 17:37:20,697 INFO 11591 [egg-security] use nosniff middleware
+2020-06-12 17:37:20,698 INFO 11591 [egg-security] use xssProtection middleware
+2020-06-12 17:37:20,698 INFO 11591 [egg-security] use xframe middleware
+2020-06-12 17:37:20,699 INFO 11591 [egg-security] use dta middleware
+2020-06-12 17:37:20,699 INFO 11591 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:37:20,718 INFO 11591 [egg:core] dump config after load, 4ms
+2020-06-12 17:37:20,751 INFO 11591 [egg-watcher:application] watcher start success
+2020-06-12 17:37:20,752 INFO 11591 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:37:20 GMT+0800 (GMT+08:00)
+2020-06-12 17:37:20,772 INFO 11591 [egg:core] dump config after ready, 5ms
+2020-06-12 17:37:35,764 INFO 11612 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:37:35,793 INFO 11612 [egg-multipart] stream mode enable
+2020-06-12 17:37:35,793 INFO 11612 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:37:36,113 INFO 11612 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:37:36,115 INFO 11612 [egg-security] use methodnoallow middleware
+2020-06-12 17:37:36,115 INFO 11612 [egg-security] use noopen middleware
+2020-06-12 17:37:36,116 INFO 11612 [egg-security] use nosniff middleware
+2020-06-12 17:37:36,117 INFO 11612 [egg-security] use xssProtection middleware
+2020-06-12 17:37:36,117 INFO 11612 [egg-security] use xframe middleware
+2020-06-12 17:37:36,118 INFO 11612 [egg-security] use dta middleware
+2020-06-12 17:37:36,118 INFO 11612 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:37:36,138 INFO 11612 [egg:core] dump config after load, 5ms
+2020-06-12 17:37:36,175 INFO 11612 [egg-watcher:application] watcher start success
+2020-06-12 17:37:36,176 INFO 11612 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:37:36 GMT+0800 (GMT+08:00)
+2020-06-12 17:37:36,195 INFO 11612 [egg:core] dump config after ready, 5ms
+2020-06-12 17:40:49,809 INFO 11659 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:40:49,833 INFO 11659 [egg-multipart] stream mode enable
+2020-06-12 17:40:49,834 INFO 11659 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:40:50,135 INFO 11659 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:40:50,138 INFO 11659 [egg-security] use methodnoallow middleware
+2020-06-12 17:40:50,139 INFO 11659 [egg-security] use noopen middleware
+2020-06-12 17:40:50,140 INFO 11659 [egg-security] use nosniff middleware
+2020-06-12 17:40:50,141 INFO 11659 [egg-security] use xssProtection middleware
+2020-06-12 17:40:50,142 INFO 11659 [egg-security] use xframe middleware
+2020-06-12 17:40:50,143 INFO 11659 [egg-security] use dta middleware
+2020-06-12 17:40:50,143 INFO 11659 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:40:50,168 INFO 11659 [egg:core] dump config after load, 4ms
+2020-06-12 17:40:50,202 INFO 11659 [egg-watcher:application] watcher start success
+2020-06-12 17:40:50,203 INFO 11659 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:40:50 GMT+0800 (GMT+08:00)
+2020-06-12 17:40:50,220 INFO 11659 [egg:core] dump config after ready, 4ms
+2020-06-12 17:41:35,931 INFO 11683 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:41:35,956 INFO 11683 [egg-multipart] stream mode enable
+2020-06-12 17:41:35,957 INFO 11683 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:41:36,245 INFO 11683 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:41:36,247 INFO 11683 [egg-security] use methodnoallow middleware
+2020-06-12 17:41:36,247 INFO 11683 [egg-security] use noopen middleware
+2020-06-12 17:41:36,248 INFO 11683 [egg-security] use nosniff middleware
+2020-06-12 17:41:36,248 INFO 11683 [egg-security] use xssProtection middleware
+2020-06-12 17:41:36,249 INFO 11683 [egg-security] use xframe middleware
+2020-06-12 17:41:36,250 INFO 11683 [egg-security] use dta middleware
+2020-06-12 17:41:36,250 INFO 11683 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:41:36,270 INFO 11683 [egg:core] dump config after load, 4ms
+2020-06-12 17:41:36,304 INFO 11683 [egg-watcher:application] watcher start success
+2020-06-12 17:41:36,305 INFO 11683 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:41:36 GMT+0800 (GMT+08:00)
+2020-06-12 17:41:36,322 INFO 11683 [egg:core] dump config after ready, 4ms
+2020-06-12 17:42:04,024 INFO 11711 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:42:04,053 INFO 11711 [egg-multipart] stream mode enable
+2020-06-12 17:42:04,054 INFO 11711 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:42:04,341 INFO 11711 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:42:04,343 INFO 11711 [egg-security] use methodnoallow middleware
+2020-06-12 17:42:04,343 INFO 11711 [egg-security] use noopen middleware
+2020-06-12 17:42:04,344 INFO 11711 [egg-security] use nosniff middleware
+2020-06-12 17:42:04,345 INFO 11711 [egg-security] use xssProtection middleware
+2020-06-12 17:42:04,345 INFO 11711 [egg-security] use xframe middleware
+2020-06-12 17:42:04,346 INFO 11711 [egg-security] use dta middleware
+2020-06-12 17:42:04,346 INFO 11711 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:42:04,366 INFO 11711 [egg:core] dump config after load, 5ms
+2020-06-12 17:42:04,398 INFO 11711 [egg-watcher:application] watcher start success
+2020-06-12 17:42:04,399 INFO 11711 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:42:04 GMT+0800 (GMT+08:00)
+2020-06-12 17:42:04,419 INFO 11711 [egg:core] dump config after ready, 6ms
+2020-06-12 17:42:19,072 INFO 11735 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:42:19,099 INFO 11735 [egg-multipart] stream mode enable
+2020-06-12 17:42:19,100 INFO 11735 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:42:19,372 INFO 11735 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:42:19,374 INFO 11735 [egg-security] use methodnoallow middleware
+2020-06-12 17:42:19,374 INFO 11735 [egg-security] use noopen middleware
+2020-06-12 17:42:19,375 INFO 11735 [egg-security] use nosniff middleware
+2020-06-12 17:42:19,375 INFO 11735 [egg-security] use xssProtection middleware
+2020-06-12 17:42:19,376 INFO 11735 [egg-security] use xframe middleware
+2020-06-12 17:42:19,377 INFO 11735 [egg-security] use dta middleware
+2020-06-12 17:42:19,377 INFO 11735 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:42:19,396 INFO 11735 [egg:core] dump config after load, 5ms
+2020-06-12 17:42:19,427 INFO 11735 [egg-watcher:application] watcher start success
+2020-06-12 17:42:19,428 INFO 11735 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:42:19 GMT+0800 (GMT+08:00)
+2020-06-12 17:42:19,446 INFO 11735 [egg:core] dump config after ready, 5ms
+2020-06-12 17:42:28,111 INFO 11756 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:42:28,136 INFO 11756 [egg-multipart] stream mode enable
+2020-06-12 17:42:28,136 INFO 11756 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:42:28,397 INFO 11756 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:42:28,399 INFO 11756 [egg-security] use methodnoallow middleware
+2020-06-12 17:42:28,400 INFO 11756 [egg-security] use noopen middleware
+2020-06-12 17:42:28,400 INFO 11756 [egg-security] use nosniff middleware
+2020-06-12 17:42:28,401 INFO 11756 [egg-security] use xssProtection middleware
+2020-06-12 17:42:28,402 INFO 11756 [egg-security] use xframe middleware
+2020-06-12 17:42:28,402 INFO 11756 [egg-security] use dta middleware
+2020-06-12 17:42:28,402 INFO 11756 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:42:28,421 INFO 11756 [egg:core] dump config after load, 4ms
+2020-06-12 17:42:28,450 INFO 11756 [egg-watcher:application] watcher start success
+2020-06-12 17:42:28,452 INFO 11756 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:42:28 GMT+0800 (GMT+08:00)
+2020-06-12 17:42:28,468 INFO 11756 [egg:core] dump config after ready, 4ms
+2020-06-12 17:43:00,868 INFO 11784 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:43:00,893 INFO 11784 [egg-multipart] stream mode enable
+2020-06-12 17:43:00,893 INFO 11784 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:43:01,159 INFO 11784 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:43:01,161 INFO 11784 [egg-security] use methodnoallow middleware
+2020-06-12 17:43:01,161 INFO 11784 [egg-security] use noopen middleware
+2020-06-12 17:43:01,162 INFO 11784 [egg-security] use nosniff middleware
+2020-06-12 17:43:01,163 INFO 11784 [egg-security] use xssProtection middleware
+2020-06-12 17:43:01,163 INFO 11784 [egg-security] use xframe middleware
+2020-06-12 17:43:01,164 INFO 11784 [egg-security] use dta middleware
+2020-06-12 17:43:01,164 INFO 11784 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:43:01,182 INFO 11784 [egg:core] dump config after load, 4ms
+2020-06-12 17:43:01,211 INFO 11784 [egg-watcher:application] watcher start success
+2020-06-12 17:43:01,214 INFO 11784 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:43:01 GMT+0800 (GMT+08:00)
+2020-06-12 17:43:01,230 INFO 11784 [egg:core] dump config after ready, 5ms
+2020-06-12 17:44:06,525 INFO 11817 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 17:44:06,557 INFO 11817 [egg-multipart] stream mode enable
+2020-06-12 17:44:06,557 INFO 11817 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 17:44:06,841 INFO 11817 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 17:44:06,843 INFO 11817 [egg-security] use methodnoallow middleware
+2020-06-12 17:44:06,844 INFO 11817 [egg-security] use noopen middleware
+2020-06-12 17:44:06,845 INFO 11817 [egg-security] use nosniff middleware
+2020-06-12 17:44:06,845 INFO 11817 [egg-security] use xssProtection middleware
+2020-06-12 17:44:06,846 INFO 11817 [egg-security] use xframe middleware
+2020-06-12 17:44:06,847 INFO 11817 [egg-security] use dta middleware
+2020-06-12 17:44:06,847 INFO 11817 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 17:44:06,865 INFO 11817 [egg:core] dump config after load, 4ms
+2020-06-12 17:44:06,895 INFO 11817 [egg-watcher:application] watcher start success
+2020-06-12 17:44:06,896 INFO 11817 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 17:44:06 GMT+0800 (GMT+08:00)
+2020-06-12 17:44:06,914 INFO 11817 [egg:core] dump config after ready, 5ms
+2020-06-12 19:00:20,718 INFO 12688 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:00:20,747 INFO 12688 [egg-multipart] stream mode enable
+2020-06-12 19:00:20,748 INFO 12688 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:00:21,052 INFO 12688 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:00:21,054 INFO 12688 [egg-security] use methodnoallow middleware
+2020-06-12 19:00:21,055 INFO 12688 [egg-security] use noopen middleware
+2020-06-12 19:00:21,055 INFO 12688 [egg-security] use nosniff middleware
+2020-06-12 19:00:21,056 INFO 12688 [egg-security] use xssProtection middleware
+2020-06-12 19:00:21,057 INFO 12688 [egg-security] use xframe middleware
+2020-06-12 19:00:21,057 INFO 12688 [egg-security] use dta middleware
+2020-06-12 19:00:21,057 INFO 12688 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:00:21,079 INFO 12688 [egg:core] dump config after load, 4ms
+2020-06-12 19:00:21,113 INFO 12688 [egg-watcher:application] watcher start success
+2020-06-12 19:00:21,115 INFO 12688 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:00:21 GMT+0800 (GMT+08:00)
+2020-06-12 19:00:21,139 INFO 12688 [egg:core] dump config after ready, 4ms
+2020-06-12 19:00:51,502 INFO 12714 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:00:51,527 INFO 12714 [egg-multipart] stream mode enable
+2020-06-12 19:00:51,527 INFO 12714 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:00:51,796 INFO 12714 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:00:51,798 INFO 12714 [egg-security] use methodnoallow middleware
+2020-06-12 19:00:51,799 INFO 12714 [egg-security] use noopen middleware
+2020-06-12 19:00:51,799 INFO 12714 [egg-security] use nosniff middleware
+2020-06-12 19:00:51,800 INFO 12714 [egg-security] use xssProtection middleware
+2020-06-12 19:00:51,801 INFO 12714 [egg-security] use xframe middleware
+2020-06-12 19:00:51,801 INFO 12714 [egg-security] use dta middleware
+2020-06-12 19:00:51,801 INFO 12714 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:00:51,822 INFO 12714 [egg:core] dump config after load, 6ms
+2020-06-12 19:00:51,852 INFO 12714 [egg-watcher:application] watcher start success
+2020-06-12 19:00:51,854 INFO 12714 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:00:51 GMT+0800 (GMT+08:00)
+2020-06-12 19:00:51,871 INFO 12714 [egg:core] dump config after ready, 4ms
+2020-06-12 19:00:57,736 INFO 12735 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:00:57,763 INFO 12735 [egg-multipart] stream mode enable
+2020-06-12 19:00:57,764 INFO 12735 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:00:58,033 INFO 12735 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:00:58,035 INFO 12735 [egg-security] use methodnoallow middleware
+2020-06-12 19:00:58,036 INFO 12735 [egg-security] use noopen middleware
+2020-06-12 19:00:58,037 INFO 12735 [egg-security] use nosniff middleware
+2020-06-12 19:00:58,038 INFO 12735 [egg-security] use xssProtection middleware
+2020-06-12 19:00:58,039 INFO 12735 [egg-security] use xframe middleware
+2020-06-12 19:00:58,040 INFO 12735 [egg-security] use dta middleware
+2020-06-12 19:00:58,040 INFO 12735 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:00:58,066 INFO 12735 [egg:core] dump config after load, 6ms
+2020-06-12 19:00:58,099 INFO 12735 [egg-watcher:application] watcher start success
+2020-06-12 19:00:58,100 INFO 12735 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:00:58 GMT+0800 (GMT+08:00)
+2020-06-12 19:00:58,120 INFO 12735 [egg:core] dump config after ready, 5ms
+2020-06-12 19:02:11,263 INFO 12759 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:02:11,293 INFO 12759 [egg-multipart] stream mode enable
+2020-06-12 19:02:11,293 INFO 12759 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:02:11,623 INFO 12759 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:02:11,625 INFO 12759 [egg-security] use methodnoallow middleware
+2020-06-12 19:02:11,626 INFO 12759 [egg-security] use noopen middleware
+2020-06-12 19:02:11,627 INFO 12759 [egg-security] use nosniff middleware
+2020-06-12 19:02:11,628 INFO 12759 [egg-security] use xssProtection middleware
+2020-06-12 19:02:11,629 INFO 12759 [egg-security] use xframe middleware
+2020-06-12 19:02:11,629 INFO 12759 [egg-security] use dta middleware
+2020-06-12 19:02:11,629 INFO 12759 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:02:11,657 INFO 12759 [egg:core] dump config after load, 8ms
+2020-06-12 19:02:11,691 INFO 12759 [egg-watcher:application] watcher start success
+2020-06-12 19:02:11,693 INFO 12759 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:02:11 GMT+0800 (GMT+08:00)
+2020-06-12 19:02:11,710 INFO 12759 [egg:core] dump config after ready, 4ms
+2020-06-12 19:02:52,619 INFO 12793 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:02:52,645 INFO 12793 [egg-multipart] stream mode enable
+2020-06-12 19:02:52,646 INFO 12793 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:02:52,913 INFO 12793 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:02:52,915 INFO 12793 [egg-security] use methodnoallow middleware
+2020-06-12 19:02:52,916 INFO 12793 [egg-security] use noopen middleware
+2020-06-12 19:02:52,916 INFO 12793 [egg-security] use nosniff middleware
+2020-06-12 19:02:52,917 INFO 12793 [egg-security] use xssProtection middleware
+2020-06-12 19:02:52,918 INFO 12793 [egg-security] use xframe middleware
+2020-06-12 19:02:52,918 INFO 12793 [egg-security] use dta middleware
+2020-06-12 19:02:52,918 INFO 12793 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:02:52,938 INFO 12793 [egg:core] dump config after load, 4ms
+2020-06-12 19:02:52,976 INFO 12793 [egg-watcher:application] watcher start success
+2020-06-12 19:02:52,978 INFO 12793 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:02:52 GMT+0800 (GMT+08:00)
+2020-06-12 19:02:52,999 INFO 12793 [egg:core] dump config after ready, 5ms
+2020-06-12 19:03:09,451 INFO 12814 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:03:09,476 INFO 12814 [egg-multipart] stream mode enable
+2020-06-12 19:03:09,476 INFO 12814 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:03:09,630 INFO 12814 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:03:09,632 INFO 12814 [egg-security] use methodnoallow middleware
+2020-06-12 19:03:09,632 INFO 12814 [egg-security] use noopen middleware
+2020-06-12 19:03:09,632 INFO 12814 [egg-security] use nosniff middleware
+2020-06-12 19:03:09,633 INFO 12814 [egg-security] use xssProtection middleware
+2020-06-12 19:03:09,633 INFO 12814 [egg-security] use xframe middleware
+2020-06-12 19:03:09,633 INFO 12814 [egg-security] use dta middleware
+2020-06-12 19:03:09,633 INFO 12814 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:03:09,646 INFO 12814 [egg:core] dump config after load, 4ms
+2020-06-12 19:03:09,673 INFO 12814 [egg-watcher:application] watcher start success
+2020-06-12 19:03:09,674 INFO 12814 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:03:09 GMT+0800 (GMT+08:00)
+2020-06-12 19:03:09,691 INFO 12814 [egg:core] dump config after ready, 4ms
+2020-06-12 19:05:09,236 INFO 12855 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:05:09,262 INFO 12855 [egg-multipart] stream mode enable
+2020-06-12 19:05:09,262 INFO 12855 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:05:09,524 INFO 12855 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:05:09,527 INFO 12855 [egg-security] use methodnoallow middleware
+2020-06-12 19:05:09,527 INFO 12855 [egg-security] use noopen middleware
+2020-06-12 19:05:09,528 INFO 12855 [egg-security] use nosniff middleware
+2020-06-12 19:05:09,529 INFO 12855 [egg-security] use xssProtection middleware
+2020-06-12 19:05:09,529 INFO 12855 [egg-security] use xframe middleware
+2020-06-12 19:05:09,530 INFO 12855 [egg-security] use dta middleware
+2020-06-12 19:05:09,530 INFO 12855 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:05:09,550 INFO 12855 [egg:core] dump config after load, 4ms
+2020-06-12 19:05:09,582 INFO 12855 [egg-watcher:application] watcher start success
+2020-06-12 19:05:09,583 INFO 12855 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:05:09 GMT+0800 (GMT+08:00)
+2020-06-12 19:05:09,602 INFO 12855 [egg:core] dump config after ready, 5ms
+2020-06-12 19:09:25,565 INFO 12920 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:09:25,595 INFO 12920 [egg-multipart] stream mode enable
+2020-06-12 19:09:25,595 INFO 12920 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:09:25,948 INFO 12920 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:09:25,950 INFO 12920 [egg-security] use methodnoallow middleware
+2020-06-12 19:09:25,950 INFO 12920 [egg-security] use noopen middleware
+2020-06-12 19:09:25,951 INFO 12920 [egg-security] use nosniff middleware
+2020-06-12 19:09:25,952 INFO 12920 [egg-security] use xssProtection middleware
+2020-06-12 19:09:25,953 INFO 12920 [egg-security] use xframe middleware
+2020-06-12 19:09:25,953 INFO 12920 [egg-security] use dta middleware
+2020-06-12 19:09:25,953 INFO 12920 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:09:25,979 INFO 12920 [egg:core] dump config after load, 8ms
+2020-06-12 19:09:26,010 INFO 12920 [egg-watcher:application] watcher start success
+2020-06-12 19:09:26,011 INFO 12920 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:09:26 GMT+0800 (GMT+08:00)
+2020-06-12 19:09:26,029 INFO 12920 [egg:core] dump config after ready, 5ms
+2020-06-12 19:09:44,232 INFO 12945 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:09:44,257 INFO 12945 [egg-multipart] stream mode enable
+2020-06-12 19:09:44,258 INFO 12945 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:09:44,525 INFO 12945 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:09:44,527 INFO 12945 [egg-security] use methodnoallow middleware
+2020-06-12 19:09:44,527 INFO 12945 [egg-security] use noopen middleware
+2020-06-12 19:09:44,528 INFO 12945 [egg-security] use nosniff middleware
+2020-06-12 19:09:44,528 INFO 12945 [egg-security] use xssProtection middleware
+2020-06-12 19:09:44,529 INFO 12945 [egg-security] use xframe middleware
+2020-06-12 19:09:44,530 INFO 12945 [egg-security] use dta middleware
+2020-06-12 19:09:44,530 INFO 12945 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:09:44,548 INFO 12945 [egg:core] dump config after load, 3ms
+2020-06-12 19:09:44,580 INFO 12945 [egg-watcher:application] watcher start success
+2020-06-12 19:09:44,581 INFO 12945 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:09:44 GMT+0800 (GMT+08:00)
+2020-06-12 19:09:44,599 INFO 12945 [egg:core] dump config after ready, 4ms
+2020-06-12 19:10:23,765 INFO 12969 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:10:23,796 INFO 12969 [egg-multipart] stream mode enable
+2020-06-12 19:10:23,796 INFO 12969 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:10:24,106 INFO 12969 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:10:24,107 INFO 12969 [egg-security] use methodnoallow middleware
+2020-06-12 19:10:24,108 INFO 12969 [egg-security] use noopen middleware
+2020-06-12 19:10:24,108 INFO 12969 [egg-security] use nosniff middleware
+2020-06-12 19:10:24,109 INFO 12969 [egg-security] use xssProtection middleware
+2020-06-12 19:10:24,110 INFO 12969 [egg-security] use xframe middleware
+2020-06-12 19:10:24,110 INFO 12969 [egg-security] use dta middleware
+2020-06-12 19:10:24,110 INFO 12969 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:10:24,129 INFO 12969 [egg:core] dump config after load, 4ms
+2020-06-12 19:10:24,166 INFO 12969 [egg-watcher:application] watcher start success
+2020-06-12 19:10:24,168 INFO 12969 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:10:24 GMT+0800 (GMT+08:00)
+2020-06-12 19:10:24,185 INFO 12969 [egg:core] dump config after ready, 4ms
+2020-06-12 19:10:37,354 INFO 12990 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:10:37,381 INFO 12990 [egg-multipart] stream mode enable
+2020-06-12 19:10:37,382 INFO 12990 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:10:37,698 INFO 12990 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:10:37,700 INFO 12990 [egg-security] use methodnoallow middleware
+2020-06-12 19:10:37,701 INFO 12990 [egg-security] use noopen middleware
+2020-06-12 19:10:37,702 INFO 12990 [egg-security] use nosniff middleware
+2020-06-12 19:10:37,702 INFO 12990 [egg-security] use xssProtection middleware
+2020-06-12 19:10:37,703 INFO 12990 [egg-security] use xframe middleware
+2020-06-12 19:10:37,704 INFO 12990 [egg-security] use dta middleware
+2020-06-12 19:10:37,704 INFO 12990 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:10:37,724 INFO 12990 [egg:core] dump config after load, 4ms
+2020-06-12 19:10:37,755 INFO 12990 [egg-watcher:application] watcher start success
+2020-06-12 19:10:37,756 INFO 12990 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:10:37 GMT+0800 (GMT+08:00)
+2020-06-12 19:10:37,773 INFO 12990 [egg:core] dump config after ready, 4ms
+2020-06-12 19:11:26,244 INFO 13021 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:11:26,267 INFO 13021 [egg-multipart] stream mode enable
+2020-06-12 19:11:26,267 INFO 13021 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:11:26,521 INFO 13021 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:11:26,523 INFO 13021 [egg-security] use methodnoallow middleware
+2020-06-12 19:11:26,523 INFO 13021 [egg-security] use noopen middleware
+2020-06-12 19:11:26,524 INFO 13021 [egg-security] use nosniff middleware
+2020-06-12 19:11:26,525 INFO 13021 [egg-security] use xssProtection middleware
+2020-06-12 19:11:26,525 INFO 13021 [egg-security] use xframe middleware
+2020-06-12 19:11:26,526 INFO 13021 [egg-security] use dta middleware
+2020-06-12 19:11:26,526 INFO 13021 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:11:26,545 INFO 13021 [egg:core] dump config after load, 4ms
+2020-06-12 19:11:26,574 INFO 13021 [egg-watcher:application] watcher start success
+2020-06-12 19:11:26,575 INFO 13021 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:11:26 GMT+0800 (GMT+08:00)
+2020-06-12 19:11:26,592 INFO 13021 [egg:core] dump config after ready, 4ms
+2020-06-12 19:11:27,875 INFO 13032 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:11:27,901 INFO 13032 [egg-multipart] stream mode enable
+2020-06-12 19:11:27,901 INFO 13032 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:11:28,073 INFO 13032 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:11:28,074 INFO 13032 [egg-security] use methodnoallow middleware
+2020-06-12 19:11:28,074 INFO 13032 [egg-security] use noopen middleware
+2020-06-12 19:11:28,075 INFO 13032 [egg-security] use nosniff middleware
+2020-06-12 19:11:28,075 INFO 13032 [egg-security] use xssProtection middleware
+2020-06-12 19:11:28,075 INFO 13032 [egg-security] use xframe middleware
+2020-06-12 19:11:28,076 INFO 13032 [egg-security] use dta middleware
+2020-06-12 19:11:28,076 INFO 13032 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:11:28,093 INFO 13032 [egg:core] dump config after load, 5ms
+2020-06-12 19:11:28,125 INFO 13032 [egg-watcher:application] watcher start success
+2020-06-12 19:11:28,129 INFO 13032 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:11:28 GMT+0800 (GMT+08:00)
+2020-06-12 19:11:28,147 INFO 13032 [egg:core] dump config after ready, 4ms
+2020-06-12 19:12:15,841 INFO 13051 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:12:15,871 INFO 13051 [egg-multipart] stream mode enable
+2020-06-12 19:12:15,872 INFO 13051 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:12:16,185 INFO 13051 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:12:16,187 INFO 13051 [egg-security] use methodnoallow middleware
+2020-06-12 19:12:16,188 INFO 13051 [egg-security] use noopen middleware
+2020-06-12 19:12:16,188 INFO 13051 [egg-security] use nosniff middleware
+2020-06-12 19:12:16,189 INFO 13051 [egg-security] use xssProtection middleware
+2020-06-12 19:12:16,190 INFO 13051 [egg-security] use xframe middleware
+2020-06-12 19:12:16,191 INFO 13051 [egg-security] use dta middleware
+2020-06-12 19:12:16,191 INFO 13051 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:12:16,215 INFO 13051 [egg:core] dump config after load, 6ms
+2020-06-12 19:12:16,247 INFO 13051 [egg-watcher:application] watcher start success
+2020-06-12 19:12:16,248 INFO 13051 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:12:16 GMT+0800 (GMT+08:00)
+2020-06-12 19:12:16,268 INFO 13051 [egg:core] dump config after ready, 4ms
+2020-06-12 19:12:36,176 INFO 13078 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:12:36,199 INFO 13078 [egg-multipart] stream mode enable
+2020-06-12 19:12:36,199 INFO 13078 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:12:36,495 INFO 13078 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:12:36,497 INFO 13078 [egg-security] use methodnoallow middleware
+2020-06-12 19:12:36,498 INFO 13078 [egg-security] use noopen middleware
+2020-06-12 19:12:36,498 INFO 13078 [egg-security] use nosniff middleware
+2020-06-12 19:12:36,499 INFO 13078 [egg-security] use xssProtection middleware
+2020-06-12 19:12:36,500 INFO 13078 [egg-security] use xframe middleware
+2020-06-12 19:12:36,500 INFO 13078 [egg-security] use dta middleware
+2020-06-12 19:12:36,501 INFO 13078 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:12:36,521 INFO 13078 [egg:core] dump config after load, 5ms
+2020-06-12 19:12:36,557 INFO 13078 [egg-watcher:application] watcher start success
+2020-06-12 19:12:36,558 INFO 13078 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:12:36 GMT+0800 (GMT+08:00)
+2020-06-12 19:12:36,577 INFO 13078 [egg:core] dump config after ready, 5ms
+2020-06-12 19:12:46,868 INFO 13102 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:12:46,895 INFO 13102 [egg-multipart] stream mode enable
+2020-06-12 19:12:46,896 INFO 13102 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:12:47,184 INFO 13102 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:12:47,186 INFO 13102 [egg-security] use methodnoallow middleware
+2020-06-12 19:12:47,187 INFO 13102 [egg-security] use noopen middleware
+2020-06-12 19:12:47,188 INFO 13102 [egg-security] use nosniff middleware
+2020-06-12 19:12:47,188 INFO 13102 [egg-security] use xssProtection middleware
+2020-06-12 19:12:47,189 INFO 13102 [egg-security] use xframe middleware
+2020-06-12 19:12:47,190 INFO 13102 [egg-security] use dta middleware
+2020-06-12 19:12:47,190 INFO 13102 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:12:47,211 INFO 13102 [egg:core] dump config after load, 5ms
+2020-06-12 19:12:47,242 INFO 13102 [egg-watcher:application] watcher start success
+2020-06-12 19:12:47,243 INFO 13102 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:12:47 GMT+0800 (GMT+08:00)
+2020-06-12 19:12:47,262 INFO 13102 [egg:core] dump config after ready, 4ms
+2020-06-12 19:16:07,082 INFO 13190 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:16:07,109 INFO 13190 [egg-multipart] stream mode enable
+2020-06-12 19:16:07,109 INFO 13190 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:16:07,415 INFO 13190 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:16:07,418 INFO 13190 [egg-security] use methodnoallow middleware
+2020-06-12 19:16:07,418 INFO 13190 [egg-security] use noopen middleware
+2020-06-12 19:16:07,419 INFO 13190 [egg-security] use nosniff middleware
+2020-06-12 19:16:07,420 INFO 13190 [egg-security] use xssProtection middleware
+2020-06-12 19:16:07,421 INFO 13190 [egg-security] use xframe middleware
+2020-06-12 19:16:07,422 INFO 13190 [egg-security] use dta middleware
+2020-06-12 19:16:07,422 INFO 13190 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:16:07,449 INFO 13190 [egg:core] dump config after load, 6ms
+2020-06-12 19:16:07,483 INFO 13190 [egg-watcher:application] watcher start success
+2020-06-12 19:16:07,485 INFO 13190 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:16:07 GMT+0800 (GMT+08:00)
+2020-06-12 19:16:07,505 INFO 13190 [egg:core] dump config after ready, 5ms
+2020-06-12 19:23:59,867 INFO 13276 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:23:59,900 INFO 13276 [egg-multipart] stream mode enable
+2020-06-12 19:23:59,901 INFO 13276 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:24:00,227 INFO 13276 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:24:00,229 INFO 13276 [egg-security] use methodnoallow middleware
+2020-06-12 19:24:00,230 INFO 13276 [egg-security] use noopen middleware
+2020-06-12 19:24:00,230 INFO 13276 [egg-security] use nosniff middleware
+2020-06-12 19:24:00,231 INFO 13276 [egg-security] use xssProtection middleware
+2020-06-12 19:24:00,232 INFO 13276 [egg-security] use xframe middleware
+2020-06-12 19:24:00,233 INFO 13276 [egg-security] use dta middleware
+2020-06-12 19:24:00,233 INFO 13276 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:24:00,254 INFO 13276 [egg:core] dump config after load, 5ms
+2020-06-12 19:24:00,284 INFO 13276 [egg-watcher:application] watcher start success
+2020-06-12 19:24:00,285 INFO 13276 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:24:00 GMT+0800 (GMT+08:00)
+2020-06-12 19:24:00,303 INFO 13276 [egg:core] dump config after ready, 4ms
+2020-06-12 19:26:58,850 INFO 13366 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:26:58,872 INFO 13366 [egg-multipart] stream mode enable
+2020-06-12 19:26:58,873 INFO 13366 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:26:59,136 INFO 13366 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:26:59,138 INFO 13366 [egg-security] use methodnoallow middleware
+2020-06-12 19:26:59,138 INFO 13366 [egg-security] use noopen middleware
+2020-06-12 19:26:59,139 INFO 13366 [egg-security] use nosniff middleware
+2020-06-12 19:26:59,140 INFO 13366 [egg-security] use xssProtection middleware
+2020-06-12 19:26:59,141 INFO 13366 [egg-security] use xframe middleware
+2020-06-12 19:26:59,141 INFO 13366 [egg-security] use dta middleware
+2020-06-12 19:26:59,141 INFO 13366 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:26:59,163 INFO 13366 [egg:core] dump config after load, 5ms
+2020-06-12 19:26:59,195 INFO 13366 [egg-watcher:application] watcher start success
+2020-06-12 19:26:59,197 INFO 13366 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:26:59 GMT+0800 (GMT+08:00)
+2020-06-12 19:26:59,216 INFO 13366 [egg:core] dump config after ready, 5ms
+2020-06-12 19:31:26,611 INFO 13477 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:31:26,638 INFO 13477 [egg-multipart] stream mode enable
+2020-06-12 19:31:26,638 INFO 13477 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:31:26,962 INFO 13477 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:31:26,965 INFO 13477 [egg-security] use methodnoallow middleware
+2020-06-12 19:31:26,965 INFO 13477 [egg-security] use noopen middleware
+2020-06-12 19:31:26,966 INFO 13477 [egg-security] use nosniff middleware
+2020-06-12 19:31:26,967 INFO 13477 [egg-security] use xssProtection middleware
+2020-06-12 19:31:26,968 INFO 13477 [egg-security] use xframe middleware
+2020-06-12 19:31:26,969 INFO 13477 [egg-security] use dta middleware
+2020-06-12 19:31:26,969 INFO 13477 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:31:27,002 INFO 13477 [egg:core] dump config after load, 9ms
+2020-06-12 19:31:27,035 INFO 13477 [egg-watcher:application] watcher start success
+2020-06-12 19:31:27,037 INFO 13477 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:31:27 GMT+0800 (GMT+08:00)
+2020-06-12 19:31:27,058 INFO 13477 [egg:core] dump config after ready, 6ms
+2020-06-12 19:31:32,847 INFO 13496 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:31:32,882 INFO 13496 [egg-multipart] stream mode enable
+2020-06-12 19:31:32,883 INFO 13496 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:31:33,216 INFO 13496 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:31:33,218 INFO 13496 [egg-security] use methodnoallow middleware
+2020-06-12 19:31:33,218 INFO 13496 [egg-security] use noopen middleware
+2020-06-12 19:31:33,219 INFO 13496 [egg-security] use nosniff middleware
+2020-06-12 19:31:33,220 INFO 13496 [egg-security] use xssProtection middleware
+2020-06-12 19:31:33,220 INFO 13496 [egg-security] use xframe middleware
+2020-06-12 19:31:33,221 INFO 13496 [egg-security] use dta middleware
+2020-06-12 19:31:33,221 INFO 13496 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:31:33,242 INFO 13496 [egg:core] dump config after load, 3ms
+2020-06-12 19:31:33,276 INFO 13496 [egg-watcher:application] watcher start success
+2020-06-12 19:31:33,277 INFO 13496 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:31:33 GMT+0800 (GMT+08:00)
+2020-06-12 19:31:33,295 INFO 13496 [egg:core] dump config after ready, 4ms
+2020-06-12 19:31:40,539 INFO 13509 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:31:40,563 INFO 13509 [egg-multipart] stream mode enable
+2020-06-12 19:31:40,564 INFO 13509 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:31:40,846 INFO 13509 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:31:40,848 INFO 13509 [egg-security] use methodnoallow middleware
+2020-06-12 19:31:40,849 INFO 13509 [egg-security] use noopen middleware
+2020-06-12 19:31:40,849 INFO 13509 [egg-security] use nosniff middleware
+2020-06-12 19:31:40,850 INFO 13509 [egg-security] use xssProtection middleware
+2020-06-12 19:31:40,850 INFO 13509 [egg-security] use xframe middleware
+2020-06-12 19:31:40,851 INFO 13509 [egg-security] use dta middleware
+2020-06-12 19:31:40,851 INFO 13509 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:31:40,872 INFO 13509 [egg:core] dump config after load, 5ms
+2020-06-12 19:31:40,904 INFO 13509 [egg-watcher:application] watcher start success
+2020-06-12 19:31:40,905 INFO 13509 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:31:40 GMT+0800 (GMT+08:00)
+2020-06-12 19:31:40,924 INFO 13509 [egg:core] dump config after ready, 5ms
+2020-06-12 19:32:34,664 INFO 13544 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:32:34,692 INFO 13544 [egg-multipart] stream mode enable
+2020-06-12 19:32:34,692 INFO 13544 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:32:35,035 INFO 13544 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:32:35,037 INFO 13544 [egg-security] use methodnoallow middleware
+2020-06-12 19:32:35,037 INFO 13544 [egg-security] use noopen middleware
+2020-06-12 19:32:35,038 INFO 13544 [egg-security] use nosniff middleware
+2020-06-12 19:32:35,039 INFO 13544 [egg-security] use xssProtection middleware
+2020-06-12 19:32:35,039 INFO 13544 [egg-security] use xframe middleware
+2020-06-12 19:32:35,040 INFO 13544 [egg-security] use dta middleware
+2020-06-12 19:32:35,040 INFO 13544 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:32:35,061 INFO 13544 [egg:core] dump config after load, 5ms
+2020-06-12 19:32:35,095 INFO 13544 [egg-watcher:application] watcher start success
+2020-06-12 19:32:35,097 INFO 13544 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:32:35 GMT+0800 (GMT+08:00)
+2020-06-12 19:32:35,114 INFO 13544 [egg:core] dump config after ready, 4ms
+2020-06-12 19:34:54,886 INFO 13625 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:34:54,912 INFO 13625 [egg-multipart] stream mode enable
+2020-06-12 19:34:54,912 INFO 13625 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:34:55,218 INFO 13625 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:34:55,220 INFO 13625 [egg-security] use methodnoallow middleware
+2020-06-12 19:34:55,221 INFO 13625 [egg-security] use noopen middleware
+2020-06-12 19:34:55,222 INFO 13625 [egg-security] use nosniff middleware
+2020-06-12 19:34:55,223 INFO 13625 [egg-security] use xssProtection middleware
+2020-06-12 19:34:55,224 INFO 13625 [egg-security] use xframe middleware
+2020-06-12 19:34:55,225 INFO 13625 [egg-security] use dta middleware
+2020-06-12 19:34:55,226 INFO 13625 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:34:55,253 INFO 13625 [egg:core] dump config after load, 5ms
+2020-06-12 19:34:55,289 INFO 13625 [egg-watcher:application] watcher start success
+2020-06-12 19:34:55,292 INFO 13625 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:34:55 GMT+0800 (GMT+08:00)
+2020-06-12 19:34:55,311 INFO 13625 [egg:core] dump config after ready, 4ms
+2020-06-12 19:35:22,999 INFO 13649 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:35:23,024 INFO 13649 [egg-multipart] stream mode enable
+2020-06-12 19:35:23,024 INFO 13649 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:35:23,319 INFO 13649 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:35:23,321 INFO 13649 [egg-security] use methodnoallow middleware
+2020-06-12 19:35:23,322 INFO 13649 [egg-security] use noopen middleware
+2020-06-12 19:35:23,323 INFO 13649 [egg-security] use nosniff middleware
+2020-06-12 19:35:23,324 INFO 13649 [egg-security] use xssProtection middleware
+2020-06-12 19:35:23,326 INFO 13649 [egg-security] use xframe middleware
+2020-06-12 19:35:23,327 INFO 13649 [egg-security] use dta middleware
+2020-06-12 19:35:23,327 INFO 13649 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:35:23,350 INFO 13649 [egg:core] dump config after load, 4ms
+2020-06-12 19:35:23,384 INFO 13649 [egg-watcher:application] watcher start success
+2020-06-12 19:35:23,385 INFO 13649 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:35:23 GMT+0800 (GMT+08:00)
+2020-06-12 19:35:23,405 INFO 13649 [egg:core] dump config after ready, 5ms
+2020-06-12 19:39:15,624 INFO 13742 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:39:15,653 INFO 13742 [egg-multipart] stream mode enable
+2020-06-12 19:39:15,653 INFO 13742 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:39:15,979 INFO 13742 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:39:15,981 INFO 13742 [egg-security] use methodnoallow middleware
+2020-06-12 19:39:15,982 INFO 13742 [egg-security] use noopen middleware
+2020-06-12 19:39:15,982 INFO 13742 [egg-security] use nosniff middleware
+2020-06-12 19:39:15,983 INFO 13742 [egg-security] use xssProtection middleware
+2020-06-12 19:39:15,984 INFO 13742 [egg-security] use xframe middleware
+2020-06-12 19:39:15,985 INFO 13742 [egg-security] use dta middleware
+2020-06-12 19:39:15,985 INFO 13742 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:39:16,007 INFO 13742 [egg:core] dump config after load, 4ms
+2020-06-12 19:39:16,038 INFO 13742 [egg-watcher:application] watcher start success
+2020-06-12 19:39:16,039 INFO 13742 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:39:16 GMT+0800 (GMT+08:00)
+2020-06-12 19:39:16,058 INFO 13742 [egg:core] dump config after ready, 4ms
+2020-06-12 19:39:44,393 INFO 13770 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:39:44,419 INFO 13770 [egg-multipart] stream mode enable
+2020-06-12 19:39:44,419 INFO 13770 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:39:44,687 INFO 13770 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:39:44,689 INFO 13770 [egg-security] use methodnoallow middleware
+2020-06-12 19:39:44,689 INFO 13770 [egg-security] use noopen middleware
+2020-06-12 19:39:44,690 INFO 13770 [egg-security] use nosniff middleware
+2020-06-12 19:39:44,690 INFO 13770 [egg-security] use xssProtection middleware
+2020-06-12 19:39:44,691 INFO 13770 [egg-security] use xframe middleware
+2020-06-12 19:39:44,692 INFO 13770 [egg-security] use dta middleware
+2020-06-12 19:39:44,692 INFO 13770 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:39:44,709 INFO 13770 [egg:core] dump config after load, 4ms
+2020-06-12 19:39:44,740 INFO 13770 [egg-watcher:application] watcher start success
+2020-06-12 19:39:44,742 INFO 13770 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:39:44 GMT+0800 (GMT+08:00)
+2020-06-12 19:39:44,759 INFO 13770 [egg:core] dump config after ready, 4ms
+2020-06-12 19:40:29,708 INFO 13798 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:40:29,732 INFO 13798 [egg-multipart] stream mode enable
+2020-06-12 19:40:29,732 INFO 13798 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:40:29,982 INFO 13798 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:40:29,983 INFO 13798 [egg-security] use methodnoallow middleware
+2020-06-12 19:40:29,984 INFO 13798 [egg-security] use noopen middleware
+2020-06-12 19:40:29,985 INFO 13798 [egg-security] use nosniff middleware
+2020-06-12 19:40:29,985 INFO 13798 [egg-security] use xssProtection middleware
+2020-06-12 19:40:29,986 INFO 13798 [egg-security] use xframe middleware
+2020-06-12 19:40:29,986 INFO 13798 [egg-security] use dta middleware
+2020-06-12 19:40:29,986 INFO 13798 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:40:30,005 INFO 13798 [egg:core] dump config after load, 5ms
+2020-06-12 19:40:30,037 INFO 13798 [egg-watcher:application] watcher start success
+2020-06-12 19:40:30,039 INFO 13798 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:40:30 GMT+0800 (GMT+08:00)
+2020-06-12 19:40:30,055 INFO 13798 [egg:core] dump config after ready, 4ms
+2020-06-12 19:40:47,398 INFO 13823 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:40:47,424 INFO 13823 [egg-multipart] stream mode enable
+2020-06-12 19:40:47,425 INFO 13823 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:40:47,705 INFO 13823 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:40:47,706 INFO 13823 [egg-security] use methodnoallow middleware
+2020-06-12 19:40:47,707 INFO 13823 [egg-security] use noopen middleware
+2020-06-12 19:40:47,708 INFO 13823 [egg-security] use nosniff middleware
+2020-06-12 19:40:47,708 INFO 13823 [egg-security] use xssProtection middleware
+2020-06-12 19:40:47,709 INFO 13823 [egg-security] use xframe middleware
+2020-06-12 19:40:47,709 INFO 13823 [egg-security] use dta middleware
+2020-06-12 19:40:47,709 INFO 13823 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:40:47,728 INFO 13823 [egg:core] dump config after load, 4ms
+2020-06-12 19:40:47,760 INFO 13823 [egg-watcher:application] watcher start success
+2020-06-12 19:40:47,762 INFO 13823 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:40:47 GMT+0800 (GMT+08:00)
+2020-06-12 19:40:47,778 INFO 13823 [egg:core] dump config after ready, 4ms
+2020-06-12 19:44:10,707 INFO 13879 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:44:10,737 INFO 13879 [egg-multipart] stream mode enable
+2020-06-12 19:44:10,738 INFO 13879 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:44:11,051 INFO 13879 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:44:11,053 INFO 13879 [egg-security] use methodnoallow middleware
+2020-06-12 19:44:11,053 INFO 13879 [egg-security] use noopen middleware
+2020-06-12 19:44:11,054 INFO 13879 [egg-security] use nosniff middleware
+2020-06-12 19:44:11,055 INFO 13879 [egg-security] use xssProtection middleware
+2020-06-12 19:44:11,056 INFO 13879 [egg-security] use xframe middleware
+2020-06-12 19:44:11,056 INFO 13879 [egg-security] use dta middleware
+2020-06-12 19:44:11,056 INFO 13879 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:44:11,076 INFO 13879 [egg:core] dump config after load, 4ms
+2020-06-12 19:44:11,108 INFO 13879 [egg-watcher:application] watcher start success
+2020-06-12 19:44:11,111 INFO 13879 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:44:11 GMT+0800 (GMT+08:00)
+2020-06-12 19:44:11,127 INFO 13879 [egg:core] dump config after ready, 4ms
+2020-06-12 19:45:21,433 INFO 13918 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:45:21,458 INFO 13918 [egg-multipart] stream mode enable
+2020-06-12 19:45:21,459 INFO 13918 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:45:21,789 INFO 13918 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:45:21,791 INFO 13918 [egg-security] use methodnoallow middleware
+2020-06-12 19:45:21,792 INFO 13918 [egg-security] use noopen middleware
+2020-06-12 19:45:21,792 INFO 13918 [egg-security] use nosniff middleware
+2020-06-12 19:45:21,793 INFO 13918 [egg-security] use xssProtection middleware
+2020-06-12 19:45:21,794 INFO 13918 [egg-security] use xframe middleware
+2020-06-12 19:45:21,795 INFO 13918 [egg-security] use dta middleware
+2020-06-12 19:45:21,795 INFO 13918 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:45:21,816 INFO 13918 [egg:core] dump config after load, 4ms
+2020-06-12 19:45:21,849 INFO 13918 [egg-watcher:application] watcher start success
+2020-06-12 19:45:21,850 INFO 13918 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:45:21 GMT+0800 (GMT+08:00)
+2020-06-12 19:45:21,870 INFO 13918 [egg:core] dump config after ready, 4ms
+2020-06-12 19:45:29,714 INFO 13939 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:45:29,735 INFO 13939 [egg-multipart] stream mode enable
+2020-06-12 19:45:29,735 INFO 13939 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:45:29,881 INFO 13939 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:45:29,883 INFO 13939 [egg-security] use methodnoallow middleware
+2020-06-12 19:45:29,883 INFO 13939 [egg-security] use noopen middleware
+2020-06-12 19:45:29,883 INFO 13939 [egg-security] use nosniff middleware
+2020-06-12 19:45:29,883 INFO 13939 [egg-security] use xssProtection middleware
+2020-06-12 19:45:29,884 INFO 13939 [egg-security] use xframe middleware
+2020-06-12 19:45:29,884 INFO 13939 [egg-security] use dta middleware
+2020-06-12 19:45:29,884 INFO 13939 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:45:29,896 INFO 13939 [egg:core] dump config after load, 3ms
+2020-06-12 19:45:29,926 INFO 13939 [egg-watcher:application] watcher start success
+2020-06-12 19:45:29,928 INFO 13939 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:45:29 GMT+0800 (GMT+08:00)
+2020-06-12 19:45:29,945 INFO 13939 [egg:core] dump config after ready, 4ms
+2020-06-12 19:45:45,236 INFO 13963 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:45:45,261 INFO 13963 [egg-multipart] stream mode enable
+2020-06-12 19:45:45,262 INFO 13963 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:45:45,523 INFO 13963 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:45:45,525 INFO 13963 [egg-security] use methodnoallow middleware
+2020-06-12 19:45:45,525 INFO 13963 [egg-security] use noopen middleware
+2020-06-12 19:45:45,526 INFO 13963 [egg-security] use nosniff middleware
+2020-06-12 19:45:45,527 INFO 13963 [egg-security] use xssProtection middleware
+2020-06-12 19:45:45,527 INFO 13963 [egg-security] use xframe middleware
+2020-06-12 19:45:45,528 INFO 13963 [egg-security] use dta middleware
+2020-06-12 19:45:45,528 INFO 13963 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:45:45,550 INFO 13963 [egg:core] dump config after load, 6ms
+2020-06-12 19:45:45,581 INFO 13963 [egg-watcher:application] watcher start success
+2020-06-12 19:45:45,582 INFO 13963 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:45:45 GMT+0800 (GMT+08:00)
+2020-06-12 19:45:45,601 INFO 13963 [egg:core] dump config after ready, 5ms
+2020-06-12 19:47:58,194 INFO 14002 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:47:58,218 INFO 14002 [egg-multipart] stream mode enable
+2020-06-12 19:47:58,218 INFO 14002 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:47:58,493 INFO 14002 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:47:58,495 INFO 14002 [egg-security] use methodnoallow middleware
+2020-06-12 19:47:58,496 INFO 14002 [egg-security] use noopen middleware
+2020-06-12 19:47:58,496 INFO 14002 [egg-security] use nosniff middleware
+2020-06-12 19:47:58,497 INFO 14002 [egg-security] use xssProtection middleware
+2020-06-12 19:47:58,498 INFO 14002 [egg-security] use xframe middleware
+2020-06-12 19:47:58,498 INFO 14002 [egg-security] use dta middleware
+2020-06-12 19:47:58,498 INFO 14002 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:47:58,519 INFO 14002 [egg:core] dump config after load, 5ms
+2020-06-12 19:47:58,550 INFO 14002 [egg-watcher:application] watcher start success
+2020-06-12 19:47:58,551 INFO 14002 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:47:58 GMT+0800 (GMT+08:00)
+2020-06-12 19:47:58,569 INFO 14002 [egg:core] dump config after ready, 4ms
+2020-06-12 19:48:00,817 INFO 14016 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:48:00,837 INFO 14016 [egg-multipart] stream mode enable
+2020-06-12 19:48:00,838 INFO 14016 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:48:00,992 INFO 14016 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:48:00,994 INFO 14016 [egg-security] use methodnoallow middleware
+2020-06-12 19:48:00,994 INFO 14016 [egg-security] use noopen middleware
+2020-06-12 19:48:00,994 INFO 14016 [egg-security] use nosniff middleware
+2020-06-12 19:48:00,994 INFO 14016 [egg-security] use xssProtection middleware
+2020-06-12 19:48:00,995 INFO 14016 [egg-security] use xframe middleware
+2020-06-12 19:48:00,995 INFO 14016 [egg-security] use dta middleware
+2020-06-12 19:48:00,995 INFO 14016 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:48:01,011 INFO 14016 [egg:core] dump config after load, 5ms
+2020-06-12 19:48:01,042 INFO 14016 [egg-watcher:application] watcher start success
+2020-06-12 19:48:01,043 INFO 14016 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:48:01 GMT+0800 (GMT+08:00)
+2020-06-12 19:48:01,062 INFO 14016 [egg:core] dump config after ready, 5ms
+2020-06-12 19:48:14,755 INFO 14030 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:48:14,782 INFO 14030 [egg-multipart] stream mode enable
+2020-06-12 19:48:14,782 INFO 14030 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:48:15,071 INFO 14030 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:48:15,073 INFO 14030 [egg-security] use methodnoallow middleware
+2020-06-12 19:48:15,073 INFO 14030 [egg-security] use noopen middleware
+2020-06-12 19:48:15,074 INFO 14030 [egg-security] use nosniff middleware
+2020-06-12 19:48:15,075 INFO 14030 [egg-security] use xssProtection middleware
+2020-06-12 19:48:15,075 INFO 14030 [egg-security] use xframe middleware
+2020-06-12 19:48:15,076 INFO 14030 [egg-security] use dta middleware
+2020-06-12 19:48:15,076 INFO 14030 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:48:15,096 INFO 14030 [egg:core] dump config after load, 5ms
+2020-06-12 19:48:15,129 INFO 14030 [egg-watcher:application] watcher start success
+2020-06-12 19:48:15,130 INFO 14030 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:48:15 GMT+0800 (GMT+08:00)
+2020-06-12 19:48:15,147 INFO 14030 [egg:core] dump config after ready, 4ms
+2020-06-12 19:48:18,893 INFO 14041 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:48:18,912 INFO 14041 [egg-multipart] stream mode enable
+2020-06-12 19:48:18,913 INFO 14041 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:48:19,060 INFO 14041 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:48:19,062 INFO 14041 [egg-security] use methodnoallow middleware
+2020-06-12 19:48:19,062 INFO 14041 [egg-security] use noopen middleware
+2020-06-12 19:48:19,062 INFO 14041 [egg-security] use nosniff middleware
+2020-06-12 19:48:19,063 INFO 14041 [egg-security] use xssProtection middleware
+2020-06-12 19:48:19,063 INFO 14041 [egg-security] use xframe middleware
+2020-06-12 19:48:19,063 INFO 14041 [egg-security] use dta middleware
+2020-06-12 19:48:19,064 INFO 14041 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:48:19,076 INFO 14041 [egg:core] dump config after load, 3ms
+2020-06-12 19:48:19,106 INFO 14041 [egg-watcher:application] watcher start success
+2020-06-12 19:48:19,107 INFO 14041 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:48:19 GMT+0800 (GMT+08:00)
+2020-06-12 19:48:19,125 INFO 14041 [egg:core] dump config after ready, 4ms
+2020-06-12 19:48:25,083 INFO 14052 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:48:25,118 INFO 14052 [egg-multipart] stream mode enable
+2020-06-12 19:48:25,119 INFO 14052 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:48:25,330 INFO 14052 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:48:25,332 INFO 14052 [egg-security] use methodnoallow middleware
+2020-06-12 19:48:25,332 INFO 14052 [egg-security] use noopen middleware
+2020-06-12 19:48:25,333 INFO 14052 [egg-security] use nosniff middleware
+2020-06-12 19:48:25,334 INFO 14052 [egg-security] use xssProtection middleware
+2020-06-12 19:48:25,334 INFO 14052 [egg-security] use xframe middleware
+2020-06-12 19:48:25,334 INFO 14052 [egg-security] use dta middleware
+2020-06-12 19:48:25,334 INFO 14052 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:48:25,348 INFO 14052 [egg:core] dump config after load, 3ms
+2020-06-12 19:48:25,375 INFO 14052 [egg-watcher:application] watcher start success
+2020-06-12 19:48:25,376 INFO 14052 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:48:25 GMT+0800 (GMT+08:00)
+2020-06-12 19:48:25,393 INFO 14052 [egg:core] dump config after ready, 4ms
+2020-06-12 19:49:45,617 INFO 14085 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:49:45,643 INFO 14085 [egg-multipart] stream mode enable
+2020-06-12 19:49:45,643 INFO 14085 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:49:45,943 INFO 14085 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:49:45,945 INFO 14085 [egg-security] use methodnoallow middleware
+2020-06-12 19:49:45,946 INFO 14085 [egg-security] use noopen middleware
+2020-06-12 19:49:45,946 INFO 14085 [egg-security] use nosniff middleware
+2020-06-12 19:49:45,947 INFO 14085 [egg-security] use xssProtection middleware
+2020-06-12 19:49:45,948 INFO 14085 [egg-security] use xframe middleware
+2020-06-12 19:49:45,949 INFO 14085 [egg-security] use dta middleware
+2020-06-12 19:49:45,949 INFO 14085 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:49:45,974 INFO 14085 [egg:core] dump config after load, 6ms
+2020-06-12 19:49:46,009 INFO 14085 [egg-watcher:application] watcher start success
+2020-06-12 19:49:46,010 INFO 14085 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:49:46 GMT+0800 (GMT+08:00)
+2020-06-12 19:49:46,029 INFO 14085 [egg:core] dump config after ready, 4ms
+2020-06-12 19:55:20,314 INFO 14140 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:55:20,343 INFO 14140 [egg-multipart] stream mode enable
+2020-06-12 19:55:20,343 INFO 14140 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:55:20,686 INFO 14140 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:55:20,688 INFO 14140 [egg-security] use methodnoallow middleware
+2020-06-12 19:55:20,689 INFO 14140 [egg-security] use noopen middleware
+2020-06-12 19:55:20,689 INFO 14140 [egg-security] use nosniff middleware
+2020-06-12 19:55:20,690 INFO 14140 [egg-security] use xssProtection middleware
+2020-06-12 19:55:20,691 INFO 14140 [egg-security] use xframe middleware
+2020-06-12 19:55:20,692 INFO 14140 [egg-security] use dta middleware
+2020-06-12 19:55:20,692 INFO 14140 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:55:20,718 INFO 14140 [egg:core] dump config after load, 8ms
+2020-06-12 19:55:20,757 INFO 14140 [egg-watcher:application] watcher start success
+2020-06-12 19:55:20,758 INFO 14140 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:55:20 GMT+0800 (GMT+08:00)
+2020-06-12 19:55:20,777 INFO 14140 [egg:core] dump config after ready, 5ms
+2020-06-12 19:56:08,949 INFO 14168 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:56:08,974 INFO 14168 [egg-multipart] stream mode enable
+2020-06-12 19:56:08,975 INFO 14168 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:56:09,261 INFO 14168 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:56:09,263 INFO 14168 [egg-security] use methodnoallow middleware
+2020-06-12 19:56:09,264 INFO 14168 [egg-security] use noopen middleware
+2020-06-12 19:56:09,265 INFO 14168 [egg-security] use nosniff middleware
+2020-06-12 19:56:09,265 INFO 14168 [egg-security] use xssProtection middleware
+2020-06-12 19:56:09,266 INFO 14168 [egg-security] use xframe middleware
+2020-06-12 19:56:09,267 INFO 14168 [egg-security] use dta middleware
+2020-06-12 19:56:09,267 INFO 14168 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:56:09,288 INFO 14168 [egg:core] dump config after load, 4ms
+2020-06-12 19:56:09,324 INFO 14168 [egg-watcher:application] watcher start success
+2020-06-12 19:56:09,325 INFO 14168 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:56:09 GMT+0800 (GMT+08:00)
+2020-06-12 19:56:09,344 INFO 14168 [egg:core] dump config after ready, 4ms
+2020-06-12 19:56:34,880 INFO 14196 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 19:56:34,905 INFO 14196 [egg-multipart] stream mode enable
+2020-06-12 19:56:34,906 INFO 14196 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 19:56:35,190 INFO 14196 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 19:56:35,192 INFO 14196 [egg-security] use methodnoallow middleware
+2020-06-12 19:56:35,192 INFO 14196 [egg-security] use noopen middleware
+2020-06-12 19:56:35,193 INFO 14196 [egg-security] use nosniff middleware
+2020-06-12 19:56:35,193 INFO 14196 [egg-security] use xssProtection middleware
+2020-06-12 19:56:35,194 INFO 14196 [egg-security] use xframe middleware
+2020-06-12 19:56:35,195 INFO 14196 [egg-security] use dta middleware
+2020-06-12 19:56:35,195 INFO 14196 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 19:56:35,216 INFO 14196 [egg:core] dump config after load, 4ms
+2020-06-12 19:56:35,248 INFO 14196 [egg-watcher:application] watcher start success
+2020-06-12 19:56:35,250 INFO 14196 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 19:56:35 GMT+0800 (GMT+08:00)
+2020-06-12 19:56:35,267 INFO 14196 [egg:core] dump config after ready, 4ms
+2020-06-12 20:00:13,462 INFO 14245 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 20:00:13,491 INFO 14245 [egg-multipart] stream mode enable
+2020-06-12 20:00:13,491 INFO 14245 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 20:00:13,845 INFO 14245 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 20:00:13,847 INFO 14245 [egg-security] use methodnoallow middleware
+2020-06-12 20:00:13,847 INFO 14245 [egg-security] use noopen middleware
+2020-06-12 20:00:13,848 INFO 14245 [egg-security] use nosniff middleware
+2020-06-12 20:00:13,849 INFO 14245 [egg-security] use xssProtection middleware
+2020-06-12 20:00:13,850 INFO 14245 [egg-security] use xframe middleware
+2020-06-12 20:00:13,850 INFO 14245 [egg-security] use dta middleware
+2020-06-12 20:00:13,850 INFO 14245 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 20:00:13,870 INFO 14245 [egg:core] dump config after load, 4ms
+2020-06-12 20:00:13,904 INFO 14245 [egg-watcher:application] watcher start success
+2020-06-12 20:00:13,906 INFO 14245 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 20:00:13 GMT+0800 (GMT+08:00)
+2020-06-12 20:00:13,923 INFO 14245 [egg:core] dump config after ready, 4ms
+2020-06-12 20:00:40,051 INFO 14266 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 20:00:40,091 INFO 14266 [egg-multipart] stream mode enable
+2020-06-12 20:00:40,092 INFO 14266 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 20:00:40,363 INFO 14266 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 20:00:40,365 INFO 14266 [egg-security] use methodnoallow middleware
+2020-06-12 20:00:40,366 INFO 14266 [egg-security] use noopen middleware
+2020-06-12 20:00:40,366 INFO 14266 [egg-security] use nosniff middleware
+2020-06-12 20:00:40,367 INFO 14266 [egg-security] use xssProtection middleware
+2020-06-12 20:00:40,368 INFO 14266 [egg-security] use xframe middleware
+2020-06-12 20:00:40,369 INFO 14266 [egg-security] use dta middleware
+2020-06-12 20:00:40,369 INFO 14266 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 20:00:40,393 INFO 14266 [egg:core] dump config after load, 5ms
+2020-06-12 20:00:40,434 INFO 14266 [egg-watcher:application] watcher start success
+2020-06-12 20:00:40,436 INFO 14266 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 20:00:40 GMT+0800 (GMT+08:00)
+2020-06-12 20:00:40,461 INFO 14266 [egg:core] dump config after ready, 4ms
+2020-06-12 20:01:38,617 INFO 14295 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 20:01:38,640 INFO 14295 [egg-multipart] stream mode enable
+2020-06-12 20:01:38,641 INFO 14295 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 20:01:38,930 INFO 14295 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 20:01:38,932 INFO 14295 [egg-security] use methodnoallow middleware
+2020-06-12 20:01:38,933 INFO 14295 [egg-security] use noopen middleware
+2020-06-12 20:01:38,933 INFO 14295 [egg-security] use nosniff middleware
+2020-06-12 20:01:38,934 INFO 14295 [egg-security] use xssProtection middleware
+2020-06-12 20:01:38,935 INFO 14295 [egg-security] use xframe middleware
+2020-06-12 20:01:38,935 INFO 14295 [egg-security] use dta middleware
+2020-06-12 20:01:38,935 INFO 14295 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 20:01:38,956 INFO 14295 [egg:core] dump config after load, 4ms
+2020-06-12 20:01:38,994 INFO 14295 [egg-watcher:application] watcher start success
+2020-06-12 20:01:38,996 INFO 14295 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 20:01:38 GMT+0800 (GMT+08:00)
+2020-06-12 20:01:39,013 INFO 14295 [egg:core] dump config after ready, 4ms
+2020-06-12 20:02:25,150 INFO 14327 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-12 20:02:25,173 INFO 14327 [egg-multipart] stream mode enable
+2020-06-12 20:02:25,173 INFO 14327 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-12 20:02:25,429 INFO 14327 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-12 20:02:25,431 INFO 14327 [egg-security] use methodnoallow middleware
+2020-06-12 20:02:25,432 INFO 14327 [egg-security] use noopen middleware
+2020-06-12 20:02:25,432 INFO 14327 [egg-security] use nosniff middleware
+2020-06-12 20:02:25,433 INFO 14327 [egg-security] use xssProtection middleware
+2020-06-12 20:02:25,434 INFO 14327 [egg-security] use xframe middleware
+2020-06-12 20:02:25,434 INFO 14327 [egg-security] use dta middleware
+2020-06-12 20:02:25,434 INFO 14327 [egg-security] compose 6 middlewares into one security middleware
+2020-06-12 20:02:25,454 INFO 14327 [egg:core] dump config after load, 4ms
+2020-06-12 20:02:25,489 INFO 14327 [egg-watcher:application] watcher start success
+2020-06-12 20:02:25,491 INFO 14327 [egg-mysql] instance[0] status OK, rds currentTime: Fri Jun 12 2020 20:02:25 GMT+0800 (GMT+08:00)
+2020-06-12 20:02:25,511 INFO 14327 [egg:core] dump config after ready, 4ms
