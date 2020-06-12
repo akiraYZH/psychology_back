@@ -52,3 +52,35 @@ hostname: yudeMacBook-Pro.local
 pid: 3902
 hostname: yudeMacBook-Pro.local
 
+2020-06-12 11:16:41,407 ERROR 3837 nodejs.ClusterClientNoResponseError: client no response in 440431ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 3837
+hostname: yudeMacBook-Pro.local
+
+2020-06-12 12:40:07,335 ERROR 3837 nodejs.ClusterClientNoResponseError: client no response in 2743170ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 3837
+hostname: yudeMacBook-Pro.local
+
+2020-06-12 14:15:43,314 ERROR 3837 nodejs.ClusterClientNoResponseError: client no response in 954879ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 3837
+hostname: yudeMacBook-Pro.local
+
+2020-06-12 14:43:58,142 ERROR 3837 nodejs.ClusterClientNoResponseError: client no response in 1694808ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 3837
+hostname: yudeMacBook-Pro.local
+

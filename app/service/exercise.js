@@ -1,15 +1,43 @@
 const Service = require("egg").Service;
+const Op = require("sequelize").Op;
+
 
 class ExerciseService extends Service {
-  async add() {
+  async add(data) {
     const { ctx } = this;
-    const { PMsg } = this.app.model.Tables;
+    const { PExercises } = this.app.model.Tables;
     try {
-      let result = await PMsg.create(ctx.request.body);
-      console.log(result);
-      if (result) {
-        ctx.status = 200;
-        return new ctx.helper._success(result);
+      if (
+        ctx.request.body.option_obj.length == ctx.request.body.score_obj.length
+      ) {
+        let option_score_obj = [];
+        let aOptions = data.option_obj;
+        let aScores = data.score_obj;
+
+        aOptions.forEach((item, index) => {
+          option_score_obj.push({ option: item, score: aScores[index] });
+        });
+
+        let result = await PExercises.create({
+          title: data.title,
+          option_obj: JSON.stringify(aOptions),
+          score_obj: JSON.stringify(aScores),
+          option_score_obj: JSON.stringify(option_score_obj),
+          type_id: data.type_id,
+        });
+
+        if (result) {
+          console.log(result);
+
+          ctx.status = 200;
+          return new this.ctx.helper._success();
+        } else {
+          ctx.status = 500;
+          return new this.ctx.helper._error();
+        }
+      } else {
+        status = 400;
+        ctx.body = new this.ctx.helper._error("有题目没有设置分数");
       }
     } catch (error) {
       ctx.status = 500;
@@ -17,45 +45,85 @@ class ExerciseService extends Service {
     }
   }
 
-  async getList() {
+  async multiAdd(data) {
+    const { ctx } = this;
+    const { PExercises } = this.app.model.Tables;
+    //创建事务对象
+    let transaction = await this.ctx.model.transaction();
+    try {
+      let exList = data.exList;
+      let noScoreIndex = -1;
+      for (let i = 0; i < exList.length; i++) {
+        if (exList[i].option_obj.length != exList[i].score_obj.length) {
+          noScoreIndex = i;
+          break;
+        }
+      }
+      if (noScoreIndex != -1) {
+        ctx.status = 400;
+        ctx.body = new this.ctx.helper._error(
+          "第" + (noScoreIndex + 1) + "题有选项没有设置分数"
+        );
+      } else {
+        exList.forEach((item) => {
+          item.option_score_obj = [];
+          item.option_obj.forEach((item2, index2) => {
+            item.option_score_obj.push({
+              question: item2,
+              score: item.score_obj[index2],
+            });
+          });
+          item.option_obj = JSON.stringify(item.option_obj);
+          item.score_obj = JSON.stringify(item.score_obj);
+          item.option_score_obj = JSON.stringify(item.option_score_obj);
+        });
+
+        for (let i = 0; i < exList.length; i++) {
+          await PExercises.create(exList[i], { transaction });
+        }
+
+        await transaction.commit();
+        ctx.status=200;
+        return new this.ctx.helper._success();
+      }
+    } catch (error) {
+      ctx.status = 500;
+      return new ctx.helper._error(error);
+    }
+  }
+
+  async getList(data) {
     const { ctx, service } = this;
-    console.log("msg add");
+    const { PExercises } = this.app.model.Tables;
 
-    let result = await service.common.selectPaginationJoin({
-      db: "p_msg m",
-      param: {
-        "m.from_id": ctx.request.body.from_id,
-        "m.to_id": ctx.request.body.to_id,
-        "m.state": ctx.request.body.state,
-        page_now: ctx.request.body.page_now,
-        num_in_page: ctx.request.body.num_in_page,
-        "m.status": 1,
-      },
-      columns: [
-        "m.id",
-        "m.from_id",
-        "IF((m.from_id=-1),('system'),(u1.account)) AS from_account",
-        "IF((m.from_id=-1),('系统消息'),(u1.name)) AS from_name",
-        "m.to_id",
-        "u2.name AS to_name",
-        "m.content",
-        "m.state",
-      ],
-      search: {
-        from_account: ctx.request.body.from_account,
-        from_name: ctx.request.body.from_name,
-        to_name: ctx.request.body.to_name,
-      },
-      joins: [
-        "LEFT JOIN p_user u1 ON m.from_id=u1.id",
-        "LEFT JOIN p_user u2 ON m.to_id=u2.id",
-      ],
-    });
+    try {
+      console.log(data);
+      let options = {
+        where: {
+          type_id: data.type_id,
+          title: { [Op.like]: `%${data.title}%` },
+          // title: { "like": `%${data.title}%` },
+          status: 1,
+        },
+        attributes: ["id","title", "option_score_obj", "mold_id", "type_id"],
+        offset: Number(data.now_page)
+          ? (Number(data.now_page) - 1) * Number(data.now_page)
+          : 0,
+        limit: Number(data.num_in_page) || 10
+      }
+      console.log(options);
+      
+      const result = await ctx.helper.selectWithPagging(PExercises, options);
 
-    if (result.is_success) {
-      return new ctx.helper._success(result);
-    } else {
-      return new ctx.helper._error("暂无数据");
+
+      ctx.status = 200;
+      let template = new ctx.helper._success();
+      return Object.assign(template, result);
+    } catch (e) {
+      console.log(e);
+
+      this.ctx.status = 500;
+      return new this.ctx.helper._error();
     }
   }
 
@@ -63,7 +131,7 @@ class ExerciseService extends Service {
     const { ctx } = this;
     const { PMsg } = this.app.model.Tables;
     try {
-      let condition = { id: data.id,status:1};
+      let condition = { id: data.id, status: 1 };
       delete data.id;
       let result = await PMsg.update(data, { where: condition });
       console.log(result);
@@ -85,8 +153,8 @@ class ExerciseService extends Service {
     const { ctx } = this;
     const { PMsg } = this.app.model.Tables;
     try {
-      let condition = { id: data.id,status:1};
-      let result =  await PMsg.update({status:0}, { where: condition });
+      let condition = { id: data.id, status: 1 };
+      let result = await PMsg.update({ status: 0 }, { where: condition });
       console.log(result);
 
       if (result[0] > 0) {

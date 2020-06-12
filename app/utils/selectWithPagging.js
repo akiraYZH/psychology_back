@@ -1,6 +1,7 @@
 const selectWithPagging = async function (model, options) {
-  let fixed = fix(options);
-  let result = await model.findAndCountAll(fixed);
+  fix(options);
+
+  let result = await model.findAndCountAll(options);
   let current = Number(options.offset) / Number(options.offset) + 1;
 
   let res = {
@@ -15,36 +16,55 @@ const selectWithPagging = async function (model, options) {
 
   function fix(obj) {
     //去掉所有空的属性
-    Object.keys(obj).forEach((attr) => {
-      if (obj[attr] instanceof Object) {
-        if (obj[attr] instanceof Array) {
-          if (!obj[attr].length) {
-            delete obj[attr];
-          }
-        } else {
-          if (attr != "model") {
-            if (JSON.stringify(obj[attr]) == "{}") {
-              delete obj[attr];
-            } else {
-              fix(obj[attr]);
-            }
-          }
+    if (Object.keys(obj).length) {
+      Object.keys(obj).forEach((attr) => {
+       eleminate(obj,attr)
+      });
+    }
+
+    //处理Op的Symbol
+    if(Object.getOwnPropertySymbols(obj).length){
+      for(let i =0;i<Object.getOwnPropertySymbols(obj).length;i++){
+        console.log(obj,Object.getOwnPropertySymbols(obj)[i]);
+        
+        eleminate(obj,Object.getOwnPropertySymbols(obj)[i]);
+      }
+    }
+  }
+
+
+  function eleminate(obj,attr){
+    if (obj[attr] instanceof Object) {
+      if (obj[attr] instanceof Array) {
+        if (!obj[attr].length) {
+          delete obj[attr];
         }
       } else {
-        if (obj[attr] == undefined || obj[attr] == null || obj[attr] == "") {
-          delete obj[attr];
-        } else if (typeof obj[attr] == "string") {
+        if (attr != "model") {
           if (
-            obj[attr].indexOf("undefined") != -1 ||
-            obj[attr].indexOf("null") != -1
+            Object.keys(obj[attr]).length == 0 &&
+            !Object.getOwnPropertySymbols(obj[attr]).length
           ) {
-            obj[attr] = "%%";
+            delete obj[attr];
+          } else {
+            fix(obj[attr]);
           }
         }
       }
-    });
+    } else {
 
-    return obj;
+      if (obj[attr] == undefined || obj[attr] == null || obj[attr] == "") {
+        delete obj[attr];
+      }
+      else if (typeof obj[attr] == "string") {
+        if (
+          obj[attr].indexOf("undefined") != -1 ||
+          obj[attr].indexOf("null") != -1
+        ) {
+          obj[attr] = "%%";
+        }
+      }
+    }
   }
 };
 

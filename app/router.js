@@ -36,9 +36,9 @@ module.exports = async (app) => {
   
   router.post(preRouter + '/exercise/add', controller.exercise.add);
   router.post(preRouter + '/exercise/multiAdd', controller.exercise.multiAdd);
-  router.post(preRouter + '/exercise/getList', controller.exercise.getList);
-  router.post(preRouter + '/exercise/update', controller.exercise.update);
-  router.post(preRouter + '/exercise/del', controller.exercise.del);
+  router.get(preRouter + '/exercise/getList', controller.exercise.getList);
+  router.put(preRouter + '/exercise/update', controller.exercise.update);
+  router.delete(preRouter + '/exercise/del', controller.exercise.del);
 
   router.post(preRouter + '/paper/add', controller.paper.add);
   router.post(preRouter + '/paper/getList', controller.paper.getList);
@@ -76,7 +76,6 @@ module.exports = async (app) => {
   //已经修改
   router.get(preRouter+'/type/getList', controller.type.getList);
   
-  router.get(preRouter+'/test/get', controller.test.get);
   router.post('/*', controller.melon.index);
   router.get('/*', controller.melon.index);
 

@@ -38,33 +38,8 @@ class ExeciseController extends Controller {
       "type_id"
     );
     if (checkRes.is_pass) {
-      if (
-        ctx.request.body.option_obj.length == ctx.request.body.score_obj.length
-      ) {
-        let option_score_obj = [];
-        let aOptions = ctx.request.body.option_obj;
-        let aScores = ctx.request.body.score_obj;
-
-        aOptions.forEach((item, index) => {
-          option_score_obj.push({ option: item, score: aScores[index] });
-        });
-
-        let result = await service.common.insert("p_exercises", {
-          title: ctx.request.body.title,
-          option_obj: JSON.stringify(aOptions),
-          score_obj: JSON.stringify(aScores),
-          option_score_obj: JSON.stringify(option_score_obj),
-          type_id: 1,
-        });
-
-        if (result.affectedRows) {
-          ctx.body = new this.ctx.helper._success();
-        } else {
-          ctx.body = new this.ctx.helper._error();
-        }
-      } else {
-        ctx.body = new this.ctx.helper._error("有题目没有设置分数");
-      }
+      let body = ctx.request.body;
+      ctx.body = await service.exercise.add(body);
     } else {
       ctx.body = new this.ctx.helper._lack(checkRes.msg);
     }
@@ -106,38 +81,8 @@ class ExeciseController extends Controller {
     const { ctx, service } = this;
     let checkRes = checkData(ctx, "exList");
     if (checkRes.is_pass) {
-      let exList = ctx.request.body.exList;
-      let noScoreIndex = -1;
-      for (let i = 0; i < exList.length; i++) {
-        if (exList[i].option_obj.length != exList[i].score_obj.length) {
-          noScoreIndex = i;
-          break;
-        }
-      }
-      if (noScoreIndex != -1) {
-        ctx.body = new this.ctx.helper._error(
-          "第" + (noScoreIndex+1) + "题有选项没有设置分数"
-        );
-      } else {
-        exList.forEach((item) => {
-          item.option_score_obj = [];
-          item.option_obj.forEach((item2, index2) => {
-            item.option_score_obj.push({
-              question: item2,
-              score: item.score_obj[index2],
-            });
-          });
-          item.option_obj = JSON.stringify(item.option_obj);
-          item.score_obj = JSON.stringify(item.score_obj);
-          item.option_score_obj = JSON.stringify(item.option_score_obj);
-        });
-        let result = await service.common.multiInsert("p_exercises", exList);
-        if (result.affectedRows) {
-          ctx.body = new this.ctx.helper._success();
-        } else {
-          ctx.body = new this.ctx.helper._error();
-        }
-      }
+      let body = ctx.request.body;
+      ctx.body = await service.exercise.multiAdd(body);
     } else {
       ctx.body = new this.ctx.helper._lack(checkRes.msg);
     }
@@ -192,64 +137,69 @@ class ExeciseController extends Controller {
    */
   async getList() {
     const { ctx, service } = this;
-    let aTypes = await service.common.select("p_type","", ["id","name"]);
-    // console.log(ctx.query.roles)
-    let result = null;
-    if (ctx.request.body.type_id) {
-      //按照类型精准查询
-      result = await service.common.selectPagination(
-        "p_exercises",
-        {
-          type_id: ctx.request.body.type_id,
-          status: 1,
-          page_now: ctx.request.body.page_now,
-          num_in_page: ctx.request.body.num_in_page,
-        },
-        ["id", "title", "option_score_obj", "mold_id", "type_id"]
-      );
-    } else if (ctx.request.body.title) {
-      //根据题目模糊查询
-      result = await service.common.selectPagination(
-        "p_exercises",
-        {
-          title: ctx.request.body.title,
-          status: 1,
-          page_now: ctx.request.body.page_now,
-          num_in_page: ctx.request.body.num_in_page,
-        },
-        ["id", "title", "option_score_obj", "mold_id", "type_id"],
-        true
-      );
-    } else {
-      result = await service.common.selectPagination(
-        "p_exercises",
-        {
-          status: 1,
-          page_now: ctx.request.body.page_now,
-          num_in_page: ctx.request.body.num_in_page,
-        },
-        ["id", "title", "option_score_obj", "mold_id", "type_id"]
-      );
-    }
-
-    if (result.is_success) {
-      result.list.forEach((item) => {
-        item.option_score_obj = eval(item.option_score_obj);
-        // console.log(aTypes);
-        
-        for(let i =0; i<aTypes.length; i++){
-          if(item.type_id==aTypes[i].id){
-            
-            item.type_name=aTypes[i].name;
-            break;
-          }
-        }
-      });
-      this.ctx.body = new this.ctx.helper._success(result);
-    } else {
-      this.ctx.body = new this.ctx.helper._error("查找不到数据");
-    }
+    let query = ctx.query;
+    ctx.body = await service.exercise.getList(query);
   }
+  // async getList() {
+  //   const { ctx, service } = this;
+  //   let aTypes = await service.common.select("p_type","", ["id","name"]);
+  //   // console.log(ctx.query.roles)
+  //   let result = null;
+  //   if (ctx.request.body.type_id) {
+  //     //按照类型精准查询
+  //     result = await service.common.selectPagination(
+  //       "p_exercises",
+  //       {
+  //         type_id: ctx.request.body.type_id,
+  //         status: 1,
+  //         page_now: ctx.request.body.page_now,
+  //         num_in_page: ctx.request.body.num_in_page,
+  //       },
+  //       ["id", "title", "option_score_obj", "mold_id", "type_id"]
+  //     );
+  //   } else if (ctx.request.body.title) {
+  //     //根据题目模糊查询
+  //     result = await service.common.selectPagination(
+  //       "p_exercises",
+  //       {
+  //         title: ctx.request.body.title,
+  //         status: 1,
+  //         page_now: ctx.request.body.page_now,
+  //         num_in_page: ctx.request.body.num_in_page,
+  //       },
+  //       ["id", "title", "option_score_obj", "mold_id", "type_id"],
+  //       true
+  //     );
+  //   } else {
+  //     result = await service.common.selectPagination(
+  //       "p_exercises",
+  //       {
+  //         status: 1,
+  //         page_now: ctx.request.body.page_now,
+  //         num_in_page: ctx.request.body.num_in_page,
+  //       },
+  //       ["id", "title", "option_score_obj", "mold_id", "type_id"]
+  //     );
+  //   }
+
+  //   if (result.is_success) {
+  //     result.list.forEach((item) => {
+  //       item.option_score_obj = eval(item.option_score_obj);
+  //       // console.log(aTypes);
+        
+  //       for(let i =0; i<aTypes.length; i++){
+  //         if(item.type_id==aTypes[i].id){
+            
+  //           item.type_name=aTypes[i].name;
+  //           break;
+  //         }
+  //       }
+  //     });
+  //     this.ctx.body = new this.ctx.helper._success(result);
+  //   } else {
+  //     this.ctx.body = new this.ctx.helper._error("查找不到数据");
+  //   }
+  // }
 
   /**
    * @api {Post} /api/exercise/update 修改题目
