@@ -553,6 +553,19 @@
   {
     "name": null,
     "methods": [
+      "HEAD",
+      "GET"
+    ],
+    "paramNames": [],
+    "path": "/api/role/routes",
+    "regexp": "/^\\/api\\/role\\/routes(?:\\/(?=$))?$/",
+    "stack": [
+      "wrappedController"
+    ]
+  },
+  {
+    "name": null,
+    "methods": [
       "PUT"
     ],
     "paramNames": [],

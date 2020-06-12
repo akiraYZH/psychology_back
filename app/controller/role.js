@@ -8,6 +8,11 @@ class RoleController extends Controller {
    * @apiGroup Role
    * @apiParam {String} name 角色名称
    * @apiParam {Array} permissions 权限标识符数组
+   * @apiParamExample 参数实例
+   {
+    "name":"test",
+    "permissions":["base","user","role"]
+   }
    * @apiSuccessExample 成功返回
    {
     code:1,
@@ -35,6 +40,7 @@ class RoleController extends Controller {
   /**
    * @api {Get} /api/role/get 获得权限角色列表
    * @apiGroup Role
+   * 
    * @apiSuccessExample
    {
     "code": 1,
@@ -57,6 +63,40 @@ class RoleController extends Controller {
   async get() {
     const { ctx, service } = this;
     ctx.body = await service.role.get();
+  }
+
+  /**
+   * @api {Get} /api/role/routes 获得角色路由标识符
+   * @apiGroup Role
+   * @apiParam {Number} id 角色id
+   * @apiSuccessExample
+   {
+    "code": 1,
+    "msg": "成功操作",
+    "data": [
+        "base",
+        "record",
+        "role",
+        "user",
+        "reservation",
+        "exercise",
+        "paper",
+        "record"
+    ]
+}
+   * 
+   */
+  async getOne() {
+    const { ctx, service } = this;
+    let checkDataRes = ctx.helper.checkData(ctx, "id");
+    if(checkDataRes.is_pass){
+      let query = ctx.query;
+      ctx.body = await service.role.getOne(query);
+    }else{
+      ctx.status=400;
+      ctx.body=ctx.helper._lack(checkDataRes.msg);
+    }
+    
   }
 
   /**

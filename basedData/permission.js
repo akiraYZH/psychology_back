@@ -5,6 +5,7 @@ module.exports = {
     apis: [
       "/api/login/login",
       "/api/user/userInfo",
+      "/api/role/routes",
       "/api/user/logout",
       "/api/user/userDetail",
       "/api/msg/add",

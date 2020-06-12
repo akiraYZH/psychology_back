@@ -16,7 +16,7 @@ class RoleService extends Service {
     // createPermission: [Function]
     const { PRole, PPermission } = this.app.model.Tables;
     console.log(PRole.prototype);
-    //创建事物对象
+    //创建事务对象
     let transaction = await this.ctx.model.transaction();
     try {
       let newRole = await PRole.create(ctx.request.body, { transaction });
@@ -88,6 +88,39 @@ class RoleService extends Service {
     }
   }
 
+  async getOne(data) {
+    const { ctx } = this;
+    const { PRole, PPermission } = this.app.model.Tables;
+    let routes = [];
+    try {
+      let role = await PRole.findOne({
+        where: { status: 1 },
+        include: {
+          model: PPermission,
+          attributes: ["id", "name", "apis"],
+          where: {
+            status: 1,
+          },
+          required: false,
+          as: "permissions",
+        },
+      });
+
+      console.log(role);
+      role.permissions.forEach((item) => {
+        routes.push(item.name);
+      });
+
+      ctx.status = 200;
+      return new ctx.helper._success(routes);
+    } catch (error) {
+      console.log(error);
+
+      ctx.status = 500;
+      return new ctx.helper._error(error);
+    }
+  }
+
   async update(data) {
     const { ctx } = this;
     const { PRole, PPermission } = this.app.model.Tables;
@@ -125,7 +158,6 @@ class RoleService extends Service {
 
       await transaction.commit();
 
-
       if (result[0] > 0 || updatePermissions) {
         ctx.status = 200;
         return new ctx.helper._success();
@@ -145,10 +177,7 @@ class RoleService extends Service {
     const { PRole } = this.app.model.Tables;
     try {
       let condition = { id: data.id, status: 1 };
-      let result = await PRole.update(
-        { status: 0 },
-        { where: condition }
-      );
+      let result = await PRole.update({ status: 0 }, { where: condition });
       console.log(result);
 
       if (result[0] > 0) {

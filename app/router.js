@@ -69,6 +69,7 @@ module.exports = async (app) => {
   //新增
   router.post(preRouter + '/role/add', controller.role.add);
   router.get(preRouter + '/role/get', controller.role.get);
+  router.get(preRouter + '/role/routes', controller.role.getOne);
   router.put(preRouter + '/role/update', controller.role.update);
   router.del(preRouter + '/role/del', controller.role.del);
 
