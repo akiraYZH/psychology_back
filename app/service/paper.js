@@ -40,7 +40,8 @@ class PaperService extends Service {
           required:false,
           where:{
             name: { [Op.like]: `%${data.name}%` },
-          }
+          },
+          attributes:["id","account","name"]
         }
       });
 

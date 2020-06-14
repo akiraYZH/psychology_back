@@ -1,9 +1,9 @@
 const selectWithPagging = async function (model, options) {
-  fix(options);
+  let fixed = fixObj(options);
 
-  console.log(options);
-  
-  let result = await model.findAndCountAll(options);
+  console.log(fixed);
+
+  let result = await model.findAndCountAll(fixed);
   let current = Number(options.offset) / Number(options.offset) + 1;
 
   let res = {
@@ -16,26 +16,48 @@ const selectWithPagging = async function (model, options) {
   };
   return res;
 
-  function fix(obj) {
-    //去掉所有空的属性
-    if (Object.keys(obj).length) {
-      Object.keys(obj).forEach((attr) => {
-       eleminate(obj,attr)
-      });
-    }
 
-
-    //处理Op的Symbol
-    if(Object.getOwnPropertySymbols(obj).length){
-      for(let i =0;i<Object.getOwnPropertySymbols(obj).length;i++){
-        
-        eleminate(obj,Object.getOwnPropertySymbols(obj)[i]);
-      }
-    }
+  //总入口
+  function fixObj(obj){
+    return fix(obj, obj)
   }
 
 
-  function eleminate(obj,attr){
+
+
+  //检查对象一层的属性
+  function fix(obj, originalObj) {
+    //去掉所有空的属性
+    if (Object.keys(obj).length) {
+      Object.keys(obj).forEach((attr) => {
+        eleminate(obj, attr, originalObj);
+      });
+    }
+
+    //处理Op的Symbol
+    if (Object.getOwnPropertySymbols(obj).length) {
+      let isSuccess = false;
+      for (
+        let i = 0;
+        i < Object.getOwnPropertySymbols(obj).length;
+        isSuccess ? i : i++
+      ) {
+        isSuccess = eleminate(
+          obj,
+          Object.getOwnPropertySymbols(obj)[i],
+          originalObj
+        );
+
+        if (i == Object.getOwnPropertySymbols(obj).length) {
+          fix(originalObj, originalObj);
+        }
+      }
+    }
+    return obj;
+  }
+
+  //检测属性，如果为空就删除属性，属性为对象就调用你fix()
+  function eleminate(obj, attr, originalObj) {
     if (obj[attr] instanceof Object) {
       if (obj[attr] instanceof Array) {
         if (!obj[attr].length) {
@@ -48,36 +70,27 @@ const selectWithPagging = async function (model, options) {
             !Object.getOwnPropertySymbols(obj[attr]).length
           ) {
             delete obj[attr];
+            fix(originalObj, originalObj);
           } else {
-            fix(obj[attr]);
+            fix(obj[attr], originalObj);
           }
         }
       }
     } else {
-
-      
-      
       if (obj[attr] == undefined || obj[attr] == null || obj[attr] == "") {
-        console.log(attr, obj[attr], obj);
-        console.log(Object.keys(obj).length, Object.getOwnPropertySymbols(obj).length);
-        
         delete obj[attr];
-        if(Object.keys(obj).length==1||Object.getOwnPropertySymbols(obj).length==1){
-          console.log(99999);
-          
-           obj=null;
-        }
-
-      }
-      else if (typeof obj[attr] == "string") {
+        return true;
+      } else if (typeof obj[attr] == "string") {
         if (
           obj[attr].indexOf("undefined") != -1 ||
           obj[attr].indexOf("null") != -1
         ) {
-          obj[attr] = "%%";
+          delete obj[attr];
+          fix(originalObj,originalObj);
         }
       }
     }
+    return false;
   }
 };
 
