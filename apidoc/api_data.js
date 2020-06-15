@@ -1988,26 +1988,7 @@ define({ "api": [
     "name": "GetLoginLogin"
   },
   {
-    "type": "Post",
-    "url": "/api/msg/add",
-    "title": "增加站内信息",
-    "group": "message",
-    "success": {
-      "examples": [
-        {
-          "title": "成功返回",
-          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"state\": 0,\n        \"status\": 1,\n        \"id\": 2,\n        \"from_id\": \"-1\",\n        \"to_id\": \"1\",\n        \"content\": \"test msg\"\n    }\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "app/controller/message.js",
-    "groupTitle": "message",
-    "name": "PostApiMsgAdd"
-  },
-  {
-    "type": "Post",
+    "type": "Delete",
     "url": "/api/msg/del",
     "title": "删除站内信息",
     "group": "message",
@@ -2036,7 +2017,26 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "app/controller/message.js",
     "groupTitle": "message",
-    "name": "PostApiMsgDel"
+    "name": "DeleteApiMsgDel"
+  },
+  {
+    "type": "Post",
+    "url": "/api/msg/add",
+    "title": "增加站内信息",
+    "group": "message",
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"state\": 0,\n        \"status\": 1,\n        \"id\": 2,\n        \"from_id\": \"-1\",\n        \"to_id\": \"1\",\n        \"content\": \"test msg\"\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/message.js",
+    "groupTitle": "message",
+    "name": "PostApiMsgAdd"
   },
   {
     "type": "Post",
@@ -2120,7 +2120,7 @@ define({ "api": [
     "name": "PostApiMsgGetlist"
   },
   {
-    "type": "Post",
+    "type": "Put",
     "url": "/api/msg/update",
     "title": "修改站内信息",
     "group": "message",
@@ -2177,6 +2177,6 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "app/controller/message.js",
     "groupTitle": "message",
-    "name": "PostApiMsgUpdate"
+    "name": "PutApiMsgUpdate"
   }
 ] });

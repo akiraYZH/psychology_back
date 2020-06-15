@@ -94,7 +94,7 @@ class MessageController extends Controller {
   }
 
   /**
-   * @api {Post} /api/msg/update 修改站内信息
+   * @api {Put} /api/msg/update 修改站内信息
    * @apiGroup message
    * @apiParam {Number} id 信息id
    * @apiParam {Number} from_id 来源用户id， 系统为-1
@@ -129,7 +129,7 @@ class MessageController extends Controller {
   }
 
   /**
-   * @api {Post} /api/msg/del 删除站内信息
+   * @api {Delete} /api/msg/del 删除站内信息
    * @apiGroup message
    * @apiParam {Number} id 信息id
    * @apiSuccessExample 成功返回
