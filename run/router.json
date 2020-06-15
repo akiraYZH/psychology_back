@@ -310,19 +310,6 @@
   {
     "name": null,
     "methods": [
-      "HEAD",
-      "GET"
-    ],
-    "paramNames": [],
-    "path": "/api/paper/detail",
-    "regexp": "/^\\/api\\/paper\\/detail(?:\\/(?=$))?$/",
-    "stack": [
-      "wrappedController"
-    ]
-  },
-  {
-    "name": null,
-    "methods": [
       "PUT"
     ],
     "paramNames": [],

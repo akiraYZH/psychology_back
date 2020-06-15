@@ -42,8 +42,7 @@ module.exports = async (app) => {
 
   router.post(preRouter + '/paper/add', controller.paper.add);
   router.get(preRouter + '/paper/getList', controller.paper.getList);
-  router.get(preRouter + '/paper/detail-score', controller.paper.detailAdmin);
-  router.get(preRouter + '/paper/detail', controller.paper.detail);
+  router.get(preRouter + '/paper/detail-score', controller.paper.detailScore);
   router.put(preRouter + '/paper/update', controller.paper.update);
   router.delete(preRouter + '/paper/del', controller.paper.del);
 

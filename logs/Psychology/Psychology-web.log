@@ -571,3 +571,79 @@ hostname: yudeMacBook-Pro.local
 2020-06-14 20:44:51,454 INFO 6952 [egg-sequelize](1ms) Executed (default): SELECT count(`p_paper`.`id`) AS `count` FROM `p_paper` AS `p_paper` INNER JOIN `p_user` AS `p_user` ON `p_paper`.`worker_id` = `p_user`.`id` AND `p_user`.`name` LIKE '%d%';
 2020-06-14 20:44:51,457 INFO 6952 [egg-sequelize](2ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `p_paper`.`worker_id`, `p_paper`.`time_stamp`, `p_paper`.`exercises_json`, `p_paper`.`status`, `p_user`.`id` AS `p_user.id`, `p_user`.`account` AS `p_user.account`, `p_user`.`name` AS `p_user.name` FROM `p_paper` AS `p_paper` INNER JOIN `p_user` AS `p_user` ON `p_paper`.`worker_id` = `p_user`.`id` AND `p_user`.`name` LIKE '%d%' LIMIT 10;
 2020-06-14 20:45:57,980 INFO 6982 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 09:59:16,139 INFO 3337 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 09:59:33,740 INFO 3337 [egg-sequelize](28ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `p_paper`.`worker_id`, `p_paper`.`time_stamp`, `p_paper`.`exercises_json`, `p_paper`.`status`, `p_user`.`id` AS `p_user.id`, `p_user`.`account` AS `p_user.account`, `p_user`.`name` AS `p_user.name` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `p_user` ON `p_paper`.`worker_id` = `p_user`.`id` LIMIT 10;
+2020-06-15 09:59:33,743 INFO 3337 [egg-sequelize](32ms) Executed (default): SELECT count(`p_paper`.`id`) AS `count` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `p_user` ON `p_paper`.`worker_id` = `p_user`.`id`;
+2020-06-15 10:01:16,627 INFO 3417 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:01:39,924 INFO 3444 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:02:27,751 INFO 3474 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:02:30,417 INFO 3474 [egg-sequelize](6ms) Executed (default): SELECT count(`p_paper`.`id`) AS `count` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id`;
+2020-06-15 10:02:30,420 INFO 3474 [egg-sequelize](2ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `editor`.`id` AS `editor.id`, `editor`.`account` AS `editor.account`, `editor`.`name` AS `editor.name` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id` LIMIT 10;
+2020-06-15 10:02:49,397 INFO 3498 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:04:07,729 INFO 3532 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:04:09,099 INFO 3532 [egg-sequelize](1ms) Executed (default): SELECT count(`p_paper`.`id`) AS `count` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id`;
+2020-06-15 10:04:09,102 INFO 3532 [egg-sequelize](1ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `editor`.`id` AS `editor.id`, `editor`.`account` AS `editor.account`, `editor`.`name` AS `editor.name` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id` LIMIT 10;
+2020-06-15 10:05:00,299 INFO 3576 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:07:54,093 INFO 3621 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:12:16,261 INFO 3810 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:12:34,434 INFO 3837 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:13:58,650 INFO 3875 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:16:41,149 INFO 3939 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:17:11,795 INFO 3963 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:18:00,863 INFO 4001 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:18:04,613 INFO 4001 [egg-sequelize](2ms) Executed (default): SELECT count(`p_paper`.`id`) AS `count` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id`;
+2020-06-15 10:18:04,615 INFO 4001 [egg-sequelize](1ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `editor`.`id` AS `editor.id`, `editor`.`account` AS `editor.account`, `editor`.`name` AS `editor.name`, `editor`.`time_stamp` AS `editor.time_stamp` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id` LIMIT 10;
+2020-06-15 10:18:26,709 INFO 4026 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:18:27,672 INFO 4026 [egg-sequelize](1ms) Executed (default): SELECT count(`p_paper`.`id`) AS `count` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id`;
+2020-06-15 10:18:27,675 INFO 4026 [egg-sequelize](2ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `p_paper`.`time_stamp`, `editor`.`id` AS `editor.id`, `editor`.`account` AS `editor.account`, `editor`.`name` AS `editor.name` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id` LIMIT 10;
+2020-06-15 10:18:55,537 INFO 4057 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:19:36,081 INFO 4085 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:20:15,765 INFO 4112 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:20:20,380 INFO 4123 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:21:19,895 INFO 4150 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:22:07,993 INFO 4177 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:22:28,520 INFO 4198 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:22:31,204 INFO 4198 [egg-sequelize](2ms) Executed (default): SELECT count(`p_paper`.`id`) AS `count` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id`;
+2020-06-15 10:22:31,207 INFO 4198 [egg-sequelize](1ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `p_paper`.`time_stamp`, `editor`.`id` AS `editor.id`, `editor`.`account` AS `editor.account`, `editor`.`name` AS `editor.name` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id` LIMIT 10;
+2020-06-15 10:23:14,825 INFO 4225 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:23:26,745 INFO 4246 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:23:27,511 INFO 4246 [egg-sequelize](4ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `p_paper`.`exercises_json`, `p_paper`.`time_stamp`, `editor`.`id` AS `editor.id`, `editor`.`account` AS `editor.account`, `editor`.`name` AS `editor.name` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id` WHERE `p_paper`.`id` = '1' AND `p_paper`.`status` = 1;
+2020-06-15 10:26:52,071 INFO 4294 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:26:52,715 INFO 4294 [egg-sequelize](2ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `p_paper`.`exercises_json`, `p_paper`.`time_stamp`, `editor`.`id` AS `editor.id`, `editor`.`account` AS `editor.account`, `editor`.`name` AS `editor.name` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id` WHERE `p_paper`.`id` = '1' AND `p_paper`.`status` = 1;
+2020-06-15 10:26:52,736 INFO 4294 [egg-sequelize](8ms) Executed (default): SELECT `id`, `title`, `option_obj`, `score_obj`, `option_score_obj`, `mold_id`, `type_id`, `status` FROM `p_exercises` AS `p_exercises` WHERE `p_exercises`.`id` IN ('1', '2', '3', '4', '5');
+2020-06-15 10:27:09,339 INFO 4318 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:27:09,504 INFO 4318 [egg-sequelize](2ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `p_paper`.`exercises_json`, `p_paper`.`time_stamp`, `editor`.`id` AS `editor.id`, `editor`.`account` AS `editor.account`, `editor`.`name` AS `editor.name` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id` WHERE `p_paper`.`id` = '1' AND `p_paper`.`status` = 1;
+2020-06-15 10:27:09,516 INFO 4318 [egg-sequelize](4ms) Executed (default): SELECT `id`, `title`, `option_obj`, `score_obj`, `option_score_obj`, `mold_id`, `type_id`, `status` FROM `p_exercises` AS `p_exercises` WHERE `p_exercises`.`id` IN ('1', '2', '3', '4', '5');
+2020-06-15 10:28:50,998 INFO 4348 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:29:46,489 INFO 4375 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:30:46,889 INFO 4403 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:31:24,381 INFO 4428 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:31:26,338 INFO 4428 [egg-sequelize](1ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `p_paper`.`exercises_json`, `p_paper`.`time_stamp`, `editor`.`id` AS `editor.id`, `editor`.`account` AS `editor.account`, `editor`.`name` AS `editor.name` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id` WHERE `p_paper`.`id` = '1' AND `p_paper`.`status` = 1;
+2020-06-15 10:31:26,348 INFO 4428 [egg-sequelize](2ms) Executed (default): SELECT `id`, `title`, `option_score_obj`, `mold_id`, `type_id` FROM `p_exercises` AS `p_exercises` WHERE `p_exercises`.`id` IN ('1', '2', '3', '4', '5') AND `p_exercises`.`status` = 1;
+2020-06-15 10:33:20,222 INFO 4462 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:33:21,378 INFO 4462 [egg-sequelize](2ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `p_paper`.`exercises_json`, `p_paper`.`time_stamp`, `editor`.`id` AS `editor.id`, `editor`.`account` AS `editor.account`, `editor`.`name` AS `editor.name` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id` WHERE `p_paper`.`id` = '1' AND `p_paper`.`status` = 1;
+2020-06-15 10:33:21,391 INFO 4462 [egg-sequelize](1ms) Executed (default): SELECT `id`, `title`, `option_score_obj`, `mold_id`, `type_id` FROM `p_exercises` AS `p_exercises` WHERE `p_exercises`.`id` IN ('1', '2', '3', '4', '5') AND `p_exercises`.`status` = 1;
+2020-06-15 10:33:48,116 INFO 4486 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:33:50,060 INFO 4486 [egg-sequelize](1ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `p_paper`.`exercises_json`, `p_paper`.`time_stamp`, `editor`.`id` AS `editor.id`, `editor`.`account` AS `editor.account`, `editor`.`name` AS `editor.name` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id` WHERE `p_paper`.`id` = '1' AND `p_paper`.`status` = 1;
+2020-06-15 10:33:50,072 INFO 4486 [egg-sequelize](1ms) Executed (default): SELECT `id`, `title`, `option_score_obj`, `mold_id`, `type_id` FROM `p_exercises` AS `p_exercises` WHERE `p_exercises`.`id` IN ('1', '2', '3', '4', '5') AND `p_exercises`.`status` = 1;
+2020-06-15 10:34:28,333 INFO 4515 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:34:52,633 INFO 4546 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:35:09,647 INFO 4572 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:35:13,432 INFO 4585 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:36:02,898 INFO 4618 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 10:36:17,013 INFO 4647 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 11:33:51,005 INFO 6549 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 11:42:50,769 INFO 7016 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 11:44:03,776 INFO 7049 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 11:52:31,742 INFO 7147 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 11:53:28,466 INFO 7190 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 11:54:02,716 INFO 7190 [egg-sequelize](43ms) Executed (default): UPDATE `p_paper` SET `id`=?,`title`=?,`exercises_json`=?,`worker_id`=? WHERE `id` = ? AND `status` = ?
+2020-06-15 11:54:15,057 INFO 7218 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 11:56:20,452 INFO 7218 [egg-sequelize](5ms) Executed (default): SELECT `p_paper`.`id`, `p_paper`.`title`, `p_paper`.`exercises_json`, `p_paper`.`time_stamp`, `editor`.`id` AS `editor.id`, `editor`.`account` AS `editor.account`, `editor`.`name` AS `editor.name` FROM `p_paper` AS `p_paper` LEFT OUTER JOIN `p_user` AS `editor` ON `p_paper`.`worker_id` = `editor`.`id` WHERE `p_paper`.`id` = '1' AND `p_paper`.`status` = 1;
+2020-06-15 11:56:20,462 INFO 7218 [egg-sequelize](2ms) Executed (default): SELECT `id`, `title`, `option_score_obj`, `mold_id`, `type_id` FROM `p_exercises` AS `p_exercises` WHERE `p_exercises`.`id` IN ('1', '2', '3', '4', '6') AND `p_exercises`.`status` = 1;
+2020-06-15 11:57:38,693 INFO 7266 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 11:58:26,090 INFO 7305 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 11:58:31,878 INFO 7316 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 11:59:18,383 INFO 7343 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 11:59:20,969 INFO 7343 [egg-sequelize](5ms) Executed (default): UPDATE `p_paper` SET `status`=? WHERE `id` = ? AND `status` = ?
+2020-06-15 11:59:46,277 INFO 7369 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result

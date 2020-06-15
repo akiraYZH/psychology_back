@@ -108,3 +108,94 @@ name: "ClusterClientNoResponseError"
 pid: 5213
 hostname: yudeMacBook-Pro.lan
 
+2020-06-15 01:16:20,281 ERROR 6982 nodejs.ECONNREFUSEDError: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379 (uncaughtException throw 1 times on pid:6982)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1141:16)
+errno: "ECONNREFUSED"
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 6982
+hostname: yudeMacBook-Pro.lan
+
+2020-06-15 01:16:20,631 ERROR 6982 nodejs.ECONNREFUSEDError: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379 (uncaughtException throw 2 times on pid:6982)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1141:16)
+errno: "ECONNREFUSED"
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 6982
+hostname: yudeMacBook-Pro.lan
+
+2020-06-15 01:16:21,213 ERROR 6982 nodejs.ECONNREFUSEDError: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379 (uncaughtException throw 3 times on pid:6982)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1141:16)
+errno: "ECONNREFUSED"
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 6982
+hostname: yudeMacBook-Pro.lan
+
+2020-06-15 01:16:22,202 ERROR 6982 nodejs.ECONNREFUSEDError: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379 (uncaughtException throw 4 times on pid:6982)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1141:16)
+errno: "ECONNREFUSED"
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 6982
+hostname: yudeMacBook-Pro.lan
+
+2020-06-15 01:16:23,880 ERROR 6982 nodejs.ECONNREFUSEDError: Redis connection to 127.0.0.1:6379 failed - connect ECONNREFUSED 127.0.0.1:6379 (uncaughtException throw 5 times on pid:6982)
+    at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1141:16)
+errno: "ECONNREFUSED"
+code: "ECONNREFUSED"
+syscall: "connect"
+address: "127.0.0.1"
+port: 6379
+name: "ECONNREFUSEDError"
+pid: 6982
+hostname: yudeMacBook-Pro.lan
+
+2020-06-15 10:36:02,867 ERROR 4618 nodejs.unhandledRejectionError: controller not exists
+    at resolveController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:298:26)
+    at spliteAndResolveRouterParams (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:277:20)
+    at EggRouter.<computed> [as get] (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:72:25)
+    at module.exports (/Users/yuakira/dev/projects/Psychology2/app/router.js:46:10)
+    at AppWorkerLoader.loadFile (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/egg_loader.js:304:13)
+    at AppWorkerLoader.loadRouter (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/router.js:17:10)
+    at AppWorkerLoader.load (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/lib/loader/app_worker_loader.js:43:10)
+    at new Application (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/lib/application.js:66:19)
+    at Object.<anonymous> (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-cluster/lib/app_worker.js:21:13)
+    at Module._compile (internal/modules/cjs/loader.js:1156:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1176:10)
+    at Module.load (internal/modules/cjs/loader.js:1000:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:899:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:74:12)
+    at internal/main/run_main_module.js:18:47
+name: "unhandledRejectionError"
+pid: 4618
+hostname: yudeMacBook-Pro.local
+
+2020-06-15 10:52:36,049 ERROR 3335 nodejs.ClusterClientNoResponseError: client no response in 438869ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 3335
+hostname: yudeMacBook-Pro.local
+
+2020-06-15 10:57:14,314 ERROR 3335 nodejs.ClusterClientNoResponseError: client no response in 258245ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 3335
+hostname: yudeMacBook-Pro.local
+
