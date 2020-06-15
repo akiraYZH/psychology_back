@@ -1,52 +1,6 @@
 [
   {
-    "type": "Post",
-    "url": "/api/distribution/add",
-    "title": "分配试卷",
-    "group": "Distribution",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "user_id",
-            "description": "<p>用户id</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "distributor_id",
-            "description": "<p>分发人id</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "paper_id",
-            "description": "<p>试卷id</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "成功返回",
-          "content": "{\n code:1,\n msg:'成功操作'\n }",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "app/controller/distribution.js",
-    "groupTitle": "Distribution",
-    "name": "PostApiDistributionAdd"
-  },
-  {
-    "type": "Post",
+    "type": "Delete",
     "url": "/api/distribution/del",
     "title": "删除分配",
     "group": "Distribution",
@@ -75,70 +29,10 @@
     "version": "0.0.0",
     "filename": "app/controller/distribution.js",
     "groupTitle": "Distribution",
-    "name": "PostApiDistributionDel"
+    "name": "DeleteApiDistributionDel"
   },
   {
-    "type": "Post",
-    "url": "/api/distribution/getList",
-    "title": "获得分配试卷列表",
-    "group": "Distribution",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Array",
-            "optional": false,
-            "field": "list",
-            "description": "<p>分配数组</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "user_id",
-            "description": "<p>用户id</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "distributor_id",
-            "description": "<p>分发人id</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "paper_id",
-            "description": "<p>试卷id</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "参数模版",
-          "content": "{\n\t\"list\":[\n\t\t{\n\t\t\t\"user_id\":6,\n\t\t\t\"distributor_id\":2,\n\t\t\t\"paper_id\":2\n\t\t},\n\t\t{\n\t\t\t\"user_id\":6,\n\t\t\t\"distributor_id\":2,\n\t\t\t\"paper_id\":2\n\t\t},\n\t\t{\n\t\t\t\"user_id\":6,\n\t\t\t\"distributor_id\":2,\n\t\t\t\"paper_id\":2\n\t\t}\n\t\t]\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "成功返回",
-          "content": "{\n code:1,\n msg:'成功操作'\n }",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "app/controller/distribution.js",
-    "groupTitle": "Distribution",
-    "name": "PostApiDistributionGetlist"
-  },
-  {
-    "type": "Post",
+    "type": "Get",
     "url": "/api/distribution/getList",
     "title": "获得分配试卷列表",
     "group": "Distribution",
@@ -208,7 +102,7 @@
       "examples": [
         {
           "title": "成功返回",
-          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"is_success\": true,\n        \"page_total\": 9,\n        \"page_now\": 1,\n        \"num_in_page\": 2,\n        \"list\": [\n            {\n                \"id\": 1,\n                \"user_id\": 6,\n                \"user_account\": \"visitor1\",\n                \"user_name\": \"visitor\",\n                \"distributor_id\": 2,\n                \"distributor_name\": \"editor\",\n                \"time_stamp\": \"1589427873139\",\n                \"state\": 0\n            },\n            {\n                \"id\": 2,\n                \"user_id\": 6,\n                \"user_account\": \"visitor1\",\n                \"user_name\": \"visitor\",\n                \"distributor_id\": 2,\n                \"distributor_name\": \"editor\",\n                \"time_stamp\": \"1589427900477\",\n                \"state\": 0\n            }\n        ]\n    }\n}",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        {\n            \"id\": 5,\n            \"time_stamp\": \"1592218451862\",\n            \"state\": 0,\n            \"user\": {\n                \"id\": 6,\n                \"account\": \"visitor15\",\n                \"name\": null\n            },\n            \"distributor\": {\n                \"id\": 2,\n                \"account\": \"664753092\",\n                \"name\": null\n            },\n            \"paper\": {\n                \"id\": 1,\n                \"title\": \"试卷一\",\n                \"time_stamp\": \"1591960228598\"\n            }\n        },\n        {\n            \"id\": 6,\n            \"time_stamp\": \"1592218451862\",\n            \"state\": 0,\n            \"user\": {\n                \"id\": 6,\n                \"account\": \"visitor15\",\n                \"name\": null\n            },\n            \"distributor\": {\n                \"id\": 2,\n                \"account\": \"664753092\",\n                \"name\": null\n            },\n            \"paper\": {\n                \"id\": 1,\n                \"title\": \"试卷一\",\n                \"time_stamp\": \"1591960228598\"\n            }\n        },\n        {\n            \"id\": 7,\n            \"time_stamp\": \"1592218451862\",\n            \"state\": 0,\n            \"user\": {\n                \"id\": 6,\n                \"account\": \"visitor15\",\n                \"name\": null\n            },\n            \"distributor\": {\n                \"id\": 2,\n                \"account\": \"664753092\",\n                \"name\": null\n            },\n            \"paper\": {\n                \"id\": 1,\n                \"title\": \"试卷一\",\n                \"time_stamp\": \"1591960228598\"\n            }\n        },\n        {\n            \"id\": 8,\n            \"time_stamp\": \"1592218515142\",\n            \"state\": 0,\n            \"user\": {\n                \"id\": 6,\n                \"account\": \"visitor15\",\n                \"name\": null\n            },\n            \"distributor\": {\n                \"id\": 2,\n                \"account\": \"664753092\",\n                \"name\": null\n            },\n            \"paper\": {\n                \"id\": 1,\n                \"title\": \"试卷一\",\n                \"time_stamp\": \"1591960228598\"\n            }\n        },\n        {\n            \"id\": 9,\n            \"time_stamp\": \"1592218515142\",\n            \"state\": 0,\n            \"user\": {\n                \"id\": 6,\n                \"account\": \"visitor15\",\n                \"name\": null\n            },\n            \"distributor\": {\n                \"id\": 2,\n                \"account\": \"664753092\",\n                \"name\": null\n            },\n            \"paper\": {\n                \"id\": 1,\n                \"title\": \"试卷一\",\n                \"time_stamp\": \"1591960228598\"\n            }\n        },\n        {\n            \"id\": 10,\n            \"time_stamp\": \"1592218515142\",\n            \"state\": 0,\n            \"user\": {\n                \"id\": 6,\n                \"account\": \"visitor15\",\n                \"name\": null\n            },\n            \"distributor\": {\n                \"id\": 2,\n                \"account\": \"664753092\",\n                \"name\": null\n            },\n            \"paper\": {\n                \"id\": 1,\n                \"title\": \"试卷一\",\n                \"time_stamp\": \"1591960228598\"\n            }\n        }\n    ],\n    \"pagging\": {\n        \"size\": 10,\n        \"current\": 1,\n        \"total\": 6\n    }\n}",
           "type": "json"
         }
       ]
@@ -216,7 +110,53 @@
     "version": "0.0.0",
     "filename": "app/controller/distribution.js",
     "groupTitle": "Distribution",
-    "name": "PostApiDistributionGetlist"
+    "name": "GetApiDistributionGetlist"
+  },
+  {
+    "type": "Post",
+    "url": "/api/distribution/add",
+    "title": "分配试卷",
+    "group": "Distribution",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "user_id",
+            "description": "<p>用户id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "distributor_id",
+            "description": "<p>分发人id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "paper_id",
+            "description": "<p>试卷id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "{\n code:1,\n msg:'成功操作'\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/distribution.js",
+    "groupTitle": "Distribution",
+    "name": "PostApiDistributionAdd"
   },
   {
     "type": "Post",
@@ -279,9 +219,9 @@
     "name": "PostApiDistributionMultiadd"
   },
   {
-    "type": "Post",
+    "type": "Put",
     "url": "/api/distribution/update",
-    "title": "获得分配",
+    "title": "修改分配",
     "group": "Distribution",
     "parameter": {
       "fields": {
@@ -292,27 +232,6 @@
             "optional": false,
             "field": "id",
             "description": "<p>分配id</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "user_id",
-            "description": "<p>用户id</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "distributor_id",
-            "description": "<p>分发者id</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "paper_id",
-            "description": "<p>试卷id</p>"
           },
           {
             "group": "Parameter",
@@ -336,7 +255,92 @@
     "version": "0.0.0",
     "filename": "app/controller/distribution.js",
     "groupTitle": "Distribution",
-    "name": "PostApiDistributionUpdate"
+    "name": "PutApiDistributionUpdate"
+  },
+  {
+    "type": "Delete",
+    "url": "/api/exercise/del",
+    "title": "删除题目",
+    "group": "Exercise",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>问题id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "{\n code:1,\n msg:'成功操作'\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/exercise.js",
+    "groupTitle": "Exercise",
+    "name": "DeleteApiExerciseDel"
+  },
+  {
+    "type": "Get",
+    "url": "/api/exercise/getList",
+    "title": "获得题目列表",
+    "group": "Exercise",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "type_id",
+            "description": "<p>（可选）题目类型id--精确查询：2躯体化，3强迫症状，4人际关系敏感，5抑郁，6焦虑，7敌对，8恐怖，9偏执，10精神病性，11其他</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>（可选）问题题目--模糊查询</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "page_now",
+            "description": "<p>（可选）现处页数</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "num_in_page",
+            "description": "<p>（可选）每页个数</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"test\",\n            \"option_score_obj\": [\n                {\n                    \"option\": \"选项一\",\n                    \"score\": \"4\"\n                },\n                {\n                    \"option\": \"选项二\",\n                    \"score\": \"3\"\n                },\n                {\n                    \"option\": \"选项三\",\n                    \"score\": \"2\"\n                },\n                {\n                    \"option\": \"选项四\",\n                    \"score\": \"1\"\n                }\n            ],\n            \"mold_id\": 1,\n            \"type_id\": 1\n        },\n        {\n            \"id\": 2,\n            \"title\": \"test\",\n            \"option_score_obj\": [\n                {\n                    \"option\": \"选项一\",\n                    \"score\": \"4\"\n                },\n                {\n                    \"option\": \"选项二\",\n                    \"score\": \"3\"\n                },\n                {\n                    \"option\": \"选项三\",\n                    \"score\": \"2\"\n                },\n                {\n                    \"option\": \"选项四\",\n                    \"score\": \"1\"\n                }\n            ],\n            \"mold_id\": 1,\n            \"type_id\": 1\n        },\n        {\n            \"id\": 3,\n            \"title\": \"test\",\n            \"option_score_obj\": [\n                {\n                    \"option\": \"选项一\",\n                    \"score\": \"4\"\n                },\n                {\n                    \"option\": \"选项二\",\n                    \"score\": \"3\"\n                },\n                {\n                    \"option\": \"选项三\",\n                    \"score\": \"2\"\n                },\n                {\n                    \"option\": \"选项四\",\n                    \"score\": \"1\"\n                }\n            ],\n            \"mold_id\": 1,\n            \"type_id\": 1\n        },\n        {\n            \"id\": 4,\n            \"title\": \"test\",\n            \"option_score_obj\": [\n                {\n                    \"option\": \"选项一\",\n                    \"score\": \"4\"\n                },\n                {\n                    \"option\": \"选项二\",\n                    \"score\": \"3\"\n                },\n                {\n                    \"option\": \"选项三\",\n                    \"score\": \"2\"\n                },\n                {\n                    \"option\": \"选项四\",\n                    \"score\": \"1\"\n                }\n            ],\n            \"mold_id\": 1,\n            \"type_id\": 1\n        },\n        {\n            \"id\": 5,\n            \"title\": \"test\",\n            \"option_score_obj\": [\n                {\n                    \"question\": \"option1\",\n                    \"score\": \"4\"\n                },\n                {\n                    \"question\": \"option2\",\n                    \"score\": \"3\"\n                },\n                {\n                    \"question\": \"option3\",\n                    \"score\": \"2\"\n                },\n                {\n                    \"question\": \"option4\",\n                    \"score\": \"1\"\n                }\n            ],\n            \"mold_id\": 1,\n            \"type_id\": 1\n        },\n        {\n            \"id\": 6,\n            \"title\": \"test\",\n            \"option_score_obj\": [\n                {\n                    \"question\": \"option1\",\n                    \"score\": \"4\"\n                },\n                {\n                    \"question\": \"option2\",\n                    \"score\": \"3\"\n                },\n                {\n                    \"question\": \"option3\",\n                    \"score\": \"2\"\n                },\n                {\n                    \"question\": \"option4\",\n                    \"score\": \"1\"\n                }\n            ],\n            \"mold_id\": 1,\n            \"type_id\": 1\n        },\n        {\n            \"id\": 7,\n            \"title\": \"test\",\n            \"option_score_obj\": [\n                {\n                    \"question\": \"option1\",\n                    \"score\": \"4\"\n                },\n                {\n                    \"question\": \"option2\",\n                    \"score\": \"3\"\n                },\n                {\n                    \"question\": \"option3\",\n                    \"score\": \"2\"\n                },\n                {\n                    \"question\": \"option4\",\n                    \"score\": \"1\"\n                }\n            ],\n            \"mold_id\": 1,\n            \"type_id\": 1\n        },\n        {\n            \"id\": 8,\n            \"title\": \"test\",\n            \"option_score_obj\": [\n                {\n                    \"question\": \"option1\",\n                    \"score\": \"4\"\n                },\n                {\n                    \"question\": \"option2\",\n                    \"score\": \"3\"\n                },\n                {\n                    \"question\": \"option3\",\n                    \"score\": \"2\"\n                },\n                {\n                    \"question\": \"option4\",\n                    \"score\": \"1\"\n                }\n            ],\n            \"mold_id\": 1,\n            \"type_id\": 1\n        }\n    ],\n    \"pagging\": {\n        \"size\": 10,\n        \"current\": 1,\n        \"total\": 8\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/exercise.js",
+    "groupTitle": "Exercise",
+    "name": "GetApiExerciseGetlist"
   },
   {
     "type": "Post",
@@ -397,91 +401,6 @@
     "filename": "app/controller/exercise.js",
     "groupTitle": "Exercise",
     "name": "PostApiExerciseAdd"
-  },
-  {
-    "type": "Post",
-    "url": "/api/exercise/del",
-    "title": "删除题目",
-    "group": "Exercise",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>问题id</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "成功返回",
-          "content": "{\n code:1,\n msg:'成功操作'\n }",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "app/controller/exercise.js",
-    "groupTitle": "Exercise",
-    "name": "PostApiExerciseDel"
-  },
-  {
-    "type": "Post",
-    "url": "/api/exercise/getList",
-    "title": "获得题目列表",
-    "group": "Exercise",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "type_id",
-            "description": "<p>（可选）题目类型id--精确查询：2躯体化，3强迫症状，4人际关系敏感，5抑郁，6焦虑，7敌对，8恐怖，9偏执，10精神病性，11其他</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "title",
-            "description": "<p>（可选）问题题目--模糊查询</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "page_now",
-            "description": "<p>（可选）现处页数</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "num_in_page",
-            "description": "<p>（可选）每页个数</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "成功返回",
-          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"is_success\": true,\n        \"page_total\": 3,\n        \"page_now\": 1,\n        \"num_in_page\": 1,\n        \"list\": [\n            {\n                \"id\": 2,\n                \"title\": \"test\",\n                \"option_score_obj\": [\n                    {\n                        \"question\": \"选项1\",\n                        \"score\": \"4\"\n                    },\n                    {\n                        \"question\": \"选项2\",\n                        \"score\": \"3\"\n                    },\n                    {\n                        \"question\": \"选项3\",\n                        \"score\": \"2\"\n                    },\n                    {\n                        \"question\": \"选项4\",\n                        \"score\": \"1\"\n                    }\n                ],\n                \"mold_id\": 1,\n                \"type_id\": 1\n            }\n        ]\n    }\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "app/controller/exercise.js",
-    "groupTitle": "Exercise",
-    "name": "PostApiExerciseGetlist"
   },
   {
     "type": "Post",
@@ -551,7 +470,7 @@
     "name": "PostApiExerciseMultiadd"
   },
   {
-    "type": "Post",
+    "type": "Put",
     "url": "/api/exercise/update",
     "title": "修改题目",
     "group": "Exercise",
@@ -615,127 +534,10 @@
     "version": "0.0.0",
     "filename": "app/controller/exercise.js",
     "groupTitle": "Exercise",
-    "name": "PostApiExerciseUpdate"
+    "name": "PutApiExerciseUpdate"
   },
   {
-    "type": "Get",
-    "url": "api/paper/detailAdmin",
-    "title": "获得试卷详情(包含分数)",
-    "group": "Paper",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>试卷id</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "成功返回",
-          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"试卷一\",\n            \"list\": [\n                [\n                    {\n                        \"id\": 6,\n                        \"title\": \"test\",\n                        \"option_score_obj\": [\n                            {\n                                \"question\": \"option1\",\n                                \"score\": \"4\"\n                            },\n                            {\n                                \"question\": \"option2\",\n                                \"score\": \"3\"\n                            },\n                            {\n                                \"question\": \"option3\",\n                                \"score\": \"2\"\n                            },\n                            {\n                                \"question\": \"option4\",\n                                \"score\": \"1\"\n                            }\n                        ],\n                        \"mold_id\": 1,\n                        \"type_id\": 1\n                    }\n                ],\n                [\n                    {\n                        \"id\": 3,\n                        \"title\": \"test\",\n                        \"option_score_obj\": [\n                            {\n                                \"question\": \"问题一\",\n                                \"score\": \"4\"\n                            },\n                            {\n                                \"question\": \"问题二\",\n                                \"score\": \"3\"\n                            },\n                            {\n                                \"question\": \"问题三\",\n                                \"score\": \"2\"\n                            },\n                            {\n                                \"question\": \"问题四\",\n                                \"score\": \"1\"\n                            }\n                        ],\n                        \"mold_id\": 1,\n                        \"type_id\": 1\n                    }\n                ],\n                [\n                    {\n                        \"id\": 4,\n                        \"title\": \"test2\",\n                        \"option_score_obj\": [\n                            {\n                                \"question\": \"问题一\",\n                                \"score\": \"4\"\n                            },\n                            {\n                                \"question\": \"问题二\",\n                                \"score\": \"3\"\n                            },\n                            {\n                                \"question\": \"问题三\",\n                                \"score\": \"2\"\n                            },\n                            {\n                                \"question\": \"问题四\",\n                                \"score\": \"1\"\n                            }\n                        ],\n                        \"mold_id\": 1,\n                        \"type_id\": 1\n                    }\n                ],\n                [\n                    {\n                        \"id\": 5,\n                        \"title\": \"test\",\n                        \"option_score_obj\": [\n                            {\n                                \"question\": \"option1\",\n                                \"score\": \"4\"\n                            },\n                            {\n                                \"question\": \"option2\",\n                                \"score\": \"3\"\n                            },\n                            {\n                                \"question\": \"option3\",\n                                \"score\": \"2\"\n                            },\n                            {\n                                \"question\": \"option4\",\n                                \"score\": \"1\"\n                            }\n                        ],\n                        \"mold_id\": 1,\n                        \"type_id\": 1\n                    }\n                ]\n            ]\n        }\n    ]\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "app/controller/paper.js",
-    "groupTitle": "Paper",
-    "name": "GetApiPaperDetailadmin"
-  },
-  {
-    "type": "Get",
-    "url": "api/paper/detailAdmin",
-    "title": "获得试卷详情(不包含分数)",
-    "group": "Paper",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>试卷id</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "成功返回",
-          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"试卷一\",\n            \"list\": [\n                [\n                    {\n                        \"id\": 6,\n                        \"title\": \"test\",\n                        \"option_obj\": [\n                            \"option1\",\n                            \"option2\",\n                            \"option3\",\n                            \"option4\"\n                        ],\n                        \"mold_id\": 1,\n                        \"type_id\": 1\n                    }\n                ],\n                [\n                    {\n                        \"id\": 3,\n                        \"title\": \"test\",\n                        \"option_obj\": [\n                            \"问题一\",\n                            \"问题二\",\n                            \"问题三\",\n                            \"问题四\"\n                        ],\n                        \"mold_id\": 1,\n                        \"type_id\": 1\n                    }\n                ],\n                [\n                    {\n                        \"id\": 4,\n                        \"title\": \"test2\",\n                        \"option_obj\": [\n                            \"问题一\",\n                            \"问题二\",\n                            \"问题三\",\n                            \"问题四\"\n                        ],\n                        \"mold_id\": 1,\n                        \"type_id\": 1\n                    }\n                ],\n                [\n                    {\n                        \"id\": 5,\n                        \"title\": \"test\",\n                        \"option_obj\": [\n                            \"option1\",\n                            \"option2\",\n                            \"option3\",\n                            \"option4\"\n                        ],\n                        \"mold_id\": 1,\n                        \"type_id\": 1\n                    }\n                ]\n            ]\n        }\n    ]\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "app/controller/paper.js",
-    "groupTitle": "Paper",
-    "name": "GetApiPaperDetailadmin"
-  },
-  {
-    "type": "Post",
-    "url": "/api/paper/add",
-    "title": "增加试卷",
-    "group": "Paper",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "title",
-            "description": "<p>试卷名称</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Array",
-            "optional": false,
-            "field": "exercises_json",
-            "description": "<p>题目id数组</p>"
-          },
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "worker_id",
-            "description": "<p>创建人id</p>"
-          }
-        ]
-      },
-      "examples": [
-        {
-          "title": "参数模版",
-          "content": "{\n   \"title\":\"试卷一\",\n   \"exercises_json\":[\"1\",\"2\",\"3\",\"4\",\"5\"] //题目id\n   \"worker_id\":\"1\" //创建人id\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "成功返回",
-          "content": "{\n code:1,\n msg:'成功操作'\n }",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "app/controller/paper.js",
-    "groupTitle": "Paper",
-    "name": "PostApiPaperAdd"
-  },
-  {
-    "type": "Post",
+    "type": "Delete",
     "url": "api/paper/del",
     "title": "删除试卷",
     "group": "Paper",
@@ -764,10 +566,42 @@
     "version": "0.0.0",
     "filename": "app/controller/paper.js",
     "groupTitle": "Paper",
-    "name": "PostApiPaperDel"
+    "name": "DeleteApiPaperDel"
   },
   {
-    "type": "Post",
+    "type": "Get",
+    "url": "api/paper/detail-score",
+    "title": "获得试卷详情(包含分数)",
+    "group": "Paper",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>试卷id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"id\": 1,\n        \"title\": \"试卷一\",\n        \"time_stamp\": \"1591960228598\",\n        \"editor\": {\n            \"id\": 1,\n            \"account\": \"admin\",\n            \"name\": \"admin\"\n        },\n        \"exercises\": [\n            {\n                \"id\": 1,\n                \"title\": \"test\",\n                \"option_score_obj\": [\n                    {\n                        \"option\": \"option一\",\n                        \"score\": \"4\"\n                    },\n                    {\n                        \"option\": \"选项二\",\n                        \"score\": \"3\"\n                    },\n                    {\n                        \"option\": \"选项三\",\n                        \"score\": \"2\"\n                    },\n                    {\n                        \"option\": \"选项四\",\n                        \"score\": \"1\"\n                    }\n                ],\n                \"mold_id\": 1,\n                \"type_id\": 1\n            },\n            {\n                \"id\": 2,\n                \"title\": \"test\",\n                \"option_score_obj\": [\n                    {\n                        \"option\": \"选项一\",\n                        \"score\": \"4\"\n                    },\n                    {\n                        \"option\": \"选项二\",\n                        \"score\": \"3\"\n                    },\n                    {\n                        \"option\": \"选项三\",\n                        \"score\": \"2\"\n                    },\n                    {\n                        \"option\": \"选项四\",\n                        \"score\": \"1\"\n                    }\n                ],\n                \"mold_id\": 1,\n                \"type_id\": 1\n            },\n            {\n                \"id\": 3,\n                \"title\": \"test\",\n                \"option_score_obj\": [\n                    {\n                        \"option\": \"选项一\",\n                        \"score\": \"4\"\n                    },\n                    {\n                        \"option\": \"选项二\",\n                        \"score\": \"3\"\n                    },\n                    {\n                        \"option\": \"选项三\",\n                        \"score\": \"2\"\n                    },\n                    {\n                        \"option\": \"选项四\",\n                        \"score\": \"1\"\n                    }\n                ],\n                \"mold_id\": 1,\n                \"type_id\": 1\n            },\n            {\n                \"id\": 4,\n                \"title\": \"test\",\n                \"option_score_obj\": [\n                    {\n                        \"option\": \"选项一\",\n                        \"score\": \"4\"\n                    },\n                    {\n                        \"option\": \"选项二\",\n                        \"score\": \"3\"\n                    },\n                    {\n                        \"option\": \"选项三\",\n                        \"score\": \"2\"\n                    },\n                    {\n                        \"option\": \"选项四\",\n                        \"score\": \"1\"\n                    }\n                ],\n                \"mold_id\": 1,\n                \"type_id\": 1\n            },\n            {\n                \"id\": 5,\n                \"title\": \"test\",\n                \"option_score_obj\": [\n                    {\n                        \"question\": \"option1\",\n                        \"score\": \"4\"\n                    },\n                    {\n                        \"question\": \"option2\",\n                        \"score\": \"3\"\n                    },\n                    {\n                        \"question\": \"option3\",\n                        \"score\": \"2\"\n                    },\n                    {\n                        \"question\": \"option4\",\n                        \"score\": \"1\"\n                    }\n                ],\n                \"mold_id\": 1,\n                \"type_id\": 1\n            }\n        ]\n    }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/paper.js",
+    "groupTitle": "Paper",
+    "name": "GetApiPaperDetailScore"
+  },
+  {
+    "type": "Get",
     "url": "api/paper/getList",
     "title": "获得试卷列表",
     "group": "Paper",
@@ -823,7 +657,7 @@
       "examples": [
         {
           "title": "成功返回",
-          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"is_success\": true,\n        \"page_total\": 2,\n        \"page_now\": \"2\",\n        \"num_in_page\": \"1\",\n        \"list\": [\n            {\n                \"id\": 2,\n                \"title\": \"试卷一\",\n                \"worker_id\": 2,\n                \"name\": \"editor\",\n                \"time_stamp\": \"1588223983506\"\n            }\n        ]\n    }\n}",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"title\": \"试卷一\",\n            \"time_stamp\": \"1591960228598\",\n            \"editor\": {\n                \"id\": 1,\n                \"account\": \"admin\",\n                \"name\": \"admin\"\n            }\n        }\n    ],\n    \"pagging\": {\n        \"size\": 10,\n        \"current\": 1,\n        \"total\": 1\n    }\n}",
           "type": "json"
         }
       ]
@@ -831,10 +665,63 @@
     "version": "0.0.0",
     "filename": "app/controller/paper.js",
     "groupTitle": "Paper",
-    "name": "PostApiPaperGetlist"
+    "name": "GetApiPaperGetlist"
   },
   {
     "type": "Post",
+    "url": "/api/paper/add",
+    "title": "增加试卷",
+    "group": "Paper",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "title",
+            "description": "<p>试卷名称</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "exercises_json",
+            "description": "<p>题目id数组</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "worker_id",
+            "description": "<p>创建人id</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "参数模版",
+          "content": "{\n   \"title\":\"试卷一\",\n   \"exercises_json\":[\"1\",\"2\",\"3\",\"4\",\"5\"] //题目id\n   \"worker_id\":\"1\" //创建人id\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "{\n code:1,\n msg:'成功操作'\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/paper.js",
+    "groupTitle": "Paper",
+    "name": "PostApiPaperAdd"
+  },
+  {
+    "type": "Put",
     "url": "api/paper/update",
     "title": "更新试卷",
     "group": "Paper",
@@ -884,7 +771,39 @@
     "version": "0.0.0",
     "filename": "app/controller/paper.js",
     "groupTitle": "Paper",
-    "name": "PostApiPaperUpdate"
+    "name": "PutApiPaperUpdate"
+  },
+  {
+    "type": "Delete",
+    "url": "api/record/del",
+    "title": "删除记录",
+    "group": "Record",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>记录id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "{\n \"code\": 1,\n \"msg\": \"成功操作\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/record.js",
+    "groupTitle": "Record",
+    "name": "DeleteApiRecordDel"
   },
   {
     "type": "Get",
@@ -966,7 +885,7 @@
       "examples": [
         {
           "title": "成功返回",
-          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"is_success\": true,\n        \"page_total\": 1,\n        \"page_now\": 1,\n        \"num_in_page\": 10,\n        \"list\": [\n            {\n                \"id\": 7,\n                \"operator_id\": 4,\n                \"operator_account\": \"visitor\",\n                \"operator_name\": \"visitor\",\n                \"worker_id\": 2,\n                \"worker_name\": \"editor\",\n                \"title\": \"试卷\",\n                \"time_stamp\": \"1588147199987\",\n                \"type_id\": 1\n            }\n        ]\n    }\n}",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"type_id\": 1,\n            \"time_stamp\": \"1592207689287\",\n            \"title\": \"试卷\",\n            \"user\": {\n                \"id\": 3,\n                \"account\": \"664753\",\n                \"name\": null\n            },\n            \"doctor\": {\n                \"id\": 2,\n                \"account\": \"664753092\",\n                \"name\": null\n            }\n        },\n        {\n            \"id\": 2,\n            \"type_id\": 1,\n            \"time_stamp\": \"1592207888812\",\n            \"title\": \"试卷\",\n            \"user\": {\n                \"id\": 3,\n                \"account\": \"664753\",\n                \"name\": null\n            },\n            \"doctor\": {\n                \"id\": 2,\n                \"account\": \"664753092\",\n                \"name\": null\n            }\n        },\n        {\n            \"id\": 3,\n            \"type_id\": 2,\n            \"time_stamp\": \"1592207949189\",\n            \"title\": \"面谈记录标题\",\n            \"user\": {\n                \"id\": 3,\n                \"account\": \"664753\",\n                \"name\": null\n            },\n            \"doctor\": {\n                \"id\": 2,\n                \"account\": \"664753092\",\n                \"name\": null\n            }\n        }\n    ],\n    \"pagging\": {\n        \"size\": 10,\n        \"current\": 1,\n        \"total\": 3\n    }\n}",
           "type": "json"
         }
       ]
@@ -1041,13 +960,13 @@
       },
       "examples": [
         {
-          "title": "参数模版（type_id为1时）",
+          "title": "参数模版（type_id为1时，试卷记录）",
           "content": "{\n   \"title\": \"试卷\",\n   \"operator_id\": \"3\",\n   \"worker_id\": \"2\",\n   \"type_id\": \"1\",\n   \"paper_exercises\": [\n     {\n       \"question\": \"问题1\",\n       \"anwserIndex\": 1,\n       \"score\": 1,\n       \"type_id\": 2,\n       \"options\": [\n         { \"option\": \"选项1\", \"score\": \"4\" },\n         { \"option\": \"选项2\", \"score\": \"3\" },\n         { \"option\": \"选项3\", \"score\": \"2\" },\n         { \"option\": \"选项4\", \"score\": \"1\" }\n       ]\n     },\n     {\n       \"question\":\"问题2\",\n       \"anwserIndex\":0,\n       \"score\":1,\n       \"type_id\":2,\n       \"options\":[\n         { \"option\": \"选项1\", \"score\": \"4\" },\n         { \"option\": \"选项2\", \"score\": \"3\" },\n         { \"option\": \"选项3\", \"score\": \"2\" },\n         {\" option\": \"选项4\", \"score\": \"1\" }\n       ]\n     }\n   ]\n }",
           "type": "json"
         },
         {
-          "title": "参数模版（type_id为2时）",
-          "content": "{\n   \"operator_id\":\"3\",\n   \"worker_id\":\"2\",\n   \"type_id\":\"2\",//1为试卷, 2为访谈记录\n   \"title\":\"面谈记录标题\"\n   \"content\":\"这次访谈很有成效， 继续努力。\"\n }",
+          "title": "参数模版（type_id为2时， 访谈记录）",
+          "content": "{\n   \"operator_id\":\"3\",\n   \"worker_id\":\"2\",\n   \"type_id\":\"2\",\n   \"title\":\"面谈记录标题\",\n   \"content\":\"这次访谈很有成效， 继续努力。\"\n }",
           "type": "json"
         }
       ]
@@ -1067,39 +986,7 @@
     "name": "PostApiRecordAdd"
   },
   {
-    "type": "Post",
-    "url": "api/record/del",
-    "title": "删除记录",
-    "group": "Record",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "Number",
-            "optional": false,
-            "field": "id",
-            "description": "<p>记录id</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "成功返回",
-          "content": "{\n \"code\": 1,\n \"msg\": \"成功操作\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "app/controller/record.js",
-    "groupTitle": "Record",
-    "name": "PostApiRecordDel"
-  },
-  {
-    "type": "Post",
+    "type": "Put",
     "url": "api/record/updateTalkRecord",
     "title": "更新面谈内容",
     "group": "Record",
@@ -1148,7 +1035,7 @@
       "examples": [
         {
           "title": "成功返回",
-          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        {\n            \"id\": 5,\n            \"operator_id\": 3,\n            \"account\": \"worker\",\n            \"name\": \"worker\",\n            \"worker_id\": 2,\n            \"worker_name\": \"editor\",\n            \"title\": null,\n            \"time_stamp\": \"1588149221180\",\n            \"type_id\": 2\n        },\n        {\n            \"id\": 7,\n            \"operator_id\": 3,\n            \"account\": \"worker\",\n            \"name\": \"worker\",\n            \"worker_id\": 2,\n            \"worker_name\": \"editor\",\n            \"title\": \"试卷\",\n            \"time_stamp\": \"1588147199987\",\n            \"type_id\": 1\n        },\n        {\n            \"id\": 8,\n            \"operator_id\": 3,\n            \"account\": \"worker\",\n            \"name\": \"worker\",\n            \"worker_id\": 2,\n            \"worker_name\": \"editor\",\n            \"title\": \"试卷\",\n            \"time_stamp\": \"1588161965326\",\n            \"type_id\": 1\n        },\n        {\n            \"id\": 9,\n            \"operator_id\": 3,\n            \"account\": \"worker\",\n            \"name\": \"worker\",\n            \"worker_id\": 2,\n            \"worker_name\": \"editor\",\n            \"title\": \"试卷\",\n            \"time_stamp\": \"1589285610159\",\n            \"type_id\": 1\n        },\n        {\n            \"id\": 10,\n            \"operator_id\": 3,\n            \"account\": \"worker\",\n            \"name\": \"worker\",\n            \"worker_id\": 2,\n            \"worker_name\": \"editor\",\n            \"title\": \"试卷\",\n            \"time_stamp\": \"1589286109676\",\n            \"type_id\": 1\n        }\n    ]\n}",
+          "content": "{\n \"code\": 1,\n \"msg\": \"成功操作\"\n}",
           "type": "json"
         }
       ]
@@ -1156,12 +1043,12 @@
     "version": "0.0.0",
     "filename": "app/controller/record.js",
     "groupTitle": "Record",
-    "name": "PostApiRecordUpdatetalkrecord"
+    "name": "PutApiRecordUpdatetalkrecord"
   },
   {
     "type": "Get",
     "url": "/api/reservation/getList",
-    "title": "获得预约列表",
+    "title": "获得预约列表(31天前起的所有数据)",
     "group": "Reservation",
     "parameter": {
       "fields": {
@@ -1180,7 +1067,7 @@
       "examples": [
         {
           "title": "成功返回",
-          "content": "{\n \"code\": 1,\n \"msg\": \"成功操作\",\n \"data\": {\n     \"2020-3-28\": [\n         {\n             \"id\": 5,\n             \"from_id\": 7,\n             \"from_name\": null,\n             \"to_id\": 2,\n             \"to_name\": \"editor\",\n             \"method\":1,\n             \"start_time\": \"1588035600000\",\n             \"end_time\": \"1588042800\",\n             \"status\": 1 \n         }\n     ],\n     \"2020-3-20\": [\n         {\n             \"id\": 5,\n             \"from_id\": 7,\n             \"from_name\": null,\n             \"to_id\": 2,\n             \"to_name\": \"editor\",\n             \"method\":1,\n             \"start_time\": \"1587348000000\",\n             \"end_time\": \"1587355200\",\n             \"status\": 2\n         }\n     ]\n }\n}",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"2020-6-10\": [\n            {\n                \"id\": 1,\n                \"type_name\": \"abc\",\n                \"method\": 1,\n                \"start_time\": \"1591758326626\",\n                \"end_time\": \"1591765526626\",\n                \"state\": 1,\n                \"from\": {\n                    \"id\": 1,\n                    \"account\": \"admin\",\n                    \"name\": null\n                },\n                \"to\": {\n                    \"id\": 2,\n                    \"account\": \"664753092\",\n                    \"name\": null\n                }\n            }\n        ]\n    }\n}",
           "type": "json"
         }
       ]
@@ -1270,7 +1157,7 @@
     "name": "PostApiReservationDel"
   },
   {
-    "type": "Post",
+    "type": "Put",
     "url": "/api/reservation/modify",
     "title": "修改预约",
     "group": "Reservation",
@@ -1334,7 +1221,7 @@
     "version": "0.0.0",
     "filename": "app/controller/reservation.js",
     "groupTitle": "Reservation",
-    "name": "PostApiReservationModify"
+    "name": "PutApiReservationModify"
   },
   {
     "type": "Get",
@@ -1345,7 +1232,7 @@
       "examples": [
         {
           "title": "{",
-          "content": "{\n \"code\": 1,\n \"msg\": \"成功操作\",\n \"data\": [\n     {\n         \"id\": 1,\n         \"type_name\": \"test1\"\n     }\n ]\n}",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"type_name\": \"有病\",\n            \"description\": \"有病就要医治\"\n        },\n        {\n            \"id\": 2,\n            \"type_name\": \"有病\",\n            \"description\": \"有病就要医治\"\n        }\n    ]\n}",
           "type": "json"
         }
       ]
@@ -1357,7 +1244,39 @@
   },
   {
     "type": "Post",
-    "url": "/api/reservation_type/add",
+    "url": "/api/reservation_type/update",
+    "title": "删除预约类型",
+    "group": "ReservationType",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>类型id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "{\n code:1,\n msg:'成功操作'\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/reservationType.js",
+    "groupTitle": "ReservationType",
+    "name": "PostApiReservation_typeUpdate"
+  },
+  {
+    "type": "Post",
+    "url": "/api/reservationType/add",
     "title": "增加预约类型",
     "group": "ReservationType",
     "parameter": {
@@ -1392,10 +1311,10 @@
     "version": "0.0.0",
     "filename": "app/controller/reservationType.js",
     "groupTitle": "ReservationType",
-    "name": "PostApiReservation_typeAdd"
+    "name": "PostApiReservationtypeAdd"
   },
   {
-    "type": "Post",
+    "type": "Put",
     "url": "/api/reservation_type/update",
     "title": "修改类型名称",
     "group": "ReservationType",
@@ -1438,13 +1357,13 @@
     "version": "0.0.0",
     "filename": "app/controller/reservationType.js",
     "groupTitle": "ReservationType",
-    "name": "PostApiReservation_typeUpdate"
+    "name": "PutApiReservation_typeUpdate"
   },
   {
-    "type": "Post",
-    "url": "/api/reservation_type/update",
-    "title": "删除预约类型",
-    "group": "ReservationType",
+    "type": "Delete",
+    "url": "/api/role/del",
+    "title": "删除角色",
+    "group": "Role",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -1468,9 +1387,152 @@
       ]
     },
     "version": "0.0.0",
-    "filename": "app/controller/reservationType.js",
-    "groupTitle": "ReservationType",
-    "name": "PostApiReservation_typeUpdate"
+    "filename": "app/controller/role.js",
+    "groupTitle": "Role",
+    "name": "DeleteApiRoleDel"
+  },
+  {
+    "type": "Get",
+    "url": "/api/role/get",
+    "title": "获得权限角色列表",
+    "group": "Role",
+    "success": {
+      "examples": [
+        {
+          "title": "{",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"admin\",\n            \"permissions\": []\n        },\n        {\n            \"id\": 2,\n            \"name\": \"心理咨询师\",\n            \"permissions\": []\n        }\n    ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/role.js",
+    "groupTitle": "Role",
+    "name": "GetApiRoleGet"
+  },
+  {
+    "type": "Get",
+    "url": "/api/role/routes",
+    "title": "获得角色路由标识符",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>角色id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "{",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        \"base\",\n        \"record\",\n        \"role\",\n        \"user\",\n        \"reservation\",\n        \"exercise\",\n        \"paper\",\n        \"record\"\n    ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/role.js",
+    "groupTitle": "Role",
+    "name": "GetApiRoleRoutes"
+  },
+  {
+    "type": "Post",
+    "url": "/api/role/add",
+    "title": "增加权限角色",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>角色名称</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "permissions",
+            "description": "<p>权限标识符数组</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "参数实例",
+          "content": "{\n \"name\":\"test\",\n \"permissions\":[\"base\",\"user\",\"role\"]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "{\n code:1,\n msg:'成功操作',\n data:{\n     \"insertId\": 7\n }\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/role.js",
+    "groupTitle": "Role",
+    "name": "PostApiRoleAdd"
+  },
+  {
+    "type": "Put",
+    "url": "/api/role/update",
+    "title": "修改角色名称",
+    "group": "Role",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>权限角色id</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>角色名称</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Array",
+            "optional": false,
+            "field": "permissions",
+            "description": "<p>权限标识符数组</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "{\n code:1,\n msg:'成功操作'\n }",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/role.js",
+    "groupTitle": "Role",
+    "name": "PutApiRoleUpdate"
   },
   {
     "type": "Get",
@@ -1492,6 +1554,47 @@
     "name": "GetApiTypeGetlist"
   },
   {
+    "type": "Delete",
+    "url": "/api/user/userDel",
+    "title": "成员删除",
+    "group": "User",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "id",
+            "description": "<p>用户id</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "{\n \"code\":1,\n \"msg\":'成功修改'\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "examples": [
+        {
+          "title": "错误返回",
+          "content": "{\n\"code\": 0,\n\"msg\": \"操作错误\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/user.js",
+    "groupTitle": "User",
+    "name": "DeleteApiUserUserdel"
+  },
+  {
     "type": "Get",
     "url": "/api/user/userDetail",
     "title": "获取用户详情",
@@ -1501,10 +1604,10 @@
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Header:token",
             "optional": false,
-            "field": "account",
-            "description": "<p>用户名</p>"
+            "field": "token",
+            "description": ""
           }
         ]
       }
@@ -1513,7 +1616,7 @@
       "examples": [
         {
           "title": "成功返回",
-          "content": "{\n \"code\": 1,\n \"msg\": \"成功操作\",\n \"data\": {\n     \"id\": 1,\n     \"roles\": \"admin\",\n     \"account\": \"admin\",\n     \"password\": \"123456\",\n     \"gender\": 1,\n     \"name\": \"admin\",\n     \"birthday\": null,\n     \"phone\": \"110\",\n     \"avatar\": \"https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif\"\n }\n}",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"id\": 1,\n        \"roles\": {\n            \"id\": 1,\n            \"name\": \"admin\"\n        },\n        \"account\": \"admin\",\n        \"password\": \"123456\",\n        \"gender\": 1,\n        \"name\": null,\n        \"birthday\": null,\n        \"phone\": null,\n        \"avatar\": null\n    }\n}",
           "type": "json"
         }
       ]
@@ -1563,8 +1666,8 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "roles",
-            "description": "<p>（可选）精准查询 用户权限：admin，doctor， worker， criminal，visitor</p>"
+            "field": "role_id",
+            "description": "<p>（可选）精准查询 用户权限id</p>"
           },
           {
             "group": "Parameter",
@@ -1594,7 +1697,7 @@
       "examples": [
         {
           "title": "成功返回",
-          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"is_success\": true,\n        \"page_total\": 4,\n        \"page_now\": 1,\n        \"num_in_page\": 10,\n        \"list\": [\n            {\n                \"roles\": \"admin\",\n                \"account\": \"admin\",\n                \"name\": \"admin\",\n                \"gender\": 1\n            },\n            {\n                \"roles\": \"doctor\",\n                \"account\": \"doctor\",\n                \"name\": \"editor\",\n                \"gender\": 1\n            },\n            {\n                \"roles\": \"worker\",\n                \"account\": \"worker\",\n                \"name\": \"worker\",\n                \"gender\": 1\n            },\n            {\n                \"roles\": \"visitor\",\n                \"account\": \"visitor\",\n                \"name\": \"visitor\",\n                \"gender\": 1\n            },\n            {\n                \"roles\": \"criminal\",\n                \"account\": \"fuxing\",\n                \"name\": \"crimial\",\n                \"gender\": 1\n            },\n            {\n                \"roles\": \"visitor\",\n                \"account\": \"visitor1\",\n                \"name\": null,\n                \"gender\": 1\n            },\n            {\n                \"roles\": \"visitor\",\n                \"account\": \"visitor2\",\n                \"name\": null,\n                \"gender\": 1\n            },\n            {\n                \"roles\": \"visitor\",\n                \"account\": \"ddd\",\n                \"name\": null,\n                \"gender\": 1\n            },\n            {\n                \"roles\": \"visitor\",\n                \"account\": \"ddf\",\n                \"name\": null,\n                \"gender\": 1\n            },\n            {\n                \"roles\": \"visitor\",\n                \"account\": \"fff\",\n                \"name\": null,\n                \"gender\": 1\n            }\n        ]\n    }\n}",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        {\n            \"account\": \"admin\",\n            \"name\": null,\n            \"gender\": 1,\n            \"roles\": {\n                \"id\": 1,\n                \"name\": \"admin\"\n            }\n        }\n    ],\n    \"pagging\": {\n        \"size\": 3,\n        \"current\": 1,\n        \"total\": 1\n    }\n}",
           "type": "json"
         }
       ]
@@ -1678,8 +1781,15 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "roles",
+            "field": "role_id",
             "description": "<p>用户权限</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "phone",
+            "description": "<p>用户电话</p>"
           }
         ]
       }
@@ -1709,6 +1819,25 @@
   },
   {
     "type": "Post",
+    "url": "/user/logout",
+    "title": "登出",
+    "group": "User",
+    "success": {
+      "examples": [
+        {
+          "title": "成功返回",
+          "content": "{\n  code: 1,\n  data: \"success\",\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/user.js",
+    "groupTitle": "User",
+    "name": "PostUserLogout"
+  },
+  {
+    "type": "Put",
     "url": "/api/user/userChange",
     "title": "成员修改",
     "group": "User",
@@ -1717,10 +1846,10 @@
         "Parameter": [
           {
             "group": "Parameter",
-            "type": "String",
+            "type": "Number",
             "optional": false,
-            "field": "account",
-            "description": "<p>用户账号</p>"
+            "field": "id",
+            "description": "<p>用户id</p>"
           },
           {
             "group": "Parameter",
@@ -1810,8 +1939,8 @@
             "group": "Parameter",
             "type": "String",
             "optional": false,
-            "field": "roles",
-            "description": "<p>（可选）权限</p>"
+            "field": "roles_id",
+            "description": "<p>（可选）权限id</p>"
           }
         ]
       }
@@ -1837,67 +1966,7 @@
     "version": "0.0.0",
     "filename": "app/controller/user.js",
     "groupTitle": "User",
-    "name": "PostApiUserUserchange"
-  },
-  {
-    "type": "Post",
-    "url": "/api/user/userDel",
-    "title": "成员删除",
-    "group": "User",
-    "parameter": {
-      "fields": {
-        "Parameter": [
-          {
-            "group": "Parameter",
-            "type": "String",
-            "optional": false,
-            "field": "account",
-            "description": "<p>用户账号</p>"
-          }
-        ]
-      }
-    },
-    "success": {
-      "examples": [
-        {
-          "title": "成功返回",
-          "content": "{\n \"code\":1,\n \"msg\":'成功修改'\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "error": {
-      "examples": [
-        {
-          "title": "错误返回",
-          "content": "{\n\"code\": 0,\n\"msg\": \"操作错误\"\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "app/controller/user.js",
-    "groupTitle": "User",
-    "name": "PostApiUserUserdel"
-  },
-  {
-    "type": "Post",
-    "url": "/user/logout",
-    "title": "登出",
-    "group": "User",
-    "success": {
-      "examples": [
-        {
-          "title": "成功返回",
-          "content": "{\n  code: 1,\n  data: \"success\",\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "app/controller/user.js",
-    "groupTitle": "User",
-    "name": "PostUserLogout"
+    "name": "PutApiUserUserchange"
   },
   {
     "type": "Get",
@@ -1908,7 +1977,7 @@
       "examples": [
         {
           "title": "Response-Example",
-          "content": "{\n\"code\": 1,\n\"msg\": \"成功操作\",\n\"data\": {\n   \"token\": \"a20d22b501b93a66d686d9fa35df6914\",\n   \"roles\": \"admin\"\n }\n}",
+          "content": "{\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"token\": \"3d9d1a155d7a6d2c84fae7bd9ba35466\",\n        \"roles\": {\n            \"id\": 1,\n            \"name\": \"admin\"\n        }\n    }\n}",
           "type": "json"
         }
       ]
@@ -1927,7 +1996,7 @@
       "examples": [
         {
           "title": "成功返回",
-          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"insertId\": 3\n    }\n}",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": {\n        \"state\": 0,\n        \"status\": 1,\n        \"id\": 2,\n        \"from_id\": \"-1\",\n        \"to_id\": \"1\",\n        \"content\": \"test msg\"\n    }\n}",
           "type": "json"
         }
       ]

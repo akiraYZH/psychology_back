@@ -237,7 +237,7 @@ class DistributionController extends Controller {
   }
 
   /**
-   * @api {Post} /api/distribution/update 修改分配
+   * @api {Put} /api/distribution/update 修改分配
    * @apiGroup Distribution
    * @apiParam {Number} id 分配id
    * @apiParam {Number} state 1:完成， 0：未完成
@@ -271,7 +271,7 @@ class DistributionController extends Controller {
   }
 
   /**
-   * @api {Post} /api/distribution/del 删除分配
+   * @api {Delete} /api/distribution/del 删除分配
    * @apiGroup Distribution
    * @apiParam {Number} id 分配id
    * 

@@ -125,8 +125,8 @@ class RoleController extends Controller {
   }
 
   /**
-   * @api {Post} /api/reservation_type/update 删除预约类型
-   * @apiGroup ReservationType
+   * @api {Delete} /api/role/del 删除角色
+   * @apiGroup Role
    * @apiParam {Number} id 类型id
    * @apiSuccessExample 成功返回
    {

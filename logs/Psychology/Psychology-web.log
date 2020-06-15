@@ -1013,3 +1013,4 @@ hostname: yudeMacBook-Pro.local
 2020-06-15 19:23:52,745 INFO 15586 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
 2020-06-15 19:24:21,628 INFO 15610 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
 2020-06-15 19:24:26,301 INFO 15610 [egg-sequelize](4ms) Executed (default): UPDATE `p_paper_user` SET `status`=? WHERE `id` = ? AND `status` = ?
+2020-06-15 19:25:03,766 INFO 15691 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result

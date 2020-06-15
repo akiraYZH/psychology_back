@@ -90,7 +90,7 @@ class ExeciseController extends Controller {
   }
 
   /**
-   * @api {Post} /api/exercise/getList 获得题目列表
+   * @api {Get} /api/exercise/getList 获得题目列表
    * @apiGroup Exercise
    * @apiParam {Number} type_id （可选）题目类型id--精确查询：2躯体化，3强迫症状，4人际关系敏感，5抑郁，6焦虑，7敌对，8恐怖，9偏执，10精神病性，11其他
    * @apiParam {String} title （可选）问题题目--模糊查询
@@ -311,7 +311,7 @@ class ExeciseController extends Controller {
  
 
   /**
-   * @api {Post} /api/exercise/update 修改题目
+   * @api {Put} /api/exercise/update 修改题目
    * @apiGroup Exercise
    * @apiParam {Number} id 问题id
    * @apiParam {String} title 问题题目
@@ -355,7 +355,7 @@ class ExeciseController extends Controller {
   }
 
   /**
-   * @api {Post} /api/exercise/del 删除题目
+   * @api {Delete} /api/exercise/del 删除题目
    * @apiGroup Exercise
    * @apiParam {Number} id 问题id
    * 

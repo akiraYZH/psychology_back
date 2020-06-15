@@ -55,6 +55,7 @@ module.exports = async (app) => {
   router.put(preRouter + '/record/updateTalkRecord', controller.record.updateTalkRecord);
   router.delete(preRouter + '/record/del', controller.record.del);
 
+  //已经修改
   router.post(preRouter + '/distribution/add', controller.distribution.add);
   router.post(preRouter + '/distribution/multiAdd', controller.distribution.multiAdd);
   router.get(preRouter + '/distribution/getList', controller.distribution.getList);

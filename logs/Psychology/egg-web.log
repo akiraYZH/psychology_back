@@ -6206,3 +6206,18 @@ hostname: yudeMacBook-Pro.local
 2020-06-15 19:24:21,616 INFO 15610 [egg-watcher:application] watcher start success
 2020-06-15 19:24:21,618 INFO 15610 [egg-mysql] instance[0] status OK, rds currentTime: Mon Jun 15 2020 19:24:21 GMT+0800 (GMT+08:00)
 2020-06-15 19:24:21,635 INFO 15610 [egg:core] dump config after ready, 5ms
+2020-06-15 19:25:03,537 INFO 15691 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"application"}
+2020-06-15 19:25:03,558 INFO 15691 [egg-multipart] stream mode enable
+2020-06-15 19:25:03,558 INFO 15691 [egg-mysql] connecting root@localhost:3306/project_psychology
+2020-06-15 19:25:03,712 INFO 15691 [egg-static] starting static serve /public/ -> /Users/yuakira/dev/projects/Psychology2/app/public
+2020-06-15 19:25:03,713 INFO 15691 [egg-security] use methodnoallow middleware
+2020-06-15 19:25:03,714 INFO 15691 [egg-security] use noopen middleware
+2020-06-15 19:25:03,714 INFO 15691 [egg-security] use nosniff middleware
+2020-06-15 19:25:03,714 INFO 15691 [egg-security] use xssProtection middleware
+2020-06-15 19:25:03,714 INFO 15691 [egg-security] use xframe middleware
+2020-06-15 19:25:03,715 INFO 15691 [egg-security] use dta middleware
+2020-06-15 19:25:03,715 INFO 15691 [egg-security] compose 6 middlewares into one security middleware
+2020-06-15 19:25:03,727 INFO 15691 [egg:core] dump config after load, 3ms
+2020-06-15 19:25:03,754 INFO 15691 [egg-watcher:application] watcher start success
+2020-06-15 19:25:03,755 INFO 15691 [egg-mysql] instance[0] status OK, rds currentTime: Mon Jun 15 2020 19:25:03 GMT+0800 (GMT+08:00)
+2020-06-15 19:25:03,773 INFO 15691 [egg:core] dump config after ready, 4ms
