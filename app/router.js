@@ -40,6 +40,7 @@ module.exports = async (app) => {
   router.put(preRouter + '/exercise/update', controller.exercise.update);
   router.delete(preRouter + '/exercise/del', controller.exercise.del);
 
+  //已经修改
   router.post(preRouter + '/paper/add', controller.paper.add);
   router.get(preRouter + '/paper/getList', controller.paper.getList);
   router.get(preRouter + '/paper/detail-score', controller.paper.detailScore);
@@ -48,10 +49,10 @@ module.exports = async (app) => {
 
   router.post(preRouter + '/record/add', controller.record.add);
   router.get(preRouter + '/record/getUserList', controller.record.getUserList);
-  router.post(preRouter + '/record/getRecords', controller.record.getRecords);
+  router.get(preRouter + '/record/getRecords', controller.record.getRecords);
   router.get(preRouter + '/record/getOneRecords', controller.record.getOneRecord);
-  router.post(preRouter + '/record/updateTalkRecord', controller.record.updateTalkRecord);
-  router.post(preRouter + '/record/del', controller.record.del);
+  router.put(preRouter + '/record/updateTalkRecord', controller.record.updateTalkRecord);
+  router.del(preRouter + '/record/del', controller.record.del);
 
   router.post(preRouter + '/distribution/add', controller.distribution.add);
   router.post(preRouter + '/distribution/multiAdd', controller.distribution.multiAdd);

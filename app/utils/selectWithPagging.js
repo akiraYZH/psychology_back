@@ -62,6 +62,14 @@ const selectWithPagging = async function (model, options) {
       if (obj[attr] instanceof Array) {
         if (!obj[attr].length) {
           delete obj[attr];
+        }else{
+          obj[attr].forEach(item=>{
+            if(item instanceof Object&&!(item instanceof Array)){
+              console.log("ok");
+              
+              fix(item, originalObj);
+            }
+          })
         }
       } else {
         if (attr != "model") {

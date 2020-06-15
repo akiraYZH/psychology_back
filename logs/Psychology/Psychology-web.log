@@ -647,3 +647,151 @@ hostname: yudeMacBook-Pro.local
 2020-06-15 11:59:18,383 INFO 7343 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
 2020-06-15 11:59:20,969 INFO 7343 [egg-sequelize](5ms) Executed (default): UPDATE `p_paper` SET `status`=? WHERE `id` = ? AND `status` = ?
 2020-06-15 11:59:46,277 INFO 7369 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 12:00:37,069 INFO 7485 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:21:01,817 INFO 9760 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:37:34,015 INFO 10596 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:37:56,139 INFO 10625 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:38:17,577 INFO 10651 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:44:59,621 INFO 10732 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:47:33,375 INFO 10772 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:52:07,269 INFO 10821 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:52:23,913 INFO 10848 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:53:02,839 ERROR 10848 [-/::1/-/20ms POST /api/record/add] nodejs.ReferenceError: PRole is not defined
+    at RecordService.add (/Users/yuakira/dev/projects/Psychology2/app/service/record.js:17:17)
+    at RecordController.add (/Users/yuakira/dev/projects/Psychology2/app/controller/record.js:67:37)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+
+pid: 10848
+hostname: yudeMacBook-Pro.local
+
+2020-06-15 15:53:32,347 INFO 10884 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:53:32,743 INFO 10884 [egg-sequelize](3ms) Executed (c1326e9c-4a0b-4f86-b3f3-ef4264dcaa68): START TRANSACTION;
+2020-06-15 15:53:32,746 INFO 10884 [egg-sequelize](1ms) Executed (c1326e9c-4a0b-4f86-b3f3-ef4264dcaa68): ROLLBACK;
+2020-06-15 15:53:56,443 INFO 10911 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:53:56,827 INFO 10911 [egg-sequelize](1ms) Executed (7f831b97-6a7a-4fc0-857f-107141739406): START TRANSACTION;
+2020-06-15 15:53:56,830 INFO 10911 [egg-sequelize](0ms) Executed (7f831b97-6a7a-4fc0-857f-107141739406): ROLLBACK;
+2020-06-15 15:54:47,948 INFO 10938 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:54:49,275 INFO 10938 [egg-sequelize](1ms) Executed (5ff773cc-1f16-4e0b-88bc-dbc14f828889): START TRANSACTION;
+2020-06-15 15:54:49,285 INFO 10938 [egg-sequelize](2ms) Executed (default): SELECT `id`, `name`, `symtom_free`, `symtom_free_advice`, `low`, `low_advice`, `middle`, `middle_advice`, `high`, `high_advice`, `status` FROM `p_type` AS `p_type`;
+2020-06-15 15:54:49,316 INFO 10938 [egg-sequelize](18ms) Executed (default): INSERT INTO `p_record` (`id`,`operator_id`,`worker_id`,`time_stamp`,`type_id`,`score`,`title`,`paper_evaluation`,`paper_exercises`,`status`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);
+2020-06-15 15:55:53,650 INFO 10967 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:55:56,727 INFO 10978 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:56:43,436 INFO 11005 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:57:07,439 INFO 11026 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:57:33,321 INFO 11050 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:57:52,264 INFO 11074 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:57:56,403 INFO 11085 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 15:58:08,797 INFO 11085 [egg-sequelize](1ms) Executed (b8d62e0b-c7dc-4443-ae4f-da93ebeb21a6): START TRANSACTION;
+2020-06-15 15:58:08,809 INFO 11085 [egg-sequelize](3ms) Executed (default): SELECT `id`, `name`, `symtom_free`, `symtom_free_advice`, `low`, `low_advice`, `middle`, `middle_advice`, `high`, `high_advice`, `status` FROM `p_type` AS `p_type`;
+2020-06-15 15:58:08,823 INFO 11085 [egg-sequelize](6ms) Executed (default): INSERT INTO `p_record` (`id`,`operator_id`,`worker_id`,`time_stamp`,`type_id`,`score`,`title`,`paper_evaluation`,`paper_exercises`,`status`) VALUES (DEFAULT,?,?,?,?,?,?,?,?,?);
+2020-06-15 15:58:33,711 WARN 11085 [-/::1/-/1ms POST /api/record/add] nodejs.SyntaxError: Unexpected token / in JSON at position 70, check bodyParser config
+    at JSON.parse (<anonymous>)
+    at parse (/Users/yuakira/dev/projects/Psychology2/node_modules/co-body/lib/json.js:57:17)
+    at AsyncFunction.module.exports [as json] (/Users/yuakira/dev/projects/Psychology2/node_modules/co-body/lib/json.js:41:20)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async parseBody (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:100:14)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:85:19)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+status: 400
+body: "{\n      \"operator_id\":\"3\",\n      \"worker_id\":\"2\",\n      \"type_id\":\"2\",//1为试卷, 2为访谈记录\n      \"title\":\"面谈记录标题\"\n      \"content\":\"这次访谈很有成效， 继续努力。\"\n    }"
+pid: 11085
+hostname: yudeMacBook-Pro.local
+
+2020-06-15 15:58:51,199 WARN 11085 [-/::1/-/0ms POST /api/record/add] nodejs.SyntaxError: Unexpected token / in JSON at position 70, check bodyParser config
+    at JSON.parse (<anonymous>)
+    at parse (/Users/yuakira/dev/projects/Psychology2/node_modules/co-body/lib/json.js:57:17)
+    at AsyncFunction.module.exports [as json] (/Users/yuakira/dev/projects/Psychology2/node_modules/co-body/lib/json.js:41:20)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async parseBody (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:100:14)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:85:19)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:39:63
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+status: 400
+body: "{\n      \"operator_id\":\"3\",\n      \"worker_id\":\"2\",\n      \"type_id\":\"2\",//1为试卷, 2为访谈记录\n      \"title\":\"面谈记录标题\",\n      \"content\":\"这次访谈很有成效， 继续努力。\"\n    }"
+pid: 11085
+hostname: yudeMacBook-Pro.local
+
+2020-06-15 15:59:09,188 INFO 11085 [egg-sequelize](0ms) Executed (d5618d89-41af-41d5-a7ad-50b07b6b82d9): START TRANSACTION;
+2020-06-15 15:59:09,195 INFO 11085 [egg-sequelize](2ms) Executed (default): INSERT INTO `p_record` (`id`,`operator_id`,`worker_id`,`time_stamp`,`type_id`,`content`,`title`,`status`) VALUES (DEFAULT,?,?,?,?,?,?,?);
+2020-06-15 15:59:26,744 INFO 11119 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:00:01,912 INFO 11143 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:12:55,516 INFO 11293 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:13:17,077 INFO 11321 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:15:18,574 INFO 11358 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:16:01,969 INFO 11386 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:16:34,208 INFO 11418 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:16:57,289 INFO 11450 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:19:21,100 INFO 11529 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:20:54,078 INFO 11585 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:23:19,637 INFO 11669 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:24:07,527 INFO 11698 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:24:39,490 INFO 11725 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:27:11,541 INFO 11786 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:28:43,980 INFO 11827 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:30:21,013 INFO 11868 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:30:47,212 INFO 11892 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:31:35,695 INFO 11920 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:32:05,719 INFO 11948 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:32:30,662 INFO 11972 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:33:26,940 INFO 12003 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:33:31,280 INFO 12014 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:34:02,954 INFO 12038 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:34:03,635 INFO 12038 [egg-sequelize](4ms) Executed (default): SELECT `p_record`.`id`, `p_record`.`type_id`, `p_record`.`time_stamp`, `p_record`.`title`, `user`.`id` AS `user.id`, `user`.`account` AS `user.account`, `user`.`name` AS `user.name`, `doctor`.`id` AS `doctor.id`, `doctor`.`account` AS `doctor.account`, `doctor`.`name` AS `doctor.name` FROM `p_record` AS `p_record` LEFT OUTER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`operator_id` = '3' AND `p_record`.`status` = 1 LIMIT 10;
+2020-06-15 16:34:03,638 INFO 12038 [egg-sequelize](9ms) Executed (default): SELECT count(`p_record`.`id`) AS `count` FROM `p_record` AS `p_record` LEFT OUTER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`operator_id` = '3' AND `p_record`.`status` = 1;
+2020-06-15 16:36:25,898 INFO 12109 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:43:13,825 INFO 12221 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:43:20,488 INFO 12244 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:44:03,174 INFO 12265 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:44:31,152 INFO 12293 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:45:05,103 INFO 12317 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:45:17,159 INFO 12342 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:45:33,190 INFO 12374 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:45:33,619 INFO 12374 [egg-sequelize](4ms) Executed (default): SELECT count(`p_record`.`id`) AS `count` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`operator_id` = '3' AND `p_record`.`status` = 1;
+2020-06-15 16:45:33,625 INFO 12374 [egg-sequelize](7ms) Executed (default): SELECT `p_record`.`id`, `p_record`.`type_id`, `p_record`.`time_stamp`, `p_record`.`title`, `user`.`id` AS `user.id`, `user`.`account` AS `user.account`, `user`.`name` AS `user.name`, `doctor`.`id` AS `doctor.id`, `doctor`.`account` AS `doctor.account`, `doctor`.`name` AS `doctor.name` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`operator_id` = '3' AND `p_record`.`status` = 1 LIMIT 10;
+2020-06-15 16:46:09,072 INFO 12398 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:46:11,301 INFO 12398 [egg-sequelize](1ms) Executed (default): SELECT count(`p_record`.`id`) AS `count` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`operator_id` = '3' AND `p_record`.`status` = 1;
+2020-06-15 16:46:11,304 INFO 12398 [egg-sequelize](2ms) Executed (default): SELECT `p_record`.`id`, `p_record`.`type_id`, `p_record`.`time_stamp`, `p_record`.`title`, `user`.`id` AS `user.id`, `user`.`account` AS `user.account`, `user`.`name` AS `user.name`, `doctor`.`id` AS `doctor.id`, `doctor`.`account` AS `doctor.account`, `doctor`.`name` AS `doctor.name` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`operator_id` = '3' AND `p_record`.`status` = 1 LIMIT 10;
+2020-06-15 16:46:31,247 INFO 12398 [egg-sequelize](3ms) Executed (default): SELECT count(`p_record`.`id`) AS `count` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` AND `user`.`account` = '6' LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1;
+2020-06-15 16:46:31,247 INFO 12398 [egg-sequelize](1ms) Executed (default): SELECT `p_record`.`id`, `p_record`.`type_id`, `p_record`.`time_stamp`, `p_record`.`title`, `user`.`id` AS `user.id`, `user`.`account` AS `user.account`, `user`.`name` AS `user.name`, `doctor`.`id` AS `doctor.id`, `doctor`.`account` AS `doctor.account`, `doctor`.`name` AS `doctor.name` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` AND `user`.`account` = '6' LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1 LIMIT 10;
+2020-06-15 16:46:41,383 INFO 12398 [egg-sequelize](1ms) Executed (default): SELECT count(`p_record`.`id`) AS `count` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` AND `user`.`account` = '664753' LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1;
+2020-06-15 16:46:41,384 INFO 12398 [egg-sequelize](1ms) Executed (default): SELECT `p_record`.`id`, `p_record`.`type_id`, `p_record`.`time_stamp`, `p_record`.`title`, `user`.`id` AS `user.id`, `user`.`account` AS `user.account`, `user`.`name` AS `user.name`, `doctor`.`id` AS `doctor.id`, `doctor`.`account` AS `doctor.account`, `doctor`.`name` AS `doctor.name` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` AND `user`.`account` = '664753' LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1 LIMIT 10;
+2020-06-15 16:47:36,097 INFO 12440 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:48:00,061 INFO 12440 [egg-sequelize](5ms) Executed (default): SELECT `p_record`.`id`, `p_record`.`type_id`, `p_record`.`time_stamp`, `p_record`.`title`, `user`.`id` AS `user.id`, `user`.`account` AS `user.account`, `user`.`name` AS `user.name`, `doctor`.`id` AS `doctor.id`, `doctor`.`account` AS `doctor.account`, `doctor`.`name` AS `doctor.name` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` AND `user`.`account` LIKE '664753' LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1 LIMIT 10;
+2020-06-15 16:48:00,064 INFO 12440 [egg-sequelize](9ms) Executed (default): SELECT count(`p_record`.`id`) AS `count` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` AND `user`.`account` LIKE '664753' LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1;
+2020-06-15 16:48:00,137 INFO 12464 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:48:02,775 INFO 12464 [egg-sequelize](2ms) Executed (default): SELECT count(`p_record`.`id`) AS `count` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` AND `user`.`account` LIKE '664' LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1;
+2020-06-15 16:48:02,778 INFO 12464 [egg-sequelize](2ms) Executed (default): SELECT `p_record`.`id`, `p_record`.`type_id`, `p_record`.`time_stamp`, `p_record`.`title`, `user`.`id` AS `user.id`, `user`.`account` AS `user.account`, `user`.`name` AS `user.name`, `doctor`.`id` AS `doctor.id`, `doctor`.`account` AS `doctor.account`, `doctor`.`name` AS `doctor.name` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` AND `user`.`account` LIKE '664' LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1 LIMIT 10;
+2020-06-15 16:49:27,721 INFO 12464 [egg-sequelize](2ms) Executed (default): SELECT count(`p_record`.`id`) AS `count` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` AND `user`.`name` LIKE '664' LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1;
+2020-06-15 16:49:27,722 INFO 12464 [egg-sequelize](2ms) Executed (default): SELECT `p_record`.`id`, `p_record`.`type_id`, `p_record`.`time_stamp`, `p_record`.`title`, `user`.`id` AS `user.id`, `user`.`account` AS `user.account`, `user`.`name` AS `user.name`, `doctor`.`id` AS `doctor.id`, `doctor`.`account` AS `doctor.account`, `doctor`.`name` AS `doctor.name` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` AND `user`.`name` LIKE '664' LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1 LIMIT 10;
+2020-06-15 16:49:38,710 INFO 12464 [egg-sequelize](2ms) Executed (default): SELECT `p_record`.`id`, `p_record`.`type_id`, `p_record`.`time_stamp`, `p_record`.`title`, `user`.`id` AS `user.id`, `user`.`account` AS `user.account`, `user`.`name` AS `user.name`, `doctor`.`id` AS `doctor.id`, `doctor`.`account` AS `doctor.account`, `doctor`.`name` AS `doctor.name` FROM `p_record` AS `p_record` LEFT OUTER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1 LIMIT 10;
+2020-06-15 16:49:38,710 INFO 12464 [egg-sequelize](3ms) Executed (default): SELECT count(`p_record`.`id`) AS `count` FROM `p_record` AS `p_record` LEFT OUTER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1;
+2020-06-15 16:50:18,910 INFO 12505 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-15 16:50:19,110 INFO 12505 [egg-sequelize](2ms) Executed (default): SELECT count(`p_record`.`id`) AS `count` FROM `p_record` AS `p_record` LEFT OUTER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1;
+2020-06-15 16:50:19,113 INFO 12505 [egg-sequelize](1ms) Executed (default): SELECT `p_record`.`id`, `p_record`.`type_id`, `p_record`.`time_stamp`, `p_record`.`title`, `user`.`id` AS `user.id`, `user`.`account` AS `user.account`, `user`.`name` AS `user.name`, `doctor`.`id` AS `doctor.id`, `doctor`.`account` AS `doctor.account`, `doctor`.`name` AS `doctor.name` FROM `p_record` AS `p_record` LEFT OUTER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1 LIMIT 10;
+2020-06-15 16:50:24,887 INFO 12505 [egg-sequelize](1ms) Executed (default): SELECT count(`p_record`.`id`) AS `count` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` AND `user`.`account` LIKE '%66%' LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1;
+2020-06-15 16:50:24,888 INFO 12505 [egg-sequelize](2ms) Executed (default): SELECT `p_record`.`id`, `p_record`.`type_id`, `p_record`.`time_stamp`, `p_record`.`title`, `user`.`id` AS `user.id`, `user`.`account` AS `user.account`, `user`.`name` AS `user.name`, `doctor`.`id` AS `doctor.id`, `doctor`.`account` AS `doctor.account`, `doctor`.`name` AS `doctor.name` FROM `p_record` AS `p_record` INNER JOIN `p_user` AS `user` ON `p_record`.`operator_id` = `user`.`id` AND `user`.`account` LIKE '%66%' LEFT OUTER JOIN `p_user` AS `doctor` ON `p_record`.`worker_id` = `doctor`.`id` WHERE `p_record`.`status` = 1 LIMIT 10;
+2020-06-15 16:50:44,192 INFO 12531 [egg-sequelize](0ms) Executed (default): SELECT 1+1 AS result

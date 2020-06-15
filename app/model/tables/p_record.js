@@ -56,13 +56,11 @@ module.exports = (app) => {
     }
   );
 
-  // p_record
-  //   .sync({
-  //     //改变表的结构，保留数据
-  //     alter: true,
-  //   })
-  //   .then(() => {
-  //     console.log("p_record Table has been created");
-  //   });
+  p_record.associate=function(){
+    app.model.Tables.PRecord.belongsTo(app.model.Tables.PUser,{foreignKey:"operator_id", as:"user"});
+    app.model.Tables.PRecord.belongsTo(app.model.Tables.PUser,{foreignKey:"worker_id", as:"doctor"});
+    // app.model.Tables.PUser.belongsTo(app.model.Tables.PRole,{foreignKey:"role_id", onDelete:"SET NULL"});
+  }
+
   return p_record;
 };

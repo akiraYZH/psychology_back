@@ -11,7 +11,7 @@ class RecordController extends Controller {
    * @apiParam {Number} type_id 1为试卷, 2为访谈记录
    * @apiParam {Number} operator_id 操作人id
    * @apiParam {Number} worker_id 负责人id
-   * @apiParamExample 参数模版（type_id为1时）
+   * @apiParamExample 参数模版（type_id为1时，试卷记录）
    {
       "title": "试卷",
       "operator_id": "3",
@@ -45,12 +45,12 @@ class RecordController extends Controller {
       ]
     }
    *
-   * @apiParamExample 参数模版（type_id为2时）
+   * @apiParamExample 参数模版（type_id为2时， 访谈记录）
    {
       "operator_id":"3",
       "worker_id":"2",
-      "type_id":"2",//1为试卷, 2为访谈记录
-      "title":"面谈记录标题"
+      "type_id":"2",
+      "title":"面谈记录标题",
       "content":"这次访谈很有成效， 继续努力。"
     }
    *
@@ -63,204 +63,8 @@ class RecordController extends Controller {
    */
   async add() {
     const { ctx, service } = this;
-    if (ctx.request.body.type_id == 1) {
-      //答卷
-      let checkRes = checkData(
-        ctx,
-        "title",
-        "operator_id",
-        "worker_id",
-        "type_id",
-        "paper_exercises"
-      );
-      if (checkRes.is_pass) {
-        let typeList = {};
-        let scoreTotal = 0;
-        let evaluationList = await service.common.select("p_type");
-        let evaluation = {};
-
-        // 分类
-        ctx.request.body.paper_exercises.forEach((item) => {
-          //顺便加总分
-          scoreTotal += Number(item.score);
-          if (!Object.keys(typeList).length) {
-            typeList[item.type_id] = {};
-            typeList[item.type_id].type_id = item.type_id;
-            typeList[item.type_id].list = [];
-            typeList[item.type_id].scoreTotal = item.score;
-            typeList[item.type_id].list.push(item);
-            typeList[item.type_id].name = evaluationList.find(
-              (item2) => item2.id == item.type_id
-            ).name;
-          } else {
-            let isMatched = false;
-            for (key in typeList) {
-              if (key == item.type_id) {
-                typeList[key].list.push(item);
-                typeList[key].scoreTotal += item.score;
-                isMatched = true;
-                break;
-              }
-            }
-            if (!isMatched) {
-              typeList[item.type_id] = {};
-              typeList[item.type_id].type_id = item.type_id;
-              typeList[item.type_id].list = [];
-              typeList[item.type_id].scoreTotal = item.score;
-              typeList[item.type_id].list.push(item);
-              typeList[item.type_id].name = evaluationList.find(
-                (item2) => item2.id == item.type_id
-              ).name;
-            }
-          }
-        });
-
-        //各项平均分
-        for (key in typeList) {
-          typeList[key].scoreAvg = (
-            typeList[key].scoreTotal / typeList[key].list.length
-          ).toFixed(2);
-        }
-
-        evaluation.scoreTotal = scoreTotal;
-        switch (scoreTotal) {
-          case scoreTotal > 240:
-            evaluation.general = evaluationList.find(
-              (item) => item.name == "总分"
-            ).high;
-            evaluation.general_advice = evaluationList.find(
-              (item) => item.name == "总分"
-            ).high_advice;
-            break;
-          case scoreTotal > 180:
-            evaluation.general = evaluationList.find(
-              (item) => item.name == "总分"
-            ).middle;
-            evaluation.general_advice = evaluationList.find(
-              (item) => item.name == "总分"
-            ).middle_advice;
-            break;
-          case scoreTotal > 160:
-            evaluation.general = evaluationList.find(
-              (item) => item.name == "总分"
-            ).low;
-            evaluation.general_advice = evaluationList.find(
-              (item) => item.name == "总分"
-            ).low_advice;
-          default:
-            evaluation.general = evaluationList.find(
-              (item) => item.name == "总分"
-            ).symtom_free;
-            evaluation.general_advice = evaluationList.find(
-              (item) => item.name == "总分"
-            ).symtom_free_advice;
-            break;
-        }
-
-        // console.log(typeList);
-        let list = [];
-        for (key in typeList) {
-          for (let i = 0; i < evaluationList.length; i++) {
-            if (key == evaluationList[i].id) {
-              list.push({
-                type_id: key,
-                name: evaluationList[i].name,
-                status:
-                  typeList[key].scoreAvg > 3
-                    ? evaluationList[i].high
-                    : typeList[key].scoreAvg > 2
-                    ? evaluationList[i].low
-                    : evaluationList[i].symtom_free,
-                advice:
-                  typeList[key].scoreAvg > 3
-                    ? evaluationList[i].high_advice
-                    : typeList[key].scoreAvg > 2
-                    ? evaluationList[i].low_advice
-                    : evaluationList[i].symtom_free_advice,
-                level:
-                  typeList[key].scoreAvg > 3
-                    ? "重度症状"
-                    : typeList[key].scoreAvg > 2
-                    ? "轻度症状"
-                    : "无症状",
-                scoreAvg: typeList[key].scoreAvg,
-              });
-              break;
-            }
-          }
-        }
-
-        evaluationList.forEach((item) => {
-          let is_matched = false;
-          for (let i = 0; i < list.length; i++) {
-            if (item.id == list[i].type_id) {
-              is_matched = true;
-              break;
-            }
-          }
-          if (!is_matched) {
-            list.push({
-              type_id: item.type_id,
-              name: item.name,
-              status: null,
-              advice: null,
-              level: null,
-              scoreAvg: null,
-            });
-          }
-        });
-
-        evaluation.list = list;
-
-        let result = await service.common.insert("p_record", {
-          title: ctx.request.body.title,
-          operator_id: ctx.request.body.operator_id,
-          worker_id: ctx.request.body.worker_id,
-          type_id: ctx.request.body.type_id,
-          paper_exercises: JSON.stringify(ctx.request.body.paper_exercises),
-          paper_evaluation: JSON.stringify(evaluation),
-          time_stamp: Date.now(),
-          score: scoreTotal,
-        });
-        if (result.affectedRows) {
-          ctx.body = new this.ctx.helper._success();
-        } else {
-          ctx.body = new this.ctx.helper._error();
-        }
-      } else {
-        ctx.body = new this.ctx.helper._lack(checkRes.msg);
-      }
-    } else if (ctx.request.body.type_id == 2) {
-      //访谈
-      let checkRes = checkData(
-        ctx,
-        "operator_id",
-        "worker_id",
-        "type_id",
-        "content",
-        "title"
-      );
-      if (checkRes.is_pass) {
-        let result = await service.common.insert("p_record", {
-          operator_id: ctx.request.body.operator_id,
-          worker_id: ctx.request.body.worker_id,
-          type_id: ctx.request.body.type_id,
-          title: ctx.request.body.title,
-          content: ctx.request.body.content.trim(),
-          time_stamp: Date.now(),
-        });
-        if (result.affectedRows) {
-          ctx.body = new this.ctx.helper._success();
-        } else {
-          ctx.body = new this.ctx.helper._error();
-        }
-      } else {
-        ctx.body = new this.ctx.helper._lack(checkRes.msg);
-      }
-    } else {
-      //不matched
-      ctx.body = new this.ctx.helper._lack("type_id只能是1或2");
-    }
+    let body = ctx.request.body;
+    ctx.body = await service.record.add(body);
   }
 
   /**
@@ -336,26 +140,30 @@ class RecordController extends Controller {
     const { ctx, service } = this;
     // let checkRes = checkData(ctx, "operator_id");
     // if (checkRes.is_pass) {
-    let result = await service.common.selectPagination2({
-      db: "p_record r",
-      param: {
-        "r.status": 1,
-        "r.operator_id": ctx.request.body.operator_id,
-        "r.worker_id": ctx.request.body.worker_id,
-      },
-      search:{
-        "u1.account":ctx.request.body.operator_account,
-        "u1.name":ctx.request.body.operator_name
-      },
-      columns:["r.id", "r.operator_id", "u1.account AS operator_account", "u1.name AS operator_name", "r.worker_id", "u2.name AS worker_name","r.title", "r.time_stamp", "r.type_id"],
-      joins:["p_user u1", "p_user u2"],
-      ons:["r.operator_id=u1.id", "r.worker_id=u2.id"]
-    });
-    if (result.is_success) {
-      ctx.body = new ctx.helper._success(result);
-    } else {
-      ctx.body = new ctx.helper._success("暂无数据");
-    }
+    // let result = await service.common.selectPagination2({
+    //   db: "p_record r",
+    //   param: {
+    //     "r.status": 1,
+    //     "r.operator_id": ctx.request.body.operator_id,
+    //     "r.worker_id": ctx.request.body.worker_id,
+    //   },
+    //   search:{
+    //     "u1.account":ctx.request.body.operator_account,
+    //     "u1.name":ctx.request.body.operator_name
+    //   },
+    //   columns:["r.id", "r.operator_id", "u1.account AS operator_account", "u1.name AS operator_name", "r.worker_id", "u2.name AS worker_name","r.title", "r.time_stamp", "r.type_id"],
+    //   joins:["p_user u1", "p_user u2"],
+    //   ons:["r.operator_id=u1.id", "r.worker_id=u2.id"]
+    // });
+    // if (result.is_success) {
+    //   ctx.body = new ctx.helper._success(result);
+    // } else {
+    //   ctx.body = new ctx.helper._success("暂无数据");
+    // }
+    let query = ctx.query;
+    console.log(query);
+    
+    ctx.body = await service.record.getRecords(query)
   }
 
   /**
