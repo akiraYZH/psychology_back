@@ -26,18 +26,10 @@ class DistributionController extends Controller {
     const { ctx, service } = this;
     let checkRes = checkData(ctx, "user_id", "paper_id", "distributor_id");
     if (checkRes.is_pass) {
-      let result = await service.common.insert("p_paper_user", {
-        user_id: ctx.request.body.user_id,
-        paper_id: ctx.request.body.paper_id,
-        distributor_id: ctx.request.body.distributor_id,
-        time_stamp: Date.now(),
-      });
-      if (result.affectedRows) {
-        ctx.body = new this.ctx.helper._success();
-      } else {
-        ctx.body = new this.ctx.helper._error();
-      }
+      let body = ctx.request.body;
+      ctx.body = await service.distribution.add(body);
     } else {
+      ctx.status=400;
       ctx.body = new this.ctx.helper._lack(checkRes.msg);
     }
   }
@@ -81,81 +73,18 @@ class DistributionController extends Controller {
     const { ctx, service } = this;
     let checkRes = checkData(ctx, "list");
     if (checkRes.is_pass) {
-      ctx.request.body.list.forEach((item) => (item.time_stamp = Date.now()));
-      console.log(ctx.request.body.list);
-
-      let result = await service.common.multiInsert(
-        "p_paper_user",
-        ctx.request.body.list
-      );
-      if (result.affectedRows) {
-        ctx.body = new this.ctx.helper._success();
-      } else {
-        ctx.body = new this.ctx.helper._error();
-      }
+      let body = ctx.request.body;
+      ctx.body = await service.distribution.multiInsert(body);
     } else {
+      ctx.status=400;
       ctx.body = new this.ctx.helper._lack(checkRes.msg);
     }
   }
 
-  /**
-   * @api {Post} /api/distribution/getList 获得分配试卷列表
-   * @apiGroup Distribution
-   * @apiParam {Array} list 分配数组
-   * @apiParam {Number} user_id 用户id
-   * @apiParam {Number} distributor_id 分发人id
-   * @apiParam {Number} paper_id 试卷id
-   * @apiParamExample 参数模版
-   * {
-	"list":[
-		{
-			"user_id":6,
-			"distributor_id":2,
-			"paper_id":2
-		},
-		{
-			"user_id":6,
-			"distributor_id":2,
-			"paper_id":2
-		},
-		{
-			"user_id":6,
-			"distributor_id":2,
-			"paper_id":2
-		}
-		]
-}
-   * 
-   * @apiSuccessExample 成功返回
-   {
-    code:1,
-    msg:'成功操作'
-    }
-   * 
-   */
-  async multiAdd() {
-    const { ctx, service } = this;
-    let checkRes = checkData(ctx, "list");
-    if (checkRes.is_pass) {
-      ctx.request.body.list.forEach((item) => (item.time_stamp = Date.now()));
-      console.log(ctx.request.body.list);
 
-      let result = await service.common.multiInsert(
-        "p_paper_user",
-        ctx.request.body.list
-      );
-      if (result.affectedRows) {
-        ctx.body = new this.ctx.helper._success();
-      } else {
-        ctx.body = new this.ctx.helper._error();
-      }
-    } else {
-      ctx.body = new this.ctx.helper._lack(checkRes.msg);
-    }
-  }
 
   /**
-   * @api {Post} /api/distribution/getList 获得分配试卷列表
+   * @api {Get} /api/distribution/getList 获得分配试卷列表
    * @apiGroup Distribution
    * @apiParam {Number} user_id (可选)精确搜索：用户id
    * @apiParam {Number} distributor_id (可选)精确搜索：分发者id
@@ -170,84 +99,147 @@ class DistributionController extends Controller {
    {
     "code": 1,
     "msg": "成功操作",
-    "data": {
-        "is_success": true,
-        "page_total": 9,
-        "page_now": 1,
-        "num_in_page": 2,
-        "list": [
-            {
-                "id": 1,
-                "user_id": 6,
-                "user_account": "visitor1",
-                "user_name": "visitor",
-                "distributor_id": 2,
-                "distributor_name": "editor",
-                "time_stamp": "1589427873139",
-                "state": 0
+    "data": [
+        {
+            "id": 5,
+            "time_stamp": "1592218451862",
+            "state": 0,
+            "user": {
+                "id": 6,
+                "account": "visitor15",
+                "name": null
             },
-            {
+            "distributor": {
                 "id": 2,
-                "user_id": 6,
-                "user_account": "visitor1",
-                "user_name": "visitor",
-                "distributor_id": 2,
-                "distributor_name": "editor",
-                "time_stamp": "1589427900477",
-                "state": 0
+                "account": "664753092",
+                "name": null
+            },
+            "paper": {
+                "id": 1,
+                "title": "试卷一",
+                "time_stamp": "1591960228598"
             }
-        ]
+        },
+        {
+            "id": 6,
+            "time_stamp": "1592218451862",
+            "state": 0,
+            "user": {
+                "id": 6,
+                "account": "visitor15",
+                "name": null
+            },
+            "distributor": {
+                "id": 2,
+                "account": "664753092",
+                "name": null
+            },
+            "paper": {
+                "id": 1,
+                "title": "试卷一",
+                "time_stamp": "1591960228598"
+            }
+        },
+        {
+            "id": 7,
+            "time_stamp": "1592218451862",
+            "state": 0,
+            "user": {
+                "id": 6,
+                "account": "visitor15",
+                "name": null
+            },
+            "distributor": {
+                "id": 2,
+                "account": "664753092",
+                "name": null
+            },
+            "paper": {
+                "id": 1,
+                "title": "试卷一",
+                "time_stamp": "1591960228598"
+            }
+        },
+        {
+            "id": 8,
+            "time_stamp": "1592218515142",
+            "state": 0,
+            "user": {
+                "id": 6,
+                "account": "visitor15",
+                "name": null
+            },
+            "distributor": {
+                "id": 2,
+                "account": "664753092",
+                "name": null
+            },
+            "paper": {
+                "id": 1,
+                "title": "试卷一",
+                "time_stamp": "1591960228598"
+            }
+        },
+        {
+            "id": 9,
+            "time_stamp": "1592218515142",
+            "state": 0,
+            "user": {
+                "id": 6,
+                "account": "visitor15",
+                "name": null
+            },
+            "distributor": {
+                "id": 2,
+                "account": "664753092",
+                "name": null
+            },
+            "paper": {
+                "id": 1,
+                "title": "试卷一",
+                "time_stamp": "1591960228598"
+            }
+        },
+        {
+            "id": 10,
+            "time_stamp": "1592218515142",
+            "state": 0,
+            "user": {
+                "id": 6,
+                "account": "visitor15",
+                "name": null
+            },
+            "distributor": {
+                "id": 2,
+                "account": "664753092",
+                "name": null
+            },
+            "paper": {
+                "id": 1,
+                "title": "试卷一",
+                "time_stamp": "1591960228598"
+            }
+        }
+    ],
+    "pagging": {
+        "size": 10,
+        "current": 1,
+        "total": 6
     }
 }
    * 
    */
   async getList() {
     const { ctx, service } = this;
+    let query = ctx.query;
+    ctx.body = await service.distribution.getList(query);
 
-    let result = await service.common.selectPagination2({
-      db: "p_paper_user pu",
-      param: {
-        "pu.status": 1,
-        "pu.user_id": ctx.request.body.user_id,
-        "pu.distributor_id": ctx.request.body.distributor_id,
-        "pu.paper_id": ctx.request.body.paper_id,
-        "pu.state": ctx.request.body.state,
-        page_now: ctx.request.body.page_now,
-        num_in_page: ctx.request.body.num_in_page,
-      },
-      columns: [
-        "pu.id",
-        "pu.user_id",
-        "u1.account AS user_account",
-        "u1.name AS user_name",
-        "pu.distributor_id",
-        "u2.name AS distributor_name",
-        "pu.time_stamp",
-        "pu.state",
-      ],
-      search: {
-        "u1.account": ctx.request.body.user_account,
-        "u1.name": ctx.request.body.user_name,
-      },
-      joins: ["p_user u1", "p_user u2"],
-      ons: ["pu.user_id=u1.id", "pu.distributor_id=u2.id"],
-    });
-    // console.log(result);
-
-    if (result.is_success) {
-      ctx.body = new this.ctx.helper._success(result);
-    } else {
-      ctx.body = new this.ctx.helper._error();
-    }
   }
 
   /**
-   * @api {Post} /api/distribution/update 获得分配
+   * @api {Post} /api/distribution/update 修改分配
    * @apiGroup Distribution
    * @apiParam {Number} id 分配id
-   * @apiParam {Number} user_id 用户id
-   * @apiParam {Number} distributor_id 分发者id
-   * @apiParam {Number} paper_id 试卷id
    * @apiParam {Number} state 1:完成， 0：未完成
    * 
    * @apiSuccessExample 成功返回
@@ -262,34 +254,18 @@ class DistributionController extends Controller {
     let checkDataRes = checkData(
       ctx,
       "id",
-      "user_id",
-      "distributor_id",
-      "paper_id",
       "state"
     );
     if (checkDataRes.is_pass) {
       if (ctx.request.body.state == 1 || ctx.request.body.state == 0) {
-        let result = await service.common.update(
-          "p_paper_user",
-          {
-            user_id: ctx.request.body.user_id,
-            distributor_id: ctx.request.body.distributor_id,
-            paper_id: ctx.request.body.paper_id,
-            state: ctx.request.body.state,
-          },
-          { id: ctx.request.body.id }
-        );
-        // console.log(result);
-
-        if (result.affectedRows) {
-          ctx.body = new this.ctx.helper._success();
-        } else {
-          ctx.body = new this.ctx.helper._error();
-        }
+        let body = ctx.request.body;
+        ctx.body = await service.distribution.update(body);
       } else {
+        ctx.status=400;
         ctx.body = new this.ctx.helper._lack("state只能为1或0");
       }
     } else {
+      ctx.status=400;
       ctx.body = new this.ctx.helper._lack(checkDataRes.msg);
     }
   }
@@ -311,20 +287,8 @@ class DistributionController extends Controller {
     let checkDataRes = checkData(ctx, "id");
     if (checkDataRes.is_pass) {
       
-        let result = await service.common.update(
-          "p_paper_user",
-          {
-            status: 0
-          },
-          { id: ctx.request.body.id }
-        );
-        // console.log(result);
-
-        if (result.affectedRows) {
-          ctx.body = new this.ctx.helper._success();
-        } else {
-          ctx.body = new this.ctx.helper._error();
-        }
+        let query = ctx.query;
+        ctx.body = await service.distribution.del(query);
     } else {
       ctx.body = new this.ctx.helper._lack(checkDataRes.msg);
     }

@@ -114,52 +114,66 @@ class RecordController extends Controller {
    {
     "code": 1,
     "msg": "成功操作",
-    "data": {
-        "is_success": true,
-        "page_total": 1,
-        "page_now": 1,
-        "num_in_page": 10,
-        "list": [
-            {
-                "id": 7,
-                "operator_id": 4,
-                "operator_account": "visitor",
-                "operator_name": "visitor",
-                "worker_id": 2,
-                "worker_name": "editor",
-                "title": "试卷",
-                "time_stamp": "1588147199987",
-                "type_id": 1
+    "data": [
+        {
+            "id": 1,
+            "type_id": 1,
+            "time_stamp": "1592207689287",
+            "title": "试卷",
+            "user": {
+                "id": 3,
+                "account": "664753",
+                "name": null
+            },
+            "doctor": {
+                "id": 2,
+                "account": "664753092",
+                "name": null
             }
-        ]
+        },
+        {
+            "id": 2,
+            "type_id": 1,
+            "time_stamp": "1592207888812",
+            "title": "试卷",
+            "user": {
+                "id": 3,
+                "account": "664753",
+                "name": null
+            },
+            "doctor": {
+                "id": 2,
+                "account": "664753092",
+                "name": null
+            }
+        },
+        {
+            "id": 3,
+            "type_id": 2,
+            "time_stamp": "1592207949189",
+            "title": "面谈记录标题",
+            "user": {
+                "id": 3,
+                "account": "664753",
+                "name": null
+            },
+            "doctor": {
+                "id": 2,
+                "account": "664753092",
+                "name": null
+            }
+        }
+    ],
+    "pagging": {
+        "size": 10,
+        "current": 1,
+        "total": 3
     }
 }
    * 
    */
   async getRecords() {
     const { ctx, service } = this;
-    // let checkRes = checkData(ctx, "operator_id");
-    // if (checkRes.is_pass) {
-    // let result = await service.common.selectPagination2({
-    //   db: "p_record r",
-    //   param: {
-    //     "r.status": 1,
-    //     "r.operator_id": ctx.request.body.operator_id,
-    //     "r.worker_id": ctx.request.body.worker_id,
-    //   },
-    //   search:{
-    //     "u1.account":ctx.request.body.operator_account,
-    //     "u1.name":ctx.request.body.operator_name
-    //   },
-    //   columns:["r.id", "r.operator_id", "u1.account AS operator_account", "u1.name AS operator_name", "r.worker_id", "u2.name AS worker_name","r.title", "r.time_stamp", "r.type_id"],
-    //   joins:["p_user u1", "p_user u2"],
-    //   ons:["r.operator_id=u1.id", "r.worker_id=u2.id"]
-    // });
-    // if (result.is_success) {
-    //   ctx.body = new ctx.helper._success(result);
-    // } else {
-    //   ctx.body = new ctx.helper._success("暂无数据");
-    // }
     let query = ctx.query;
     console.log(query);
     
@@ -349,34 +363,15 @@ class RecordController extends Controller {
     const { ctx, service } = this;
     let checkRes = checkData(ctx, "id");
     if (checkRes.is_pass) {
-      let result = await service.record.getOneRecord(ctx.query.id);
-      console.log(result);
-
-      if (result.length) {
-        // 对不同的记录进行不同的数据处理
-        if (result[0].type_id == 1) {
-          //面谈记录
-          result[0].paper_evaluation = JSON.parse(result[0].paper_evaluation);
-          result[0].paper_exercises = eval(result[0].paper_exercises);
-          delete result[0].content;
-        } else if (result[0].type_id == 2) {
-          // 做题记录
-          delete result[0].score;
-          delete result[0].paper_evaluation;
-          delete result[0].paper_exercises;
-        }
-
-        ctx.body = new ctx.helper._success(result);
-      } else {
-        ctx.body = new ctx.helper._success("暂无数据");
-      }
+      let query = ctx.query;
+      ctx.body= await service.record.getOneRecord(query);
     } else {
       ctx.body = new this.ctx.helper._lack(checkRes.msg);
     }
   }
 
   /**
-   * @api {Post} api/record/updateTalkRecord 更新面谈内容
+   * @api {Put} api/record/updateTalkRecord 更新面谈内容
    * @apiGroup Record
    * @apiParam {Number} id 面谈记录id
    * @apiParam {Number} operator_id 记录主体id
@@ -386,65 +381,8 @@ class RecordController extends Controller {
    * @apiSuccessExample 成功返回
    {
     "code": 1,
-    "msg": "成功操作",
-    "data": [
-        {
-            "id": 5,
-            "operator_id": 3,
-            "account": "worker",
-            "name": "worker",
-            "worker_id": 2,
-            "worker_name": "editor",
-            "title": null,
-            "time_stamp": "1588149221180",
-            "type_id": 2
-        },
-        {
-            "id": 7,
-            "operator_id": 3,
-            "account": "worker",
-            "name": "worker",
-            "worker_id": 2,
-            "worker_name": "editor",
-            "title": "试卷",
-            "time_stamp": "1588147199987",
-            "type_id": 1
-        },
-        {
-            "id": 8,
-            "operator_id": 3,
-            "account": "worker",
-            "name": "worker",
-            "worker_id": 2,
-            "worker_name": "editor",
-            "title": "试卷",
-            "time_stamp": "1588161965326",
-            "type_id": 1
-        },
-        {
-            "id": 9,
-            "operator_id": 3,
-            "account": "worker",
-            "name": "worker",
-            "worker_id": 2,
-            "worker_name": "editor",
-            "title": "试卷",
-            "time_stamp": "1589285610159",
-            "type_id": 1
-        },
-        {
-            "id": 10,
-            "operator_id": 3,
-            "account": "worker",
-            "name": "worker",
-            "worker_id": 2,
-            "worker_name": "editor",
-            "title": "试卷",
-            "time_stamp": "1589286109676",
-            "type_id": 1
-        }
-    ]
-}
+    "msg": "成功操作"
+   }
    * 
    */
   async updateTalkRecord() {
@@ -459,22 +397,9 @@ class RecordController extends Controller {
     );
     if (checkRes.is_pass) {
       if (ctx.request.body.type_id == 2) {
-        let result = await service.common.update(
-          "p_record",
-          {
-            operator_id: ctx.request.body.operator_id,
-            worker_id: ctx.request.body.worker_id,
-            type_id: ctx.request.body.type_id,
-            content: ctx.request.body.content.trim(),
-            time_stamp: Date.now(),
-          },
-          { id: ctx.request.body.id, status: 1 }
-        );
-        if (result.affectedRows) {
-          ctx.body = new this.ctx.helper._success();
-        } else {
-          ctx.body = new this.ctx.helper._error();
-        }
+     
+        let body = ctx.request.body;
+        ctx.body = await service.record.updateTalkRecord(body);
       } else {
         ctx.body = new this.ctx.helper._lack("type_id参数应为2");
       }
@@ -485,7 +410,7 @@ class RecordController extends Controller {
 
   //删除记录
   /**
-   * @api {Post} api/record/del 删除记录
+   * @api {Delete} api/record/del 删除记录
    * @apiGroup Record
    * @apiParam {Number} id 记录id
    * @apiSuccessExample 成功返回
@@ -499,20 +424,10 @@ class RecordController extends Controller {
     const { ctx, service } = this;
     let checkRes = checkData(ctx, "id");
     if (checkRes.is_pass) {
-      let result = await service.common.update(
-        "p_record",
-        {
-          status: 0,
-        },
-        { id: ctx.request.body.id }
-      );
-
-      if (result.affectedRows) {
-        ctx.body = new this.ctx.helper._success();
-      } else {
-        ctx.body = new this.ctx.helper._error();
-      }
+      let query = ctx.query;
+      ctx.body = await service.record.del(query);
     } else {
+      ctx.status=400;
       ctx.body = new this.ctx.helper._lack(checkRes.msg);
     }
   }
@@ -520,49 +435,3 @@ class RecordController extends Controller {
 
 module.exports = RecordController;
 
-// let json = {
-//   scoreTotal: 2,
-//   general:
-//     "您在量表上的总得分较低，表明您的心理健康状况良好。主要表现为：您很少因心理原因出现身体不适感；能积极面对社会和生活中的各种问题，信任他人，对人友善；一般没有过于焦虑、悲伤等情况。",
-//   general_advice:
-//     "您拥有比较健康的心态和良好的情绪状态，能够较好地处理生活中的挫折和压力。能很好地适应工作、社会生活，并从中获得满足和快乐，个人价值感和幸福感较高。希望您继续保持这种积极的心态和良好的行为方式。",
-//   list: [
-//     {
-//       type_id: "2",
-//       name: "躯体化",
-//       status: "表示你的生活处于规律状态中，睡眠和饮食情况都很好。",
-//       advice:
-//         "您能较好地应对社会生活中的压力，能调整自己的心态，能够有效防止心理因素躯体化。建议您能够保持积极、乐观的生活态度。",
-//       level: "无症状",
-//       scoreAvg: "1.00",
-//     },
-//     { name: "总分", status: null, advice: null, level: null, scoreAvg: null },
-//     {
-//       name: "强迫症状",
-//       status: null,
-//       advice: null,
-//       level: null,
-//       scoreAvg: null,
-//     },
-//     {
-//       name: "人际关系敏感",
-//       status: null,
-//       advice: null,
-//       level: null,
-//       scoreAvg: null,
-//     },
-//     { name: "抑郁", status: null, advice: null, level: null, scoreAvg: null },
-//     { name: "焦虑", status: null, advice: null, level: null, scoreAvg: null },
-//     { name: "敌对", status: null, advice: null, level: null, scoreAvg: null },
-//     { name: "恐怖", status: null, advice: null, level: null, scoreAvg: null },
-//     { name: "偏执", status: null, advice: null, level: null, scoreAvg: null },
-//     {
-//       name: "精神病性",
-//       status: null,
-//       advice: null,
-//       level: null,
-//       scoreAvg: null,
-//     },
-//     { name: "其他", status: null, advice: null, level: null, scoreAvg: null },
-//   ],
-// };

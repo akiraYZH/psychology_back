@@ -4,20 +4,7 @@ const Op = require("sequelize").Op;
 class RecordService extends Service {
   async add(data) {
     const { ctx } = this;
-    // getPermissions: [Function],
-    // countPermissions: [Function],
-    // hasPermission: [Function],
-    // hasPermissions: [Function],
-    // setPermissions: [Function],
-    // addPermission: [Function],
-    // addPermissions: [Function],
-    // removePermission: [Function],
-    // removePermissions: [Function],
-    // createPermission: [Function]
     const { PRecord, PType } = this.app.model.Tables;
-    // console.log(PRole.prototype);
-    //创建事务对象
-    let transaction = await this.ctx.model.transaction();
     try {
       if (ctx.request.body.type_id == 1) {
         //答卷
@@ -252,9 +239,8 @@ class RecordService extends Service {
     const { ctx, service } = this;
     const { PRecord, PUser } = this.app.model.Tables;
 
-    console.log(data,9999999);
+    console.log(data, 9999999);
     try {
-      
       let options = {
         where: {
           operator_id: data.operator_id,
@@ -273,10 +259,10 @@ class RecordService extends Service {
             required: false,
             attributes: ["id", "account", "name"],
             as: "user",
-            where:{
-              account:{[Op.like]:`%${data.account}%`},
-              name:{[Op.like]:`%${data.name}%`}
-            }
+            where: {
+              account: { [Op.like]: `%${data.account}%` },
+              name: { [Op.like]: `%${data.name}%` },
+            },
           },
           {
             model: PUser,
@@ -288,7 +274,7 @@ class RecordService extends Service {
       };
 
       const result = await ctx.helper.selectWithPagging(PRecord, options);
-x
+      x;
       console.log(result);
 
       ctx.status = 200;
@@ -302,26 +288,110 @@ x
     }
   }
 
-  // async getRecords(operator_id = null) {
-  //   // let sql = `SELECT r.id, r.operator_id, u.account, u.name, r.worker_id, u2.name AS work_name, r.time_stamp, r.type_id, r.content, r.score, r.title, r.paper_evaluation, r.paper_exercises FROM p_record r, p_user u, p_user u2 WHERE r.operator_id=u.id AND r.worker_id=u2.id AND r.status='1'`;
-  //   let sql = `SELECT r.id, r.operator_id, u.account, u.name, r.worker_id, u2.name AS worker_name, r.title,r.time_stamp, r.type_id FROM p_record r, p_user u, p_user u2 WHERE r.operator_id=u.id AND r.worker_id=u2.id AND r.status='1'`;
-  //   console.log(operator_id, 133);
-  //   if (operator_id) {
-  //     sql += ` AND r.operator_id = '${operator_id}'`;
-  //   }
 
-  //   return await this.app.mysql.query(sql);
-  // }
+  async getOneRecord(data) {
 
-  async getOneRecord(id = null) {
-    let sql = `SELECT r.id, r.operator_id, u.account, u.name, r.worker_id, u2.name AS work_name, r.time_stamp, r.type_id, r.content, r.score, r.title, r.paper_evaluation, r.paper_exercises FROM p_record r, p_user u, p_user u2 WHERE r.operator_id=u.id AND r.worker_id=u2.id AND r.status='1'`;
-    // let sql = `SELECT r.id, r.operator_id, u.account, u.name, r.worker_id, u2.name AS worker_name, r.title,r.time_stamp, r.type_id FROM p_record r, p_user u, p_user u2 WHERE r.operator_id=u.id AND r.worker_id=u2.id AND r.status='1'`;
-    console.log(id, 133);
-    if (id) {
-      sql += ` AND r.id = '${id}'`;
+    const { ctx, app } = this;
+    const { PRecord, PUser } = app.model.Tables;
+    let result = await PRecord.findOne({
+      where: {
+        id: data.id,
+        status: 1,
+      },
+      attributes:["id","time_stamp","type_id","content","score","title","paper_evaluation","paper_exercises"],
+      include:[
+        {
+          model: PUser,
+          required: false,
+          attributes: ["id", "account", "name"],
+          as: "user"
+        },
+        {
+          model: PUser,
+          required: false,
+          attributes: ["id", "account", "name"],
+          as: "doctor",
+        },
+      ],
+    });
+
+    if (result) {
+      // 对不同的记录进行不同的数据处理
+      if (result.type_id == 1) {
+        //面谈记录
+        result.dataValues.paper_evaluation = JSON.parse(result.dataValues.paper_evaluation);
+        result.dataValues.paper_exercises = eval(result.dataValues.paper_exercises);
+        delete result.dataValues.content;
+      } else if (result.type_id == 2) {
+        // 做题记录
+        delete result.dataValues.score;
+        delete result.dataValues.paper_evaluation;
+        delete result.dataValues.paper_exercises;
+      }
+
+      ctx.status=200;
+      return new ctx.helper._success(result);
+    } else {
+      ctx.status=404;
+      return new ctx.helper._success("暂无数据");
     }
+  }
 
-    return await this.app.mysql.query(sql);
+
+  
+  async updateTalkRecord(data) {
+    let { PRecord } = this.app.model.Tables;
+    let { ctx } = this;
+    let condition = {
+      id: data.id,
+      status:1
+    };
+    delete data.id;
+    (data.status || data == 0) &&
+      delete data.status;
+
+    try {
+      let result = await PRecord.update(ctx.request.body, { where: condition });
+      console.log(result);
+      if (result[0] > 0) {
+        ctx.status = 200;
+        return new this.ctx.helper._success("成功修改");
+      } else {
+        ctx.status = 400;
+        return new this.ctx.helper._error("没有改动");
+      }
+    } catch (error) {
+      // console.log(error.errors);
+      this.ctx.status = 500;
+      return new this.ctx.helper._error(error);
+    }
+  }
+
+
+  async del() {
+    let { PRecord } = this.app.model.Tables;
+    let { ctx } = this;
+    let condition = {
+      id: ctx.query.id,
+    };
+    let result = await PRecord.update(
+      {
+        status: 0,
+      },
+      { where: condition }
+    );
+    if (result[0] > 0) {
+      ctx.status = 200;
+      return new this.ctx.helper._success("成功删除");
+    } else {
+      ctx.status = 500;
+      return new this.ctx.helper._error("删除失败");
+    }
+  }
+  catch(error) {
+    // console.log(error.errors);
+    this.ctx.status = 500;
+    return new this.ctx.helper._error(error);
   }
 }
 

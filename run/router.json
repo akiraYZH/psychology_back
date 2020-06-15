@@ -433,7 +433,8 @@
   {
     "name": null,
     "methods": [
-      "POST"
+      "HEAD",
+      "GET"
     ],
     "paramNames": [],
     "path": "/api/distribution/getList",
@@ -445,7 +446,7 @@
   {
     "name": null,
     "methods": [
-      "POST"
+      "PUT"
     ],
     "paramNames": [],
     "path": "/api/distribution/update",
@@ -457,7 +458,7 @@
   {
     "name": null,
     "methods": [
-      "POST"
+      "DELETE"
     ],
     "paramNames": [],
     "path": "/api/distribution/del",

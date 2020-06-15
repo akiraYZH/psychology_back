@@ -226,3 +226,86 @@ hostname: yudeMacBook-Pro.local
 pid: 10848
 hostname: yudeMacBook-Pro.local
 
+2020-06-15 17:05:33,130 ERROR 12984 [-/::1/-/23ms GET /api/record/getOneRecords?id=2] nodejs.TypeError: PRecord.getOne is not a function
+    at RecordService.getOneRecord (/Users/yuakira/dev/projects/Psychology2/app/service/record.js:313:32)
+    at RecordController.getOneRecord (/Users/yuakira/dev/projects/Psychology2/app/controller/record.js:367:38)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/utils/index.js:44:21)
+    at Object.classControllerMiddleware (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-core/lib/loader/mixin/controller.js:87:20)
+    at Object.callFn (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/utils.js:12:21)
+    at wrappedController (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/egg_router.js:322:18)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at next (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:45:18)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:190:18
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:44:32)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/koa-compose/index.js:36:12
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/@eggjs/router/lib/router.js:195:33)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:19)
+    at dispatch (/Users/yuakira/dev/projects/Psychology2/node_modules/koa/node_modules/koa-compose/index.js:42:32)
+    at isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:15:19)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+
+pid: 12984
+hostname: yudeMacBook-Pro.local
+
+2020-06-15 18:34:57,646 ERROR 3335 nodejs.ClusterClientNoResponseError: client no response in 1401138ms exceeding maxIdleTime 60000ms, maybe the connection is close on other side.
+    at Timeout._onTimeout (/Users/yuakira/dev/projects/Psychology2/node_modules/cluster-client/lib/leader.js:77:23)
+    at listOnTimeout (internal/timers.js:549:17)
+    at processTimers (internal/timers.js:492:7)
+name: "ClusterClientNoResponseError"
+pid: 3335
+hostname: yudeMacBook-Pro.local
+
+2020-06-15 18:53:52,452 ERROR 14711 [-/::1/-/19ms POST /api/distribution/multiAdd] nodejs.ER_NO_REFERENCED_ROW_2Error: ER_NO_REFERENCED_ROW_2: Cannot add or update a child row: a foreign key constraint fails (`project_psychology`.`p_paper_user`, CONSTRAINT `p_paper_user_ibfk_45` FOREIGN KEY (`paper_id`) REFERENCES `p_paper` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE)
+    at Query.Sequence._packetToError (/Users/yuakira/dev/projects/Psychology2/node_modules/mysql/lib/protocol/sequences/Sequence.js:47:14)
+    at Query.ErrorPacket (/Users/yuakira/dev/projects/Psychology2/node_modules/mysql/lib/protocol/sequences/Query.js:79:18)
+    at Protocol._parsePacket (/Users/yuakira/dev/projects/Psychology2/node_modules/mysql/lib/protocol/Protocol.js:291:23)
+    at Parser._parsePacket (/Users/yuakira/dev/projects/Psychology2/node_modules/mysql/lib/protocol/Parser.js:433:10)
+    at Parser.write (/Users/yuakira/dev/projects/Psychology2/node_modules/mysql/lib/protocol/Parser.js:43:10)
+    at Protocol.write (/Users/yuakira/dev/projects/Psychology2/node_modules/mysql/lib/protocol/Protocol.js:38:16)
+    at Socket.<anonymous> (/Users/yuakira/dev/projects/Psychology2/node_modules/mysql/lib/Connection.js:88:28)
+    at Socket.<anonymous> (/Users/yuakira/dev/projects/Psychology2/node_modules/mysql/lib/Connection.js:526:10)
+    at Socket.emit (events.js:310:20)
+    at addChunk (_stream_readable.js:286:12)
+    at readableAddChunk (_stream_readable.js:268:9)
+    at Socket.Readable.push (_stream_readable.js:209:10)
+    at TCP.onStreamRead (internal/stream_base_commons.js:186:23)
+    --------------------
+    at Protocol._enqueue (/Users/yuakira/dev/projects/Psychology2/node_modules/mysql/lib/protocol/Protocol.js:144:48)
+    at PoolConnection.query (/Users/yuakira/dev/projects/Psychology2/node_modules/mysql/lib/Connection.js:198:25)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/ali-rds/node_modules/pify/index.js:29:7
+    at new Promise (<anonymous>)
+    at PoolConnection.<anonymous> (/Users/yuakira/dev/projects/Psychology2/node_modules/ali-rds/node_modules/pify/index.js:12:10)
+    at PoolConnection.ret [as query] (/Users/yuakira/dev/projects/Psychology2/node_modules/ali-rds/node_modules/pify/index.js:56:34)
+    at RDSConnection.proto._query (/Users/yuakira/dev/projects/Psychology2/node_modules/ali-rds/lib/connection.js:38:20)
+    at RDSTransaction.proto._query (/Users/yuakira/dev/projects/Psychology2/node_modules/ali-rds/lib/transaction.js:45:26)
+    at proto._query.next (<anonymous>)
+    at onFulfilled (/Users/yuakira/dev/projects/Psychology2/node_modules/co/index.js:65:19)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/co/index.js:54:5
+    at new Promise (<anonymous>)
+    at RDSTransaction.co (/Users/yuakira/dev/projects/Psychology2/node_modules/co/index.js:50:10)
+    at RDSTransaction.createPromise [as _query] (/Users/yuakira/dev/projects/Psychology2/node_modules/co/index.js:30:15)
+    at RDSTransaction.proto.query (/Users/yuakira/dev/projects/Psychology2/node_modules/ali-rds/lib/operator.js:54:29)
+    at proto.query.next (<anonymous>)
+    at onFulfilled (/Users/yuakira/dev/projects/Psychology2/node_modules/co/index.js:65:19)
+    at /Users/yuakira/dev/projects/Psychology2/node_modules/co/index.js:54:5
+    at new Promise (<anonymous>)
+    at RDSTransaction.co (/Users/yuakira/dev/projects/Psychology2/node_modules/co/index.js:50:10)
+    at RDSTransaction.createPromise [as query] (/Users/yuakira/dev/projects/Psychology2/node_modules/co/index.js:30:15)
+    at RDSTransaction.proto.insert (/Users/yuakira/dev/projects/Psychology2/node_modules/ali-rds/lib/operator.js:141:21)
+    sql: INSERT INTO `p_paper_user`(`user_id`, `distributor_id`, `paper_id`, `time_stamp`) VALUES(6, 2, 2, 1592218432437)
+code: "ER_NO_REFERENCED_ROW_2"
+errno: 1452
+sqlMessage: "Cannot add or update a child row: a foreign key constraint fails (`project_psychology`.`p_paper_user`, CONSTRAINT `p_paper_user_ibfk_45` FOREIGN KEY (`paper_id`) REFERENCES `p_paper` (`id`) ON DELETE NO ACTION ON UPDATE CASCADE)"
+sqlState: "23000"
+index: 0
+sql: "INSERT INTO `p_paper_user`(`user_id`, `distributor_id`, `paper_id`, `time_stamp`) VALUES(6, 2, 2, 1592218432437)"
+name: "ER_NO_REFERENCED_ROW_2Error"
+pid: 14711
+hostname: yudeMacBook-Pro.local
+

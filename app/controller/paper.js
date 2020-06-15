@@ -38,7 +38,7 @@ class PaperController extends Controller {
   }
 
   /**
-   * @api {Post} api/paper/getList 获得试卷列表
+   * @api {Get} api/paper/getList 获得试卷列表
    * @apiGroup Paper
    * @apiParam {String} title (可选)试卷名称:模糊查询
    * @apiParam {String} name (可选)编制人昵称:模糊查询
@@ -240,7 +240,7 @@ class PaperController extends Controller {
   
 
   /**
-   * @api {Post} api/paper/update 更新试卷
+   * @api {Put} api/paper/update 更新试卷
    * @apiGroup Paper
    * @apiParam {Number} id 试卷id
    * @apiParam {String} title 试卷名称
@@ -272,7 +272,7 @@ class PaperController extends Controller {
   }
 
   /**
-   * @api {Post} api/paper/del 删除试卷
+   * @api {Delete} api/paper/del 删除试卷
    * @apiGroup Paper
    * @apiParam {Number} id 试卷id
    * @apiSuccessExample 成功返回

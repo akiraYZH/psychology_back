@@ -47,18 +47,19 @@ module.exports = async (app) => {
   router.put(preRouter + '/paper/update', controller.paper.update);
   router.delete(preRouter + '/paper/del', controller.paper.del);
 
+  //已经修改
   router.post(preRouter + '/record/add', controller.record.add);
   router.get(preRouter + '/record/getUserList', controller.record.getUserList);
   router.get(preRouter + '/record/getRecords', controller.record.getRecords);
   router.get(preRouter + '/record/getOneRecords', controller.record.getOneRecord);
   router.put(preRouter + '/record/updateTalkRecord', controller.record.updateTalkRecord);
-  router.del(preRouter + '/record/del', controller.record.del);
+  router.delete(preRouter + '/record/del', controller.record.del);
 
   router.post(preRouter + '/distribution/add', controller.distribution.add);
   router.post(preRouter + '/distribution/multiAdd', controller.distribution.multiAdd);
-  router.post(preRouter + '/distribution/getList', controller.distribution.getList);
-  router.post(preRouter + '/distribution/update', controller.distribution.update);
-  router.post(preRouter + '/distribution/del', controller.distribution.del);
+  router.get(preRouter + '/distribution/getList', controller.distribution.getList);
+  router.put(preRouter + '/distribution/update', controller.distribution.update);
+  router.delete(preRouter + '/distribution/del', controller.distribution.del);
 
   //已经修改
   router.post(preRouter + '/msg/add', controller.message.add);

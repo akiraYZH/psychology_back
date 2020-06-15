@@ -47,9 +47,9 @@ module.exports = (app) => {
   
     p_paper_user.associate=function(){
       
-      app.model.Tables.PPaperUser.belongsTo(app.model.Tables.PUser,{foreignKey:"user_id"});
-      app.model.Tables.PPaperUser.belongsTo(app.model.Tables.PUser,{foreignKey:"distributor_id"})
-      app.model.Tables.PPaperUser.belongsTo(app.model.Tables.PPaper,{foreignKey:"paper_id"})
+      app.model.Tables.PPaperUser.belongsTo(app.model.Tables.PUser,{foreignKey:"user_id", as:"user"});
+      app.model.Tables.PPaperUser.belongsTo(app.model.Tables.PUser,{foreignKey:"distributor_id", as:"distributor"})
+      app.model.Tables.PPaperUser.belongsTo(app.model.Tables.PPaper,{foreignKey:"paper_id",as:"paper"})
 
     }
     // p_paper_user
