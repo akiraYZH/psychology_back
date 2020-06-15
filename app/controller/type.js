@@ -1,7 +1,6 @@
 "use strict";
 
 const Controller = require("egg").Controller;
-console.log(123);
 class TypeController extends Controller {
 
   /**
