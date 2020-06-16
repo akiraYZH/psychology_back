@@ -12,7 +12,6 @@ import ExportRecord = require('../../../app/controller/record');
 import ExportReservation = require('../../../app/controller/reservation');
 import ExportReservationType = require('../../../app/controller/reservationType');
 import ExportRole = require('../../../app/controller/role');
-import ExportTest = require('../../../app/controller/test');
 import ExportType = require('../../../app/controller/type');
 import ExportUser = require('../../../app/controller/user');
 
@@ -28,7 +27,6 @@ declare module 'egg' {
     reservation: ExportReservation;
     reservationType: ExportReservationType;
     role: ExportRole;
-    test: ExportTest;
     type: ExportType;
     user: ExportUser;
   }

@@ -207,155 +207,158 @@ class RecordController extends Controller {
    {
     "code": 1,
     "msg": "成功操作",
-    "data": [
-        {
-            "id": 10,
-            "operator_id": 3,
-            "account": "worker",
-            "name": "worker",
-            "worker_id": 2,
-            "work_name": "editor",
-            "time_stamp": "1589286109676",
-            "type_id": 1,
-            "score": "2",
-            "title": "试卷",
-            "paper_evaluation": {
-                "scoreTotal": 2,
-                "general": "您在量表上的总得分较低，表明您的心理健康状况良好。主要表现为：您很少因心理原因出现身体不适感；能积极面对社会和生活中的各种问题，信任他人，对人友善；一般没有过于焦虑、悲伤等情况。",
-                "general_advice": "您拥有比较健康的心态和良好的情绪状态，能够较好地处理生活中的挫折和压力。能很好地适应工作、社会生活，并从中获得满足和快乐，个人价值感和幸福感较高。希望您继续保持这种积极的心态和良好的行为方式。",
-                "list": [
+    "data": {
+        "id": 1,
+        "time_stamp": "1592207689287",
+        "type_id": 1,
+        "score": "2",
+        "title": "试卷",
+        "paper_evaluation": {
+            "scoreTotal": 2,
+            "general": "您在量表上的总得分较低，表明您的心理健康状况良好。主要表现为：您很少因心理原因出现身体不适感；能积极面对社会和生活中的各种问题，信任他人，对人友善；一般没有过于焦虑、悲伤等情况。",
+            "general_advice": "您拥有比较健康的心态和良好的情绪状态，能够较好地处理生活中的挫折和压力。能很好地适应工作、社会生活，并从中获得满足和快乐，个人价值感和幸福感较高。希望您继续保持这种积极的心态和良好的行为方式。",
+            "list": [
+                {
+                    "type_id": "2",
+                    "name": "躯体化",
+                    "status": "表示你的生活处于规律状态中，睡眠和饮食情况都很好。",
+                    "advice": "您能较好地应对社会生活中的压力，能调整自己的心态，能够有效防止心理因素躯体化。建议您能够保持积极、乐观的生活态度。",
+                    "level": "无症状",
+                    "scoreAvg": "1.00"
+                },
+                {
+                    "name": "总分",
+                    "status": null,
+                    "advice": null,
+                    "level": null,
+                    "scoreAvg": null
+                },
+                {
+                    "name": "强迫症状",
+                    "status": null,
+                    "advice": null,
+                    "level": null,
+                    "scoreAvg": null
+                },
+                {
+                    "name": "人际关系敏感",
+                    "status": null,
+                    "advice": null,
+                    "level": null,
+                    "scoreAvg": null
+                },
+                {
+                    "name": "抑郁",
+                    "status": null,
+                    "advice": null,
+                    "level": null,
+                    "scoreAvg": null
+                },
+                {
+                    "name": "焦虑",
+                    "status": null,
+                    "advice": null,
+                    "level": null,
+                    "scoreAvg": null
+                },
+                {
+                    "name": "敌对",
+                    "status": null,
+                    "advice": null,
+                    "level": null,
+                    "scoreAvg": null
+                },
+                {
+                    "name": "恐怖",
+                    "status": null,
+                    "advice": null,
+                    "level": null,
+                    "scoreAvg": null
+                },
+                {
+                    "name": "偏执",
+                    "status": null,
+                    "advice": null,
+                    "level": null,
+                    "scoreAvg": null
+                },
+                {
+                    "name": "精神病性",
+                    "status": null,
+                    "advice": null,
+                    "level": null,
+                    "scoreAvg": null
+                },
+                {
+                    "name": "其他",
+                    "status": null,
+                    "advice": null,
+                    "level": null,
+                    "scoreAvg": null
+                }
+            ]
+        },
+        "paper_exercises": [
+            {
+                "question": "问题1",
+                "anwserIndex": 1,
+                "score": 1,
+                "type_id": 2,
+                "options": [
                     {
-                        "type_id": "2",
-                        "name": "躯体化",
-                        "status": "表示你的生活处于规律状态中，睡眠和饮食情况都很好。",
-                        "advice": "您能较好地应对社会生活中的压力，能调整自己的心态，能够有效防止心理因素躯体化。建议您能够保持积极、乐观的生活态度。",
-                        "level": "无症状",
-                        "scoreAvg": "1.00"
+                        "option": "选项1",
+                        "score": "4"
                     },
                     {
-                        "name": "总分",
-                        "status": null,
-                        "advice": null,
-                        "level": null,
-                        "scoreAvg": null
+                        "option": "选项2",
+                        "score": "3"
                     },
                     {
-                        "name": "强迫症状",
-                        "status": null,
-                        "advice": null,
-                        "level": null,
-                        "scoreAvg": null
+                        "option": "选项3",
+                        "score": "2"
                     },
                     {
-                        "name": "人际关系敏感",
-                        "status": null,
-                        "advice": null,
-                        "level": null,
-                        "scoreAvg": null
-                    },
-                    {
-                        "name": "抑郁",
-                        "status": null,
-                        "advice": null,
-                        "level": null,
-                        "scoreAvg": null
-                    },
-                    {
-                        "name": "焦虑",
-                        "status": null,
-                        "advice": null,
-                        "level": null,
-                        "scoreAvg": null
-                    },
-                    {
-                        "name": "敌对",
-                        "status": null,
-                        "advice": null,
-                        "level": null,
-                        "scoreAvg": null
-                    },
-                    {
-                        "name": "恐怖",
-                        "status": null,
-                        "advice": null,
-                        "level": null,
-                        "scoreAvg": null
-                    },
-                    {
-                        "name": "偏执",
-                        "status": null,
-                        "advice": null,
-                        "level": null,
-                        "scoreAvg": null
-                    },
-                    {
-                        "name": "精神病性",
-                        "status": null,
-                        "advice": null,
-                        "level": null,
-                        "scoreAvg": null
-                    },
-                    {
-                        "name": "其他",
-                        "status": null,
-                        "advice": null,
-                        "level": null,
-                        "scoreAvg": null
+                        "option": "选项4",
+                        "score": "1"
                     }
                 ]
             },
-            "paper_exercises": [
-                {
-                    "question": "问题1",
-                    "anwserIndex": 1,
-                    "score": 1,
-                    "type_id": 2,
-                    "options": [
-                        {
-                            "option": "选项1",
-                            "score": "4"
-                        },
-                        {
-                            "option": "选项2",
-                            "score": "3"
-                        },
-                        {
-                            "option": "选项3",
-                            "score": "2"
-                        },
-                        {
-                            "option": "选项4",
-                            "score": "1"
-                        }
-                    ]
-                },
-                {
-                    "question": "问题2",
-                    "anwserIndex": 0,
-                    "score": 1,
-                    "type_id": 2,
-                    "options": [
-                        {
-                            "option": "选项1",
-                            "score": "4"
-                        },
-                        {
-                            "option": "选项2",
-                            "score": "3"
-                        },
-                        {
-                            "option": "选项3",
-                            "score": "2"
-                        },
-                        {
-                            " option": "选项4",
-                            "score": "1"
-                        }
-                    ]
-                }
-            ]
+            {
+                "question": "问题2",
+                "anwserIndex": 0,
+                "score": 1,
+                "type_id": 2,
+                "options": [
+                    {
+                        "option": "选项1",
+                        "score": "4"
+                    },
+                    {
+                        "option": "选项2",
+                        "score": "3"
+                    },
+                    {
+                        "option": "选项3",
+                        "score": "2"
+                    },
+                    {
+                        " option": "选项4",
+                        "score": "1"
+                    }
+                ]
+            }
+        ],
+        "user": {
+            "id": 3,
+            "account": "664753",
+            "name": null
+        },
+        "doctor": {
+            "id": 2,
+            "account": "664753092",
+            "name": null
         }
-    ]
+    }
 }
    * 
    */

@@ -58,7 +58,7 @@ class UserController extends Controller {
   /**
    * @api {Get} /api/user/userDetail 获取用户详情
    * @apiGroup User
-   * @apiParam {Header:token} token
+   * @apiParam {Header:x-token} x-token
    * @apiSuccessExample  成功返回
    {
     "code": 1,

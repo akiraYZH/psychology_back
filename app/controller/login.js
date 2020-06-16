@@ -5,7 +5,7 @@ const Controller = require("egg").Controller;
 
 class LoginController extends Controller {
   /**
-   * @api {Get} /login/login 登陆，获取登录token
+   * @api {Get} /login/login 登陆，获取登录token, 发送请求时候放入请求头 "x-token": "3d9d1a155d7a6d2c84fae7bd9ba35466"
    * @apiGroup login
    *
    *
