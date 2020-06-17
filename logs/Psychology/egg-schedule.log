@@ -1258,3 +1258,48 @@
 2020-06-16 11:15:34,556 INFO 6269 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
 2020-06-16 11:15:34,556 INFO 6269 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
 2020-06-16 11:15:34,556 INFO 6269 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 15:42:40,872 INFO 13601 [Timer] /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 46039131ms at 2020-06-18 04:30:00.003
+2020-06-17 15:42:40,872 INFO 13601 [Timer] /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 29839128ms at 2020-06-18 00:00:00.000
+2020-06-17 15:42:40,873 INFO 13601 [Timer] /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 29840128ms at 2020-06-18 00:00:01.001
+2020-06-17 15:42:40,408 INFO 13602 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 15:42:40,408 INFO 13602 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 15:42:40,408 INFO 13602 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 15:47:14,613 INFO 13650 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 15:47:14,613 INFO 13650 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 15:47:14,613 INFO 13650 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 15:48:14,750 INFO 13686 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 15:48:14,750 INFO 13686 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 15:48:14,750 INFO 13686 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 15:48:44,019 INFO 13719 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 15:48:44,019 INFO 13719 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 15:48:44,019 INFO 13719 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 15:49:27,643 INFO 13747 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 15:49:27,643 INFO 13747 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 15:49:27,643 INFO 13747 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 15:49:43,648 INFO 13771 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 15:49:43,648 INFO 13771 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 15:49:43,648 INFO 13771 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 15:49:54,062 INFO 13782 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 15:49:54,062 INFO 13782 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 15:49:54,062 INFO 13782 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 15:52:03,920 INFO 13818 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 15:52:03,920 INFO 13818 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 15:52:03,920 INFO 13818 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 15:53:27,238 INFO 13845 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 15:53:27,238 INFO 13845 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 15:53:27,238 INFO 13845 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 16:09:41,424 INFO 14024 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 16:09:41,424 INFO 14024 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 16:09:41,424 INFO 14024 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 16:09:57,309 INFO 14522 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 16:09:57,309 INFO 14522 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 16:09:57,309 INFO 14522 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 16:14:26,746 INFO 14579 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 16:14:26,746 INFO 14579 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 16:14:26,746 INFO 14579 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js
+2020-06-17 17:16:29,138 INFO 15250 [Timer] /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js next time will execute after 40410865ms at 2020-06-18 04:30:00.003
+2020-06-17 17:16:29,138 INFO 15250 [Timer] /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js next time will execute after 24210862ms at 2020-06-18 00:00:00.000
+2020-06-17 17:16:29,138 INFO 15250 [Timer] /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js next time will execute after 24211862ms at 2020-06-18 00:00:01.000
+2020-06-17 17:16:28,621 INFO 15251 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-multipart/app/schedule/clean_tmpdir.js
+2020-06-17 17:16:28,621 INFO 15251 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/clean_log.js
+2020-06-17 17:16:28,621 INFO 15251 [egg-schedule]: register schedule /Users/yuakira/dev/projects/Psychology2/node_modules/egg-logrotator/app/schedule/rotate_by_file.js

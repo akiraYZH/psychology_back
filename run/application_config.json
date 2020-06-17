@@ -206,8 +206,10 @@
       "username": "root",
       "password": "<String len: 4>",
       "define": {
-        "underscored": true
-      }
+        "underscored": true,
+        "freezeTableName": true
+      },
+      "timezone": "+08:00"
     },
     "env": "local",
     "name": "Psychology",

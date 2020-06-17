@@ -309,3 +309,98 @@ name: "ER_NO_REFERENCED_ROW_2Error"
 pid: 14711
 hostname: yudeMacBook-Pro.local
 
+2020-06-17 15:43:20,225 ERROR 13602 [-/::1/-/26ms GET /api/user/userDetail?account=admin] nodejs.TypeError: Cannot read property 'account' of undefined
+    at UserService.userDetail (/Users/yuakira/dev/projects/Psychology2/app/service/user.js:36:37)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async UserController.userDetail (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:84:16)
+
+pid: 13602
+hostname: yudeMacBook-Pro.local
+
+2020-06-17 15:46:35,830 ERROR 13602 [-/::1/-/1ms GET /api/user/userDetail?account=admin] nodejs.TypeError: Cannot read property 'account' of undefined
+    at UserService.userDetail (/Users/yuakira/dev/projects/Psychology2/app/service/user.js:36:37)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async UserController.userDetail (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:84:16)
+
+pid: 13602
+hostname: yudeMacBook-Pro.local
+
+2020-06-17 15:47:19,832 ERROR 13650 [-/::1/-/18ms GET /api/user/userDetail?account=admin] nodejs.TypeError: Cannot read property 'account' of undefined
+    at UserService.userDetail (/Users/yuakira/dev/projects/Psychology2/app/service/user.js:38:37)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async UserController.userDetail (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:84:16)
+
+pid: 13650
+hostname: yudeMacBook-Pro.local
+
+2020-06-17 15:48:20,004 ERROR 13686 [-/::1/-/27ms GET /api/user/userDetail?account=admin] nodejs.TypeError: Cannot read property 'account' of undefined
+    at UserService.userDetail (/Users/yuakira/dev/projects/Psychology2/app/service/user.js:40:37)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async UserController.userDetail (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:84:16)
+
+pid: 13686
+hostname: yudeMacBook-Pro.local
+
+2020-06-17 15:50:01,259 ERROR 13782 [-/::1/-/13ms GET /api/user/userDetail?account=admin] nodejs.ReferenceError: PPermission is not defined
+    at UserService.userDetail (/Users/yuakira/dev/projects/Psychology2/app/service/user.js:49:20)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async UserController.userDetail (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:84:16)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:12:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:41:56
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 13782
+hostname: yudeMacBook-Pro.local
+
+2020-06-17 15:50:29,519 ERROR 13782 [-/::1/-/1ms GET /api/user/userDetail?account=admin] nodejs.ReferenceError: PPermission is not defined
+    at UserService.userDetail (/Users/yuakira/dev/projects/Psychology2/app/service/user.js:49:20)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async UserController.userDetail (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:84:16)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:12:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:41:56
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 13782
+hostname: yudeMacBook-Pro.local
+
+2020-06-17 15:51:34,184 ERROR 13782 [-/::1/-/1ms GET /api/user/userDetail?account=admin] nodejs.ReferenceError: PPermission is not defined
+    at UserService.userDetail (/Users/yuakira/dev/projects/Psychology2/app/service/user.js:49:20)
+    at processTicksAndRejections (internal/process/task_queues.js:97:5)
+    at async UserController.userDetail (/Users/yuakira/dev/projects/Psychology2/app/controller/user.js:84:16)
+    at async responseOption (/Users/yuakira/dev/projects/Psychology2/app/middleware/responseOption.js:11:13)
+    at async isLogin (/Users/yuakira/dev/projects/Psychology2/app/middleware/isLogin.js:12:13)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/egg-development/app/middleware/egg_loader_trace.js:9:50
+    at async xframe (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xframe.js:7:5)
+    at async xssProtection (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/xssProtection.js:7:5)
+    at async nosniff (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/nosniff.js:8:5)
+    at async noopen (/Users/yuakira/dev/projects/Psychology2/node_modules/egg-security/lib/middlewares/noopen.js:8:5)
+    at async session (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-session/index.js:41:7)
+    at async bodyParser (/Users/yuakira/dev/projects/Psychology2/node_modules/koa-bodyparser/index.js:95:5)
+    at async /Users/yuakira/dev/projects/Psychology2/node_modules/koa-static-cache/index.js:41:56
+    at async notfound (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/notfound.js:5:5)
+    at async meta (/Users/yuakira/dev/projects/Psychology2/node_modules/egg/app/middleware/meta.js:12:5)
+    at async cors (/Users/yuakira/dev/projects/Psychology2/node_modules/@koa/cors/index.js:56:32)
+
+pid: 13782
+hostname: yudeMacBook-Pro.local
+

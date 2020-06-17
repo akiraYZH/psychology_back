@@ -21,8 +21,10 @@ class UserService extends Service {
   }
 
   async userDetail() {
-    const { PUser, PRole } = this.app.model.Tables;
-    const token = this.ctx.headers.token;
+    const { PUser, PRole,PPermission } = this.app.model.Tables;
+    console.log(this.ctx.headers);
+
+    const token = this.ctx.headers["x-token"];
     let redisData = "";
     try {
       redisData = await this.ctx.helper._getRedis(token);
@@ -30,6 +32,8 @@ class UserService extends Service {
       this.ctx.status = 401;
       return new this.ctx.helper._notLogin();
     }
+
+    console.log(redisData);
 
     const result = await PUser.findOne({
       where: {
@@ -41,6 +45,16 @@ class UserService extends Service {
           model: PRole,
           attributes: ["id", "name"],
           as: "roles",
+          include: {
+            model: PPermission,
+            attributes: ["id", "name", "apis"],
+            where: {
+              status: 1,
+            },
+            required: false,
+            as: "permissions",
+            attributes:["id","name"]
+          },
         },
       ],
     });
@@ -183,7 +197,7 @@ class UserService extends Service {
     let { ctx } = this;
     let condition = {
       id: ctx.request.body.id,
-      status:1
+      status: 1,
     };
     delete ctx.request.body.id;
     (ctx.request.body.status || ctx.request.body.status == 0) &&

@@ -24,7 +24,7 @@ module.exports = () => {
       let hasPermission = false;
       let apis = [];
       console.log(role);
-      
+
       role.permissions.forEach((item) => {
         apis.push(...JSON.parse(item.apis));
       });
@@ -32,7 +32,7 @@ module.exports = () => {
       console.log(apis);
       for (let i = 0; i < apis.length; i++) {
         console.log(apis[i]);
-        if (ctx.request.url.startsWith(apis[i])) {
+        if (ctx.request.url.startsWith(apis[i] || checkIgnore(ctx))) {
           hasPermission = true;
           //   await next();
           break;
@@ -52,4 +52,16 @@ module.exports = () => {
       // await next();
     }
   };
+
+  function checkIgnore(ctx) {
+    let isIgnore = false;
+    let ignoreArr = ["/api/user/register"];
+    for (let i = 0; i < ignoreArr.length; i++) {
+      if (ctx.request.url.startsWith(ignoreArr[i])) {
+        isIgnore = true;
+        break;
+      }
+    }
+    return isIgnore;
+  }
 };
