@@ -32,7 +32,7 @@ class ReservationTypeController extends Controller {
   }
 
   /**
-   * @api {Get} /api/reservation_type/getList 获得预约类型列表
+   * @api {Get} /api/reservationType/getList 获得预约类型列表
    * @apiGroup ReservationType
    * @apiSuccessExample
    {
@@ -59,7 +59,7 @@ class ReservationTypeController extends Controller {
   }
 
   /**
-   * @api {Put} /api/reservation_type/update 修改类型名称
+   * @api {Put} /api/reservationType/update 修改类型名称
    * @apiGroup ReservationType
    * @apiParam {Number} id 类型id
    * @apiParam {String} type_name 类型名称
@@ -84,7 +84,7 @@ class ReservationTypeController extends Controller {
   }
 
   /**
-   * @api {Post} /api/reservation_type/update 删除预约类型
+   * @api {Delete} /api/reservationType/del 删除预约类型
    * @apiGroup ReservationType
    * @apiParam {Number} id 类型id
    * @apiSuccessExample 成功返回

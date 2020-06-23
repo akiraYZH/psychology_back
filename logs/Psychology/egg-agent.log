@@ -1116,3 +1116,25 @@ hostname: yudeMacBook-Pro.local
 2020-06-17 17:16:27,802 INFO 15250 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
 2020-06-17 17:16:27,802 INFO 15250 [egg-watcher:agent] watcher start success
 2020-06-17 17:16:27,845 INFO 15250 [egg:core] dump config after ready, 4ms
+2020-06-19 15:01:21,972 INFO 4046 [egg-sequelize](2ms) Executed (default): SELECT 1+1 AS result
+2020-06-19 15:01:21,568 INFO 4046 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-06-19 15:01:21,897 INFO 4046 [egg:core] dump config after load, 3ms
+2020-06-19 15:01:21,935 INFO 4046 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-06-19 15:01:21,935 INFO 4046 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-06-19 15:01:21,935 INFO 4046 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-06-19 15:01:21,935 INFO 4046 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-06-19 15:01:21,935 INFO 4046 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-06-19 15:01:21,935 INFO 4046 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-06-19 15:01:21,935 INFO 4046 [egg-watcher:agent] watcher start success
+2020-06-19 15:01:21,979 INFO 4046 [egg:core] dump config after ready, 4ms
+2020-06-19 15:14:52,830 INFO 60577 [egg-sequelize](1ms) Executed (default): SELECT 1+1 AS result
+2020-06-19 15:14:52,370 INFO 60577 [egg:logger] init all loggers with options: {"dir":"/Users/yuakira/dev/projects/Psychology2/logs/Psychology","encoding":"utf8","env":"local","level":"INFO","consoleLevel":"INFO","disableConsoleAfterReady":false,"outputJSON":false,"buffer":true,"appLogName":"Psychology-web.log","coreLogName":"egg-web.log","agentLogName":"egg-agent.log","errorLogName":"common-error.log","coreLogger":{"consoleLevel":"WARN"},"allowDebugAtProd":false,"type":"agent"}
+2020-06-19 15:14:52,732 INFO 60577 [egg:core] dump config after load, 3ms
+2020-06-19 15:14:52,795 INFO 60577 [egg-watcher] Start watching: ["/Users/yuakira/dev/projects/Psychology2/app","/Users/yuakira/dev/projects/Psychology2/config","/Users/yuakira/dev/projects/Psychology2/mocks","/Users/yuakira/dev/projects/Psychology2/mocks_proxy","/Users/yuakira/dev/projects/Psychology2/app.js"]
+2020-06-19 15:14:52,795 INFO 60577 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app"
+2020-06-19 15:14:52,796 INFO 60577 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/config"
+2020-06-19 15:14:52,796 INFO 60577 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks"
+2020-06-19 15:14:52,796 INFO 60577 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/mocks_proxy"
+2020-06-19 15:14:52,796 INFO 60577 [egg-watcher] Start watching: "/Users/yuakira/dev/projects/Psychology2/app.js"
+2020-06-19 15:14:52,796 INFO 60577 [egg-watcher:agent] watcher start success
+2020-06-19 15:14:52,838 INFO 60577 [egg:core] dump config after ready, 5ms

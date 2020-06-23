@@ -1224,27 +1224,8 @@ define({ "api": [
     "name": "PutApiReservationModify"
   },
   {
-    "type": "Get",
-    "url": "/api/reservation_type/getList",
-    "title": "获得预约类型列表",
-    "group": "ReservationType",
-    "success": {
-      "examples": [
-        {
-          "title": "{",
-          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"type_name\": \"有病\",\n            \"description\": \"有病就要医治\"\n        },\n        {\n            \"id\": 2,\n            \"type_name\": \"有病\",\n            \"description\": \"有病就要医治\"\n        }\n    ]\n}",
-          "type": "json"
-        }
-      ]
-    },
-    "version": "0.0.0",
-    "filename": "app/controller/reservationType.js",
-    "groupTitle": "ReservationType",
-    "name": "GetApiReservation_typeGetlist"
-  },
-  {
-    "type": "Post",
-    "url": "/api/reservation_type/update",
+    "type": "Delete",
+    "url": "/api/reservationType/del",
     "title": "删除预约类型",
     "group": "ReservationType",
     "parameter": {
@@ -1272,7 +1253,26 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "app/controller/reservationType.js",
     "groupTitle": "ReservationType",
-    "name": "PostApiReservation_typeUpdate"
+    "name": "DeleteApiReservationtypeDel"
+  },
+  {
+    "type": "Get",
+    "url": "/api/reservationType/getList",
+    "title": "获得预约类型列表",
+    "group": "ReservationType",
+    "success": {
+      "examples": [
+        {
+          "title": "{",
+          "content": "   {\n    \"code\": 1,\n    \"msg\": \"成功操作\",\n    \"data\": [\n        {\n            \"id\": 1,\n            \"type_name\": \"有病\",\n            \"description\": \"有病就要医治\"\n        },\n        {\n            \"id\": 2,\n            \"type_name\": \"有病\",\n            \"description\": \"有病就要医治\"\n        }\n    ]\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "app/controller/reservationType.js",
+    "groupTitle": "ReservationType",
+    "name": "GetApiReservationtypeGetlist"
   },
   {
     "type": "Post",
@@ -1315,7 +1315,7 @@ define({ "api": [
   },
   {
     "type": "Put",
-    "url": "/api/reservation_type/update",
+    "url": "/api/reservationType/update",
     "title": "修改类型名称",
     "group": "ReservationType",
     "parameter": {
@@ -1357,7 +1357,7 @@ define({ "api": [
     "version": "0.0.0",
     "filename": "app/controller/reservationType.js",
     "groupTitle": "ReservationType",
-    "name": "PutApiReservation_typeUpdate"
+    "name": "PutApiReservationtypeUpdate"
   },
   {
     "type": "Delete",
