@@ -32,7 +32,7 @@ class RoleController extends Controller {
       ctx.body = await service.role.add(body);
     } else {
       //缺少参数
-      this.status=400;
+      this.status = 400;
       this.ctx.body = new this.ctx.helper._lack(checkRes.msg);
     }
   }
@@ -89,14 +89,13 @@ class RoleController extends Controller {
   async getOne() {
     const { ctx, service } = this;
     let checkDataRes = ctx.helper.checkData(ctx, "id");
-    if(checkDataRes.is_pass){
+    if (checkDataRes.is_pass) {
       let query = ctx.query;
       ctx.body = await service.role.getOne(query);
-    }else{
-      ctx.status=400;
-      ctx.body=ctx.helper._lack(checkDataRes.msg);
+    } else {
+      ctx.status = 400;
+      ctx.body = ctx.helper._lack(checkDataRes.msg);
     }
-    
   }
 
   /**
