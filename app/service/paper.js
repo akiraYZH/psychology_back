@@ -150,8 +150,8 @@ class PaperService extends Service {
         ctx.status = 200;
         return new ctx.helper._success();
       } else {
-        ctx.status = 404;
-        return new ctx.helper._error("没有删除");
+        ctx.status = 200;
+        return new ctx.helper._error("没有改动");
       }
     } catch (error) {
       ctx.status = 500;

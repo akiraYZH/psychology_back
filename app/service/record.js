@@ -332,7 +332,7 @@ class RecordService extends Service {
       ctx.status=200;
       return new ctx.helper._success(result);
     } else {
-      ctx.status=404;
+      ctx.status=200;
       return new ctx.helper._success("暂无数据");
     }
   }

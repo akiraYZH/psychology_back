@@ -21,7 +21,7 @@ class TypeService extends Service {
       ctx.status = 200;
       return new ctx.helper._success(result);
     } else {
-      ctx.status = 404;
+      ctx.status = 200;
       return new ctx.helper._error("暂无数据");
     }
   }

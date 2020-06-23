@@ -278,7 +278,7 @@ class ReservationService extends Service {
         ctx.status = 200;
         return new ctx.helper._success();
       } else {
-        ctx.status = 404;
+        ctx.status = 200;
         return new ctx.helper._error("没有删除");
       }
     } catch (error) {

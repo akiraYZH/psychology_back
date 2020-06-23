@@ -72,7 +72,7 @@ class MessageService extends Service {
         ctx.status = 200;
         return new ctx.helper._success();
       } else {
-        ctx.status = 404;
+        ctx.status = 200;
         return new ctx.helper._error("没有修改");
       }
     } catch (error) {
@@ -93,8 +93,8 @@ class MessageService extends Service {
         ctx.status = 200;
         return new ctx.helper._success();
       } else {
-        ctx.status = 404;
-        return new ctx.helper._error("没有删除");
+        ctx.status = 200;
+        return new ctx.helper._error("没有改动");
       }
     } catch (error) {
       ctx.status = 500;
